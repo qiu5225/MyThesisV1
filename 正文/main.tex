@@ -1,0 +1,1469 @@
+\documentclass{wzuthesis} % 不填充空白页。如果需要双面打印版，请注释掉本行并启用下一行
+% \documentclass[print-both-sides]{scutthesis} % 使用双面打印版（填充额外空白页以保证每一章开头都在奇数页）
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{bicaption}
+\usepackage{subcaption} 
+\usepackage{caption}
+\usepackage{amsmath}
+
+\bicaptionsetup[figure]{}{name=Fig.}
+\bicaptionsetup[table]{}{name=Table}
+\setlength{\headheight}{13pt}
+
+%\setmainfont{Times New Roman}[
+%  Path = ./fonts/,
+%  Extension = .ttf,
+%  UprightFont = times,
+%  BoldFont = timesbd,
+%  ItalicFont = timesi,
+%  BoldItalicFont = timesbi
+%]
+
+\setmainfont{Times New Roman}[
+UprightFont = *,
+BoldFont = * Bold,
+ItalicFont = * Italic,
+BoldItalicFont = * Bold Italic
+]
+
+%%===============论文信息=============================
+\ctitle{面向疾病预测医学数据的特征选择算法研究} 
+                                % 中文题目
+\etitle{Graduate Degree Thesis of Wenzhou University English Title}                     % 英文题目
+
+\cauthor{邱\ 从\ 波}            % 作者姓名
+\fen{TP391.4}                  % 分类号
+\udc{004.8}                    % UDC
+\id{23451350028}               % 学号
+\mi{公开}                       % 密级
+\xwlx{学术型}                   %学位类型
+\pylx{全日制统招研究生}         % 培养类型
+\cmajor{计算机科学与技术}       % 专业名称
+\cclass{智能计算与数据挖掘}              % 研究方向
+\cmentor{黄长城（教授） 陈慧灵（教授）} % 指导老师
+\cdata{2025年11月8日} %完成时间
+\blindcode{} % 盲审代码
+%%===================================================
+% \def\blind{}       % 盲审版把这条注释打开
+
+
+
+\cabstract{
+特征选择对于提高机器学习模型性能至关重要。虽然元启发式算法被广泛用于特征选择，但其有效性常受计算开销和收敛到次优解的阻碍。本文提出一种改进的 RIME 算法（IRIME），它结合信息熵评估策略、随机重启机制和拉格朗日插值方法来克服这些局限。信息熵评估策略通过对特征动态加权增强种群多样性，随机重启机制防止过早收敛，拉格朗日插值方法通过逼近全局最优解加速收敛。在 CEC 2017 测试集上的大量实验表明，IRIME 优于七种领先算法，收敛速度更快且稳定性更高。在 8 个低到中等维度数据集和 4 个高维数据集上测试，该算法在显著减少冗余特征的同时实现了有竞争力的分类准确率。此外，消融研究证实了这三种策略的协同效应。结果凸显了 IRIME 在全局优化和特征选择方面的鲁棒性，为特征选择提供了实用工具。
+}
+\ckeywords{元启发算法，RIME，信息熵，拉格朗日插值，特征选择}
+
+\eabstract{
+Feature selection is crucial for improving model performance in machine learning. While meta-heuristic algorithms are widely employed for feature selection, their effectiveness is frequently hampered by computational overhead and convergence to suboptimal solutions. We propose an improved RIME algorithm (IRIME) in this work. It combines information entropy evaluation strategy, random restart mechanism, and Lagrange interpolation method to overcome these limitations. The information entropy evaluation strategy enhances population diversity by dynamically weighting features, while the random restart mechanism prevents premature convergence and the Lagrange interpolation method accelerates convergence by approximating global optima. Extensive experiments on the CEC 2017 test suite, IRIME's outperforms seven leading algorithm, with faster convergence and higher stability. Tested on 8 datasets with low to moderate dimensionality and 4 high-dimensional datasets, our algorithm achieves competitive classification accuracy while significantly reducing redundant features. Furthermore, the ablation studies confirm the synergistic effect of the three strategies. The results highlight IRIME's robustness in global optimization and feature selection, offering a practical tool for feature selection.
+}
+% 英文文关键词(每个关键词之间用,分开, 最后一个关键词不打标点符号。)
+\ekeywords{meta-heuristic, RIME, information entropy, Lagrange interpolation, feature selection}
+
+\begin{document}
+% 论文前置部分
+
+\frontmatter
+\makefirstpage
+% 如果不需要图、表目录前往cls文件中将相应的注释掉
+
+% 论文主体部分
+\mainmatter
+\chapter{绪论}
+在特征选择任务中，启发式算法经常面临四个基本挑战：(1) 过早收敛和局部最优：这些算法常常收敛到次优解，阻碍全局优化。(2) 稳定性低：结果对初始种群配置或随机种子高度敏感，导致重复试验间差异显著。(3) 参数依赖：大量超参数调整不仅引入主观性，还损害算法的泛化能力。(4) 可扩展性限制：超高维环境下搜索空间的爆炸式增长，使在实际时间限制内收敛在计算上不可行。相比之下，RIME算法通过其参数高效设计和快速收敛特性解决了这些限制。本文在RIME算法基础上提出了IRIME，这是一种改进的RIME变体，集成了三个关键策略：信息熵评估策略、随机重启机制和拉格朗日插值法。信息熵评估策略动态加权特征，以增强种群多样性和探索能力。随机重启机制通过重新初始化低适应度个体来防止停滞，而拉格朗日插值法通过逼近全局最优来加速收敛。通过有针对性的改进，IRIME成为特征选择问题的强大且可扩展的解决方案。
+
+\section{研究背景}
+信息与互联网技术的飞速发展使得数据量呈指数级增长 \cite {oussous2018big}。直接利用这些海量数据会产生高昂的计算成本。数据挖掘技术 \cite {majumdar2017analysis} 旨在从海量数据中提取有效信息。机器学习与人工智能的现代化发展已获得广泛关注。在模型训练过程中，原始数据中的冗余特征不仅会增加计算开销，还会降低模型精度 \cite {islam2022comprehensive}。因此，特征选择成为机器学习中一项关键的预处理技术。特征选择的目标是筛选出最优、最高效的特征组合，该过程会从原始数据集中识别出最具预测能力的特征，同时剔除冗余或无关特征 \cite {10214275}。
+特征选择方法可分为过滤式、嵌入式、封装式三类 \cite {maldonado2022review}，三类方法的差异体现在分类器与特征选择流程的融合方式上。过滤式方法 \cite {babalik2024binary} 采用相关性、互信息等统计准则完成特征筛选 \cite {pengmutation2005}，该类方法简单高效，能够有效缩减特征子集，但灵活性不足，通常无法解决特征冗余问题。嵌入式方法 \cite {hussien2019s};\cite {embedded1} 将特征选择嵌入分类器训练过程，提升了算法交互性，但也增加了模型训练与参数调优的复杂度。封装式方法 \cite {gonzalez2019new} 将特征选择转化为搜索问题，通过模型性能指标评估特征子集的优劣；元启发式算法已成为封装式特征选择的主流方法 \cite {yab2022meta}。该类算法通过连续迭代优化输入参数，同时结合性能指标评估，最终收敛至最优解。元启发式算法受生物、物理或社会行为启发，具有灵活性强、适配多类数据集、可处理高维空间的优势。但现有元启发式算法易陷入局部最优，尤其在处理高维数据时，维数灾难会加剧数据稀疏性与基于距离的求解难题。元启发式算法面临双重挑战：迭代过程中解的多样性持续衰减，削弱全局优化能力；算法性能对人工调优的参数高度敏感，导致性能波动较大。
+\cite {su2023rime} 受自然界霜冰形成过程启发，提出了霜冰优化算法（RIME）。该算法模拟了不同风力条件下软霜与硬霜的生长过程。与哈里斯鹰优化算法（HHO）\cite {heidari2019harris}、蚁群优化算法（ACO）\cite {dorigo2007ant} 等元启发式算法相比，RIME 算法参数设置简单、流程简洁，同时具备优异的优化性能。
+在特征选择任务中，启发式算法普遍面临四大核心难题：
+(1) 早熟收敛与局部最优：算法易收敛至次优解，无法实现全局优化；
+(2) 稳定性差：算法结果对初始种群配置、随机种子高度敏感，重复实验的结果波动显著；
+(3) 参数依赖性：算法依赖大量超参数调优，不仅引入主观偏差，还降低了算法泛化能力；
+(4) 可扩展性受限：超高维场景下搜索空间呈爆炸式增长，算法无法在合理时间内完成收敛。
+与之相对，RIME 算法通过少参数设计与快速收敛特性有效缓解了上述缺陷；结合针对性改进后，RIME 成为求解特征选择问题的鲁棒、可扩展方案。
+据此，本文提出改进型霜冰优化算法（IRIME），该算法融合三大核心策略：信息熵评价策略、随机重启机制、拉格朗日插值法。信息熵评价策略通过对特征动态加权，提升种群多样性与全局探索能力；随机重启机制通过重新初始化低适应度个体避免算法停滞；拉格朗日插值法通过逼近全局最优解加速算法收敛。基于 CEC2017 测试集的实验表明，IRIME 性能优于七种主流算法。\ 在 12 个数据集（包含 8 个中低维数据集、4 个高维数据集）上，IRIME 以最小特征冗余实现了高精度分类；消融实验进一步验证了三种策略的协同有效性。
+\section{国内外研究现状}
+优化的本质，是在各类理论研究与工程应用中，求解指定问题的最优解决方案。随着实际问题的复杂程度持续提升，近年来各领域对优化技术的要求也随之提高，特征选择问题同样遵循这一规律。
+群智能优化算法本身具备全局优化的核心特性，十分适配特征选择任务，可用于筛选出高效的特征子集。为实现复杂数据的有效处理，科研人员围绕优化搜索策略展开改进研究，以此提升学习算法的优化性能，并据此提出了一系列基于元启发式算法的特征选择方法。
+
+近年来，启发式算法已成为机器学习领域的核心工具，尤其适用于求解具备大解空间与NP 难特性的复杂优化问题 \cite {karimi2022machine}。这类算法依托创新策略生成近似最优解，在效率与适应性上普遍优于传统方法。按照启发来源划分，启发式算法可归为四大类别 \cite {ss2022nature}：进化算法、群智能算法、物理启发算法与人类行为启发算法 \cite {zhao2024triangulation}。
+进化算法受生物进化规律启发，通过交叉、变异、选择、淘汰等操作迭代优化候选解种群。迭代过程中，低适应度个体被剔除，高适应度个体持续进化，进而提升种群整体适应性。遗传算法（GA；\cite {liao2023genetic}）是最具代表性的进化计算方法，同类算法还包括差分进化算法（DE；\cite {song2023dynamic}）。群智能算法通过模拟简单个体间的局部交互与自组织行为求解复杂问题，实现群体层面的涌现智能。经典群智能算法包含蚁群优化算法（ACO；\cite {wang2021ant}）、粒子群优化算法（PSO；\cite {du2023orderly}），此外还有麻雀搜索算法（SSA；\cite {SSAxue2020novel}）、秃鹰搜索算法（BES；\cite {BESalsattar2020novel}）与海鸥优化算法（SOA；\cite {SOAdhiman2019seagull}）。物理启发优化算法以能量最小化、力学平衡、热力学过程等基础物理原理构建计算框架，典型算法包括模拟退火算法（SA；\cite {vincent2022simulated}）、正弦余弦算法（SCA；\cite {wang2021modified}）与水循环算法（WCA；\cite {meng2023novel}）。人类启发算法将人类个体 / 群体的社会行为、认知过程与决策机制抽象为数学规则，用于求解优化问题，该类算法涵盖帝国主义竞争算法（ICA；\cite {atashpaz2007imperialist}）、基于状态的优化算法（SBO；\cite {wang2025status}）与文化算法（CA；\cite {coello2004efficient}）。
+尽管启发式算法在求解复杂实际问题时面临诸多挑战，研究者仍提出大量改进变体以提升其性能。
+例如，\cite {hu2012adaptive} 提出自适应粒子群优化算法（APSO），以强化粒子群算法的鲁棒性。\cite {tiwari2024developments} 在传统差分进化算法（DE）中融入自适应交叉机制与改进选择策略，避免算法早熟收敛，改进算法在复杂非线性工程优化任务中表现优异。\cite {dhar2022covariance} 利用斯皮尔曼秩相关系数确定狼群参与对抗学习的权重，以此加速灰狼优化算法（GWO）收敛并提升算法性能。\cite {peng2024q} 提出改进型哈里斯鹰优化算法（EHHO），用以解决原算法处理高维复杂任务的缺陷，实验结果验证了其在特征选择任务中的有效性。\cite {zhang2024velocity} 提出改进灰狼算法（VGWO-AWLO），引入速度参数引导狼群搜索并结合自适应权重优化，实验证实该算法性能优于原始 GWO 及其变体。\cite {deep2022random} 提出融入分散因子的改进灰狼优化算法（RWGWO），强化局部搜索并平衡特征选择的探索 - 开发过程，在慢性病预测任务中，该算法在特征降维与分类精度上均优于其他自然启发算法。
+\cite {pham2024enhancing} 将对抗学习与轮盘赌选择策略融入正弦余弦算法（SCA），改进算法保留了原算法的探索 - 开发能力，同时在实际优化问题中具备更高稳定性。
+针对分布式制造中的按订单生产配送优化问题，\cite {ZHANG2025101996} 提出基于混合数学启发式的自学习迭代贪心算法（MSIG），用于求解异构装配流水车间调度问题。MSIG 融合数学规划、问题专属启发式与自适应学习策略，在最小化拖期成本上优于现有方法。
+\cite {MEJIADEDIOS2025102005} 提出基于代理模型的双层进化算法，优化分层供应链决策：上层最小化仓库成本，下层降低客户延迟。该方法可高效逼近复杂路径决策并保证解的可行性，性能超越现有算法。
+\cite {shaheen2024enhanced} 提出融合局部逃逸策略（LES）的改进分数阶开普勒优化器（FOKO），提升配电系统能源效率，解决光伏并网与静止同步补偿器部署问题。FOKO 在 CEC 2017 测试集与配电网络测试中优于 KO、PSO、DE 等基准算法，能量损耗最高降低 65.51%。
+\cite {liu2024kriging} 提出克里金辅助双种群差分进化算法（KDPDE），用于求解高计算成本的混合整数约束优化问题，融合整数约束松弛、期望改进局部搜索与多样性维持策略。
+\cite {yu2025particle} 提出基于团队协作的粒子群优化算法，结合自适应参数调整，提升全局搜索与收敛性能，克服传统 PSO 缺陷，基准函数与实际问题的大量实验均验证了其有效性。
+\cite {ozdemir2024improved} 对海洋捕食者算法进行改进（STPMPA），该算法在基准测试与实际物流应用中均展现出更优的精度与效率。
+\cite {SU2025102029} 提出离散自适应灰狼优化算法（DAGWO），用于舰载机运输调度问题，融合改进路径规划与多目标优化提升作战效率，在各类任务场景中均表现优异。
+尽管上述方法均取得良好效果，但仍存在诸多不足：例如参数设置复杂、泛化能力弱、鲁棒性差，且在高维数据集上性能不佳。特征选择是一项极具挑战性的优化任务，仍需持续的算法改进以实现更优性能。
+NFL 定理 \cite {wolpert1997no} 从理论上证明：不存在可最优求解所有特征选择问题的通用算法。霜冰优化算法（RIME）是 Su 等人 \cite {su2023rime} 近期提出的元启发式算法。凭借极少的参数调优需求与稳定的优化能力，RIME 已获得广泛研究关注，并成功应用于图像处理与工程优化领域。例如，\cite {zhong2024srime} 融合拉丁超立方抽样提出增强型 RIME 算法（SRIME），用于工程优化任务；\cite {guo2024improved} 采用改进版 RIME 实现肺癌图像分割；\cite {hosney2024efficient} 将 RIME 与正交学习结合，应用于膀胱癌诊断；\cite {chen2025terime} 提出改进型 RIME 算法（TERIME），实现光伏模型的鲁棒参数提取；\cite {wang2025cgwrime} 在 RIME 中嵌入协作与竞争机制，提出 CGWRIME 算法并验证其工程优化效果；\cite {gu2024multi} 通过多策略改进 RIME，将其应用于三维无人水面艇（USV）路径规划；\cite {zheng2024stochastic} 将 RIME 与生物地理学算法混合，用于高精度图像分割。
+上述应用验证了 RIME 在实际场景中的通用求解能力。然而，RIME 在特征选择领域的研究仍较为匮乏。此外，RIME 自身存在固有缺陷：收敛速度慢、探索与开发能力失衡、局部搜索易早熟收敛。为克服这些缺陷，本文对 RIME 算法展开深入全面的研究，旨在弥补其短板、提升整体优化性能。
+
+\section{本文组织结构}
+本文组织结构如下：第一章节阐述相关工作；第二章节节介绍特征选择问题与原始 RIME 算法；第三章节详细说明 IRIME 算法及其改进策略；第四章节展示 CEC2017 测试集的完整实验结果并分析；第五章节节给出算法在特征选择任务中的应用结果与详细分析；最后在第六章节总结全文工作，并展望未来研究方向。
+\chapter{相关背景知识介绍}
+\section{特征选择问题}
+\subsection{特征选择问题描述}
+现实中的数据通常充斥着一些无关特征。常见的机器学习算法如决策树算法
+在面对这类复杂数据通常会表现出性能不高的现象。这即是特征选择问题近年来
+被广泛关注的原因。特征选择的目的就在于从一个完整的特征集中选择能够满足
+特定要求的最优特征子集。换句话说，特征选择问题是一个搜索问题。根据与学
+习算法进行结合的不同方式，我们可将特征选择方法分为过滤式、包裹式和嵌入
+式三大类。
+过滤式方法：过滤式方法中，特征子集的评估往往独立于某个特定的学习算
+法。其主要特点是速度相较于包裹式和嵌入式方法较快。因为过滤式方法通常依
+赖数据本身的特性来评价特征如距离、相似度、信息量等，不需要消耗过大计算
+资源。得到特征子集后才训练具体的学习器。因此，整个特征选择过程与学习器
+无关，使用该方法所得到的特征子集精度较低但是其泛化能力较强。
+包裹式方法：包裹式方法中，首先需要确定后续使用的学习器，然后将特征
+子集在已选定的学习器上所得的性能作为子集评估指标，例如误差或分类准确率。
+最终选择出使得具体学习器性能最优的特征子集作为最优子集。包裹式方法总是
+可以得到最利于所定学习器的子集。因此，使用包裹式方法所得到的特征子集精
+度较高但是其泛化性能较弱。
+嵌入式方法：嵌入式方法中，最本质的特点是其将特征选择过程与学习器的
+训练过程同时进行，在对特征进行评估的同时构造学习器，两者同步优化。学习
+器构造完成时，所选择的特征子集就代表了所选最优子集。换句话说，在嵌入式
+方法中学习器即选择器，该方法对结果的解释性很强但其泛化能力较弱。
+通常，特征选择方法的关键研究内容主要包括以下四点：子集生成、子集评
+估、停止准则以及子集性能的多指标验证。子集生成：子集生成器负责在子集空
+间里生成一个特征子集；子集评估：评估器负责评估特征子集的优劣性；停止准
+则主要决定算法何时停止搜索特征子集；子集性能的多指标验证用于验证这项工
+作的质量。以上四个点的研究内容并不是独立存在的，他们作为一个整体互相关
+联。在搜索过程中需要反复评价搜索空间中每个生成子集的优劣性，从而为后续
+搜索提供方向，而在这过程中，不同的子集评估方法也都能提供不同的搜索信息，
+搜索策略将根据前面所得信息在特征空间内继续搜索，指导停止准则满足如：已
+选择特征达到预先设定值、已达到分类率要求、或特征增加或减少已不影响评价
+函数所得结果等。而多验证指标则从不同方面体现各个方法的差异与优越性。本
+文将重点研究特征选择方法中的子集生成步骤。
+\section{原始RIME算法}
+\subsection{RIME概述}
+RIME 受雾凇形成这一自然现象的启发。该算法模拟了不同环境条件下水汽的凝结过程，如先前的研究（H. Su 等人，2023）中详细描述的那样。RIME 框架由四个关键阶段组成：（1）种群初始化，（2）软雾凇搜索，（3）硬雾凇穿刺，以及（4）正向贪婪选择。这些阶段共同使算法能够有效地探索和利用解空间。图 1 提供了 RIME 工作流程的可视化表示，而相应的算法步骤在算法 1 中进行了概述。
+
+\subsection{种群初始化}
+种群由 $n$ 个代理 ${S}_{i}$ 组成，每个代理包含 $d$ 个雾凇粒子 ${x}_{ij}$ ，如方程（1）所定义。因此，种群 $R$ 可以由粒子矩阵完全表征，如方程（2）所示。
+\begin{equation}
+R = \begin{bmatrix} S_1 \\ S_2 \\ \vdots \\ S_i \end{bmatrix}; S_i = \begin{bmatrix} x_{i1} & x_{i2} & \cdots & x_{ij} \end{bmatrix}
+\label{eq:rime-population1}
+\end{equation}
+\begin{equation}
+R = \begin{bmatrix} x_{11} & x_{12} & \cdots & x_{1j} \\ x_{21} & x_{22} & \cdots & x_{2j} \\ \vdots & \vdots & \ddots & \vdots \\ x_{i1} & x_{i2} & \cdots & x_{ij} \end{bmatrix}
+\label{eq:rime-population2}
+\end{equation}
+
+\subsection{软雾凇搜索}
+在有风的环境中，软雾凇的生长具有很强的随机性，使得雾凇粒子能够自由覆盖附着物体的大部分表面，同时在一致的方向上缓慢生长。在软雾凇阶段，雾凇粒子的位置由方程（3）确定。
+\begin{equation}
+R_{ij}^{new} = R_{best,j} + r_1 \cdot \cos{\theta} \cdot \beta \cdot \left( h \cdot (Ub_{ij} - Lb_{ij}) + Lb_{ij} \right), \, r_2 < E
+\label{eq:soft-position-update}
+\end{equation}
+这里，${R}_{ij}^{\text{ new }}$ 是第 $i$ 个雾凇代理中第 $j$ 个粒子的更新位置，${R}_{\text{ best, }j}$ 表示种群 $R$ 中最佳雾凇代理的第 $j$ 个粒子。方向参数 ${r}_{1}$（$\left( {-1,1}\right)$ 中的随机值）和 $\cos \theta$（方程 4）共同引导粒子运动，并在迭代过程中自适应调整。环境因子 $\beta$（方程 5）通过模拟外部影响确保算法收敛，而粘附系数 $h \in  \left( {0,1}\right)$ 调节粒子间的距离。
+\begin{equation}
+\theta = \pi \cdot \frac{t}{10 \cdot T}
+\label{eq:theta}
+\end{equation}
+其中 $t$ 表示当前迭代次数，$T$ 是允许的最大迭代次数。
+\begin{equation}
+\beta = 1 - \left[\frac{w \cdot t}{T}\right] / w
+\label{eq:beta}
+\end{equation}
+其中 $\beta$ 遵循阶梯函数模型，$\left\lbrack  \cdot \right\rbrack$ 表示取整。参数 $w = 5$ 控制阶梯分段的数量。控制个体凝聚概率的附着系数 $E$ 随迭代次数增加（公式 6）。
+
+其中 ${r}_{2} \in  \left( {0,1}\right)$ 是一个均匀分布的随机变量，它与 $E,{242}$ 共同控制粒子凝聚（位置更新）。完整的软雾搜索方法详见算法 2。
+\begin{equation}
+    E = \sqrt{(\frac {t}{T})}
+\label{eq:E}
+\end{equation}
+
+\subsection{硬雾凇穿刺}
+在大风条件下，硬雾凇生长比软雾凇呈现出更简单、更规则的模式，具有三个关键特征：(1) 强风使外部影响最小化，导致连贯的单向生长。(2) 均匀的生长方向促进粒子重叠。(3) 与软雾凇一样，硬雾凇粒子在生长过程中会膨胀，增加穿刺概率。RIME 算法吸收了这种穿刺机制，增强了收敛性和跳出局部最优的能力。具体实现见算法 3，粒子替换公式见方程 (7)。
+
+\begin{equation}
+R_{ij}^{new} = R_{best,j}, \quad r_3 < F_{normr}(S_i)
+\label{eq:hard-rime location update}
+\end{equation}
+
+其中 ${R}_{ij}^{\text{ new }}$ 表示更新后粒子的位置，而 ${R}_{\text{ best },j}$ 表示雾凇种群 $R$ 中最优粒子的第 $j$ 个分量。第 $i$ 个智能体的选择概率由其归一化适应度值 ${F}^{\text{ normr }}\left( {S}_{i}\right)$ 给出，并且 ${r}_{3}$ 是在 $\left\lbrack  {-1,1}\right\rbrack$ 内均匀分布的随机变量。
+
+\subsection{正贪婪选择机制}
+在 RIME 算法中，正贪婪选择机制通过直接的适应度比较确定性地选择更优解。这种方法只接受能提高适应度的更新，确保种群持续改进。然而，这种机制在优化后期表现出固有的收敛到局部最优的趋势。后续 4.2 节提出的随机重启机制有效地缓解了这一局限性。
+\chapter{IRIME算法}
+本研究通过整合信息熵评估策略、拉格朗日插值法和随机重启机制这三个关键策略，对 RIME 算法进行了改进，得到 IRIME 算法。信息熵的引入增强了各智能体之间的信息交换，拉格朗日插值法加快了收敛速度，随机重启机制有助于保持解的多样性。这三种策略的协同组合使 IRIME 在解决特征选择等复杂问题时表现出更强的适应性和优化能力，在收敛速度和解的质量方面均优于原始算法。算法 4 中提供的伪代码详细说明了 IRIME 的实现步骤，同时附图 2 直观展示了该算法的工作流程。
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures//Flowchart/IRIME2flowchart.png}
+    \caption{Flowchart of IRIME}
+    \label{fig:IRL-Flowchart}
+\end{figure}
+\section{信息熵评估策略}
+信息熵评估策略是信息论中用于衡量数据不确定性的基本概念。其实质是通过概率分布量化系统中的不确定性或随机性：熵值越高，系统的不确定性越大；反之，熵值越低，系统的确定性越强。在优化问题中，信息熵可动态评估种群多样性，从而在优化过程中实现探索与利用之间的自适应平衡。该策略如算法 5 所示。
+
+\subsection{信息熵的数学定义}
+设离散随机变量 $\mathcal{X}$ 的概率质量函数为 $P\left( {\mathcal{X} = {x}_{k}}\right)  = 2 \; {p}_{k}$，其中 $k = 1,2,\ldots ,K$。$\mathcal{X}$ 的信息熵 $H\left( \mathcal{X}\right)$ 定义为：
+\begin{equation}
+    H(\mathcal{X}) = -\sum_{k=1}^K p_k \log_2 p_k
+\label{eq:information entropy define}    
+\end{equation}
+其中 log 表示以 2 为底的对数（熵的单位为比特）或以 e 为底的自然对数（熵的单位为奈特）。
+\subsection{评估流程}
+我们设计了一种名为信息熵评估策略的信息熵驱动动态权重分配策略。该策略可以有效提高启发式算法的收敛效率，其具体步骤如下：
+步骤 1：位置概率归一化：对种群中第 $j$ 个 293 维特征的位置值进行归一化，并计算该维度上 294 个个体 $i$ 的变异概率：
+\begin{equation}
+    p_{ij} = \frac{x_{ij}}{\sum_{i=1}^n x_{ij}}
+\label{eq:mutation probability p}
+\end{equation}
+其中 ${x}_{ij}$ 表示第 $i$ 个个体在第 $j$ 维的位置，296 $n$ 是种群大小。
+
+步骤 2：维度熵计算：基于归一化结果，计算第 $j$ 维的信息熵 ${E}_{j}$：
+\begin{equation}
+E_j = \begin{cases} 
+0 & \text{if } \sum_{i=1}^n x_{ij} = 0, \\
+-\frac{1}{\ln n} \sum_{i=1}^n p_{ij} \ln p_{ij} & \text{otherwise.}
+\end{cases}
+\label{eq:information entropy E}
+\end{equation}
+其中 $\ln n$ 是确保 ${E}_{j} \in  \left\lbrack  {0,1}\right\rbrack$ 的归一化因子。
+
+步骤 3：特征权重分配：基于第 $j$ 维的熵 ${E}_{j}$ 计算其权重 ${w}_{j}$，其中熵越低（确定性越高）对应越大的权重。
+
+\begin{equation}
+    w_j = \frac{1 - E_j}{\sum_{k=1}^m (1 - E_k)}
+\label{eq:feature weight}
+\end{equation}
+其中 $m$ 表示特征维度的总数。
+
+步骤 4：更新智能体位置：使用权重 ${w}_{j}$ 调整个体位置，306 生成新的熵优化位置 ${x}_{i}^{\mathrm{{IE}}}$：
+% \begin{equation}
+%     x_i^{\text{IE}} = x_i \odot \boldsymbol{w}
+% \label{eq:new entropy-optimized positions}
+% \end{equation}
+
+其中 $\odot$ 表示逐元素相乘，$\mathbf{w} = {\left\lbrack  {w}_{1},{w}_{2},\ldots ,{w}_{m}\right\rbrack  }^{\top }$ 是权重向量。
+
+\section{随机重启机制}
+传统的重启策略通常在预定的迭代次数后触发，无法及时重启表现不佳的个体。这会干扰表现良好个体的搜索过程，同时让过多表现不佳的解使算法陷入次优解。为克服这一局限，我们提出一种更具随机性的重启策略。当迭代次数超过 ${T}_{\text{ rand }}$ 时，算法重启按适应度值排名靠后的一半个体。这种方法在保留高质量个体的同时确保刷新表现不佳的解，从而保持收敛精度和速度。此外，随机化的迭代阈值显著增强了种群多样性，有效减轻了次优解的负面影响。随机重启策略正式定义如下：
+\begin{equation}
+    T_{\text{rand}} = T \times \sin\left(\pi \cdot \text{rand}\right) 
+\label{eq:rand number T}
+\end{equation}
+\begin{equation}
+    X_i^{\text{inferior}} = \text{lb} \times \text{rand} + (\text{ub} - \text{lb}) \times \text{rand} \times \text{randi}(-1,1)
+\label{eq:X-inferior}
+\end{equation}
+其中 ${T}_{\text{ rand }}$ 表示随机化的迭代阈值，${X}_{i}^{\text{ inferior }}$ 表示第 $i$ 个次优智能体的位置，${lb}$ 和 ${ub}$ 分别表示搜索域的下界和上界。randi $\left( {-1,1}\right)$ 是在 $\left\lbrack  {-1,1}\right\rbrack$ 内均匀分布的随机变量。
+\section{拉格朗日插值法}
+拉格朗日插值法利用预定义的节点构建目标函数的多项式近似。从该插值多项式得到的最优解可作为原函数最优解的近似。随着节点间的间隔减小，多项式的最优解会收敛到原函数的最优解。拉格朗日插值公式表示为：
+
+\begin{equation}
+    P_n(x) = \sum_{j=1}^n y_j \left( \prod_{\substack{i=1 \\ i \neq j}}^{k} \frac{x - x_i}{x_j - x_i} \right)
+\label{eq:Lagrange interpolation}
+\end{equation}
+
+其中 $\left( {{x}_{i},{y}_{i}}\right)$ 表示第 $i$ 个节点的坐标，$n\mathrm{n}$ 对应所选节点的数量 333，$j$ 表示一个与 $i$ 不同的索引。当 $n = 1$ 时，得到的表达式 334 是一个常数函数；当 $n = 2$ 时，得到的多项式是一个线性函数，对于解决复杂问题，它与目标函数的相似度不足；当 $n > 4$ 时，得到的多项式至少是一个三次函数，其最优解需要大量的计算成本和导数信息，不适合用于优化。因此，本文选择 $n = 3$，得到一个多项式。
+\begin{equation}
+    P_3(x) = y_0 \times \frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)} + y_1 \times \frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)} + y_2 \times \frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}
+\label{eq:P3}
+\end{equation}
+设，
+\begin{equation}
+    a_0 = \frac{y_0}{(x_0-x_1)(x_0-x_2)}, \quad a_1 = \frac{y_1}{(x_1-x_0)(x_1-x_2)}, \quad a_2 = \frac{y_2}{(x_2-x_0)(x_2-x_1)}
+\label{eq:a0-a1-a2}
+\end{equation}
+
+${P}_{3}\left( x\right)$ 的最优解可轻松得到为
+\begin{equation}
+    x^* = \frac{a_0(x_1+x_2) + a_1(x_0+x_2) + a_2(x_0+x_1)}{2(a_0+a_1+a_2)}
+\label{eq:X*}
+考虑到优化问题的多维性质，我们对上述公式 342 进行了改进，得到以下表达式：
+\end{equation}
+
+\begin{equation}
+    X_L = \frac{a_0(X_{(r,t)}(t) + Best(t)) + a_1(X_{(r,s)}(t) + Best(t)) + a_2(X_{(r,s)}(t) + X_{(r,t)}(t))}{2(a_0+a_1+a_2)}
+\label{eq:XL}
+\end{equation}
+\begin{equation}
+\left\{
+\begin{aligned}
+a_0 &= \frac{f(X_{r3}(t))}{(X_{r3}(t)-X_{r4}(t))(X_{r3}(t)-\text{Best}(t))} \\
+a_1 &= \frac{f(X_{r4}(t))}{(X_{r4}(t)-X_{r3}(t))(X_{r4}(t)-\text{Best}(t))} \\
+a_2 &= \frac{f(\text{Best}(t))}{(\text{Best}(t)-X_{r3}(t))(\text{Best}(t)-X_{r4}(t))}
+\end{aligned}
+\right.
+\label{eq:a0-a1-a2-2}
+\end{equation}
+其中 ${X}_{L}$ 表示通过拉格朗日插值得到的新位置，${X}_{\left( r3\right) }\left( t\right)$ 和 345 ${X}_{\left( r4\right) }\left( t\right)$ 表示两个随机选择的个体的位置，Best $\left( t\right)$ 表示当前最优个体的位置。该策略的伪代码如算法 6 所示。
+
+\section{时间复杂度分析}
+IRIME 算法的时间复杂度包括：参数定义 O(1)、种群初始化 $\mathrm{O}\left( {\mathrm{n} \cdot  \mathrm{d}}\right)$、信息熵评估 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、随机重启机制 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、拉格朗日插值 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、评估函数计算 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{c}}\right)$ 和种群更新 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$。总体复杂度为 $\mathrm{O}\left( 1\right) \; + \mathrm{O}\left( {\mathrm{n} \cdot  \mathrm{d}}\right)  + \mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{c}}\right)  + 3 \cdot  \mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$，其中 $\mathrm{n}$ 是种群大小，$\mathrm{d}$ 是问题维度，c 是评估函数计算时间。
+\newpage
+
+\chapter{基准函数实验}
+在本节中，我们通过在 CEC 2017 测试集上进行广泛的实验，将所提出的 IRIME 算法与八个先进的竞争对手进行了评估。所有对比算法的参数配置列于表 1。研究涵盖三个关键分析维度：(1) 通过迭代曲线进行收敛行为分析，(2) 通过箱线图可视化进行解的稳定性评估，(3) 使用弗里德曼检验进行非参数统计验证。此外，我们进行了消融实验以评估三种新机制的有效性。所有实验均在严格控制的条件下进行。第 5.1 节详细介绍了软件和硬件配置。
+
+%算法参数设置表1
+\begin{table}[htbp]
+\centering
+\small
+\caption{Parameter configurations for the competing algorithms on benchmark}
+\begin{tabular}{ll}
+\toprule
+\textbf{Algorithms} & \textbf{Other parameters} \\
+\midrule
+IRIME & $w = 5$ \\
+RIME & $w=5$ \\
+LSHADE & $p\_best\_rate = 0.11$; $arc\_rate = 2.6$;\\ & $memory\_size = 6$; $NP\_min$ = 4\\
+BDA & $w\in [0.5,0.9]$\\
+BWO & $W_f \in [0.1,0.5]$\\
+RSA & $\alpha = 0.1$; $\beta = 0.005$\\
+SCA & $C_1 \in [0,2]$; $C_2 \in [0,2]$;$C_3 \in [0,2]$\\
+STOA & $S_a \in [0,2]$; $b = 1$\\
+PDO & $rho = 0.005$; $epsPD = 0.1$\\
+\bottomrule
+\end{tabular}
+\label{tb:CEC-alg-parameters}
+\end{table}
+
+\section{实验设置}
+我们的实验框架采用了严格的评估指标，包括 30 次独立运行的最佳适应度值（Best）、平均性能（Mean）和标准差（Std）。CEC 2017 测试套件的定义和详细信息见表 2。所有实验均在配备英特尔酷睿 i5 - 12600KF 2.50GHz 处理器、16GB 内存、运行 Windows 11（64 位）的工作站上进行，使用 MATLAB R2021a。为保证统计可靠性，每个算法独立运行 30 次，每次运行的终止条件为 10000 次函数评估。为确保公平比较，我们保持一致的实验条件：所有 37 个算法的种群规模固定为 30，并严格遵循其最初公布的参数设置。
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Details of CEC 2017 test suite functions}
+\label{tb:CEC2017-functions}
+\begin{tabular}{>{\ttfamily}l l l r}
+\toprule
+\textbf{ID} & \textbf{Function Equation} & \textbf{Class} & \textbf{Optimum} \\
+\midrule
+F1  & Shifted and Rotated Bent Cigar Function          & Unimodal    & 100   \\
+F3  & Shifted and Rotated Zakhov Function              & Unimodal    & 300   \\
+F4  & Shifted and Rotated Rosenbrock's Function        & Multimodal  & 400      \\
+F5  & Shifted and Rotated Rastrin's Function           & Multimodal  & 500   \\
+F6  & Shifted and Rotated Expanded Scaffer's F6 Function & Multimodal  & 600   \\
+F7  & Shifted and Rotated Lunacek Bi-Rastrigin Function  & Multimodal  & 700   \\
+F8  & Shifted and Rotated Non-Continuous Rastrigin's Function & Multimodal & 800   \\
+F9  & Shifted and Rotated Lévy Function                & Multimodal  & 900   \\
+F10  & Shifted and Rotated Schwefel's Function          & Multimodal  & 1000  \\
+F11 & Hybrid Function 1 (N=3)                          & Hybrid      & 1100  \\
+F12 & Hybrid Function 2 (N=3)                          & Hybrid      & 1200  \\
+F13 & Hybrid Function 3 (N=3)                          & Hybrid      & 1300  \\
+F14 & Hybrid Function 4 (N = 4)                        & Hybrid      & 1400  \\
+F15 & Hybrid Function 5 (N=4)                          & Hybrid      & 1500  \\
+F16 & Hybrid Function 6 (N=6)                          & Hybrid      & 1600  \\
+F17 & Hybrid Function 7 (N = 5)                        & Hybrid      & 1700  \\
+F18 & Hybrid Function 8 (N=5)                          & Hybrid      & 1800      \\
+F19 & Hybrid Function 9 (N=6)                         & Hybrid      & 1900  \\
+F20 & Hybrid Function 10 (N=6)                         & Hybrid      & 2000  \\
+F21 & Composition Function 1 (N=3)                     & Composition & 2100  \\
+F22 & Composition Function 2 (N=3)                     & Composition & 2200  \\
+F23 & Composition Function 3 (N=3)                     & Composition & 2300  \\
+F24 & Composition Function 4 (N=3)                     & Composition & 2400  \\
+F25 & Composition Function 5 (N=3)                     & Composition & 2500  \\
+F26 & Composition Function 6 (N=3)                     & Composition & 2600  \\
+F27 & Composition Function 7 (N=3)                     & Composition & 2700  \\
+F28 & Composition Function 8 (N=3)                     & Composition & 2800  \\
+F29 & Composition Function 9 (N=3)                     & Composition & 2900  \\
+F30 & Composition Function 10 (N=3)                     & Composition & 3000  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{收敛曲线分析}
+根据收敛图（图 3 和图 4），在多个函数（如 F1、F10、F13、F15、F19 和 F22）上，IRIME 在收敛速度和最优适应度值方面优于其他八种算法。半对数图揭示了三种不同的收敛模式：（1）初始阶段快速收敛。对于单峰函数（F1、F5），与 RIME 和 LSHADE 相比，IRIME 在前 20\% 的函数评估次数（FEs）内（例如，F1 在 3000 次 FEs 时）实现了更低的适应度值，显示出卓越的初始收敛速度。（2）中后期持续优化。在多峰函数（F6、F15）中，IRIME 保持单调改进，而竞争对手则出现振荡或过早停滞。在 5000 - 10000 次 FEs 期间，其平均梯度比 PDO 更陡峭。（3）在解的质量和稳定性方面，复合函数（F22、F30）展示了 IRIME 卓越的持续优化能力，在实现更好的最终解方面始终优于竞争算法。此外，对比实验（表 3 和表 4）的详细数据表明，IRIME 在三个关键指标：最佳适应度（Best）、平均适应度（Mean）和标准差（Std）上始终优于 RIME、LSHADE、BDA、BWO、RSA、SCA、STOA 和 PDO。例如，在 30 维的 F1 函数上，IRIME 实现了 ${3.95} \times  {10}^{2}$ 的最佳适应度值，远低于其他算法获得的值。同样，对于 50 维的 F4 函数，IRIME 达到了 ${5.14} \times  {10}^{2}$ 的最佳值，再次证明了其卓越的优化能力。值得注意的是，IRIME 在大多数基准函数上保持始终较低的平均值，这不仅表明其平均性能更好，而且解的稳定性更高。其较小的标准差进一步支持了这一结论，表明结果的离散度显著降低，从而提高了算法的可靠性。
+% 30维曲线图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图 (F1, F2, F3)
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/6.pdf}
+    \end{subfigure}
+    % 第二行子图 (F6, F11, F16)
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/13.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/15.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/18.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/19.pdf}
+    \end{subfigure}
+    % 第四行（剩余3个子图，示例用F4,F5,F7）
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/20.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/22.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim30/30.pdf}
+    \end{subfigure}
+    % 插入单独图例图片（宽度建议设为子图宽度的2/3）
+    \vspace{0.5cm}
+    \includegraphics[width=0.5\textwidth]{figures/Convergence/dim30/legend.pdf}
+    \caption{Convergence curves on 12 benchmark functions (30D).}
+    \label{fig:curve-dim30}
+\end{figure}
+
+% 50维曲线图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图 (F1, F2, F3)
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/6.pdf}
+    \end{subfigure}
+    % 第二行子图 (F6, F11, F16)
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/13.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/15.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/18.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/19.pdf}
+    \end{subfigure}
+    % 第四行（剩余3个子图，示例用F4,F5,F7）
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/20.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/22.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/Convergence/dim50/30.pdf}
+    \end{subfigure}
+    % 插入单独图例图片（宽度建议设为子图宽度的2/3）
+    \vspace{0.5cm}
+    \includegraphics[width=0.5\textwidth]{figures/Convergence/dim30/legend.pdf}
+    \caption{Convergence curves on 12 benchmark functions (50D).}
+    \label{fig:curve-dim50}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/Ftest/Ftest-dim30-dim50.pdf} % 调整宽度为适合您文档的值
+    \caption{The Friedman test result of nine algorithms (30D).}
+    \label{fig:Ftest-dim30-dim50}
+\end{figure}
+\section{箱线图分析}
+图 6 和图 7 分别展示了 30 维和 50 维的箱线图。在大多数基准函数中，IRIME 的箱线图始终显示出较低的中位数和较窄的四分位距，表明其性能更好且更稳定。例如，在 F1 函数中，IRIME 的中位数结果远低于 RIME 和 LSHADE 等竞争算法，这表明 IRIME 能更稳定地收敛到更优解。此外，其较小的四分位距表明结果的离散度较低，反映出高稳定性。在高维的 F4 函数中，IRIME 也表现出色，其箱线图的整体位置低于大多数其他算法，进一步证明了其在复杂高维环境中进行高效优化的能力。此外，在不同的基准函数中，IRIME 的箱线图始终表现出类似的优势特征，而一些算法（如 BDA 和 RIME）在多个函数中表现不佳，表现为中位数较高或离散度较大。总体而言，IRIME 在 CEC 2017 基准测试集上表现出强大的优化性能和稳健的稳定性，在低维和高维情况下均表现出色。这些结果凸显了其与其他竞争算法相比的明显优势。
+
+% 30维箱型图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/6.pdf}
+    \end{subfigure}
+    % 第二行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/13.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/15.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/18.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/19.pdf}
+    \end{subfigure}
+    % 第四行
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/20.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/22.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim30/30.pdf}
+    \end{subfigure}
+    \caption{Box diagram on 12 benchmark functions (30D).}
+    \label{fig:box-dim30}
+\end{figure}
+% 50维箱型图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/6.pdf}
+    \end{subfigure}
+    % 第二行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/13.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/15.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/18.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/19.pdf}
+    \end{subfigure}
+    % 第四行
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/20.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/22.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/box/dim50/30.pdf}
+    \end{subfigure}
+    \caption{Box diagram on 12 benchmark functions (50D).}
+    \label{fig:box-dim50}
+\end{figure}
+
+\section{弗里德曼统计检验}
+CEC 2017 的弗里德曼统计结果表明，所提出的算法具有明显优势。在 30 维测试中，IRIME 在大多数函数（如 F1、F3、F5）上获得了顶级排名，最终总排名为 1.31，如图 5 所示，显著优于 BDA（排名：9.00）等算法。同样，在 50 维测试中，它在多个函数（如 F1、F4、F11）上表现出色，总排名为 1.21，超过了大多数竞争对手。值得注意的是，IRIME 在不同维度上始终保持高性能，而像 BDA 这样的算法在大多数情况下排名较差。这些结果强调了我们的算法在 CEC 2017 测试集上具有卓越的优化能力，能够提供更稳定、更准确的解，并具有显著的性能优势。
+
+% Table generated by Excel2LaTeX from sheet 'dim=30'
+\begin{table}[htbp]
+  \centering
+  \caption{Comparative results of nine algorithms on CEC 2017 functions (30D).}
+    \setlength{\tabcolsep}{3pt} % 减少列间距
+    \tiny
+    \begin{tabular}{ccccccccccc}
+    \toprule    
+    Function & Metric & IRIME & RIME  & LSHADE & BDA   & BWO   & RSA   & SCA   & STOA  & PDO \\
+    \midrule
+    \multirow{3}[0]{*}{F1} & best  & \textbf{3.9536E+02} & 5.2647E+06 & 5.4242E+07 & 8.3562E+10 & 3.7651E+10 & 4.2848E+10 & 1.7636E+10 & 4.5851E+09 & 3.7472E+10 \\
+          & mean  & \textbf{1.2630E+04} & 1.1814E+07 & 1.4184E+08 & 8.3562E+10 & 5.3274E+10 & 5.1575E+10 & 2.1336E+10 & 9.9804E+09 & 5.1169E+10 \\
+          & std   & \textbf{1.8998E+04} & 8.0266E+06 & 5.1258E+07 & 1.2458E+06 & 6.8511E+09 & 5.6243E+09 & 2.5245E+09 & 4.8163E+09 & 8.7213E+09 \\
+    \multirow{3}[0]{*}{F3} & best  & \textbf{8.2299E+03} & 3.6361E+04 & 2.6980E+04 & 2.0708E+08 & 8.1210E+04 & 7.8591E+04 & 6.6386E+04 & 5.3102E+04 & 7.2520E+04 \\
+          & mean  & \textbf{2.1615E+04} & 8.3219E+04 & 5.3301E+04 & 2.0711E+08 & 8.5214E+04 & 8.4359E+04 & 9.6629E+04 & 8.6975E+04 & 9.3874E+04 \\
+          & std   & 9.4119E+03 & 2.5552E+04 & 3.0814E+04 & 7.1537E+04 & \textbf{3.5034E+03} & 4.3231E+03 & 1.7633E+04 & 1.6677E+04 & 9.5676E+03 \\
+    \multirow{3}[0]{*}{F4} & best  & 4.7010E+02 & \textbf{4.5622E+02} & 5.1476E+02 & 3.3625E+04 & 8.5256E+03 & 7.0539E+03 & 1.9858E+03 & 7.1457E+02 & 1.2573E+04 \\
+          & mean  & \textbf{5.1668E+02} & 5.2012E+02 & 5.3046E+02 & 3.3626E+04 & 1.3771E+04 & 1.2903E+04 & 3.4697E+03 & 1.0213E+03 & 1.7112E+04 \\
+          & std   & 4.1599E+01 & 2.8219E+01 & 1.2024E+01 & \textbf{3.0273E+00} & 2.3685E+03 & 4.6584E+03 & 1.5641E+03 & 2.0769E+02 & 3.2391E+03 \\
+    \multirow{3}[0]{*}{F5} & best  & \textbf{5.3285E+02} & 5.8377E+02 & 6.6955E+02 & 1.0973E+03 & 9.0328E+02 & 8.5311E+02 & 7.8762E+02 & 6.8542E+02 & 8.2716E+02 \\
+          & mean  & \textbf{5.9967E+02} & 6.4155E+02 & 6.9952E+02 & 1.0974E+03 & 9.4670E+02 & 9.3248E+02 & 8.2124E+02 & 7.3588E+02 & 8.8312E+02 \\
+          & std   & 3.6243E+01 & 3.7195E+01 & 2.0194E+01 & \textbf{1.9435E-01} & 1.8460E+01 & 3.5877E+01 & 1.9560E+01 & 3.1438E+01 & 4.8352E+01 \\
+    \multirow{3}[0]{*}{F6} & best  & \textbf{6.0493E+02} & 6.0643E+02 & 6.0761E+02 & 7.2477E+02 & 6.8612E+02 & 6.8537E+02 & 6.5310E+02 & 6.3957E+02 & 6.7747E+02 \\
+          & mean  & 6.1517E+02 & 6.1974E+02 & \textbf{6.1173E+02} & 7.2479E+02 & 6.9374E+02 & 6.9430E+02 & 6.6231E+02 & 6.4952E+02 & 6.9153E+02 \\
+          & std   & 7.8417E+00 & 1.0925E+01 & 2.5890E+00 & \textbf{6.6924E-02} & 4.9400E+00 & 6.0931E+00 & 7.3655E+00 & 6.7059E+00 & 9.4765E+00 \\
+    \multirow{3}[0]{*}{F7} & best  & \textbf{7.8787E+02} & 8.4285E+02 & 9.2850E+02 & 1.5434E+03 & 1.3857E+03 & 1.2815E+03 & 1.1524E+03 & 1.0123E+03 & 1.2566E+03 \\
+          & mean  & \textbf{8.5071E+02} & 8.9660E+02 & 9.5193E+02 & 1.5443E+03 & 1.4315E+03 & 1.3797E+03 & 1.2656E+03 & 1.1486E+03 & 1.3793E+03 \\
+          & std   & 2.5417E+01 & 4.9745E+01 & 1.4056E+01 & \textbf{1.5374E+00} & 2.8622E+01 & 4.2492E+01 & 8.1489E+01 & 7.0323E+01 & 9.7185E+01 \\
+    \multirow{3}[0]{*}{F8} & best  & \textbf{8.4677E+02} & 8.9139E+02 & 9.6323E+02 & 1.2873E+03 & 1.1246E+03 & 1.1000E+03 & 1.0598E+03 & 9.3904E+02 & 1.0749E+03 \\
+          & mean  & \textbf{8.8877E+02} & 9.1929E+02 & 1.0021E+03 & 1.2873E+03 & 1.1437E+03 & 1.1420E+03 & 1.0979E+03 & 9.8960E+02 & 1.1274E+03 \\
+          & std   & 2.9069E+01 & 2.8160E+01 & 1.6297E+01 & \textbf{0.0000E+00} & 1.2953E+01 & 2.8423E+01 & 2.1894E+01 & 2.8649E+01 & 2.2616E+01 \\
+    \multirow{3}[0]{*}{F9} & best  & \textbf{1.0263E+03} & 2.3289E+03 & 1.1155E+03 & 1.4602E+04 & 1.0199E+04 & 1.0589E+04 & 5.5744E+03 & 3.5410E+03 & 7.0386E+03 \\
+          & mean  & 1.8441E+03 & 3.3495E+03 & \textbf{1.2633E+03} & 1.5113E+04 & 1.1876E+04 & 1.1840E+04 & 8.6730E+03 & 6.3974E+03 & 9.0529E+03 \\
+          & std   & 5.2798E+02 & 8.3314E+02 & \textbf{1.0928E+02} & 4.9105E+02 & 8.4573E+02 & 8.0193E+02 & 3.6398E+03 & 1.7711E+03 & 1.5880E+03 \\
+    \multirow{3}[0]{*}{F10} & best  & 4.0571E+03 & \textbf{3.5667E+03} & 6.7934E+03 & 1.0152E+04 & 8.1524E+03 & 7.8404E+03 & 8.2932E+03 & 7.0094E+03 & 7.0747E+03 \\
+          & mean  & \textbf{4.9052E+03} & 5.0016E+03 & 7.6695E+03 & 1.0152E+04 & 8.8377E+03 & 8.5623E+03 & 9.0177E+03 & 7.8949E+03 & 8.4293E+03 \\
+          & std   & 5.0523E+02 & 8.1336E+02 & 5.7198E+02 & \textbf{1.9174E-12} & 3.3010E+02 & 4.0894E+02 & 3.5919E+02 & 4.9143E+02 & 6.6900E+02 \\
+    \multirow{3}[0]{*}{F11} & best  & \textbf{1.1582E+03} & 1.3192E+03 & 1.3250E+03 & 6.0091E+08 & 7.0103E+03 & 7.9034E+03 & 3.3435E+03 & 1.8927E+03 & 8.4164E+03 \\
+          & mean  & \textbf{1.2125E+03} & 1.4018E+03 & 1.4180E+03 & 6.0091E+08 & 8.5338E+03 & 1.2531E+04 & 4.5446E+03 & 3.1640E+03 & 1.5386E+04 \\
+          & std   & 4.5204E+01 & 8.5198E+01 & 4.3547E+01 & \textbf{0.0000E+00} & 1.0129E+03 & 4.7695E+03 & 1.0827E+03 & 1.0173E+03 & 5.5635E+03 \\
+    \multirow{3}[0]{*}{F12} & best  & \textbf{4.7278E+05} & 5.4646E+06 & 7.5373E+06 & 2.8660E+10 & 8.3002E+09 & 6.9339E+09 & 2.4024E+09 & 2.1009E+08 & 5.6626E+09 \\
+          & mean  & \textbf{2.6792E+06} & 1.8208E+07 & 1.3654E+07 & 2.8660E+10 & 1.2638E+10 & 1.6219E+10 & 2.9259E+09 & 3.9737E+08 & 1.3528E+10 \\
+          & std   & 2.2870E+06 & 1.1207E+07 & 4.9606E+06 & \textbf{0.0000E+00} & 2.1516E+09 & 4.3572E+09 & 4.3408E+08 & 2.4760E+08 & 3.2527E+09 \\
+    \multirow{3}[0]{*}{F13} & best  & \textbf{2.3495E+03} & 4.4526E+04 & 3.8525E+05 & 4.2961E+10 & 6.0762E+09 & 4.9334E+09 & 5.1236E+08 & 1.6425E+07 & 8.7037E+09 \\
+          & mean  & \textbf{1.5537E+04} & 3.6796E+05 & 8.9004E+05 & 4.2961E+10 & 8.8544E+09 & 1.1954E+10 & 1.5684E+09 & 1.7393E+08 & 1.2576E+10 \\
+          & std   & 1.4965E+04 & 5.1697E+05 & 4.3333E+05 & \textbf{3.9480E+00} & 2.3263E+09 & 4.1107E+09 & 7.8094E+08 & 1.3380E+08 & 1.9560E+09 \\
+    \multirow{3}[0]{*}{F14} & best  & 5.5721E+03 & 5.4723E+04 & \textbf{2.2293E+03} & 1.2163E+09 & 1.5717E+06 & 1.6764E+06 & 2.1133E+05 & 1.0611E+05 & 2.2498E+06 \\
+          & mean  & 6.2927E+04 & 2.5410E+05 & \textbf{3.5509E+03} & 1.2163E+09 & 5.3556E+06 & 2.2099E+07 & 1.4880E+06 & 8.5560E+05 & 6.7811E+06 \\
+          & std   & 4.9805E+04 & 1.7104E+05 & 1.6444E+03 & \textbf{2.9930E-01} & 3.9970E+06 & 2.2221E+07 & 1.6016E+06 & 1.0907E+06 & 4.6329E+06 \\
+    \multirow{3}[0]{*}{F15} & best  & \textbf{1.5589E+03} & 3.9840E+03 & 4.2351E+04 & 6.1107E+09 & 8.1003E+07 & 2.8528E+08 & 8.9639E+06 & 3.4223E+05 & 5.5119E+07 \\
+          & mean  & \textbf{2.5856E+03} & 3.2942E+04 & 7.6706E+04 & 6.1107E+09 & 3.9529E+08 & 8.2459E+08 & 6.2716E+07 & 4.1439E+07 & 4.9713E+08 \\
+          & std   & 1.3341E+03 & 2.4738E+04 & 3.5047E+04 & \textbf{4.6460E-01} & 1.8894E+08 & 6.1038E+08 & 6.6251E+07 & 7.0899E+07 & 7.4038E+08 \\
+    \multirow{3}[0]{*}{F16} & best  & \textbf{2.2792E+03} & 2.3688E+03 & 2.9531E+03 & 2.7095E+04 & 4.8615E+03 & 5.2683E+03 & 4.0189E+03 & 2.7343E+03 & 5.0818E+03 \\
+          & mean  & \textbf{2.6996E+03} & 2.9473E+03 & 3.3655E+03 & 2.7099E+04 & 5.7998E+03 & 7.3134E+03 & 4.2636E+03 & 3.5017E+03 & 5.8756E+03 \\
+          & std   & 2.7782E+02 & 3.0953E+02 & 2.9499E+02 & \textbf{8.3447E+00} & 4.6480E+02 & 1.8497E+03 & 2.1955E+02 & 5.3859E+02 & 5.6978E+02 \\
+    \multirow{3}[0]{*}{F17} & best  & \textbf{1.9059E+03} & 1.9943E+03 & 2.1478E+03 & 2.5735E+05 & 3.3809E+03 & 3.3196E+03 & 2.7286E+03 & 2.0041E+03 & 3.2055E+03 \\
+          & mean  & \textbf{2.2705E+03} & 2.3762E+03 & 2.2743E+03 & 2.5735E+05 & 4.4576E+03 & 7.4361E+03 & 2.9306E+03 & 2.5984E+03 & 3.9384E+03 \\
+          & std   & 2.5405E+02 & 2.2414E+02 & 9.7950E+01 & \textbf{1.1148E-01} & 1.0298E+03 & 7.1610E+03 & 1.5843E+02 & 3.6943E+02 & 8.8913E+02 \\
+    \multirow{3}[0]{*}{F18} & best  & 7.3706E+04 & 2.4634E+05 & \textbf{4.2999E+04} & 4.5513E+09 & 2.2342E+07 & 2.2292E+07 & 2.4640E+06 & 5.9727E+05 & 7.4076E+06 \\
+          & mean  & 3.5254E+05 & 1.4304E+06 & \textbf{1.6788E+05} & 4.5513E+09 & 5.7045E+07 & 3.9039E+07 & 1.2933E+07 & 7.7296E+06 & 8.0185E+07 \\
+          & std   & 2.7251E+05 & 1.0249E+06 & 1.5027E+05 & \textbf{1.9006E-01} & 3.0557E+07 & 1.7305E+07 & 6.9026E+06 & 8.5404E+06 & 3.3083E+07 \\
+    \multirow{3}[0]{*}{F19} & best  & \textbf{2.0139E+03} & 5.6696E+03 & 2.7170E+04 & 6.1916E+09 & 2.9951E+08 & 5.4513E+07 & 2.2061E+07 & 1.3964E+06 & 1.5606E+08 \\
+          & mean  & \textbf{5.5603E+03} & 2.3595E+04 & 1.5142E+05 & 6.1916E+09 & 6.8647E+08 & 1.0441E+09 & 8.5210E+07 & 2.3373E+07 & 9.8916E+08 \\
+          & std   & 4.3718E+03 & 1.9609E+04 & 1.4250E+05 & \textbf{6.5380E-03} & 2.5981E+08 & 7.8274E+08 & 3.6661E+07 & 3.7532E+07 & 7.6626E+08 \\
+    \multirow{3}[0]{*}{F20} & best  & \textbf{2.0928E+03} & 2.1530E+03 & 2.3982E+03 & 5.3274E+03 & 2.7345E+03 & 2.7641E+03 & 2.8366E+03 & 2.4092E+03 & 2.8669E+03 \\
+          & mean  & \textbf{2.3991E+03} & 2.4809E+03 & 2.6705E+03 & 5.3275E+03 & 3.0333E+03 & 3.0854E+03 & 3.0902E+03 & 2.6749E+03 & 3.1003E+03 \\
+          & std   & 1.7677E+02 & 2.7066E+02 & 1.4397E+02 & \textbf{8.7280E-02} & 1.6374E+02 & 1.4282E+02 & 1.6193E+02 & 2.2667E+02 & 1.5793E+02 \\
+    \multirow{3}[0]{*}{F21} & best  & \textbf{2.3704E+03} & 2.3847E+03 & 2.4806E+03 & 3.2013E+03 & 2.6696E+03 & 2.6626E+03 & 2.5719E+03 & 2.4608E+03 & 2.6607E+03 \\
+          & mean  & \textbf{2.4030E+03} & 2.4283E+03 & 2.5001E+03 & 3.2013E+03 & 2.7484E+03 & 2.7502E+03 & 2.6080E+03 & 2.5164E+03 & 2.7550E+03 \\
+          & std   & 2.2668E+01 & 2.5260E+01 & 1.3602E+01 & \textbf{1.8691E-01} & 4.1840E+01 & 6.0794E+01 & 2.4541E+01 & 4.7112E+01 & 6.8934E+01 \\
+    \multirow{3}[0]{*}{F22} & best  & \textbf{2.3009E+03} & 2.3177E+03 & 2.3812E+03 & 1.2789E+04 & 8.0190E+03 & 7.9175E+03 & 6.1866E+03 & 7.6339E+03 & 8.6573E+03 \\
+          & mean  & 3.6567E+03 & 5.4805E+03 & \textbf{2.4620E+03} & 1.2791E+04 & 9.0084E+03 & 9.2024E+03 & 9.6361E+03 & 8.9770E+03 & 9.3485E+03 \\
+          & std   & 2.2711E+03 & 1.8543E+03 & 6.6110E+01 & \textbf{3.9844E+00} & 5.6438E+02 & 7.4884E+02 & 1.4420E+03 & 8.2169E+02 & 4.5780E+02 \\
+    \multirow{3}[0]{*}{F23} & best  & \textbf{2.7246E+03} & 2.7375E+03 & 2.8165E+03 & 7.5955E+03 & 3.3117E+03 & 3.3101E+03 & 3.0542E+03 & 2.8866E+03 & 3.2617E+03 \\
+          & mean  & \textbf{2.7835E+03} & 2.8074E+03 & 2.8554E+03 & 7.5961E+03 & 3.3930E+03 & 3.4945E+03 & 3.1276E+03 & 2.9209E+03 & 3.4440E+03 \\
+          & std   & 4.8066E+01 & 3.6137E+01 & 2.0531E+01 & \textbf{1.8148E+00} & 4.0506E+01 & 1.2365E+02 & 5.6796E+01 & 2.2123E+01 & 1.0477E+02 \\
+    \multirow{3}[0]{*}{F24} & best  & \textbf{2.9100E+03} & 2.9113E+03 & 3.0001E+03 & 5.1709E+03 & 3.4920E+03 & 3.3682E+03 & 3.2090E+03 & 2.9751E+03 & 3.4606E+03 \\
+          & mean  & 2.9598E+03 & \textbf{2.9525E+03} & 3.0146E+03 & 5.1709E+03 & 3.6051E+03 & 3.4941E+03 & 3.2927E+03 & 3.0640E+03 & 3.5859E+03 \\
+          & std   & 4.2834E+01 & 3.3667E+01 & 1.1914E+01 & \textbf{0.0000E+00} & 7.9428E+01 & 2.0480E+02 & 5.2799E+01 & 4.6949E+01 & 6.9128E+01 \\
+    \multirow{3}[0]{*}{F25} & best  & \textbf{2.8842E+03} & 2.8951E+03 & 2.9153E+03 & 8.8568E+03 & 3.9943E+03 & 3.9952E+03 & 3.3416E+03 & 3.1052E+03 & 4.4591E+03 \\
+          & mean  & \textbf{2.9061E+03} & 2.9244E+03 & 2.9291E+03 & 8.8568E+03 & 4.5475E+03 & 5.1617E+03 & 3.6886E+03 & 3.3605E+03 & 5.4060E+03 \\
+          & std   & 1.6977E+01 & 1.8229E+01 & 8.0990E+00 & \textbf{0.0000E+00} & 2.1479E+02 & 9.9781E+02 & 2.3845E+02 & 2.4501E+02 & 7.2065E+02 \\
+    \multirow{3}[0]{*}{F26} & best  & \textbf{2.8017E+03} & 3.0893E+03 & 5.2748E+03 & 1.5815E+04 & 9.8403E+03 & 9.7578E+03 & 7.3179E+03 & 5.4749E+03 & 7.1594E+03 \\
+          & mean  & \textbf{4.2919E+03} & 5.0153E+03 & 5.5874E+03 & 1.5815E+04 & 1.1059E+04 & 1.0520E+04 & 8.0902E+03 & 6.2272E+03 & 1.0748E+04 \\
+          & std   & 1.0448E+03 & 7.3567E+02 & 1.6011E+02 & \textbf{1.9174E-12} & 7.8573E+02 & 4.9577E+02 & 3.9558E+02 & 4.6649E+02 & 1.9518E+03 \\
+    \multirow{3}[0]{*}{F27} & best  & 3.2236E+03 & 3.2269E+03 & \textbf{3.2128E+03} & 1.0124E+04 & 3.8948E+03 & 3.7646E+03 & 3.4309E+03 & 3.2965E+03 & 3.6041E+03 \\
+          & mean  & 3.2507E+03 & 3.2463E+03 & \textbf{3.2366E+03} & 1.0124E+04 & 4.2493E+03 & 4.3080E+03 & 3.5929E+03 & 3.3803E+03 & 4.1175E+03 \\
+          & std   & 1.9801E+01 & 1.1264E+01 & 1.0826E+01 & \textbf{1.9174E-12} & 1.7516E+02 & 6.0691E+02 & 8.0663E+01 & 6.9580E+01 & 2.1782E+02 \\
+    \multirow{3}[0]{*}{F28} & best  & \textbf{3.2333E+03} & 3.2531E+03 & 3.2818E+03 & 9.9895E+03 & 5.6787E+03 & 5.8269E+03 & 4.0007E+03 & 3.5385E+03 & 5.7192E+03 \\
+          & mean  & \textbf{3.2653E+03} & 3.3172E+03 & 3.3242E+03 & 9.9895E+03 & 6.6437E+03 & 6.6161E+03 & 4.6967E+03 & 4.6587E+03 & 6.7776E+03 \\
+          & std   & 1.4174E+01 & 4.8308E+01 & 3.2794E+01 & \textbf{0.0000E+00} & 4.2020E+02 & 5.1748E+02 & 4.4483E+02 & 1.4147E+03 & 6.7116E+02 \\
+    \multirow{3}[0]{*}{F29} & best  & \textbf{3.6238E+03} & 3.7632E+03 & 3.9988E+03 & 2.2099E+05 & 6.9274E+03 & 6.2300E+03 & 5.0767E+03 & 4.3419E+03 & 5.4465E+03 \\
+          & mean  & \textbf{4.0407E+03} & 4.0532E+03 & 4.1499E+03 & 2.2100E+05 & 8.1166E+03 & 7.6902E+03 & 5.3819E+03 & 5.0790E+03 & 7.1934E+03 \\
+          & std   & 2.3446E+02 & 2.3800E+02 & 1.2657E+02 & \textbf{9.4501E+00} & 6.8540E+02 & 1.5040E+03 & 3.8547E+02 & 5.2060E+02 & 1.1989E+03 \\
+    \multirow{3}[0]{*}{F30} & best  & \textbf{1.0054E+04} & 3.4067E+05 & 2.9485E+05 & 1.0020E+10 & 5.1896E+08 & 1.1598E+09 & 4.8824E+07 & 7.8161E+06 & 3.2087E+08 \\
+          & mean  & \textbf{3.5215E+04} & 1.5534E+06 & 1.1659E+06 & 1.0020E+10 & 1.3001E+09 & 3.8512E+09 & 2.4143E+08 & 7.2167E+07 & 1.8144E+09 \\
+          & std   & 2.3724E+04 & 9.5886E+05 & 5.9558E+05 & 1.8505E+04 & 7.0935E+08 & 1.6008E+09 & 9.0752E+07 & 4.6639E+07 & 1.0239E+09 \\
+    \bottomrule      
+    \end{tabular}%
+    \label{tb:Wilcoxon-dim30}%
+\end{table}%
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{table}[htbp]
+  \centering
+  \caption{Comparative results of nine algorithms on CEC 2017 functions (50D).}
+    \setlength{\tabcolsep}{3pt} % 减少列间距
+    \tiny
+    \begin{tabular}{ccccccccccc}
+    \toprule    
+    Function & Metric & IRIME & RIME  & LSHADE & BDA   & BWO   & RSA   & SCA   & STOA  & PDO \\
+    \midrule
+    \multirow{3}[0]{*}{F1} & best  & \textbf{1.0691E+06} & 7.0209E+07 & 1.7939E+09 & 1.3310E+11 & 9.3568E+10 & 9.3426E+10 & 6.6574E+10 & 3.3902E+10 & 8.3500E+10 \\
+          & mean  & \textbf{3.7896E+06} & 1.3534E+08 & 3.0660E+09 & 1.3312E+11 & 1.0469E+11 & 1.0258E+11 & 7.2896E+10 & 4.5260E+10 & 9.8016E+10 \\
+          & std   & \textbf{2.5627E+06} & 4.1820E+07 & 7.9391E+08 & 3.5421E+07 & 5.2054E+09 & 5.5773E+09 & 4.2155E+09 & 1.1854E+10 & 1.1316E+10 \\
+    \multirow{3}[0]{*}{F3} & best  & \textbf{8.1504E+04} & 1.5415E+05 & 1.5463E+05 & 1.1337E+14 & 1.9621E+05 & 1.5080E+05 & 1.2626E+05 & 1.7230E+05 & 1.5875E+05 \\
+          & mean  & \textbf{1.1528E+05} & 2.3760E+05 & 2.3649E+05 & 1.1402E+14 & 2.6586E+05 & 1.7791E+05 & 2.4532E+05 & 2.4771E+05 & 3.3167E+05 \\
+          & std   & 2.7783E+04 & 6.5187E+04 & 3.8693E+04 & 8.1588E+11 & 5.4486E+04 & \textbf{1.5015E+04} & 5.7273E+04 & 6.9239E+04 & 1.1482E+05 \\
+    \multirow{3}[0]{*}{F4} & best  & \textbf{5.1351E+02} & 6.0919E+02 & 9.6473E+02 & 5.5485E+04 & 3.0396E+04 & 2.2080E+04 & 1.0766E+04 & 2.9997E+03 & 1.9107E+04 \\
+          & mean  & \textbf{6.0503E+02} & 6.9111E+02 & 1.0271E+03 & 5.5490E+04 & 3.5960E+04 & 2.9995E+04 & 1.6409E+04 & 5.6863E+03 & 3.1651E+04 \\
+          & std   & 5.4918E+01 & 7.2518E+01 & 4.9687E+01 & \textbf{9.7642E+00} & 2.9024E+03 & 5.4016E+03 & 3.1440E+03 & 2.9058E+03 & 9.1791E+03 \\
+    \multirow{3}[0]{*}{F5} & best  & \textbf{6.5057E+02} & 7.3356E+02 & 8.9618E+02 & 1.3176E+03 & 1.1823E+03 & 1.1367E+03 & 1.0897E+03 & 8.9976E+02 & 1.0527E+03 \\
+          & mean  & \textbf{7.1858E+02} & 8.1232E+02 & 9.5481E+02 & 1.3179E+03 & 1.2133E+03 & 1.1731E+03 & 1.1299E+03 & 9.9871E+02 & 1.1474E+03 \\
+          & std   & 4.1558E+01 & 6.1879E+01 & 2.8539E+01 & \textbf{3.2010E-01} & 1.7411E+01 & 2.4492E+01 & 2.7689E+01 & 7.0792E+01 & 8.2469E+01 \\
+    \multirow{3}[0]{*}{F6} & best  & 6.2316E+02 & 6.2863E+02 & \textbf{6.2215E+02} & 7.2688E+02 & 6.9387E+02 & 7.0183E+02 & 6.7925E+02 & 6.5456E+02 & 6.9557E+02 \\
+          & mean  & 6.3082E+02 & 6.4062E+02 & \textbf{6.2792E+02} & 7.2709E+02 & 7.0422E+02 & 7.0601E+02 & 6.8967E+02 & 6.7221E+02 & 7.0374E+02 \\
+          & std   & 4.2653E+00 & 8.1752E+00 & 3.2057E+00 & \textbf{2.5284E-01} & 4.0892E+00 & 3.9490E+00 & 8.2910E+00 & 1.1823E+01 & 1.0732E+01 \\
+    \multirow{3}[0]{*}{F7} & best  & \textbf{9.4624E+02} & 1.1191E+03 & 1.2373E+03 & 2.0428E+03 & 1.9632E+03 & 1.8690E+03 & 1.7714E+03 & 1.5362E+03 & 1.7645E+03 \\
+          & mean  & \textbf{1.0398E+03} & 1.2167E+03 & 1.2598E+03 & 2.0502E+03 & 2.0188E+03 & 1.9536E+03 & 1.9835E+03 & 1.6690E+03 & 1.9163E+03 \\
+          & std   & 5.0633E+01 & 6.6627E+01 & 2.2252E+01 & \textbf{8.2925E+00} & 2.9282E+01 & 4.6852E+01 & 1.1934E+02 & 8.3999E+01 & 7.9946E+01 \\
+    \multirow{3}[0]{*}{F8} & best  & \textbf{9.6623E+02} & 1.0128E+03 & 1.1858E+03 & 1.6562E+03 & 1.5027E+03 & 1.4783E+03 & 1.4188E+03 & 1.2738E+03 & 1.4291E+03 \\
+          & mean  & \textbf{1.0316E+03} & 1.1042E+03 & 1.2347E+03 & 1.6568E+03 & 1.5163E+03 & 1.5228E+03 & 1.4621E+03 & 1.3219E+03 & 1.5099E+03 \\
+          & std   & 3.2404E+01 & 5.1094E+01 & 2.1155E+01 & \textbf{8.4976E-01} & 1.5220E+01 & 2.4091E+01 & 3.5070E+01 & 4.4158E+01 & 6.3472E+01 \\
+    \multirow{3}[0]{*}{F9} & best  & 5.2689E+03 & 6.0983E+03 & \textbf{3.7263E+03} & 3.0368E+04 & 3.6990E+04 & 3.3792E+04 & 2.5850E+04 & 2.0224E+04 & 2.3112E+04 \\
+          & mean  & 8.7957E+03 & 1.3850E+04 & \textbf{5.4243E+03} & 3.1597E+04 & 4.0093E+04 & 3.9597E+04 & 3.4740E+04 & 3.0892E+04 & 2.8752E+04 \\
+          & std   & 2.5553E+03 & 5.7197E+03 & 1.3597E+03 & \textbf{8.2133E+02} & 2.0289E+03 & 3.5045E+03 & 4.3759E+03 & 1.0958E+04 & 3.5625E+03 \\
+    \multirow{3}[0]{*}{F10} & best  & \textbf{5.9107E+03} & 7.6418E+03 & 1.2669E+04 & 2.0046E+04 & 1.4858E+04 & 1.4041E+04 & 1.4627E+04 & 1.3190E+04 & 1.2910E+04 \\
+          & mean  & \textbf{7.4497E+03} & 8.9524E+03 & 1.4572E+04 & 2.0053E+04 & 1.5285E+04 & 1.5218E+04 & 1.5438E+04 & 1.4032E+04 & 1.4436E+04 \\
+          & std   & 1.1693E+03 & 1.3600E+03 & 8.6711E+02 & \textbf{7.3582E+00} & 3.0659E+02 & 6.3202E+02 & 4.7278E+02 & 5.5553E+02 & 1.0822E+03 \\
+    \multirow{3}[0]{*}{F11} & best  & \textbf{1.2776E+03} & 1.6181E+03 & 3.6719E+03 & 6.2860E+05 & 1.7539E+04 & 1.6004E+04 & 1.0134E+04 & 6.0625E+03 & 2.0892E+04 \\
+          & mean  & \textbf{1.3670E+03} & 1.8562E+03 & 4.7877E+03 & 6.2860E+05 & 2.3298E+04 & 2.2101E+04 & 1.4626E+04 & 9.2187E+03 & 2.3647E+04 \\
+          & std   & 6.2215E+01 & 2.2582E+02 & 8.0507E+02 & \textbf{3.2321E+00} & 2.2785E+03 & 2.8293E+03 & 3.2483E+03 & 2.1825E+03 & 2.2617E+03 \\
+    \multirow{3}[0]{*}{F12} & best  & \textbf{4.1624E+06} & 7.1606E+07 & 4.4398E+08 & 1.4022E+11 & 5.4394E+10 & 6.5970E+10 & 1.6229E+10 & 2.7788E+09 & 5.4956E+10 \\
+          & mean  & \textbf{1.6306E+07} & 1.9869E+08 & 7.4613E+08 & 1.4022E+11 & 6.6187E+10 & 8.6446E+10 & 2.3316E+10 & 1.0492E+10 & 8.2055E+10 \\
+          & std   & 8.7407E+06 & 1.2716E+08 & 2.1038E+08 & \textbf{1.6760E+06} & 8.5937E+09 & 1.4246E+10 & 3.6468E+09 & 5.3320E+09 & 1.6512E+10 \\
+    \multirow{3}[0]{*}{F13} & best  & \textbf{1.2591E+04} & 3.7586E+05 & 6.2353E+07 & 1.1189E+11 & 3.0731E+10 & 3.2292E+10 & 6.3195E+09 & 2.4215E+08 & 2.7850E+10 \\
+          & mean  & \textbf{3.6348E+04} & 1.2794E+06 & 1.4018E+08 & 1.1189E+11 & 4.2631E+10 & 5.1700E+10 & 8.7748E+09 & 2.0774E+09 & 4.0538E+10 \\
+          & std   & 2.7330E+04 & 1.6978E+06 & 6.6574E+07 & \textbf{2.4194E+01} & 6.5087E+09 & 1.0804E+10 & 2.6919E+09 & 2.5698E+09 & 1.1706E+10 \\
+    \multirow{3}[0]{*}{F14} & best  & \textbf{3.8775E+04} & 1.5111E+05 & 7.0863E+04 & 1.4245E+09 & 2.7266E+07 & 3.3341E+07 & 4.7838E+06 & 6.0054E+05 & 3.6280E+07 \\
+          & mean  & 7.1541E+05 & 7.5054E+05 & \textbf{4.4543E+05} & 1.4245E+09 & 9.3210E+07 & 1.1839E+08 & 1.1640E+07 & 2.3742E+06 & 7.1612E+07 \\
+          & std   & 5.5055E+05 & 4.9732E+05 & 2.9044E+05 & \textbf{3.5313E-01} & 4.8676E+07 & 6.6821E+07 & 5.4696E+06 & 1.7395E+06 & 2.7755E+07 \\
+    \multirow{3}[0]{*}{F15} & best  & \textbf{4.5296E+03} & 5.1118E+04 & 1.6187E+07 & 2.3430E+10 & 4.2412E+09 & 3.2132E+09 & 6.5788E+08 & 5.5666E+07 & 1.7878E+09 \\
+          & mean  & \textbf{1.7249E+04} & 2.0221E+05 & 3.2465E+07 & 2.3430E+10 & 6.4069E+09 & 1.0938E+10 & 1.4596E+09 & 4.6492E+08 & 4.6103E+09 \\
+          & std   & 8.6897E+03 & 1.0236E+05 & 1.4891E+07 & \textbf{1.9777E+00} & 1.8540E+09 & 4.4522E+09 & 7.5788E+08 & 4.3559E+08 & 1.7489E+09 \\
+    \multirow{3}[0]{*}{F16} & best  & \textbf{3.0614E+03} & 3.3825E+03 & 5.0915E+03 & 2.3738E+04 & 7.9355E+03 & 7.3364E+03 & 5.4876E+03 & 3.8951E+03 & 7.2278E+03 \\
+          & mean  & \textbf{3.4641E+03} & 4.0014E+03 & 5.3946E+03 & 2.3738E+04 & 8.8340E+03 & 9.3915E+03 & 6.5102E+03 & 4.5764E+03 & 9.9827E+03 \\
+          & std   & 3.2733E+02 & 4.2908E+02 & 2.1848E+02 & \textbf{4.0852E-02} & 6.8052E+02 & 1.6058E+03 & 5.5177E+02 & 5.4657E+02 & 1.5906E+03 \\
+    \multirow{3}[0]{*}{F17} & best  & \textbf{2.6072E+03} & 2.8021E+03 & 4.0404E+03 & 1.5328E+05 & 6.0079E+03 & 1.0375E+04 & 4.2256E+03 & 3.2995E+03 & 5.8799E+03 \\
+          & mean  & \textbf{3.0995E+03} & 3.3620E+03 & 4.5240E+03 & 1.5328E+05 & 7.8456E+03 & 1.7495E+04 & 5.2295E+03 & 3.8242E+03 & 1.0232E+04 \\
+          & std   & 3.3123E+02 & 4.0965E+02 & 2.5111E+02 & \textbf{2.2243E+00} & 1.4099E+03 & 5.2968E+03 & 4.8431E+02 & 3.7774E+02 & 3.0350E+03 \\
+    \multirow{3}[0]{*}{F18} & best  & \textbf{2.5792E+05} & 4.4735E+05 & 3.4255E+06 & 1.8753E+09 & 8.2892E+07 & 1.1474E+08 & 3.4562E+07 & 3.0318E+06 & 1.2032E+07 \\
+          & mean  & \textbf{3.3641E+06} & 6.8193E+06 & 4.9379E+06 & 1.8753E+09 & 1.6527E+08 & 2.1578E+08 & 7.7578E+07 & 1.3844E+07 & 1.6247E+08 \\
+          & std   & 1.9348E+06 & 5.2215E+06 & 1.9576E+06 & \textbf{5.9077E-01} & 8.0753E+07 & 9.6967E+07 & 3.3730E+07 & 9.5502E+06 & 1.0528E+08 \\
+    \multirow{3}[0]{*}{F19} & best  & \textbf{2.4415E+03} & 2.5819E+05 & 7.1966E+06 & 1.3538E+10 & 1.8025E+09 & 2.1731E+09 & 2.2417E+08 & 1.5160E+07 & 1.9660E+09 \\
+          & mean  & \textbf{3.2373E+04} & 9.8873E+05 & 1.5367E+07 & 1.3538E+10 & 3.8207E+09 & 5.3860E+09 & 6.6868E+08 & 2.4474E+08 & 4.4275E+09 \\
+          & std   & 4.8123E+04 & 7.3223E+05 & 7.3114E+06 & \textbf{1.7727E-01} & 1.1376E+09 & 1.7197E+09 & 5.6016E+08 & 3.1849E+08 & 2.0039E+09 \\
+    \multirow{3}[0]{*}{F20} & best  & \textbf{2.6058E+03} & 2.6641E+03 & 3.9212E+03 & 5.1950E+03 & 3.8830E+03 & 3.9877E+03 & 3.9319E+03 & 3.4232E+03 & 3.8686E+03 \\
+          & mean  & \textbf{3.0486E+03} & 3.3672E+03 & 4.2035E+03 & 5.1954E+03 & 4.1625E+03 & 4.3529E+03 & 4.4437E+03 & 3.9352E+03 & 4.2575E+03 \\
+          & std   & 3.5169E+02 & 3.6933E+02 & 1.4016E+02 & \textbf{7.6268E-01} & 1.4017E+02 & 2.2009E+02 & 2.1738E+02 & 5.0285E+02 & 2.5798E+02 \\
+    \multirow{3}[0]{*}{F21} & best  & 2.4674E+03 & \textbf{2.4444E+03} & 2.7157E+03 & 4.2536E+03 & 3.1072E+03 & 3.1478E+03 & 2.9152E+03 & 2.7127E+03 & 3.0901E+03 \\
+          & mean  & \textbf{2.5142E+03} & 2.5541E+03 & 2.7511E+03 & 4.2544E+03 & 3.1937E+03 & 3.2164E+03 & 2.9703E+03 & 2.7790E+03 & 3.2815E+03 \\
+          & std   & 3.9734E+01 & 6.6851E+01 & 2.4684E+01 & \textbf{9.6510E-01} & 6.3720E+01 & 5.0154E+01 & 4.1425E+01 & 4.8678E+01 & 1.2574E+02 \\
+    \multirow{3}[0]{*}{F22} & best  & \textbf{8.0382E+03} & 9.1894E+03 & 1.5032E+04 & 2.0250E+04 & 1.6035E+04 & 1.6995E+04 & 1.5981E+04 & 1.3521E+04 & 1.5872E+04 \\
+          & mean  & \textbf{9.7523E+03} & 1.0399E+04 & 1.6353E+04 & 2.0263E+04 & 1.7107E+04 & 1.7733E+04 & 1.7045E+04 & 1.5764E+04 & 1.7178E+04 \\
+          & std   & 1.0454E+03 & 6.7695E+02 & 8.9527E+02 & \textbf{1.9183E+01} & 5.3832E+02 & 4.3774E+02 & 4.8354E+02 & 1.0861E+03 & 8.5727E+02 \\
+    \multirow{3}[0]{*}{F23} & best  & 2.9749E+03 & \textbf{2.9328E+03} & 3.1170E+03 & 9.2813E+03 & 4.0620E+03 & 3.8752E+03 & 3.6071E+03 & 3.2999E+03 & 4.1547E+03 \\
+          & mean  & 3.1119E+03 & \textbf{3.0832E+03} & 3.1988E+03 & 9.2880E+03 & 4.1996E+03 & 4.1291E+03 & 3.7893E+03 & 3.3477E+03 & 4.3535E+03 \\
+          & std   & 1.7867E+02 & 7.9930E+01 & 4.0448E+01 & \textbf{7.5731E+00} & 1.0113E+02 & 2.0252E+02 & 7.4469E+01 & 3.4988E+01 & 1.4280E+02 \\
+    \multirow{3}[0]{*}{F24} & best  & \textbf{3.0755E+03} & 3.1269E+03 & 3.3075E+03 & 6.8116E+03 & 4.5449E+03 & 3.9679E+03 & 3.7666E+03 & 3.3748E+03 & 4.0807E+03 \\
+          & mean  & \textbf{3.1535E+03} & 3.1880E+03 & 3.3447E+03 & 6.8122E+03 & 4.6738E+03 & 4.5650E+03 & 3.8869E+03 & 3.4300E+03 & 4.4039E+03 \\
+          & std   & 7.1586E+01 & 7.0526E+01 & 2.1153E+01 & \textbf{6.7437E-01} & 1.0371E+02 & 6.5066E+02 & 8.2544E+01 & 3.8013E+01 & 1.3780E+02 \\
+    \multirow{3}[0]{*}{F25} & best  & \textbf{3.0760E+03} & 3.1123E+03 & 3.2768E+03 & 1.9370E+04 & 1.3577E+04 & 1.2501E+04 & 7.6537E+03 & 4.4418E+03 & 9.4219E+03 \\
+          & mean  & \textbf{3.1743E+03} & 3.2301E+03 & 3.4093E+03 & 1.9375E+04 & 1.4979E+04 & 1.4150E+04 & 1.0718E+04 & 5.8045E+03 & 1.3733E+04 \\
+          & std   & 5.3584E+01 & 7.6209E+01 & 8.7698E+01 & \textbf{6.0016E+00} & 6.4198E+02 & 8.0843E+02 & 1.9121E+03 & 7.6621E+02 & 2.3643E+03 \\
+    \multirow{3}[0]{*}{F26} & best  & \textbf{5.6950E+03} & 6.3495E+03 & 8.0279E+03 & 1.9968E+04 & 1.6540E+04 & 1.4984E+04 & 1.3122E+04 & 8.3382E+03 & 1.4007E+04 \\
+          & mean  & \textbf{7.3894E+03} & 7.5289E+03 & 8.4988E+03 & 1.9977E+04 & 1.7088E+04 & 1.6354E+04 & 1.4363E+04 & 9.7141E+03 & 1.6419E+04 \\
+          & std   & 1.3248E+03 & 9.1770E+02 & 2.4906E+02 & \textbf{1.1451E+01} & 3.8790E+02 & 6.4469E+02 & 5.6200E+02 & 6.1312E+02 & 1.3828E+03 \\
+    \multirow{3}[0]{*}{F27} & best  & \textbf{3.4064E+03} & 3.4927E+03 & 3.5560E+03 & 1.8332E+04 & 5.3323E+03 & 4.8488E+03 & 4.6472E+03 & 3.8361E+03 & 5.1831E+03 \\
+          & mean  & \textbf{3.5838E+03} & 3.5913E+03 & 3.6140E+03 & 1.8341E+04 & 6.1999E+03 & 6.2476E+03 & 4.9079E+03 & 4.0431E+03 & 5.5753E+03 \\
+          & std   & 1.2667E+02 & 9.2917E+01 & 4.2423E+01 & \textbf{8.7784E+00} & 4.6142E+02 & 9.4024E+02 & 1.6979E+02 & 2.5548E+02 & 3.5150E+02 \\
+    \multirow{3}[0]{*}{F28} & best  & \textbf{3.3658E+03} & 3.4194E+03 & 3.8214E+03 & 1.9783E+04 & 1.0945E+04 & 1.0546E+04 & 7.8049E+03 & 6.2703E+03 & 9.1399E+03 \\
+          & mean  & \textbf{3.4541E+03} & 3.5129E+03 & 4.0771E+03 & 1.9786E+04 & 1.2449E+04 & 1.2813E+04 & 8.8587E+03 & 8.8274E+03 & 1.3827E+04 \\
+          & std   & 4.5775E+01 & 6.3353E+01 & 1.6656E+02 & \textbf{5.9494E+00} & 6.5863E+02 & 1.0245E+03 & 7.8857E+02 & 2.2929E+03 & 1.9928E+03 \\
+    \multirow{3}[0]{*}{F29} & best  & \textbf{3.6772E+03} & 4.4041E+03 & 5.9596E+03 & 6.2009E+06 & 2.1876E+04 & 2.2915E+04 & 8.2321E+03 & 5.8052E+03 & 3.6084E+04 \\
+          & mean  & \textbf{4.3041E+03} & 5.1730E+03 & 6.2733E+03 & 6.2013E+06 & 6.0070E+04 & 4.9275E+04 & 1.0834E+04 & 6.7057E+03 & 1.2292E+05 \\
+          & std   & 4.8027E+02 & 4.0105E+02 & \textbf{2.3562E+02} & 6.4504E+02 & 3.6409E+04 & 2.5349E+04 & 2.7975E+03 & 6.8548E+02 & 1.1358E+05 \\
+    \multirow{3}[0]{*}{F30} & best  & \textbf{2.0560E+06} & 5.8441E+07 & 1.0364E+08 & 2.4249E+10 & 3.5703E+09 & 5.3549E+09 & 1.0519E+09 & 2.3007E+08 & 1.8052E+09 \\
+          & mean  & \textbf{5.9703E+06} & 7.7039E+07 & 1.7332E+08 & 2.4253E+10 & 5.3141E+09 & 1.0156E+10 & 1.7454E+09 & 4.6045E+08 & 7.8868E+09 \\
+          & std   & \textbf{4.5474E+06} & 1.9131E+07 & 4.7877E+07 & 4.9748E+06 & 1.1647E+09 & 3.7077E+09 & 6.2917E+08 & 2.5237E+08 & 3.1717E+09 \\
+    \bottomrule      
+    \end{tabular}%
+  \label{tb:Wilcoxon-dim50}%
+\end{table}%
+
+% Table generated by Excel2LaTeX from sheet '消融实验'
+\begin{table}[htbp]
+  \centering
+  \caption{Comparative results of IRIME and its variants on CEC 2017 functions (30D)}
+    \setlength{\tabcolsep}{3pt} % 减少列间距
+    \tiny
+    \begin{tabular}{rrrrrrccrrrr}
+	\toprule
+    \multicolumn{1}{c}{Function} & \multicolumn{1}{c}{Metric} & \multicolumn{1}{c}{IRIME} & \multicolumn{1}{c}{IRIME1} & \multicolumn{1}{c}{IRIME2} & \multicolumn{1}{c}{IRIME3} & Function & Metric & \multicolumn{1}{c}{IRIME} & \multicolumn{1}{c}{IRIME1} & \multicolumn{1}{c}{IRIME2} & \multicolumn{1}{c}{IRIME3} \\
+	\midrule
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F1}} & \multicolumn{1}{c}{best} & 1.2558E+06 & 1.0045E+06 & 5.4544E+06 & 1.1318E+08 & \multirow{3}[0]{*}{F16} & best  & 2.8688E+03 & 2.6826E+03 & 2.7336E+03 & 3.2032E+03 \\
+          & \multicolumn{1}{c}{mean} & 3.3987E+06 & 4.1328E+06 & 2.5161E+07 & 1.5456E+08 &       & mean  & 3.3552E+03 & 3.3840E+03 & 3.4238E+03 & 3.7122E+03 \\
+          & \multicolumn{1}{c}{std} & 1.5194E+06 & 3.1143E+06 & 2.0054E+07 & 4.1785E+07 &       & std   & 2.3006E+02 & 3.8652E+02 & 5.0485E+02 & 3.9866E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F3}} & \multicolumn{1}{c}{best} & 8.8890E+04 & 8.8439E+04 & 1.3138E+05 & 2.0558E+05 & \multirow{3}[0]{*}{F17} & best  & 2.3092E+03 & 2.8608E+03 & 2.3864E+03 & 3.0366E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.1081E+05 & 1.2990E+05 & 2.1286E+05 & 2.6118E+05 &       & mean  & 2.8937E+03 & 3.1601E+03 & 3.0277E+03 & 3.5248E+03 \\
+          & \multicolumn{1}{c}{std} & 1.5636E+04 & 4.0473E+04 & 7.1786E+04 & 5.3141E+04 &       & std   & 3.8377E+02 & 2.0263E+02 & 4.1320E+02 & 2.7300E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F4}} & \multicolumn{1}{c}{best} & 5.3447E+02 & 5.7805E+02 & 5.9908E+02 & 6.7640E+02 & \multirow{3}[0]{*}{F18} & best  & 8.6352E+04 & 6.3864E+05 & 2.2840E+05 & 1.5852E+06 \\
+          & \multicolumn{1}{c}{mean} & 6.2916E+02 & 6.4728E+02 & 6.7860E+02 & 7.6329E+02 &       & mean  & 1.7940E+06 & 3.0928E+06 & 2.4147E+06 & 8.5198E+06 \\
+          & \multicolumn{1}{c}{std} & 5.3123E+01 & 5.6742E+01 & 4.7260E+01 & 1.0628E+02 &       & std   & 1.2771E+06 & 3.4844E+06 & 3.3472E+06 & 7.2520E+06 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F5}} & \multicolumn{1}{c}{best} & 6.5655E+02 & 6.9636E+02 & 6.6096E+02 & 7.2954E+02 & \multirow{3}[0]{*}{F19} & best  & 3.6404E+03 & 6.6142E+03 & 5.7974E+03 & 3.2805E+04 \\
+          & \multicolumn{1}{c}{mean} & 7.2421E+02 & 7.3021E+02 & 7.4534E+02 & 7.7363E+02 &       & mean  & 1.7049E+04 & 1.3720E+04 & 2.4292E+04 & 3.1884E+05 \\
+          & \multicolumn{1}{c}{std} & 4.2345E+01 & 2.7674E+01 & 4.8586E+01 & 3.3015E+01 &       & std   & 9.5224E+03 & 1.1057E+04 & 1.8061E+04 & 3.7235E+05 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F6}} & \multicolumn{1}{c}{best} & 6.1576E+02 & 6.1740E+02 & 6.1846E+02 & 6.2366E+02 & \multirow{3}[0]{*}{F20} & best  & 2.7498E+03 & 2.9101E+03 & 2.8053E+03 & 2.5443E+03 \\
+          & \multicolumn{1}{c}{mean} & 6.3197E+02 & 6.3293E+02 & 6.3077E+02 & 6.3286E+02 &       & mean  & 3.0999E+03 & 3.1275E+03 & 3.1106E+03 & 3.2433E+03 \\
+          & \multicolumn{1}{c}{std} & 7.4473E+00 & 8.9955E+00 & 6.9216E+00 & 6.7160E+00 &       & std   & 2.5323E+02 & 1.4604E+02 & 3.0619E+02 & 3.9186E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F7}} & \multicolumn{1}{c}{best} & 9.5459E+02 & 9.8948E+02 & 9.6774E+02 & 1.1428E+03 & \multirow{3}[0]{*}{F21} & best  & 2.4299E+03 & 2.4479E+03 & 2.4368E+03 & 2.5153E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.1008E+03 & 1.0640E+03 & 1.0954E+03 & 1.2453E+03 &       & mean  & 2.5065E+03 & 2.5578E+03 & 2.5449E+03 & 2.5840E+03 \\
+          & \multicolumn{1}{c}{std} & 9.8027E+01 & 5.7950E+01 & 9.3540E+01 & 8.6098E+01 &       & std   & 4.1664E+01 & 7.5127E+01 & 9.1912E+01 & 5.3123E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F8}} & \multicolumn{1}{c}{best} & 9.2777E+02 & 9.5503E+02 & 9.7841E+02 & 1.0158E+03 & \multirow{3}[0]{*}{F22} & best  & 7.4094E+03 & 2.3304E+03 & 8.7135E+03 & 8.8509E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.0087E+03 & 1.0273E+03 & 1.0229E+03 & 1.1100E+03 &       & mean  & 9.6458E+03 & 9.1099E+03 & 1.0306E+04 & 1.0598E+04 \\
+          & \multicolumn{1}{c}{std} & 4.9127E+01 & 4.9284E+01 & 4.6605E+01 & 4.1735E+01 &       & std   & 1.2940E+03 & 2.4798E+03 & 1.2841E+03 & 1.3328E+03 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F9}} & \multicolumn{1}{c}{best} & 3.5472E+03 & 3.3174E+03 & 4.9401E+03 & 9.3991E+03 & \multirow{3}[0]{*}{F23} & best  & 2.8953E+03 & 2.9228E+03 & 2.9394E+03 & 2.9344E+03 \\
+          & \multicolumn{1}{c}{mean} & 7.9460E+03 & 7.9757E+03 & 1.0689E+04 & 1.7675E+04 &       & mean  & 3.0492E+03 & 3.0892E+03 & 3.0640E+03 & 3.0986E+03 \\
+          & \multicolumn{1}{c}{std} & 2.4182E+03 & 3.8489E+03 & 4.0951E+03 & 6.6864E+03 &       & std   & 8.3674E+01 & 1.1143E+02 & 8.8297E+01 & 1.0629E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F10}} & \multicolumn{1}{c}{best} & 6.3768E+03 & 5.8878E+03 & 6.4308E+03 & 8.0581E+03 & \multirow{3}[0]{*}{F24} & best  & 3.0940E+03 & 3.0579E+03 & 3.0980E+03 & 3.1650E+03 \\
+          & \multicolumn{1}{c}{mean} & 7.4203E+03 & 7.3403E+03 & 8.2466E+03 & 9.0423E+03 &       & mean  & 3.1802E+03 & 3.1754E+03 & 3.2256E+03 & 3.2429E+03 \\
+          & \multicolumn{1}{c}{std} & 7.1909E+02 & 1.1524E+03 & 1.3674E+03 & 8.3056E+02 &       & std   & 6.2427E+01 & 7.8666E+01 & 8.9514E+01 & 7.7414E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F11}} & \multicolumn{1}{c}{best} & 1.2258E+03 & 1.2349E+03 & 1.3181E+03 & 1.7616E+03 & \multirow{3}[0]{*}{F25} & best  & 3.0434E+03 & 3.0605E+03 & 3.1037E+03 & 3.1552E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.3608E+03 & 1.3953E+03 & 1.4195E+03 & 1.9363E+03 &       & mean  & 3.1581E+03 & 3.1627E+03 & 3.1690E+03 & 3.2325E+03 \\
+          & \multicolumn{1}{c}{std} & 6.1395E+01 & 1.1507E+02 & 6.4794E+01 & 1.9610E+02 &       & std   & 4.7245E+01 & 5.1392E+01 & 4.0386E+01 & 5.8210E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F12}} & \multicolumn{1}{c}{best} & 7.4913E+06 & 9.9780E+06 & 1.0632E+07 & 5.0445E+07 & \multirow{3}[0]{*}{F26} & best  & 3.1656E+03 & 3.2680E+03 & 6.0113E+03 & 6.4070E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.6960E+07 & 1.6688E+07 & 3.6390E+07 & 2.2399E+08 &       & mean  & 6.3738E+03 & 7.2080E+03 & 7.1323E+03 & 7.5735E+03 \\
+          & \multicolumn{1}{c}{std} & 7.9006E+06 & 7.1739E+06 & 1.8680E+07 & 2.0914E+08 &       & std   & 1.7048E+03 & 1.7518E+03 & 9.0307E+02 & 9.3845E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F13}} & \multicolumn{1}{c}{best} & 6.4121E+03 & 8.7112E+03 & 9.1452E+03 & 4.5488E+05 & \multirow{3}[0]{*}{F27} & best  & 3.5057E+03 & 3.4621E+03 & 3.4143E+03 & 3.5315E+03 \\
+          & \multicolumn{1}{c}{mean} & 3.5114E+04 & 3.7325E+04 & 2.7901E+04 & 1.0457E+06 &       & mean  & 3.5764E+03 & 3.5869E+03 & 3.5750E+03 & 3.6327E+03 \\
+          & \multicolumn{1}{c}{std} & 4.7804E+04 & 6.3660E+04 & 2.5519E+04 & 3.4769E+05 &       & std   & 7.1227E+01 & 1.2291E+02 & 1.1911E+02 & 6.2420E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F14}} & \multicolumn{1}{c}{best} & 5.7083E+04 & 2.4241E+05 & 4.5955E+05 & 3.0298E+05 & \multirow{3}[0]{*}{F28} & best  & 3.3713E+03 & 3.4005E+03 & 3.4054E+03 & 3.4249E+03 \\
+          & \multicolumn{1}{c}{mean} & 8.1234E+05 & 8.2842E+05 & 1.0787E+06 & 1.7145E+06 &       & mean  & 3.4341E+03 & 3.4606E+03 & 3.4694E+03 & 3.5636E+03 \\
+          & \multicolumn{1}{c}{std} & 4.0241E+05 & 7.5862E+05 & 4.2126E+05 & 1.7989E+06 &       & std   & 4.3014E+01 & 5.3152E+01 & 5.7289E+01 & 9.3363E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F15}} & \multicolumn{1}{c}{best} & 4.1770E+03 & 5.5266E+03 & 7.3184E+03 & 1.0944E+05 & \multirow{3}[0]{*}{F29} & best  & 4.2879E+03 & 3.8221E+03 & 3.7370E+03 & 4.5630E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.2366E+04 & 1.5678E+04 & 1.4110E+04 & 1.6534E+05 &       & mean  & 4.5100E+03 & 4.7316E+03 & 4.3861E+03 & 5.1734E+03 \\
+          & \multicolumn{1}{c}{std} & 8.2541E+03 & 8.0991E+03 & 7.7415E+03 & 5.6155E+04 &       & std   & 2.0332E+02 & 4.4696E+02 & 4.7439E+02 & 3.5449E+02 \\
+          &       &       &       &       &       & \multirow{3}[0]{*}{F30} & best  & 2.7873E+06 & 2.2049E+06 & 2.6670E+06 & 2.0144E+07 \\
+          &       &       &       &       &       &       & mean  & 4.0230E+06 & 4.4672E+06 & 1.2267E+07 & 4.4791E+07 \\
+          &       &       &       &       &       &       & std   & 9.8195E+05 & 1.8589E+06 & 9.8045E+06 & 2.3794E+07 \\
+	\bottomrule
+    \end{tabular}%
+  \label{tb:ablation-dim30}%
+\end{table}%
+
+% Table generated by Excel2LaTeX from sheet 'dim=50'
+\begin{table}[htbp]
+  \centering
+  \caption{Comparative results of IRIME and its variants on CEC 2017 functions (50D)}
+    \setlength{\tabcolsep}{3pt}
+    \tiny
+    \begin{tabular}{rrrrrrccrrrr}
+    \toprule
+    \multicolumn{1}{c}{Function} & \multicolumn{1}{c}{Metric} & \multicolumn{1}{c}{IRIME} & \multicolumn{1}{c}{IRIME1} & \multicolumn{1}{c}{IRIME2} & \multicolumn{1}{c}{IRIME3} & Function & Metric & \multicolumn{1}{c}{IRIME} & \multicolumn{1}{c}{IRIME1} & \multicolumn{1}{c}{IRIME2} & \multicolumn{1}{c}{IRIME3} \\
+    \midrule
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F1}} & \multicolumn{1}{c}{best} & 2.5998E+02 & 5.9359E+03 & 3.6513E+03 & 6.1747E+06 & \multirow{3}[0]{*}{F16} & best  & 2.0612E+03 & 2.2352E+03 & 2.3037E+03 & 2.4056E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.2240E+04 & 8.7933E+04 & 5.9362E+04 & 1.5117E+07 &       & mean  & 2.5143E+03 & 2.6624E+03 & 2.6860E+03 & 2.8684E+03 \\
+          & \multicolumn{1}{c}{std} & 1.2329E+04 & 1.5915E+05 & 1.2319E+05 & 6.5201E+06 &       & std   & 3.1687E+02 & 3.7234E+02 & 3.0646E+02 & 2.1176E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F3}} & \multicolumn{1}{c}{best} & 9.5810E+03 & 9.7098E+03 & 3.1455E+04 & 4.9309E+04 & \multirow{3}[0]{*}{F17} & best  & 1.8934E+03 & 1.9971E+03 & 1.7874E+03 & 1.9529E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.7915E+04 & 2.2766E+04 & 5.2002E+04 & 8.8347E+04 &       & mean  & 2.1250E+03 & 2.2332E+03 & 2.2590E+03 & 2.4153E+03 \\
+          & \multicolumn{1}{c}{std} & 6.1508E+03 & 1.0279E+04 & 1.4393E+04 & 3.3042E+04 &       & std   & 1.7876E+02 & 1.4418E+02 & 3.3531E+02 & 2.9336E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F4}} & \multicolumn{1}{c}{best} & 4.9131E+02 & 4.7255E+02 & 4.8922E+02 & 4.9517E+02 & \multirow{3}[0]{*}{F18} & best  & 6.2076E+04 & 1.1554E+05 & 1.3702E+05 & 6.8856E+05 \\
+          & \multicolumn{1}{c}{mean} & 5.2050E+02 & 5.1220E+02 & 5.2519E+02 & 5.5451E+02 &       & mean  & 2.0004E+05 & 6.8201E+05 & 6.1285E+05 & 3.2597E+06 \\
+          & \multicolumn{1}{c}{std} & 1.9003E+01 & 3.3957E+01 & 2.8305E+01 & 5.7395E+01 &       & std   & 1.5082E+05 & 7.8357E+05 & 5.5404E+05 & 2.2131E+06 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F5}} & \multicolumn{1}{c}{best} & 5.5523E+02 & 5.7164E+02 & 5.7568E+02 & 5.7474E+02 & \multirow{3}[0]{*}{F19} & best  & 1.9298E+03 & 2.0242E+03 & 2.8178E+03 & 6.4475E+03 \\
+          & \multicolumn{1}{c}{mean} & 5.9252E+02 & 6.1633E+02 & 6.1639E+02 & 6.3291E+02 &       & mean  & 5.1041E+03 & 6.8860E+03 & 1.1113E+04 & 4.5022E+04 \\
+          & \multicolumn{1}{c}{std} & 2.5654E+01 & 3.3403E+01 & 3.5628E+01 & 4.0341E+01 &       & std   & 3.4372E+03 & 7.2220E+03 & 9.4846E+03 & 2.6286E+04 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F6}} & \multicolumn{1}{c}{best} & 6.0387E+02 & 6.0694E+02 & 6.0488E+02 & 6.1395E+02 & \multirow{3}[0]{*}{F20} & best  & 2.2122E+03 & 2.2747E+03 & 2.3102E+03 & 2.2497E+03 \\
+          & \multicolumn{1}{c}{mean} & 6.1289E+02 & 6.1590E+02 & 6.1429E+02 & 6.2083E+02 &       & mean  & 2.4204E+03 & 2.5478E+03 & 2.4929E+03 & 2.6686E+03 \\
+          & \multicolumn{1}{c}{std} & 5.5505E+00 & 8.8969E+00 & 9.7850E+00 & 5.5502E+00 &       & std   & 1.7590E+02 & 2.3265E+02 & 1.3098E+02 & 2.3658E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F7}} & \multicolumn{1}{c}{best} & 7.8913E+02 & 8.1756E+02 & 8.0850E+02 & 8.5502E+02 & \multirow{3}[0]{*}{F21} & best  & 2.3475E+03 & 2.3915E+03 & 2.3628E+03 & 2.3574E+03 \\
+          & \multicolumn{1}{c}{mean} & 8.2926E+02 & 8.6384E+02 & 8.6664E+02 & 9.1457E+02 &       & mean  & 2.3813E+03 & 2.4202E+03 & 2.4129E+03 & 2.4233E+03 \\
+          & \multicolumn{1}{c}{std} & 2.9010E+01 & 3.7531E+01 & 4.2853E+01 & 4.2540E+01 &       & std   & 1.5661E+01 & 2.4905E+01 & 3.2042E+01 & 3.2712E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F8}} & \multicolumn{1}{c}{best} & 8.4826E+02 & 8.6965E+02 & 8.8757E+02 & 8.7963E+02 & \multirow{3}[0]{*}{F22} & best  & 2.3001E+03 & 2.3005E+03 & 2.3005E+03 & 2.3203E+03 \\
+          & \multicolumn{1}{c}{mean} & 8.8384E+02 & 8.9294E+02 & 9.1092E+02 & 9.2603E+02 &       & mean  & 3.5893E+03 & 4.1098E+03 & 4.3869E+03 & 5.2847E+03 \\
+          & \multicolumn{1}{c}{std} & 1.9496E+01 & 1.6764E+01 & 2.1601E+01 & 2.0284E+01 &       & std   & 2.0741E+03 & 1.9953E+03 & 2.2460E+03 & 2.0595E+03 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F9}} & \multicolumn{1}{c}{best} & 1.0200E+03 & 1.2668E+03 & 1.3602E+03 & 1.8368E+03 & \multirow{3}[0]{*}{F23} & best  & 2.7263E+03 & 2.7240E+03 & 2.7510E+03 & 2.7515E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.9680E+03 & 2.1161E+03 & 2.2500E+03 & 4.3246E+03 &       & mean  & 2.7653E+03 & 2.7908E+03 & 2.7996E+03 & 2.8487E+03 \\
+          & \multicolumn{1}{c}{std} & 5.8933E+02 & 7.0572E+02 & 1.0722E+03 & 2.0715E+03 &       & std   & 3.3792E+01 & 5.0344E+01 & 3.5553E+01 & 6.2152E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F10}} & \multicolumn{1}{c}{best} & 2.9567E+03 & 4.2917E+03 & 3.0702E+03 & 3.9096E+03 & \multirow{3}[0]{*}{F24} & best  & 2.9211E+03 & 2.9132E+03 & 2.9098E+03 & 2.9190E+03 \\
+          & \multicolumn{1}{c}{mean} & 4.7099E+03 & 4.9652E+03 & 5.4430E+03 & 4.9123E+03 &       & mean  & 2.9580E+03 & 2.9626E+03 & 2.9953E+03 & 2.9702E+03 \\
+          & \multicolumn{1}{c}{std} & 8.8189E+02 & 7.2594E+02 & 1.2159E+03 & 7.0890E+02 &       & std   & 3.1118E+01 & 3.4165E+01 & 6.7378E+01 & 4.8109E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F11}} & \multicolumn{1}{c}{best} & 1.1606E+03 & 1.1748E+03 & 1.1610E+03 & 1.3083E+03 & \multirow{3}[0]{*}{F25} & best  & 2.8846E+03 & 2.8878E+03 & 2.8907E+03 & 2.9044E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.2157E+03 & 1.2506E+03 & 1.2395E+03 & 1.3629E+03 &       & mean  & 2.8989E+03 & 2.9188E+03 & 2.9215E+03 & 2.9400E+03 \\
+          & \multicolumn{1}{c}{std} & 3.3957E+01 & 4.1306E+01 & 5.4949E+01 & 5.4884E+01 &       & std   & 1.3576E+01 & 2.3211E+01 & 2.3212E+01 & 3.2306E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F12}} & \multicolumn{1}{c}{best} & 2.1978E+05 & 6.3148E+05 & 3.2419E+05 & 5.5903E+06 & \multirow{3}[0]{*}{F26} & best  & 2.9025E+03 & 2.8020E+03 & 2.9017E+03 & 3.0406E+03 \\
+          & \multicolumn{1}{c}{mean} & 1.4591E+06 & 2.2720E+06 & 2.6815E+06 & 3.4095E+07 &       & mean  & 4.7586E+03 & 4.5739E+03 & 4.7496E+03 & 5.0770E+03 \\
+          & \multicolumn{1}{c}{std} & 8.4120E+05 & 1.4251E+06 & 1.7985E+06 & 3.0242E+07 &       & std   & 7.6348E+02 & 1.2681E+03 & 1.0878E+03 & 8.4666E+02 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F13}} & \multicolumn{1}{c}{best} & 3.1439E+03 & 4.8273E+03 & 2.8014E+03 & 5.3486E+04 & \multirow{3}[0]{*}{F27} & best  & 3.2193E+03 & 3.2313E+03 & 3.2256E+03 & 3.2183E+03 \\
+          & \multicolumn{1}{c}{mean} & 2.0404E+04 & 2.7173E+04 & 4.5430E+04 & 4.2677E+05 &       & mean  & 3.2400E+03 & 3.2487E+03 & 3.2575E+03 & 3.2560E+03 \\
+          & \multicolumn{1}{c}{std} & 1.2822E+04 & 1.6328E+04 & 1.0150E+05 & 7.1392E+05 &       & std   & 1.7103E+01 & 2.1350E+01 & 2.9144E+01 & 2.9582E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F14}} & \multicolumn{1}{c}{best} & 4.9574E+03 & 1.8471E+04 & 5.0773E+04 & 9.5993E+04 & \multirow{3}[0]{*}{F28} & best  & 3.2174E+03 & 3.2150E+03 & 3.2233E+03 & 3.2670E+03 \\
+          & \multicolumn{1}{c}{mean} & 4.3815E+04 & 5.8290E+04 & 1.2434E+05 & 4.0737E+05 &       & mean  & 3.2482E+03 & 3.2691E+03 & 3.2721E+03 & 3.3337E+03 \\
+          & \multicolumn{1}{c}{std} & 3.0140E+04 & 3.0478E+04 & 7.5137E+04 & 2.8950E+05 &       & std   & 2.3235E+01 & 3.6993E+01 & 3.1277E+01 & 6.0449E+01 \\
+    \multicolumn{1}{c}{\multirow{3}[0]{*}{F15}} & \multicolumn{1}{c}{best} & 1.5950E+03 & 2.1364E+03 & 1.7994E+03 & 9.7005E+03 & \multirow{3}[0]{*}{F29} & best  & 3.7722E+03 & 3.6556E+03 & 3.8282E+03 & 3.8825E+03 \\
+          & \multicolumn{1}{c}{mean} & 2.9020E+03 & 8.1641E+03 & 1.1872E+04 & 3.4115E+04 &       & mean  & 3.8853E+03 & 3.8999E+03 & 4.0335E+03 & 4.1437E+03 \\
+          & \multicolumn{1}{c}{std} & 1.5170E+03 & 7.6321E+03 & 1.2820E+04 & 2.2163E+04 &       & std   & 8.9678E+01 & 1.9425E+02 & 1.4719E+02 & 2.7717E+02 \\
+          &       &       &       &       &       & \multirow{3}[0]{*}{F30} & best  & 6.3440E+03 & 1.2215E+04 & 1.2309E+04 & 3.6967E+05 \\
+          &       &       &       &       &       &       & mean  & 6.7820E+04 & 5.7947E+04 & 1.2775E+05 & 7.6501E+05 \\
+          &       &       &       &       &       &       & std   & 1.1844E+05 & 5.5463E+04 & 1.3526E+05 & 3.6199E+05 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tb:ablation-dim50}%
+\end{table}%
+
+\section{消融实验}
+本节系统性地进行消融研究，以评估IRIME中三项关键策略的单独贡献： (1) 信息熵评估策略，(2) 随机重启机制，(3) 拉格朗日插值法。实验结果显示不同策略组合具有明显的性能模式。我们将表7中的四个算法用于消融实验。对比结果显示性能差异显著：完整的IRIME取得了优异的表现，最终排名得分优于所有部分变体。详细排名结果如图8所示，结合表5和表6的对比实验详细结果，我们可以得出以下结论：
+拉格朗日插值法：最具影响力的组成部分，特别是在43\%的单模态函数（平均提升62.3\%）和组合函数（58.1\%）中。其多项式逼近能力显著加快了收敛速度。
+随机重启机制：维持种群多样性、防止早熟收敛的关键，在87\%的多模态情况下发挥作用。典型例子包括F18（1.4对4.0的得分差异）。
+信息熵评估策略：在特定函数类别中提供了选择性优势，特别增强了可分离函数的开发能力（F1-F3表现出18.7\%的性能提升）。
+这些结果共同验证了每个策略对IRIME性能的独特贡献，其中拉格朗日插值法是最关键的组成部分，其次是随机重启机制和信息熵评估策略，影响程度依次递减。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/Ftest/Ftest-ablation.pdf} % 调整宽度为适合您文档的值
+    \caption{Friedman test result of IRIME and its variants}
+    \label{fig:Ftest-ablation}
+\end{figure}
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption{Details of IRIME variants ('Y' = strategy used ; 'N' = not used) }
+  \begin{tabular}{lcccc}
+    \toprule
+    & RIME & RIME1 & RIME2 & RIME3 \\
+    \midrule
+    Information entropy evaluation strategy   & Y & N & Y & Y\\
+    Lagrange interpolation method  & Y & Y & N & Y\\
+    Random restart mechanism  & Y & Y & Y & N \\
+    \bottomrule
+  \end{tabular}
+\label{tb:variant IRIME}
+\end{table}
+\chapter{特征选择实验}
+本节旨在通过选择医学特征选择（FS）问题作为案例，提升IRIME在工程问题中的清晰度和有效性，以评估其优化性能。为确保全面评估，我们将所提方法与七种先进的元启发式算法进行比较：RIME、AOA、BWO、WOA、ROA、SCA和COA。所有算法的参数设置均统一，种群规模为N=30
+，每次运行的最大计算预算为3000次迭代，具体详见表8。本研究所用的所有实验数据集均来自医学领域。数据集包括8个中低维度和4个高维度数据集，涵盖多样的数据特性，以严格测试算法的可扩展性和鲁棒性。这些数据集的详细规格（如样本量、特征维度和类别分布）见表9。此分层数据设计旨在验证IRIME在不同问题复杂度下的表现，同时保持其在医学应用中的实际相关性。
+
+%算法参数设置表2
+\begin{table}[htbp]
+\centering
+\small
+\caption{Parameters setting for
+algorithms used in FS}
+\begin{tabular}{ll}
+\toprule
+\textbf{Algorithms} & \textbf{Other parameters} \\
+\midrule
+IRIME & $w = 5$ \\
+RIME & $w=5$ \\
+AOA & $c_1 = 0.2$; $C_3 = 3$; $\mu = 25$; $\sigma = 3$\\
+BWO & $W_f \in [0.1,0.5]$\\
+WOA & $A = 1$; $C \in [-1,1]$; $b = 0.75$; $l \in [-1,1]$\\
+ROA & $C = 0.1$\\
+SCA & $C_1 \in [0,2]$; $C_2 \in [0,2]$;$C_3 \in [0,2]$\\
+COA & $C_3 = 3$; $\mu = 25$; $\sigma = 3$; $PCr = 0.8$; $F = 0.85$\\
+\bottomrule
+\end{tabular}
+\label{tb:FS-alg-parameters}
+\end{table}
+
+%数据集介绍表
+\begin{table}[htbp]
+    \centering
+    \caption{Overview of the datasets}
+    \small
+      \begin{tabular}{lrrrr}
+        \toprule
+      Dataset Name & \multicolumn{1}{l}{Samples} & \multicolumn{1}{l}{Features} & \multicolumn{1}{l}{Classes} \\
+      \midrule
+      Breast\_cancer & 699   & 9     & 2 \\
+      Cleveland\_heart & 303   & 14    & 2 \\
+      Dermatology & 358   & 35    & 6 \\
+      Diabetes & 768   & 8     & 2 \\
+      Lung\_cancer\_3class & 32    & 57    & 3 \\
+      Parkinson & 195   & 23    & 2 \\
+      Spect & 267   & 23    & 2 \\
+      wpbc  & 198   & 33    & 2 \\
+      ALLAML & 72    & 7129  & 2 \\
+      Lymphoma & 96    & 4026  & 9 \\
+      nci9  & 60    & 9712  & 9 \\
+      TOX-171 & 171   & 5748  & 4 \\
+      \bottomrule
+      \end{tabular}%
+    \label{tb:datasets-information}%
+\end{table}%
+
+\section{解的表示}
+每个解的维度等于特征数，每个维度代表对应特征的指数。例如，当数据中有100个特征时，一个解有100个维度。每个解的维度限制在区间
+内。特征选择通过固定阈值0.5进行，如下式所示：
+\begin{equation}
+\begin{cases}
+\text{Feature is selected}, & \text{if } X_i^{d} > 0.5 \\
+\text{Feature is not selected}, & \text{if } X_i^{d} \leq 0.5
+\end{cases}
+\label{eq:feature selected}
+\end{equation}
+\section{适应度函数}
+为了验证所提算法在特征选择中的优化性能，我们采用分类错误率（CEE）作为评估所选特征有效性的目标函数。该目标函数的计算方法见式22。
+\begin{equation}
+    Fitness = CEE=\frac{\text{No. of wrongly classified}}{\text{Total number of instances}}
+\label{eq:fitness}
+\end{equation}
+其中CEE指KNN（S. Zhang等，2017）分类器的错误率，
+设为5。KNN中多个邻居之间的距离采用欧氏距离（ED），定义见式23。
+\begin{equation}
+    DE(Y,X)=\sqrt{\sum_{j = 1}^{dim}(X^j - Y^j)^2}
+\label{eq:DE(X,Y)}
+\end{equation}
+
+其中和指特定实例中的特征，dim为使用的特征总数。
+每个数据集的实例被划分为训练样本和测试样本（70\%、3\%）。训练样本用于特征选择（FS）评估，测试样本在测试阶段完全隐藏。为防止过拟合，我们采用分层的10折交叉验证方法。具体而言，训练样本首先被划分为10个等大小的折。在每次迭代中，使用其中9折（K-1）训练K近邻（KNN）分类器，剩余1折作为验证集。此过程重复10次，轮换验证折，确保所有数据都被评估。最终结果在所有迭代中汇总，以提供稳健的性能评估。
+
+% 特征选择cov图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/2.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/3.pdf}
+    \end{subfigure}
+    % 第二行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/4.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/6.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/7.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/9.pdf}
+    \end{subfigure}
+    % 第四行
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/11.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/cov/12.pdf}
+    \end{subfigure}
+    \caption{Convergence curves on 12 datasets.}
+    \label{fig:fs-cov}
+\end{figure}
+
+%特征选择acc图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/2.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/3.pdf}
+    \end{subfigure}
+    % 第二行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/4.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/6.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/7.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/9.pdf}
+    \end{subfigure}
+    % 第四行
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/11.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/acc/12.pdf}
+    \end{subfigure}
+    \caption{Comparative accuracy histograms on 12 datasets.}
+    \label{fig:fs-acc}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{The fitness value results on 12 datasets}
+    \setlength{\tabcolsep}{3pt} % 减少列间距
+    \tiny
+    \begin{tabular}{cccccccccc}
+    \toprule    
+    Dataset & Metric & IRIME & RIME  & AOA   & BWO   & WOA   & ROA   & SCA   & COA \\
+    \midrule
+    \multirow{3}[0]{*}{Breast-cancer} & best  & 4.4444E-03 & 1.7578E-02 & 1.4900E-02 & 3.3333E-03 & 4.4444E-03 & 3.3333E-03 & 1.1567E-02 & 3.3333E-03 \\
+          & mean  & 1.9624E-02 & 2.3028E-02 & 2.6478E-02 & 2.0336E-02 & 1.9689E-02 & 2.5877E-02 & 2.5432E-02 & 2.1159E-02 \\
+          & std   & 1.1108E-02 & 5.5461E-03 & 1.1300E-02 & 1.1041E-02 & 1.1334E-02 & 1.0368E-02 & 1.1200E-02 & 1.2029E-02 \\
+    \multirow{3}[0]{*}{Cleveland-heart} & best  & 6.9846E-02 & 6.9846E-02 & 8.7115E-02 & 5.3346E-02 & 8.8654E-02 & 3.8385E-02 & 6.9846E-02 & 5.5654E-02 \\
+          & mean  & 1.0826E-01 & 1.1486E-01 & 1.2253E-01 & 1.2161E-01 & 1.2223E-01 & 1.0903E-01 & 1.1401E-01 & 1.1509E-01 \\
+          & std   & 1.9192E-02 & 3.6574E-02 & 3.3669E-02 & 3.3271E-02 & 2.3424E-02 & 4.4835E-02 & 3.0825E-02 & 3.3782E-02 \\
+    \multirow{3}[0]{*}{Dermatology} & best  & 1.7647E-03 & 2.3529E-03 & 4.1176E-03 & 5.0000E-03 & 3.8235E-03 & 3.8235E-03 & 1.4706E-03 & 3.2353E-03 \\
+          & mean  & 4.2767E-03 & 7.3007E-03 & 1.3031E-02 & 1.5643E-02 & 1.1589E-02 & 1.4807E-02 & 1.1043E-02 & 6.6417E-03 \\
+          & std   & 4.3719E-03 & 6.5224E-03 & 1.0056E-02 & 1.2877E-02 & 6.9351E-03 & 7.6337E-03 & 7.2608E-03 & 5.7978E-03 \\
+    \multirow{3}[0]{*}{Diabetes} & best  & 1.6676E-01 & 1.7574E-01 & 1.6404E-01 & 1.8743E-01 & 1.8618E-01 & 2.0037E-01 & 1.9140E-01 & 2.0162E-01 \\
+          & mean  & 2.0427E-01 & 2.1890E-01 & 2.2082E-01 & 2.1164E-01 & 2.1644E-01 & 2.3310E-01 & 2.1957E-01 & 2.1669E-01 \\
+          & std   & 1.9885E-02 & 2.0106E-02 & 2.8935E-02 & 1.9926E-02 & 2.3074E-02 & 2.6184E-02 & 2.1388E-02 & 1.0460E-02 \\
+    \multirow{3}[0]{*}{lungcancer-3class} & best  & 3.5714E-04 & 7.1429E-04 & 4.4643E-03 & 1.2500E-03 & 5.3571E-04 & 8.9286E-04 & 3.5714E-04 & 2.3214E-03 \\
+          & mean  & 1.7214E-02 & 3.3964E-02 & 1.0418E-01 & 8.4339E-02 & 8.3839E-02 & 1.5043E-01 & 8.3143E-02 & 3.6054E-02 \\
+          & std   & 5.2117E-02 & 6.9439E-02 & 1.3867E-01 & 1.1565E-01 & 1.1644E-01 & 1.2116E-01 & 8.7001E-02 & 6.9281E-02 \\
+    \multirow{3}[0]{*}{Parkinson} & best  & 9.0909E-04 & 9.0909E-04 & 2.7657E-02 & 3.1818E-03 & 2.6748E-02 & 2.9476E-02 & 1.8182E-03 & 2.2727E-03 \\
+          & mean  & 4.6692E-02 & 7.4570E-02 & 5.9892E-02 & 4.2115E-02 & 6.9902E-02 & 8.5678E-02 & 5.9703E-02 & 7.0266E-02 \\
+          & std   & 2.6093E-02 & 4.8458E-02 & 3.3682E-02 & 2.0709E-02 & 2.7134E-02 & 3.5320E-02 & 3.1505E-02 & 3.7616E-02 \\
+    \multirow{3}[0]{*}{SPECT} & best  & 7.8353E-02 & 5.9220E-02 & 9.9760E-02 & 6.2856E-02 & 8.3353E-02 & 7.9717E-02 & 7.7444E-02 & 4.3268E-02 \\
+          & mean  & 1.0815E-01 & 1.1913E-01 & 1.2637E-01 & 1.4036E-01 & 1.2318E-01 & 1.2086E-01 & 1.1548E-01 & 1.0737E-01 \\
+          & std   & 2.1731E-02 & 3.3873E-02 & 3.0181E-02 & 4.0193E-02 & 2.7183E-02 & 2.9275E-02 & 2.5141E-02 & 3.8726E-02 \\
+    \multirow{3}[0]{*}{wpbc} & best  & 2.7506E-02 & 7.7972E-02 & 1.0730E-01 & 8.1608E-02 & 7.7366E-02 & 1.0366E-01 & 7.7063E-02 & 5.5315E-02 \\
+          & mean  & 8.8429E-02 & 1.1161E-01 & 1.4347E-01 & 1.2696E-01 & 1.4672E-01 & 1.4056E-01 & 1.1064E-01 & 1.1811E-01 \\
+          & std   & 3.6329E-02 & 2.3809E-02 & 3.3643E-02 & 2.4154E-02 & 3.1608E-02 & 2.6510E-02 & 2.4200E-02 & 5.0897E-02 \\
+    \multirow{3}[0]{*}{ALLAML} & best  & 1.4027E-06 & 8.4163E-06 & 7.5650E-02 & 2.8054E-06 & 1.4027E-06 & 2.8054E-06 & 7.1539E-05 & 7.5319E-02 \\
+          & mean  & 3.6471E-06 & 1.4210E-02 & 1.5397E-01 & 2.1221E-02 & 2.8295E-02 & 7.7909E-02 & 1.4248E-02 & 1.3198E-01 \\
+          & std   & 1.5079E-06 & 2.9868E-02 & 5.2247E-02 & 3.4156E-02 & 3.6511E-02 & 7.0353E-02 & 2.9826E-02 & 6.4967E-02 \\
+    \multirow{3}[0]{*}{Lymphoma} & best  & 2.4839E-06 & 4.9677E-06 & 4.7889E-03 & 2.4839E-06 & 4.9677E-06 & 7.4516E-06 & 7.4516E-06 & 7.6006E-04 \\
+          & mean  & 4.7193E-06 & 7.2032E-06 & 4.8530E-03 & 2.9806E-06 & 8.9419E-06 & 1.7139E-05 & 1.5152E-05 & 4.1381E-03 \\
+          & std   & 1.4100E-06 & 2.1749E-06 & 5.3077E-05 & 1.0473E-06 & 3.9186E-06 & 1.4024E-05 & 9.0281E-06 & 1.1887E-03 \\
+    \multirow{3}[0]{*}{nci9} & best  & 1.6501E-01 & 2.4767E-01 & 4.1957E-01 & 2.4751E-01 & 2.4753E-01 & 3.3009E-01 & 2.4761E-01 & 4.1726E-01 \\
+          & mean  & 2.7228E-01 & 3.4662E-01 & 5.5840E-01 & 3.6318E-01 & 3.6310E-01 & 4.5414E-01 & 3.4668E-01 & 5.5754E-01 \\
+          & std   & 1.1034E-01 & 7.5740E-02 & 8.6980E-02 & 9.6622E-02 & 8.8655E-02 & 7.9960E-02 & 6.5048E-02 & 1.2324E-01 \\
+    \multirow{3}[0]{*}{TOX-171} & best  & 1.6875E-04 & 3.2026E-02 & 1.5065E-01 & 8.7480E-02 & 3.1633E-02 & 6.4942E-02 & 2.9420E-02 & 6.3251E-02 \\
+          & mean  & 3.5686E-02 & 9.5800E-02 & 2.2457E-01 & 1.5284E-01 & 1.3361E-01 & 1.5890E-01 & 7.6619E-02 & 1.3883E-01 \\
+          & std   & 3.8437E-02 & 4.2697E-02 & 6.4879E-02 & 4.9116E-02 & 5.6303E-02 & 4.6560E-02 & 2.8391E-02 & 3.9287E-02 \\
+    \bottomrule      
+    \end{tabular}%
+  \label{tb:FS-fitness}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+  \caption{The accuracy results on 12 datasets}
+    \setlength{\tabcolsep}{3pt} % 减少列间距
+    \tiny
+    \begin{tabular}{cccccccccc}
+    \toprule    
+    Dataset & Metric & IRIME & RIME  & AOA   & BWO   & WOA   & ROA   & SCA   & COA \\
+    \midrule
+    \multirow{3}[0]{*}{Breast-cancer} & best  & 9.6403E-01 & 9.7122E-01 & 9.4964E-01 & 9.6403E-01 & 9.6403E-01 & 9.6403E-01 & 9.5683E-01 & 9.6403E-01 \\
+          & mean  & 9.8489E-01 & 9.8201E-01 & 9.7842E-01 & 9.8417E-01 & 9.8561E-01 & 9.7914E-01 & 9.7914E-01 & 9.8345E-01 \\
+          & std   & 1.0963E-02 & 5.0871E-03 & 1.2228E-02 & 1.0617E-02 & 1.1248E-02 & 9.8584E-03 & 1.1476E-02 & 1.1773E-02 \\
+    \multirow{3}[0]{*}{Cleveland-heart} & best  & 8.6667E-01 & 8.1667E-01 & 8.3333E-01 & 8.3333E-01 & 8.5000E-01 & 8.5000E-01 & 8.1667E-01 & 8.5000E-01 \\
+          & mean  & 8.9500E-01 & 8.8833E-01 & 8.8167E-01 & 8.8167E-01 & 8.8167E-01 & 8.9500E-01 & 8.8833E-01 & 8.8833E-01 \\
+          & std   & 1.9325E-02 & 3.6893E-02 & 3.4650E-02 & 3.3747E-02 & 2.4152E-02 & 4.5168E-02 & 3.1476E-02 & 3.4292E-02 \\
+    \multirow{3}[0]{*}{Dermatology} & best  & 9.8592E-01 & 9.8592E-01 & 9.7183E-01 & 9.5775E-01 & 9.8592E-01 & 9.8592E-01 & 9.8592E-01 & 9.8592E-01 \\
+          & mean  & 9.9859E-01 & 9.9577E-01 & 9.9296E-01 & 9.9014E-01 & 9.9296E-01 & 9.9155E-01 & 9.9155E-01 & 9.9718E-01 \\
+          & std   & 4.4539E-03 & 6.8035E-03 & 9.9593E-03 & 1.3362E-02 & 7.4232E-03 & 7.2732E-03 & 7.2732E-03 & 5.9385E-03 \\
+    \multirow{3}[0]{*}{Diabetes} & best  & 7.5817E-01 & 7.5817E-01 & 7.4510E-01 & 7.5163E-01 & 7.5163E-01 & 7.5163E-01 & 7.4510E-01 & 7.7124E-01 \\
+          & mean  & 7.8824E-01 & 7.8431E-01 & 7.8301E-01 & 7.9216E-01 & 7.8693E-01 & 7.8497E-01 & 7.8301E-01 & 7.8693E-01 \\
+          & std   & 1.8538E-02 & 2.0897E-02 & 3.0314E-02 & 2.0391E-02 & 2.1830E-02 & 2.3756E-02 & 2.1743E-02 & 1.1610E-02 \\
+    \multirow{3}[0]{*}{lungcancer-3class} & best  & 8.3333E-01 & 1.0000E+00 & 6.6667E-01 & 6.6667E-01 & 6.6667E-01 & 6.6667E-01 & 8.3333E-01 & 8.3333E-01 \\
+          & mean  & 9.8333E-01 & 1.0000E+00 & 9.0000E-01 & 9.1667E-01 & 9.1667E-01 & 8.5000E-01 & 9.1667E-01 & 9.6667E-01 \\
+          & std   & 5.2705E-02 & 0.0000E+00 & 1.4055E-01 & 1.1785E-01 & 1.1785E-01 & 1.2298E-01 & 8.7841E-02 & 7.0273E-02 \\
+    \multirow{3}[0]{*}{Parkinson} & best  & 9.2308E-01 & 8.4615E-01 & 8.9744E-01 & 9.2308E-01 & 8.9744E-01 & 8.4615E-01 & 8.9744E-01 & 8.7179E-01 \\
+          & mean  & 9.5385E-01 & 9.2564E-01 & 9.4359E-01 & 9.5897E-01 & 9.3077E-01 & 9.1538E-01 & 9.4103E-01 & 9.3077E-01 \\
+          & std   & 2.6482E-02 & 4.9024E-02 & 3.3758E-02 & 2.1622E-02 & 2.7163E-02 & 3.6362E-02 & 3.2094E-02 & 3.8319E-02 \\
+    \multirow{3}[0]{*}{SPECT} & best  & 8.6792E-01 & 8.1132E-01 & 8.3019E-01 & 7.9245E-01 & 8.3019E-01 & 8.3019E-01 & 8.4906E-01 & 8.3019E-01 \\
+          & mean  & 8.9434E-01 & 8.8302E-01 & 8.7925E-01 & 8.6226E-01 & 8.8113E-01 & 8.8302E-01 & 8.8679E-01 & 8.9623E-01 \\
+          & std   & 2.2147E-02 & 3.4218E-02 & 3.1067E-02 & 4.1766E-02 & 2.8197E-02 & 2.9230E-02 & 2.5157E-02 & 4.0025E-02 \\
+    \multirow{3}[0]{*}{wpbc} & best  & 8.7179E-01 & 8.4615E-01 & 7.9487E-01 & 8.4615E-01 & 8.2051E-01 & 8.2051E-01 & 8.7179E-01 & 7.9487E-01 \\
+          & mean  & 9.1282E-01 & 8.8974E-01 & 8.6154E-01 & 8.7436E-01 & 8.5385E-01 & 8.6154E-01 & 8.8974E-01 & 8.8462E-01 \\
+          & std   & 3.6663E-02 & 2.4325E-02 & 3.4613E-02 & 2.5498E-02 & 3.2094E-02 & 2.7563E-02 & 2.4325E-02 & 5.1637E-02 \\
+    \multirow{3}[0]{*}{ALLAML} & best  & 1.0000E+00 & 9.2857E-01 & 7.8571E-01 & 9.2857E-01 & 9.2857E-01 & 7.8571E-01 & 1.0000E+00 & 7.1429E-01 \\
+          & mean  & 1.0000E+00 & 9.8571E-01 & 8.5000E-01 & 9.7857E-01 & 9.7143E-01 & 9.2143E-01 & 1.0000E+00 & 8.7143E-01 \\
+          & std   & 0.0000E+00 & 3.0117E-02 & 5.2705E-02 & 3.4503E-02 & 3.6886E-02 & 7.1031E-02 & 0.0000E+00 & 6.5638E-02 \\
+    \multirow{3}[0]{*}{Lymphoma} & best  & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 \\
+          & mean  & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 & 1.0000E+00 \\
+          & std   & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 & 0.0000E+00 \\
+    \multirow{3}[0]{*}{nci9} & best  & 5.0000E-01 & 5.0000E-01 & 3.3333E-01 & 5.0000E-01 & 5.0000E-01 & 4.1667E-01 & 5.8333E-01 & 1.6667E-01 \\
+          & mean  & 7.2500E-01 & 6.5000E-01 & 4.7500E-01 & 6.3333E-01 & 6.3333E-01 & 5.4167E-01 & 6.5000E-01 & 4.4167E-01 \\
+          & std   & 1.1146E-01 & 7.6578E-02 & 9.6625E-02 & 9.7816E-02 & 8.9581E-02 & 8.0985E-02 & 6.5734E-02 & 1.2454E-01 \\
+    \multirow{3}[0]{*}{TOX-171} & best  & 8.8235E-01 & 8.8235E-01 & 7.0588E-01 & 7.9412E-01 & 7.9412E-01 & 7.9412E-01 & 8.8235E-01 & 8.2353E-01 \\
+          & mean  & 9.6471E-01 & 9.4412E-01 & 8.0294E-01 & 8.4706E-01 & 8.6765E-01 & 8.4412E-01 & 9.2353E-01 & 8.6471E-01 \\
+          & std   & 3.8722E-02 & 2.9248E-02 & 6.0515E-02 & 4.9604E-02 & 5.7585E-02 & 4.8129E-02 & 2.8414E-02 & 3.9703E-02 \\
+    \bottomrule      
+    \end{tabular}%
+  \label{tb:FS-acc}%
+\end{table}%
+
+%特征选择featureSize图
+\begin{figure}[htbp]
+    \centering
+    % 第一行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/1.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/2.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/3.pdf}
+    \end{subfigure}
+    % 第二行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/4.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/5.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/6.pdf}
+    \end{subfigure}
+    % 第三行子图
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/7.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/8.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/9.pdf}
+    \end{subfigure}
+    % 第四行
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/10.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/11.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \caption*{}
+        \includegraphics[width=\textwidth]{figures/FS/feature/12.pdf}
+    \end{subfigure}
+    \caption{Comparative feature size histograms on 12 datasets.}
+    \label{fig:fs-feature}
+\end{figure}
+
+\section{实验结果分析}
+在医学特征选择的评估中，IRIME在适应度值和准确率指标方面都表现出显著优势。就适应度值而言，IRIME在多个数据集上始终表现良好。具体而言，在乳腺癌数据集上，其最佳适应度值为0.0044，与WOA并列第二，略高于BWO和ROA。在皮肤科数据集上，IRIME实现了最佳适应度值0.0018，仅次于SCA，且明显优于其他对比算法，彰显其强大的优化能力。在肺癌三分类和wpbc数据集上，IRIME分别取得了0.0003和0.0275的最佳适应度值，在所有比较算法中排名第一。此外，IRIME在不同数据集上的标准差保持适中，例如乳腺癌数据集的标准差为0.0111，表明其具有稳定且高性能的表现。在平均适应度值方面，IRIME在皮肤科数据集上的平均值为0.0043，远低于AOA和BWO，且仅次于SCA。在分类准确率方面，IRIME在多个五个数据集上获得了最高和平均的准确率。例如，在乳腺癌数据集上的最佳准确率与其他领先算法相当，平均准确率达98.49\%，位居前列。这些结果表明，IRIME不仅能有效选择相关特征，还能保持稳健的分类准确性。在高维数据集ALLAML和TOX-171上，IRIME分别以100\%和88.24\%的分类准确率夺得第一，且在其他高维数据集上表现具有竞争力。此外，IRIME在所有高维数据集上的适应度值表现出压倒性的优势。
+
+\chapter{总结与展望}
+在本研究中，我们提出了一种改进型 RIME 算法（IRIME），旨在解决原始 RIME 算法存在的局限性。具体而言，该改进方案通过整合三大核心创新机制实现性能突破：（1）信息熵评估策略通过量化搜索过程中的信息不确定性，动态平衡算法的探索（Exploration）与利用（Exploitation）能力，避免算法过早陷入局部最优或搜索效率低下的困境；（2）随机重启机制当算法检测到搜索进程陷入停滞状态时，自动触发随机初始化重启，重新开辟搜索路径，有效规避局部最优解的束缚；（3）拉格朗日插值法通过构建光滑的插值函数拟合搜索空间的目标函数分布，为算法提供更精准的搜索方向指引，从而显著提升收敛速度。
+为全面验证 IRIME 算法的性能优势，我们在两大核心任务场景中开展了系统性实验：CEC 2017 基准测试集与特征选择任务。在 CEC 2017 测试集上，无论面对低维还是高维优化问题，IRIME 均展现出卓越的全局优化能力不仅收敛速度远超原始 RIME 及其他对比算法，还能获得更高的求解精度，充分验证了其在复杂优化场景中的适应性。在特征选择任务中，IRIME 能够精准识别数据集中的关键特征，有效剔除冗余信息，进而显著提升后续分类模型的性能；多组数据集上的实验结果均表明，其特征选择效果与分类精度均优于现有主流对比算法，凸显了算法在实际数据处理任务中的实用价值。
+此外，我们通过消融实验（Ablation Studies）进一步验证了三大创新机制的有效性：单独移除任一机制后，算法的优化性能、收敛速度或特征选择精度均出现明显下降，而三者的有机结合则实现了 “1+1+1>3” 的协同效应，显著增强了算法的整体性能。这一结果充分证明了各创新模块设计的合理性与必要性，为算法的后续改进提供了坚实的实验支撑。
+展望未来，相关研究可从两方面进一步推进：一方面，可通过优化算法的计算流程、引入并行计算等方式，进一步提升 IRIME 的计算效率，以适应更大规模数据或更复杂优化问题的需求；另一方面，可探索融合更多先进搜索策略，拓展算法在多模态优化问题中的性能边界，此类问题因存在多个最优解而极具挑战性，IRIME 的现有框架为相关改进提供了良好基础。同时，IRIME 在工程实践中具有广阔的应用前景，尤其适用于图像处理（如图像分割、特征提取）、医疗诊断（如疾病风险预测、医学影像分析）等对优化精度与效率均有严格要求的领域。其高效处理优化问题与特征选择任务的双重能力，充分彰显了算法的通用性与实用价值，为解决实际工程中的复杂问题提供了新的技术思路。
+\newpage
+
+\backmatter
+\renewcommand{\chaptermark}[1]{\markboth{\songti #1}{}}
+\makereferences
+\newpage
+
+
+
+% {
+%     \appendix
+%     \renewcommand{\chaptermark}[1]{\markboth{\heiti  附录\thechapter\ ~#1}{}}
+%     \chapter{补充更多细节}
+
+%     \section{补充图}
+%     主要列入正文内过分冗长的公式推导，供查读方便所需的辅助性数学工具或表格；重复性数据图表；论文使用的缩写、程序全文及说明等。附录一般与论文全文装订在一起，与正文一起编页码，如果附录内容很多时可独立成册。若有多个附录按大写英文字母排序，如附录 A、附录B 等，每一个附录均另起一页。附录中的公式及图表编号也冠以附录序号字母加一短划线如公式A-2），图 A-2，表 B-2 等。本项可根据论文需要编排或省略。
+%     \subsection{补充图}
+
+%     \newclearpage
+% }
+\ifdefined\blind  %这个if不要删除
+    % 盲审版没有致谢
+\else
+%     \chapter{致谢}
+
+%     四年时间转眼即逝，青涩而美好的本科生活快告一段落了。回首这段时间，我不仅学习到了很多知识和技能，而且提高了分析和解决问题的能力与养成了一定的科学素养。虽然走过了一些弯路，但更加坚定我后来选择学术研究的道路，实在是获益良多。这一切与老师的教诲和同学们的帮助是分不开的，在此对他们表达诚挚的谢意。
+
+%     最后我要感谢我的家人，正是他们的无私的奉献和支持，我才有了不断拼搏的信心和勇气，才能取得现在的成果。
+
+%     \vskip 108pt
+%     \begin{flushright}
+%         邱从波\makebox[1cm]{} \\
+%         \today
+%     \end{flushright}
+%     \newpage
+% \fi
+% \chapter{攻读硕士学位期间取得的主要学术成果}
+
+% \section*{1. 已发表的学术论文}
+% 论文格式依照《温州大学研究生学位论文格式》（温州大学行政〔2016〕153号）文件要求，上传的盲审论文含封面（盲审格式）、中英文摘要和关键词、目录、正文、参考文献、注释、附录、攻读学位期间取得的研究成果（作者、发表卷期等信息一律用“XXX”替代，详见示例）,除去扉页、版权页、致谢等部分，论文封面及论文中不得出现温州大学、指导教师及作者等相关信息,一律用“***”替代。
+
+% \ifdefined\blind  % 这个if不要删除
+%     % 盲审版不透露自己姓名
+%     \begin{enumerate}
+%         \renewcommand{\labelenumi}{[\arabic{enumi}]}
+%         \setlength{\itemindent}{0em}
+%         \setlength{\labelsep}{0.5em}
+  
+%         \item XXX[J]. Journal of Materials Science-Materials in Electronics,2022,X(X): XXXX -XXXX.SCI收录，已发表，第三章的研究成果.
+%         \item  XXX, XXX, XXX[J]. Journal of Physics: Conference Series.2021.X(X)(本人第一作者).EI收录，已发表，第四章的研究成果.
+%     \end{enumerate}
+% \else
+%     攻读学位期间发表的学术论文目录格式同参考文献,并在最后注明刊物级别和第一完成单位名称。
+%     \begin{enumerate}
+%         \renewcommand{\labelenumi}{[\arabic{enumi}]}
+%         \setlength{\itemindent}{0em}
+%         \setlength{\labelsep}{0.5em}
+  
+%         \item Zhang X, Yu Z, Zhao L, et al. COMPrompter: reconceptualized segment anything model with multiprompt network for camouflaged object detection[J]. Science China Information Sciences, 2025, 68(1): 112104. JCR 一区， 温州大学.
+%         \item Yu Z, Zhang X, Zhao L, et al. Exploring Deeper! Segment Anything Model with Depth Perception for Camouflaged Object Detection[C]//Proceedings of the 32nd ACM International Conference on Multimedia. 2024: 4322-4330. CCF-A ,温州大学.
+%     \end{enumerate}
+% \fi
+
+% \section*{2. 参与的科研项目}
+
+
+% \section*{3. 获奖情况}
+
+
+%\newpage
+\end{document}
