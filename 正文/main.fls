@@ -440,6 +440,15 @@ INPUT ./main.lot
 INPUT ./main.lot
 INPUT main.lot
 OUTPUT main.lot
+INPUT ./figures/Flowchart/RIME-Flowcahrt.png
+INPUT ./figures/Flowchart/RIME-Flowcahrt.png
+INPUT ./figures/Flowchart/RIME-Flowcahrt.png
+INPUT ./figures/RIME/RIMEsoftandhard.png
+INPUT ./figures/RIME/RIMEsoftandhard.png
+INPUT ./figures/RIME/RIMEsoftandhard.png
+INPUT ./figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg
+INPUT ./figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg
+INPUT ./figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg
 INPUT ./figures//Flowchart/IRIME2flowchart.png
 INPUT ./figures//Flowchart/IRIME2flowchart.png
 INPUT ./figures//Flowchart/IRIME2flowchart.png
@@ -737,6 +746,9 @@ INPUT ./figures/FS/feature/11.pdf
 INPUT ./figures/FS/feature/12.pdf
 INPUT ./figures/FS/feature/12.pdf
 INPUT ./figures/FS/feature/12.pdf
+INPUT ./figures/HHO/QL.pdf
+INPUT ./figures/HHO/QL.pdf
+INPUT ./figures/HHO/QL.pdf
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl

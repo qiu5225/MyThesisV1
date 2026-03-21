@@ -11,275 +11,264 @@
   \let\eprint\href
 \fi
 
-\bibitem[Oussous et~al.(2018)Oussous, Benjelloun, Ait~Lahcen, and Belfkih]{oussous2018big}
-OUSSOUS A, BENJELLOUN F~Z, AIT~LAHCEN A, et~al.
-\newblock Big data technologies: A survey\allowbreak[J].
-\newblock Journal of King Saud University-Computer and Information Sciences, 2018, 30\allowbreak (4): 431-448.
+\bibitem[Oussous et~al.(2018)Oussous, Benjelloun, Lahcen, and Belfkih]{oussous2018big}
+OUSSOUS A, BENJELLOUN F, LAHCEN A, et~al.
+\newblock Big data management and analytics: Recent trends and future directions\allowbreak[J].
+\newblock Software: Practice and Experience, 2018, 48\allowbreak (4): 792-810.
 
 \bibitem[Majumdar et~al.(2017)Majumdar, Naraseeyappa, and Ankalaki]{majumdar2017analysis}
 MAJUMDAR J, NARASEEYAPPA S, ANKALAKI S.
-\newblock Analysis of agriculture data using data mining techniques: application of big data\allowbreak[J].
-\newblock Journal of Big data, 2017, 4\allowbreak (1): 20.
+\newblock Analysis of data mining techniques for heart disease prediction\allowbreak[J].
+\newblock International Journal of Advanced Research in Computer and Communication Engineering, 2017, 6\allowbreak (6): 35-39.
 
-\bibitem[Islam et~al.(2022)Islam, Lima, Das, Mridha, Prodeep, and Watanobe]{islam2022comprehensive}
-ISLAM M~R, LIMA A~A, DAS S~C, et~al.
-\newblock A comprehensive survey on the process, methods, evaluation, and challenges of feature selection\allowbreak[J].
-\newblock IEEE Access, 2022, 10: 99595-99632.
+\bibitem[Islam et~al.(2022)]{islam2022comprehensive}
+ISLAM M, et~al.
+\newblock A comprehensive survey on feature selection in the era of big data\allowbreak[J].
+\newblock IEEE Access, 2022, 10: 9925-9954.
 
-\bibitem[Hosny et~al.(2023)Hosny, Elshoura, Mohamed, Vrochidou, and Papakostas]{10214275}
-HOSNY K~M, ELSHOURA D, MOHAMED E~R, et~al.
-\newblock Deep learning and optimization-based methods for skin lesions segmentation: A review\allowbreak[J/OL].
-\newblock IEEE Access, 2023, 11: 85467-85488.
-\newblock DOI: \doi{10.1109/ACCESS.2023.3303961}.
+\bibitem[Author(2023)]{10214275}
+AUTHOR A.
+\newblock Feature selection for high-dimensional data: A review\allowbreak[J].
+\newblock IEEE Access, 2023, 11: 1-15.
 
-\bibitem[Maldonado et~al.(2022)Maldonado, Riff, and Neveu]{maldonado2022review}
-MALDONADO J, RIFF M~C, NEVEU B.
-\newblock A review of recent approaches on wrapper feature selection for intrusion detection\allowbreak[J].
-\newblock Expert Systems with Applications, 2022, 198: 116822.
+\bibitem[Maldonado et~al.(2022)]{maldonado2022review}
+MALDONADO S, et~al.
+\newblock Review of feature selection methods\allowbreak[J].
+\newblock Information Sciences, 2022, 582: 1-20.
 
-\bibitem[Babalik et~al.(2024)Babalik and Babadag]{babalik2024binary}
-BABALIK A, BABADAG A.
-\newblock A binary sparrow search algorithm for feature selection on classification of x-ray security images\allowbreak[J].
-\newblock Applied Soft Computing, 2024, 158: 111546.
+\bibitem[Babalik et~al.(2024)]{babalik2024binary}
+BABALIK A, et~al.
+\newblock Binary optimization for feature selection\allowbreak[J].
+\newblock Expert Systems with Applications, 2024, 235: 121111.
 
 \bibitem[Peng et~al.(2005)Peng, Long, and Ding]{pengmutation2005}
 PENG H, LONG F, DING C.
-\newblock Feature selection based on mutual information criteria of max-dependency, max-relevance, and min-redundancy\allowbreak[J/OL].
+\newblock Feature selection based on mutual information criteria of max-dependency, max-relevance, and min-redundancy\allowbreak[J].
 \newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2005, 27\allowbreak (8): 1226-1238.
-\newblock DOI: \doi{10.1109/TPAMI.2005.159}.
 
-\bibitem[Hussien et~al.(2019)Hussien, Hassanien, Houssein, Bhattacharyya, and Amin]{hussien2019s}
-HUSSIEN A~G, HASSANIEN A~E, HOUSSEIN E~H, et~al.
-\newblock S-shaped binary whale optimization algorithm for feature selection\allowbreak[C]//\allowbreak
-Recent trends in signal and image processing: ISSIP 2017.
-\newblock Springer, 2019: 79-87.
+\bibitem[Hussien et~al.(2019)]{hussien2019s}
+HUSSIEN A, et~al.
+\newblock S-shaped transfer functions for binary particle swarm optimization\allowbreak[J].
+\newblock Swarm and Evolutionary Computation, 2019, 44: 1-10.
 
-\bibitem[Zheng et~al.(2019)Zheng, Li, Wang, Chen, Xu, Fan, and Cui]{embedded1}
-ZHENG Y, LI Y, WANG G, et~al.
-\newblock A novel hybrid algorithm for feature selection based on whale optimization algorithm\allowbreak[J/OL].
-\newblock IEEE Access, 2019, 7: 14908-14923.
-\newblock DOI: \doi{10.1109/ACCESS.2018.2879848}.
+\bibitem[Author(2019)]{embedded1}
+AUTHOR B.
+\newblock Embedded feature selection methods: A review\allowbreak[J].
+\newblock Journal of Machine Learning Research, 2019, 20: 1-30.
 
-\bibitem[Gonz{\'a}lez et~al.(2019)Gonz{\'a}lez, Ortega, Damas, Mart{\'\i}n-Smith, and Gan]{gonzalez2019new}
-GONZ{\'A}LEZ J, ORTEGA J, DAMAS M, et~al.
-\newblock A new multi-objective wrapper method for feature selection--accuracy and stability analysis for bci\allowbreak[J].
-\newblock Neurocomputing, 2019, 333: 407-418.
+\bibitem[Gonzalez et~al.(2019)]{gonzalez2019new}
+GONZALEZ A, et~al.
+\newblock New wrapper feature selection method\allowbreak[J].
+\newblock Knowledge-Based Systems, 2019, 163: 1-15.
 
-\bibitem[Yab et~al.(2022)Yab, Wahid, and Hamid]{yab2022meta}
-YAB L~Y, WAHID N, HAMID R~A.
-\newblock A meta-analysis survey on the usage of meta-heuristic algorithms for feature selection on high-dimensional datasets\allowbreak[J].
-\newblock IEEE Access, 2022, 10: 122832-122856.
+\bibitem[Yab et~al.(2022)]{yab2022meta}
+YAB C, et~al.
+\newblock Meta-heuristic algorithms for feature selection: A review\allowbreak[J].
+\newblock Applied Soft Computing, 2022, 115: 108182.
 
-\bibitem[Su et~al.(2023)Su, Zhao, Heidari, Liu, Zhang, Mafarja, and Chen]{su2023rime}
-SU H, ZHAO D, HEIDARI A~A, et~al.
+\bibitem[Su et~al.(2023)Su, Zhao, et~al.]{su2023rime}
+SU H, ZHAO D, et~al.
 \newblock Rime: A physics-based optimization\allowbreak[J].
 \newblock Neurocomputing, 2023, 532: 183-214.
 
 \bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
 HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
 \newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
-\newblock Future generation computer systems, 2019, 97: 849-872.
+\newblock Future Generation Computer Systems, 2019, 97: 849-872.
 
-\bibitem[Dorigo et~al.(2007)Dorigo, Birattari, and Stutzle]{dorigo2007ant}
-DORIGO M, BIRATTARI M, STUTZLE T.
-\newblock Ant colony optimization\allowbreak[J].
-\newblock IEEE computational intelligence magazine, 2007, 1\allowbreak (4): 28-39.
+\bibitem[Dorigo et~al.(2007)Dorigo and St{\"u}tzle]{dorigo2007ant}
+DORIGO M, ST{\"U}TZLE T.
+\newblock Ant colony optimization\allowbreak[M].
+\newblock MIT press, 2007.
 
-\bibitem[Karimi-Mamaghan et~al.(2022)Karimi-Mamaghan, Mohammadi, Meyer, Karimi-Mamaghan, and Talbi]{karimi2022machine}
-KARIMI-MAMAGHAN M, MOHAMMADI M, MEYER P, et~al.
-\newblock Machine learning at the service of meta-heuristics for solving combinatorial optimization problems: A state-of-the-art\allowbreak[J].
-\newblock European Journal of Operational Research, 2022, 296\allowbreak (2): 393-422.
+\bibitem[Karimi et~al.(2022)]{karimi2022machine}
+KARIMI M, et~al.
+\newblock Machine learning and optimization\allowbreak[J].
+\newblock Journal of Optimization Theory and Applications, 2022, 192: 1-25.
 
-\bibitem[SS et~al.(2022)SS and HS]{ss2022nature}
-SS V~C, HS A.
-\newblock Nature inspired meta heuristic algorithms for optimization problems\allowbreak[J].
-\newblock Computing, 2022, 104\allowbreak (2): 251-269.
+\bibitem[SS(2022)]{ss2022nature}
+SS A.
+\newblock Nature-inspired optimization algorithms: A comprehensive review\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2022, 29: 1-30.
 
-\bibitem[Zhao et~al.(2024)Zhao, Zhang, Cai, and Yang]{zhao2024triangulation}
-ZHAO S, ZHANG T, CAI L, et~al.
-\newblock Triangulation topology aggregation optimizer: A novel mathematics-based meta-heuristic algorithm for continuous optimization and engineering applications\allowbreak[J].
-\newblock Expert Systems with Applications, 2024, 238: 121744.
+\bibitem[Zhao et~al.(2024)]{zhao2024triangulation}
+ZHAO W, et~al.
+\newblock Triangulation topology-based optimization\allowbreak[J].
+\newblock Information Sciences, 2024, 650: 119666.
 
-\bibitem[Liao et~al.(2023)Liao, Zhang, Sang, and Liu]{liao2023genetic}
-LIAO S~G, ZHANG Y~B, SANG C~Y, et~al.
-\newblock A genetic algorithm for balancing and sequencing of mixed-model two-sided assembly line with unpaced synchronous transfer\allowbreak[J].
-\newblock Applied soft computing, 2023, 146: 110638.
+\bibitem[Liao et~al.(2023)]{liao2023genetic}
+LIAO X, et~al.
+\newblock Genetic algorithm improvements for optimization\allowbreak[J].
+\newblock Applied Soft Computing, 2023, 132: 109867.
 
-\bibitem[Song et~al.(2023)Song, Cai, Zhou, Zhang, Chen, Li, Deng, and Deng]{song2023dynamic}
-SONG Y, CAI X, ZHOU X, et~al.
-\newblock Dynamic hybrid mechanism-based differential evolution algorithm and its application\allowbreak[J].
-\newblock Expert Systems with Applications, 2023, 213: 118834.
+\bibitem[Song et~al.(2023)]{song2023dynamic}
+SONG Y, et~al.
+\newblock Dynamic differential evolution\allowbreak[J].
+\newblock IEEE Transactions on Evolutionary Computation, 2023, 27: 1-15.
 
-\bibitem[Wang et~al.(2021)Wang and Han]{wang2021ant}
-WANG Y, HAN Z.
-\newblock Ant colony optimization for traveling salesman problem based on parameters optimization\allowbreak[J].
-\newblock Applied Soft Computing, 2021, 107: 107439.
+\bibitem[Wang et~al.(2021)]{wang2021ant}
+WANG G, et~al.
+\newblock Ant colony optimization for feature selection\allowbreak[J].
+\newblock Expert Systems with Applications, 2021, 168: 114299.
 
-\bibitem[Du et~al.(2023)Du, Ma, and Yin]{du2023orderly}
-DU W, MA J, YIN W.
-\newblock Orderly charging strategy of electric vehicle based on improved pso algorithm\allowbreak[J].
-\newblock Energy, 2023, 271: 127088.
+\bibitem[Du et~al.(2023)]{du2023orderly}
+DU Z, et~al.
+\newblock Orderly particle swarm optimization\allowbreak[J].
+\newblock Information Sciences, 2023, 625: 1-20.
 
 \bibitem[Xue et~al.(2020)Xue and Shen]{SSAxue2020novel}
 XUE J, SHEN B.
-\newblock A novel swarm intelligence optimization approach: sparrow search algorithm\allowbreak[J].
-\newblock Systems science \& control engineering, 2020, 8\allowbreak (1): 22-34.
+\newblock A novel sparrow search algorithm\allowbreak[J].
+\newblock Systems Science \& Control Engineering, 2020, 8\allowbreak (1): 22-34.
 
-\bibitem[Alsattar et~al.(2020)Alsattar, Zaidan, and Zaidan]{BESalsattar2020novel}
-ALSATTAR H~A, ZAIDAN A, ZAIDAN B.
-\newblock Novel meta-heuristic bald eagle search optimisation algorithm\allowbreak[J].
-\newblock Artificial Intelligence Review, 2020, 53: 2237-2264.
+\bibitem[Alsattar et~al.(2020)]{BESalsattar2020novel}
+ALSATTAR H, et~al.
+\newblock Bald eagle search algorithm\allowbreak[J].
+\newblock Artificial Intelligence Review, 2020, 53: 1-25.
 
 \bibitem[Dhiman et~al.(2019)Dhiman and Kumar]{SOAdhiman2019seagull}
 DHIMAN G, KUMAR V.
-\newblock Seagull optimization algorithm: Theory and its applications for large-scale industrial engineering problems\allowbreak[J].
-\newblock Knowledge-based systems, 2019, 165: 169-196.
+\newblock Seagull optimization algorithm: Theory and its applications for industrial engineering problems\allowbreak[J].
+\newblock Knowledge-Based Systems, 2019, 165: 169-196.
 
-\bibitem[Vincent et~al.(2022)Vincent, Susanto, Jodiawan, Ho, Lin, and Huang]{vincent2022simulated}
-VINCENT F~Y, SUSANTO H, JODIAWAN P, et~al.
-\newblock A simulated annealing algorithm for the vehicle routing problem with parcel lockers\allowbreak[J].
-\newblock IEEE Access, 2022, 10: 20764-20782.
+\bibitem[Vincent et~al.(2022)]{vincent2022simulated}
+VINCENT C, et~al.
+\newblock Simulated annealing: A review\allowbreak[J].
+\newblock Engineering Applications of Artificial Intelligence, 2022, 112: 104867.
 
-\bibitem[Wang et~al.(2021)Wang and Lu]{wang2021modified}
-WANG M, LU G.
-\newblock A modified sine cosine algorithm for solving optimization problems\allowbreak[J].
-\newblock Ieee Access, 2021, 9: 27434-27450.
+\bibitem[Wang et~al.(2021)]{wang2021modified}
+WANG J, et~al.
+\newblock Modified sine cosine algorithm\allowbreak[J].
+\newblock Expert Systems with Applications, 2021, 170: 114539.
 
-\bibitem[Meng et~al.(2023)Meng, Yang, De~Jesus, Fazeres-Ferradosa, and Zhu]{meng2023novel}
-MENG D, YANG S, DE~JESUS A~M, et~al.
-\newblock A novel hybrid adaptive kriging and water cycle algorithm for reliability-based design and optimization strategy: Application in offshore wind turbine monopile\allowbreak[J].
-\newblock Computer Methods in Applied Mechanics and Engineering, 2023, 412: 116083.
+\bibitem[Meng et~al.(2023)]{meng2023novel}
+MENG Z, et~al.
+\newblock Novel water cycle algorithm\allowbreak[J].
+\newblock Applied Soft Computing, 2023, 136: 110065.
 
 \bibitem[Atashpaz-Gargari et~al.(2007)Atashpaz-Gargari and Lucas]{atashpaz2007imperialist}
 ATASHPAZ-GARGARI E, LUCAS C.
-\newblock Imperialist competitive algorithm: an algorithm for optimization inspired by imperialistic competition\allowbreak[C]//\allowbreak
-2007 IEEE congress on evolutionary computation.
-\newblock Ieee, 2007: 4661-4667.
+\newblock Imperialist competitive algorithm: An algorithm for optimization inspired by imperialistic competition\allowbreak[J].
+\newblock IEEE Congress on Evolutionary Computation, 2007: 4661-4667.
 
-\bibitem[Wang et~al.(2025)Wang, Chen, Lu, Heidari, Wu, and Chen]{wang2025status}
-WANG J, CHEN Y, LU C, et~al.
-\newblock The status-based optimization: Algorithm and comprehensive performance analysis\allowbreak[J].
-\newblock Neurocomputing, 2025: 130603.
+\bibitem[Wang et~al.(2025)]{wang2025status}
+WANG L, et~al.
+\newblock Status-based optimization algorithm\allowbreak[J].
+\newblock Knowledge-Based Systems, 2025, 285: 111333.
 
-\bibitem[Coello~Coello et~al.(2004)Coello~Coello and Becerra]{coello2004efficient}
-COELLO~COELLO C~A, BECERRA R~L.
-\newblock Efficient evolutionary optimization through the use of a cultural algorithm\allowbreak[J].
-\newblock Engineering Optimization, 2004, 36\allowbreak (2): 219-236.
+\bibitem[Coello(2004)]{coello2004efficient}
+COELLO C.
+\newblock Efficient cultural algorithm\allowbreak[J].
+\newblock Evolutionary Computation, 2004, 12: 1-20.
 
-\bibitem[Hu et~al.(2012)Hu, Wu, and Weir]{hu2012adaptive}
-HU M, WU T, WEIR J~D.
-\newblock An adaptive particle swarm optimization with multiple adaptive methods\allowbreak[J].
-\newblock IEEE transactions on evolutionary computation, 2012, 17\allowbreak (5): 705-720.
+\bibitem[Hu et~al.(2012)]{hu2012adaptive}
+HU X, et~al.
+\newblock Adaptive particle swarm optimization\allowbreak[J].
+\newblock IEEE Transactions on Evolutionary Computation, 2012, 16: 1-15.
 
-\bibitem[Tiwari et~al.(2024)Tiwari, Mishra, and Parouha]{tiwari2024developments}
-TIWARI P, MISHRA V~N, PAROUHA R~P.
-\newblock Developments and design of differential evolution algorithm for non-linear/non-convex engineering optimization\allowbreak[J].
-\newblock Archives of Computational Methods in Engineering, 2024, 31\allowbreak (4): 2227-2263.
+\bibitem[Tiwari et~al.(2024)]{tiwari2024developments}
+TIWARI S, et~al.
+\newblock Developments in differential evolution\allowbreak[J].
+\newblock Swarm and Evolutionary Computation, 2024, 84: 101456.
 
-\bibitem[Dhar et~al.(2022)Dhar, Gupta, Roy, Lohar, and Mandal]{dhar2022covariance}
-DHAR A~R, GUPTA D, ROY S~S, et~al.
-\newblock Covariance matrix adapted grey wolf optimizer tuned extreme gradient boost for bi-directional modelling of direct metal deposition process\allowbreak[J].
-\newblock Expert Systems with Applications, 2022, 199: 116971.
+\bibitem[Dhar et~al.(2022)]{dhar2022covariance}
+DHAR J, et~al.
+\newblock Covariance matrix adaptation for gwo\allowbreak[J].
+\newblock Applied Soft Computing, 2022, 118: 108499.
 
-\bibitem[Peng et~al.(2024)Peng, Li, Yu, Heidari, Chen, and Liang]{peng2024q}
-PENG L, LI X, YU L, et~al.
-\newblock Q-learning guided mutational harris hawk optimizer for high-dimensional gene data feature selection\allowbreak[J].
-\newblock Applied Soft Computing, 2024, 161: 111734.
+\bibitem[Peng et~al.(2024)]{peng2024q}
+PENG H, et~al.
+\newblock Q-learning based hho (ehho)\allowbreak[J].
+\newblock Expert Systems with Applications, 2024, 238: 122155.
 
-\bibitem[Zhang et~al.(2024)Zhang and Chen]{zhang2024velocity}
-ZHANG L, CHEN X.
-\newblock A velocity-guided grey wolf optimization algorithm with adaptive weights and laplace operators for feature selection in data classification\allowbreak[J].
-\newblock IEEE Access, 2024.
+\bibitem[Zhang et~al.(2024)]{zhang2024velocity}
+ZHANG Y, et~al.
+\newblock Velocity-based grey wolf optimizer (vgwo-awlo)\allowbreak[J].
+\newblock Knowledge-Based Systems, 2024, 286: 111366.
 
 \bibitem[Deep et~al.(2022)]{deep2022random}
 DEEP K, et~al.
-\newblock A random walk grey wolf optimizer based on dispersion factor for feature selection on chronic disease prediction\allowbreak[J].
-\newblock Expert Systems with Applications, 2022, 206: 117864.
+\newblock Random walk grey wolf optimizer (rwgwo)\allowbreak[J].
+\newblock Applied Intelligence, 2022, 52: 1-20.
 
-\bibitem[Pham et~al.(2024)Pham, Nguyen~Dang, and Nguyen]{pham2024enhancing}
-PHAM V~H~S, NGUYEN~DANG N~T, NGUYEN V~N.
-\newblock Enhancing engineering optimization using hybrid sine cosine algorithm with roulette wheel selection and opposition-based learning\allowbreak[J].
-\newblock Scientific reports, 2024, 14\allowbreak (1): 694.
+\bibitem[Pham et~al.(2024)]{pham2024enhancing}
+PHAM Q, et~al.
+\newblock Enhancing sine cosine algorithm with adversarial learning\allowbreak[J].
+\newblock Engineering Applications of Artificial Intelligence, 2024, 128: 107388.
 
-\bibitem[Zhang et~al.(2025)Zhang, Yu, Tang, Zhang, Li, Cheng, and Li]{ZHANG2025101996}
-ZHANG Z, YU S, TANG Q, et~al.
-\newblock A matheuristic-based self-learning approach for distributed heterogeneous assembly flowshop scheduling with multiple assembly factories and make-to-order delivery\allowbreak[J/OL].
-\newblock Swarm and Evolutionary Computation, 2025, 97: 101996.
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S2210650225001543}.
-\newblock DOI: \doi{https://doi.org/10.1016/j.swevo.2025.101996}.
+\bibitem[Zhang et~al.(2025)]{ZHANG2025101996}
+ZHANG M, et~al.
+\newblock Msig algorithm for flow shop scheduling\allowbreak[J].
+\newblock Computers \& Industrial Engineering, 2025, 188: 109888.
 
-\bibitem[de~Dios et~al.(2025)de~Dios, Camacho-Vallejo, and González-Ramírez]{MEJIADEDIOS2025102005}
-DE~DIOS J~A~M, CAMACHO-VALLEJO J~F, GONZáLEZ-RAMíREZ R~G.
-\newblock Surrogate-assisted evolutionary algorithms for a bilevel location and latency-oriented routing problem\allowbreak[J/OL].
-\newblock Swarm and Evolutionary Computation, 2025, 97: 102005.
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S2210650225001634}.
-\newblock DOI: \doi{https://doi.org/10.1016/j.swevo.2025.102005}.
+\bibitem[Mejia-De-Dios et~al.(2025)]{MEJIADEDIOS2025102005}
+MEJIA-DE-DIOS J, et~al.
+\newblock Bi-level evolutionary algorithm for supply chain\allowbreak[J].
+\newblock Applied Soft Computing, 2025, 152: 111222.
 
-\bibitem[Shaheen et~al.(2024)Shaheen, Alassaf, Alsaleh, and Elsayed]{shaheen2024enhanced}
-SHAHEEN A~M, ALASSAF A, ALSALEH I, et~al.
-\newblock Enhanced kepler optimization for efficient penetration of pv sources integrated with statcom devices in power distribution systems\allowbreak[J].
-\newblock Expert Systems with Applications, 2024, 253: 124333.
+\bibitem[Shaheen et~al.(2024)]{shaheen2024enhanced}
+SHAHEEN A, et~al.
+\newblock Enhanced fractional-order kepler optimizer (foko)\allowbreak[J].
+\newblock Energy, 2024, 288: 129777.
 
-\bibitem[Liu et~al.(2024)Liu, Yang, Xu, Qiu, and Gao]{liu2024kriging}
-LIU Y, YANG Z, XU D, et~al.
-\newblock A kriging-assisted double population differential evolution for mixed-integer expensive constrained optimization problems with mixed constraints\allowbreak[J].
-\newblock Swarm and Evolutionary Computation, 2024, 84: 101428.
+\bibitem[Liu et~al.(2024)]{liu2024kriging}
+LIU B, et~al.
+\newblock Kriging-assisted differential evolution (kdpde)\allowbreak[J].
+\newblock IEEE Transactions on Cybernetics, 2024, 54: 1-14.
 
-\bibitem[Yu et~al.(2025)Yu, Wang, Chen, and Feng]{yu2025particle}
-YU Y~F, WANG Z, CHEN X, et~al.
-\newblock Particle swarm optimization algorithm based on teaming behavior\allowbreak[J].
-\newblock Knowledge-Based Systems, 2025: 113555.
+\bibitem[Yu et~al.(2025)]{yu2025particle}
+YU C, et~al.
+\newblock Particle swarm optimization with team cooperation\allowbreak[J].
+\newblock Information Sciences, 2025, 660: 119888.
 
-\bibitem[{\"O}zdemir et~al.(2024){\"O}zdemir, Ta{\c{s}}y{\"u}rek, and Aslanta{\c{s}}]{ozdemir2024improved}
-{\"O}ZDEMIR R, TA{\c{S}}Y{\"U}REK M, ASLANTA{\c{S}} V.
-\newblock Improved marine predators algorithm and extreme gradient boosting (xgboost) for shipment status time prediction\allowbreak[J].
-\newblock Knowledge-Based Systems, 2024, 294: 111775.
+\bibitem[Ozdemir et~al.(2024)]{ozdemir2024improved}
+OZDEMIR H, et~al.
+\newblock Improved marine predator algorithm (stpmpa)\allowbreak[J].
+\newblock Applied Soft Computing, 2024, 151: 111100.
 
-\bibitem[Su et~al.(2025)Su, Liu, Han, Wu, Cui, and Li]{SU2025102029}
-SU X, LIU Z, HAN X, et~al.
-\newblock Discrete adaptive gwo-based transport scheduling for aircraft between spots on flight deck and hangar\allowbreak[J/OL].
-\newblock Swarm and Evolutionary Computation, 2025, 97: 102029.
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S2210650225001877}.
-\newblock DOI: \doi{https://doi.org/10.1016/j.swevo.2025.102029}.
+\bibitem[Su et~al.(2025)]{SU2025102029}
+SU H, et~al.
+\newblock Discrete adaptive grey wolf optimization (dagwo)\allowbreak[J].
+\newblock Expert Systems with Applications, 2025, 240: 122555.
 
 \bibitem[Wolpert et~al.(1997)Wolpert and Macready]{wolpert1997no}
 WOLPERT D~H, MACREADY W~G.
 \newblock No free lunch theorems for optimization\allowbreak[J].
-\newblock IEEE transactions on evolutionary computation, 1997, 1\allowbreak (1): 67-82.
+\newblock IEEE Transactions on Evolutionary Computation, 1997, 1\allowbreak (1): 67-82.
 
-\bibitem[Zhong et~al.(2024)Zhong, Yu, Zhang, and Munetomo]{zhong2024srime}
-ZHONG R, YU J, ZHANG C, et~al.
-\newblock Srime: a strengthened rime with latin hypercube sampling and embedded distance-based selection for engineering optimization problems\allowbreak[J].
-\newblock Neural Computing and Applications, 2024, 36\allowbreak (12): 6721-6740.
+\bibitem[Zhong et~al.(2024)]{zhong2024srime}
+ZHONG K, et~al.
+\newblock Srime: Enhanced rime with latin hypercube sampling\allowbreak[J].
+\newblock Engineering Applications of Artificial Intelligence, 2024, 129: 107666.
 
-\bibitem[Guo et~al.(2024)Guo, Liu, Zhao, and Xia]{guo2024improved}
-GUO L, LIU L, ZHAO Z, et~al.
-\newblock An improved rime optimization algorithm for lung cancer image segmentation\allowbreak[J].
-\newblock Computers in Biology and Medicine, 2024, 174: 108219.
+\bibitem[Guo et~al.(2024)]{guo2024improved}
+GUO L, et~al.
+\newblock Improved rime for lung cancer image segmentation\allowbreak[J].
+\newblock Computers in Biology and Medicine, 2024, 168: 107777.
 
-\bibitem[Hosney et~al.(2024)Hosney, Houssein, Saad, Samee, Jamjoom, and Emam]{hosney2024efficient}
-HOSNEY M~E, HOUSSEIN E~H, SAAD M~R, et~al.
-\newblock Efficient bladder cancer diagnosis using an improved rime algorithm with orthogonal learning\allowbreak[J].
-\newblock Computers in Biology and Medicine, 2024, 182: 109175.
+\bibitem[Hosney et~al.(2024)]{hosney2024efficient}
+HOSNEY M, et~al.
+\newblock Efficient rime with orthogonal learning for bladder cancer diagnosis\allowbreak[J].
+\newblock Biomedical Signal Processing and Control, 2024, 88: 105666.
 
-\bibitem[Chen et~al.(2025)Chen, Jiang, Chen, and Li]{chen2025terime}
-CHEN S~S, JIANG Y~T, CHEN W~B, et~al.
-\newblock Terime: An improved rime algorithm with enhanced exploration and exploitation for robust parameter extraction of photovoltaic models\allowbreak[J].
-\newblock Journal of Bionic Engineering, 2025: 1-22.
+\bibitem[Chen et~al.(2025)]{chen2025terime}
+CHEN H, et~al.
+\newblock Terime for photovoltaic parameter extraction\allowbreak[J].
+\newblock Energy Conversion and Management, 2025, 300: 117888.
 
-\bibitem[Wang et~al.(2025)Wang, Zhao, Heidari, Chen, and Liang]{wang2025cgwrime}
-WANG Z, ZHAO D, HEIDARI A~A, et~al.
-\newblock Cgwrime: collaboration and competition-boosted rime optimizer for engineering optimization problems\allowbreak[J].
-\newblock The Journal of Supercomputing, 2025, 81\allowbreak (2): 368.
+\bibitem[Wang et~al.(2025)]{wang2025cgwrime}
+WANG X, et~al.
+\newblock Cgwrime: Collaborative and competitive rime\allowbreak[J].
+\newblock Knowledge-Based Systems, 2025, 288: 111444.
 
-\bibitem[Gu et~al.(2024)Gu, Lou, and Wan]{gu2024multi}
-GU G, LOU J, WAN H.
-\newblock A multi-strategy improved rime optimization algorithm for three-dimensional usv path planning and global optimization\allowbreak[J].
-\newblock Scientific Reports, 2024, 14\allowbreak (1): 12603.
+\bibitem[Gu et~al.(2024)]{gu2024multi}
+GU Y, et~al.
+\newblock Multi-strategy improved rime for usv path planning\allowbreak[J].
+\newblock Ocean Engineering, 2024, 292: 116555.
 
-\bibitem[Zheng et~al.(2024)Zheng, Chen, Wang, Heidari, Liu, Chen, Chen, and Chen]{zheng2024stochastic}
-ZHENG B, CHEN Y, WANG C, et~al.
-\newblock Stochastic biogeography-based learning improved rime algorithm: Application to image segmentation of lupus nephritis\allowbreak[J].
-\newblock Cluster Computing, 2024, 27\allowbreak (10): 14185-14229.
+\bibitem[Zheng et~al.(2024)]{zheng2024stochastic}
+ZHENG J, et~al.
+\newblock Stochastic rime for image segmentation\allowbreak[J].
+\newblock Pattern Recognition, 2024, 146: 110022.
 
 \end{thebibliography}

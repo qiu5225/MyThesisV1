@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1772602924.60162 "main.aux" "main.bbl" "main" 1772602947.91694 0
-  "./main.bib" 1772253896 28900 6c107e3fc34abf3bb9af45670e1d261e ""
+["bibtex main"] 1774078446.68464 "main.aux" "main.bbl" "main" 1774078462.2043 0
+  "./main.bib" 1772853872 14059 bff5edde3da487a44e3e295954962857 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/bibtex/bst/gbt7714/gbt7714-numerical.bst" 1746085058 46094 ad0aed08d79354f7f2e8883dbf55daa8 ""
-  "main.aux" 1772602935 19792 115bc0071364c7f292d7e6315ed907cb "xelatex"
+  "main.aux" 1774078451 22295 66cd394c41dee5b10f49c166fc9d0cea "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1772602937.46706 "main.xdv" "main.pdf" "main" 1772602947.96565 0
-  "main.xdv" 1772602935 930064 b951f89f2329e5fec1cfeecda3af1bbf "xelatex"
+["xdvipdfmx"] 1774078453.09163 "main.xdv" "main.pdf" "main" 1774078462.21827 0
+  "main.xdv" 1774078451 1025216 c1e5973cd75e73dd357be4b3c6137a9e "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1772602925.35296 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1772602947.91865 0
-  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1772602907 126686 e886a42e7a5d339cb995fd22e735369c ""
+["xelatex"] 1774078447.20861 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1774078462.20459 0
+  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1774078085 144597 c260ccb9bd3dc544dd10784cefc30482 ""
   "c:/Windows/Fonts/msyh.ttc" 1761330050 19704352 1e10e74402e59d54499af795caf0b135 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1746084981 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1746089148 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -261,8 +261,12 @@
   "figures/FS/feature/7.pdf" 1747708629 6700 492c76159ecd37e5a6654ed659cf6184 ""
   "figures/FS/feature/8.pdf" 1747708629 6696 5cf92f938b6bb0ab5636f2f17b9973c8 ""
   "figures/FS/feature/9.pdf" 1747708629 6547 1edf4af3d846e276787cd4800a19549d ""
+  "figures/Flowchart/RIME-Flowcahrt.png" 1749612310 85934 a34bda81fff16e1c0d810d37532d54e6 ""
   "figures/Ftest/Ftest-ablation.pdf" 1751336163 21848 8a0146cb01f2eddca3f755bc6da5980c ""
   "figures/Ftest/Ftest-dim30-dim50.pdf" 1751423111 19846 7580d7daa520bfc48babfd8af559584f ""
+  "figures/HHO/QL.pdf" 1772608797 57305 683c26d9fc05dfdd67af3ea12384a6d4 ""
+  "figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg" 1772851008 20387 468ffba8e641fe53017a714b0b019b6d ""
+  "figures/RIME/RIMEsoftandhard.png" 1772851840 776539 0211c7719ef793f2d2a7952456fed75e ""
   "figures/box/dim30/1.pdf" 1746329053 9785 dd2ff9f182862eaac1d324fbea2ed8d5 ""
   "figures/box/dim30/10.pdf" 1746329053 7257 f6ed27b73dede4aade37ad29e94df9cb ""
   "figures/box/dim30/13.pdf" 1746329053 7760 29d75bdc1fc9bd4f9ce2677d66bc2c7b ""
@@ -287,13 +291,13 @@
   "figures/box/dim50/5.pdf" 1746329053 7320 7e952ad561c9fd5e08377467ed4c6931 ""
   "figures/box/dim50/6.pdf" 1746329053 7344 4120aca31b2f06daa71e9f35a75d9b4a ""
   "figures/box/dim50/8.pdf" 1746329053 7322 7559cf825621179f27131ecc224ff8ff ""
-  "main.aux" 1772602935 19792 115bc0071364c7f292d7e6315ed907cb "xelatex"
-  "main.bbl" 1772602925 16502 279a2d42e495386c920aaf061a21f51a "bibtex main"
-  "main.lof" 1772602935 1394 6e15b95e9c9b9af94a55209ffda59c15 "xelatex"
-  "main.lot" 1772602935 1612 55e866d54bdf61a1d198adfd99625be2 "xelatex"
-  "main.out" 1772602935 3576 e00a24e9bdaa83bf65a5c05002904589 "xelatex"
-  "main.tex" 1772602907 126686 e886a42e7a5d339cb995fd22e735369c ""
-  "main.toc" 1772602935 3017 1212c465d239f82edb5d1c3d12c6cac4 "xelatex"
+  "main.aux" 1774078451 22295 66cd394c41dee5b10f49c166fc9d0cea "xelatex"
+  "main.bbl" 1774078447 11037 99880c0d2a1c8f4a719a507eaec6fe2b "bibtex main"
+  "main.lof" 1774078451 1776 d5dcb0d917d6baf2f420a6083d90234e "xelatex"
+  "main.lot" 1774078451 1509 8c5331eeab7deed396f344e8a6b67897 "xelatex"
+  "main.out" 1774078451 5782 4bc63a1ffd327a32c528d134a1eabf12 "xelatex"
+  "main.tex" 1774078085 144597 c260ccb9bd3dc544dd10784cefc30482 ""
+  "main.toc" 1774078451 4970 fdd90288a1e1cb24b64ba95620723c96 "xelatex"
   "title.png" 1772172846 112838 507126d3441e00830693855d09e1e4df ""
   "wzuthesis.cls" 1772172846 24813 0ddd52f1677ea1c943c43cbaae15b7af ""
   (generated)

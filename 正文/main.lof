@@ -1,17 +1,20 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces RIME算法流程图}}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 雾凇算法软雾凇搜索和硬雾凇穿刺示意图}}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces HHO工作原理图}}{9}{figure.caption.9}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Flowchart of IRIME}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces IRIME工作流程图}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces 12 个基准函数上的收敛曲线 (30D)}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces 12 个基准函数上的收敛曲线 (50D)}}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces 九种算法的 Friedman 检验结果 (30D)}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces 12 个基准函数上的箱线图 (30D)}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {3-6}{\ignorespaces 12 个基准函数上的箱线图 (50D)}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {3-7}{\ignorespaces IRIME 及其变体的 Friedman 检验结果}}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {3-8}{\ignorespaces 12 个数据集上的收敛曲线}}{30}{figure.caption.26}%
+\contentsline {figure}{\numberline {3-9}{\ignorespaces 12 个数据集上的对比准确率直方图}}{31}{figure.caption.27}%
+\contentsline {figure}{\numberline {3-10}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{32}{figure.caption.30}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Convergence curves on 12 benchmark functions (30D).}}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Convergence curves on 12 benchmark functions (50D).}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces The Friedman test result of nine algorithms (30D).}}{16}{figure.caption.12}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces Box diagram on 12 benchmark functions (30D).}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Box diagram on 12 benchmark functions (50D).}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Friedman test result of IRIME and its variants}}{24}{figure.caption.19}%
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Convergence curves on 12 datasets.}}{27}{figure.caption.23}%
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Comparative accuracy histograms on 12 datasets.}}{28}{figure.caption.24}%
-\contentsline {figure}{\numberline {5-3}{\ignorespaces Comparative feature size histograms on 12 datasets.}}{30}{figure.caption.27}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Q-learning的工作示意图}}{35}{figure.caption.31}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}

@@ -1,18 +1,17 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
+\contentsline {table}{\numberline {3-1}{\ignorespaces 基准测试中对比算法的参数配置}}{17}{table.caption.11}%
+\contentsline {table}{\numberline {3-2}{\ignorespaces CEC 2017 测试套件函数的详细信息}}{18}{table.caption.12}%
+\contentsline {table}{\numberline {3-3}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (30D)}}{24}{table.caption.18}%
+\contentsline {table}{\numberline {3-4}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (50D)}}{25}{table.caption.19}%
+\contentsline {table}{\numberline {3-5}{\ignorespaces IRIME 及其变体在 CEC 2017 函数上的对比结果 (30D)}}{26}{table.caption.20}%
+\contentsline {table}{\numberline {3-6}{\ignorespaces IRIME 及其变体在 CEC 2017 函数上的对比结果 (50D)}}{27}{table.caption.21}%
+\contentsline {table}{\numberline {3-7}{\ignorespaces IRIME 变体详情 ('Y' = 使用策略 ; 'N' = 未使用)}}{27}{table.caption.23}%
+\contentsline {table}{\numberline {3-8}{\ignorespaces Parameters setting for algorithms used in FS}}{28}{table.caption.24}%
+\contentsline {table}{\numberline {3-9}{\ignorespaces 数据集概览}}{28}{table.caption.25}%
+\contentsline {table}{\numberline {3-10}{\ignorespaces 12 个数据集上的适应度值结果}}{29}{table.caption.28}%
+\contentsline {table}{\numberline {3-11}{\ignorespaces 12 个数据集上的准确率结果}}{33}{table.caption.29}%
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {4-1}{\ignorespaces Parameter configurations for the competing algorithms on benchmark}}{12}{table.caption.8}%
-\contentsline {table}{\numberline {4-2}{\ignorespaces Details of CEC 2017 test suite functions}}{13}{table.caption.9}%
-\contentsline {table}{\numberline {4-3}{\ignorespaces Comparative results of nine algorithms on CEC 2017 functions (30D).}}{20}{table.caption.15}%
-\contentsline {table}{\numberline {4-4}{\ignorespaces Comparative results of nine algorithms on CEC 2017 functions (50D).}}{21}{table.caption.16}%
-\contentsline {table}{\numberline {4-5}{\ignorespaces Comparative results of IRIME and its variants on CEC 2017 functions (30D)}}{22}{table.caption.17}%
-\contentsline {table}{\numberline {4-6}{\ignorespaces Comparative results of IRIME and its variants on CEC 2017 functions (50D)}}{23}{table.caption.18}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces Details of IRIME variants ('Y' = strategy used ; 'N' = not used) }}{24}{table.caption.20}%
-\addvspace {10.0pt}
-\contentsline {table}{\numberline {5-1}{\ignorespaces Parameters setting for algorithms used in FS}}{25}{table.caption.21}%
-\contentsline {table}{\numberline {5-2}{\ignorespaces Overview of the datasets}}{25}{table.caption.22}%
-\contentsline {table}{\numberline {5-3}{\ignorespaces The fitness value results on 12 datasets}}{29}{table.caption.25}%
-\contentsline {table}{\numberline {5-4}{\ignorespaces The accuracy results on 12 datasets}}{29}{table.caption.26}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
