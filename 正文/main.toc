@@ -52,20 +52,22 @@
 \contentsline {section}{\numberline {4.1}引言}{40}{section.4.1}%
 \contentsline {section}{\numberline {4.2}算法介绍}{40}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}经验互益策略}{40}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{40}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{40}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{41}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{41}{subsubsection.4.2.1.2}%
 \contentsline {paragraph}{经验匮乏阶段 (Experience Scarcity Stage, ESC)}{41}{paragraph*.38}%
 \contentsline {paragraph}{经验交叉阶段 (Experience Crossover Stage, ECR)}{41}{paragraph*.39}%
-\contentsline {paragraph}{经验共享阶段 (Experience Sharing Stage, ESH)}{41}{paragraph*.40}%
-\contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{41}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{41}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{42}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}实验与结果分析}{42}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}基准函数实验}{42}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}特征选择实验}{42}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}消融实验}{42}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}本章小结}{42}{section.4.4}%
-\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}全文总结}{43}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来研究展望}{43}{section.5.2}%
-\contentsline {chapter}{参考文献}{44}{chapter*.41}%
+\contentsline {paragraph}{经验共享阶段 (Experience Sharing Stage, ESH)}{42}{paragraph*.40}%
+\contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{42}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{43}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{44}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}算法实现}{44}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}实验与结果分析}{45}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}基准函数实验}{45}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}特征选择实验}{46}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}各算法收敛曲线及直方图分析}{46}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}消融实验}{47}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}本章小结}{47}{section.4.4}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}全文总结}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来研究展望}{49}{section.5.2}%
+\contentsline {chapter}{参考文献}{50}{chapter*.49}%

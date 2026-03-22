@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  22 MAR 2026 12:24
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  22 MAR 2026 14:36
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1786,17 +1786,18 @@ File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 [40
 
 ] [41]
-Overfull \hbox (16.60829pt too wide) detected at line 2024
-[][][]\OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 ([]) = \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 F\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) \OMS/ztmcm/m/n/12.045 ^^Y \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 F \OT1/ztmcm/m/n/12.045 + \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ))
- []
-
-[42]
+File: figures/HHO/gauss.jpg Graphic file (type bmp)
+<figures/HHO/gauss.jpg>
+ [42]
+File: figures/HHO/elite.jpg Graphic file (type bmp)
+<figures/HHO/elite.jpg>
+ [43] [44] [45] [46] [47] [48]
 5
-[43
+[49
 
-] (./main.bbl [44
+] (./main.bbl [50
 
-] [45] [46]) [47] (./main.aux)
+] [51] [52]) [53] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1809,15 +1810,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EF080EA92440CAD0B8E348BF8C19E626;5516.
+(rerunfilecheck)             Checksum: DD3122338D3A9163D951AE1CDC41CF57;5610.
  ) 
 Here is how much of TeX's memory you used:
- 29299 strings out of 476720
- 642704 string characters out of 5799663
+ 29329 strings out of 476720
+ 643564 string characters out of 5799663
  2160842 words of memory out of 5000000
- 50705 multiletter control sequences out of 15000+600000
- 605156 words of font info for 244 fonts, out of 8000000 for 9000
+ 50731 multiletter control sequences out of 15000+600000
+ 605172 words of font info for 246 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  125i,21n,121p,2013b,768s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (55 pages, 1185004 bytes).
+Output written on main.xdv (61 pages, 1289208 bytes).
