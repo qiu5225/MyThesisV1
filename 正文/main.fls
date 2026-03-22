@@ -854,9 +854,6 @@ INPUT ./figures/FS/feature/12.pdf
 INPUT ./figures/Ftest/Ftest-ablation.pdf
 INPUT ./figures/Ftest/Ftest-ablation.pdf
 INPUT ./figures/Ftest/Ftest-ablation.pdf
-INPUT ./figures/HHO/QL.pdf
-INPUT ./figures/HHO/QL.pdf
-INPUT ./figures/HHO/QL.pdf
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl

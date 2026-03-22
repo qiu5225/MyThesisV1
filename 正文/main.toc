@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {3.2.2}随机重启机制}{14}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}拉格朗日插值法}{15}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}时间复杂度分析}{16}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}实验结结果与分析}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.3}实验与结果分析}{17}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}基准函数实验}{17}{subsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.1.1}实验设置}{17}{subsubsection.3.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.3.1.2}收敛曲线分析}{17}{subsubsection.3.3.1.2}%
@@ -48,20 +48,24 @@
 \contentsline {subsubsection}{\numberline {3.3.2.5}适应度函数}{34}{subsubsection.3.3.2.5}%
 \contentsline {subsection}{\numberline {3.3.3}消融实验}{34}{subsection.3.3.3}%
 \contentsline {section}{\numberline {3.4}本章小结}{39}{section.3.4}%
-\contentsline {chapter}{\numberline {4\hspace {.3em}}基于经验交流策略的改进哈里斯鹰优化算法}{40}{chapter.4}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}基于多策略改进的哈里斯鹰算法}{40}{chapter.4}%
 \contentsline {section}{\numberline {4.1}引言}{40}{section.4.1}%
 \contentsline {section}{\numberline {4.2}算法介绍}{40}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}经验互益策略}{40}{subsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{40}{subsubsection.4.2.1.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{40}{subsubsection.4.2.1.2}%
-\contentsline {paragraph}{经验匮乏阶段 (Experience Scarcity Stage, ESC)}{40}{paragraph*.38}%
-\contentsline {paragraph}{经验交叉阶段 (Experience Crossover Stage, ECR)}{40}{paragraph*.39}%
+\contentsline {paragraph}{经验匮乏阶段 (Experience Scarcity Stage, ESC)}{41}{paragraph*.38}%
+\contentsline {paragraph}{经验交叉阶段 (Experience Crossover Stage, ECR)}{41}{paragraph*.39}%
 \contentsline {paragraph}{经验共享阶段 (Experience Sharing Stage, ESH)}{41}{paragraph*.40}%
 \contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{41}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{41}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{41}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}基准函数实验}{42}{section.4.3}%
-\contentsline {section}{\numberline {4.4}特征选择实验}{42}{section.4.4}%
-\contentsline {section}{\numberline {4.5}消融实验}{42}{section.4.5}%
+\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{42}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}实验与结果分析}{42}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}基准函数实验}{42}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}特征选择实验}{42}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}消融实验}{42}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}本章小结}{42}{section.4.4}%
 \contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{43}{chapter.5}%
-\contentsline {chapter}{参考文献}{44}{chapter*.42}%
+\contentsline {section}{\numberline {5.1}全文总结}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来研究展望}{43}{section.5.2}%
+\contentsline {chapter}{参考文献}{44}{chapter*.41}%
