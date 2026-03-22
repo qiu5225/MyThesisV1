@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{53}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -16,15 +16,15 @@ OUSSOUS A, BENJELLOUN F, LAHCEN A, et~al.
 \newblock Big data management and analytics: Recent trends and future directions\allowbreak[J].
 \newblock Software: Practice and Experience, 2018, 48\allowbreak (4): 792-810.
 
-\bibitem[Majumdar et~al.(2017)Majumdar, Naraseeyappa, and Ankalaki]{majumdar2017analysis}
-MAJUMDAR J, NARASEEYAPPA S, ANKALAKI S.
-\newblock Analysis of data mining techniques for heart disease prediction\allowbreak[J].
-\newblock International Journal of Advanced Research in Computer and Communication Engineering, 2017, 6\allowbreak (6): 35-39.
-
 \bibitem[Islam et~al.(2022)]{islam2022comprehensive}
 ISLAM M, et~al.
 \newblock A comprehensive survey on feature selection in the era of big data\allowbreak[J].
 \newblock IEEE Access, 2022, 10: 9925-9954.
+
+\bibitem[Majumdar et~al.(2017)Majumdar, Naraseeyappa, and Ankalaki]{majumdar2017analysis}
+MAJUMDAR J, NARASEEYAPPA S, ANKALAKI S.
+\newblock Analysis of data mining techniques for heart disease prediction\allowbreak[J].
+\newblock International Journal of Advanced Research in Computer and Communication Engineering, 2017, 6\allowbreak (6): 35-39.
 
 \bibitem[Author(2023)]{10214275}
 AUTHOR A.
@@ -66,20 +66,10 @@ YAB C, et~al.
 \newblock Meta-heuristic algorithms for feature selection: A review\allowbreak[J].
 \newblock Applied Soft Computing, 2022, 115: 108182.
 
-\bibitem[Su et~al.(2023)Su, Zhao, et~al.]{su2023rime}
-SU H, ZHAO D, et~al.
-\newblock Rime: A physics-based optimization\allowbreak[J].
-\newblock Neurocomputing, 2023, 532: 183-214.
-
-\bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
-HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
-\newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
-\newblock Future Generation Computer Systems, 2019, 97: 849-872.
-
-\bibitem[Dorigo et~al.(2007)Dorigo and St{\"u}tzle]{dorigo2007ant}
-DORIGO M, ST{\"U}TZLE T.
-\newblock Ant colony optimization\allowbreak[M].
-\newblock MIT press, 2007.
+\bibitem[Wolpert et~al.(1997)Wolpert and Macready]{wolpert1997no}
+WOLPERT D~H, MACREADY W~G.
+\newblock No free lunch theorems for optimization\allowbreak[J].
+\newblock IEEE Transactions on Evolutionary Computation, 1997, 1\allowbreak (1): 67-82.
 
 \bibitem[Karimi et~al.(2022)]{karimi2022machine}
 KARIMI M, et~al.
@@ -231,10 +221,20 @@ SU H, et~al.
 \newblock Discrete adaptive grey wolf optimization (dagwo)\allowbreak[J].
 \newblock Expert Systems with Applications, 2025, 240: 122555.
 
-\bibitem[Wolpert et~al.(1997)Wolpert and Macready]{wolpert1997no}
-WOLPERT D~H, MACREADY W~G.
-\newblock No free lunch theorems for optimization\allowbreak[J].
-\newblock IEEE Transactions on Evolutionary Computation, 1997, 1\allowbreak (1): 67-82.
+\bibitem[Su et~al.(2023)Su, Zhao, et~al.]{su2023rime}
+SU H, ZHAO D, et~al.
+\newblock Rime: A physics-based optimization\allowbreak[J].
+\newblock Neurocomputing, 2023, 532: 183-214.
+
+\bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
+HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
+\newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
+\newblock Future Generation Computer Systems, 2019, 97: 849-872.
+
+\bibitem[Dorigo et~al.(2007)Dorigo and St{\"u}tzle]{dorigo2007ant}
+DORIGO M, ST{\"U}TZLE T.
+\newblock Ant colony optimization\allowbreak[M].
+\newblock MIT press, 2007.
 
 \bibitem[Zhong et~al.(2024)]{zhong2024srime}
 ZHONG K, et~al.
@@ -275,10 +275,5 @@ ZHENG J, et~al.
 HAMAD Q~S, SAMMA H, SUANDI S~A.
 \newblock Optimization of convolutional neural network hyperparameter for medical image diagnosis using metaheuristic algorithms: A short recent review (2019-2022)\allowbreak[A].
 \newblock 2024.
-
-\bibitem[Chen et~al.(2022)Chen, Francis, Li, Liao, Xiao, Ha, Li, Ding, and Cao]{chen2022egret}
-CHEN Z, FRANCIS A, LI S, et~al.
-\newblock Egret swarm optimization algorithm: an evolutionary computation approach for model free optimization\allowbreak[J].
-\newblock Biomimetics, 2022, 7\allowbreak (4): 144.
 
 \end{thebibliography}

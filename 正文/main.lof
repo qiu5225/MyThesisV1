@@ -1,24 +1,24 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {2-1}{\ignorespaces RIME算法流程图}}{6}{figure.caption.7}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces 雾凇算法软雾凇搜索和硬雾凇穿刺示意图}}{8}{figure.caption.8}%
-\contentsline {figure}{\numberline {2-3}{\ignorespaces HHO工作原理图}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {2-1}{\ignorespaces RIME算法流程图}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 雾凇算法软雾凇搜索和硬雾凇穿刺示意图}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces HHO工作原理图}}{11}{figure.caption.9}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3-1}{\ignorespaces IRIME工作流程图}}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {3-2}{\ignorespaces 12 个基准函数上的收敛曲线 (30D)}}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {3-3}{\ignorespaces 12 个基准函数上的收敛曲线 (50D)}}{20}{figure.caption.14}%
-\contentsline {figure}{\numberline {3-4}{\ignorespaces 九种算法的 Friedman 检验结果 (30D)}}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {3-5}{\ignorespaces 12 个基准函数上的箱线图 (30D)}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {3-6}{\ignorespaces 12 个基准函数上的箱线图 (50D)}}{23}{figure.caption.17}%
-\contentsline {figure}{\numberline {3-7}{\ignorespaces 12 个数据集上的收敛曲线}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3-8}{\ignorespaces 12 个数据集上的对比准确率直方图}}{30}{figure.caption.25}%
-\contentsline {figure}{\numberline {3-9}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{32}{figure.caption.28}%
-\contentsline {figure}{\numberline {3-10}{\ignorespaces 12 个数据集上的收敛曲线}}{35}{figure.caption.31}%
-\contentsline {figure}{\numberline {3-11}{\ignorespaces 12 个数据集上的对比准确率直方图}}{36}{figure.caption.32}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces IRIME工作流程图}}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces 12 个基准函数上的收敛曲线 (30D)}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces 12 个基准函数上的收敛曲线 (50D)}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces 九种算法的 Friedman 检验结果 (30D)}}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces 12 个基准函数上的箱线图 (30D)}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {3-6}{\ignorespaces 12 个基准函数上的箱线图 (50D)}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {3-7}{\ignorespaces 12 个数据集上的收敛曲线}}{31}{figure.caption.24}%
+\contentsline {figure}{\numberline {3-8}{\ignorespaces 12 个数据集上的对比准确率直方图}}{32}{figure.caption.25}%
+\contentsline {figure}{\numberline {3-9}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {3-10}{\ignorespaces 12 个数据集上的收敛曲线}}{36}{figure.caption.31}%
+\contentsline {figure}{\numberline {3-11}{\ignorespaces 12 个数据集上的对比准确率直方图}}{37}{figure.caption.32}%
 \contentsline {figure}{\numberline {3-12}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{38}{figure.caption.35}%
-\contentsline {figure}{\numberline {3-13}{\ignorespaces IRIME 及其变体的 Friedman 检验结果}}{39}{figure.caption.36}%
+\contentsline {figure}{\numberline {3-13}{\ignorespaces IRIME 及其变体的 Friedman 检验结果}}{40}{figure.caption.36}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Q-learning的工作示意图}}{43}{figure.caption.41}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces 精英方差引导开发策略示意图}}{44}{figure.caption.43}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Q-learning的工作示意图}}{44}{figure.caption.41}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces 精英方差引导开发策略示意图}}{45}{figure.caption.43}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
