@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  21 MAR 2026 16:08
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  22 MAR 2026 11:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,16 +1423,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.52812> not available
 
 
 
-] [2]
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3] [4]
+ [2] [3] [4]
 2
-File: figures/Flowchart/RIME-Flowcahrt.png Graphic file (type bmp)
-<figures/Flowchart/RIME-Flowcahrt.png>
 [5
 
-] [6]
+]
+File: figures/Flowchart/RIME-Flowcahrt.png Graphic file (type bmp)
+<figures/Flowchart/RIME-Flowcahrt.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
@@ -1441,9 +1445,6 @@ File: figures/RIME/RIMEsoftandhard.png Graphic file (type bmp)
  [8]
 File: figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg Graphic file (type bmp)
 <figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg>
-
-Underfull \vbox (badness 4792) has occurred while \output is active []
-
  [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1505,11 +1506,11 @@ Missing character: There is no 式 ("5F0F) in font zptmcm7t!
 Missing character: There is no ： ("FF1A) in font zptmcm7t!
 [15] [16]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 461.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 473.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 461.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 473.
 
-Overfull \hbox (0.35995pt too wide) in paragraph at lines 480--522
+Overfull \hbox (0.35995pt too wide) in paragraph at lines 492--534
 []\TU/AdobeSongStd-Light.otf(0)/m/n/12.045 我 们 的 实 验 框 架 采 用 了 严 格 的 评 估 指 标，|  包 括 \TU/TimesNewRoman(0)/m/n/12.045 30 \TU/AdobeSongStd-Light.otf(0)/m/n/12.045 次 独 立 运 行 的 最 佳 适 应 度 值  |（\TU/TimesNewRoman(0)/m/n/12.045 Best\TU/AdobeSongStd-Light.otf(0)/m/n/12.045 ） 、|
  []
 
@@ -1621,13 +1622,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18] [19] [20]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.52437> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 816.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 828.
 
 
-LaTeX Warning: Float too large for page by 21.78938pt on input line 910.
+LaTeX Warning: Float too large for page by 21.78938pt on input line 922.
 
 
-LaTeX Warning: Float too large for page by 21.78938pt on input line 1012.
+LaTeX Warning: Float too large for page by 21.78938pt on input line 1024.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1788,7 +1789,7 @@ File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 File: figures/HHO/QL.pdf Graphic file (type pdf)
 <use figures/HHO/QL.pdf>
  [41]
-Overfull \hbox (16.60829pt too wide) detected at line 2009
+Overfull \hbox (16.60829pt too wide) detected at line 2021
 [][][]\OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 ([]) = \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 F\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) + \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ) \OMS/ztmcm/m/n/12.045 ^^Y \OML/ztmcm/m/it/12.045 O\OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 T \OMS/ztmcm/m/n/12.045 ^^B \OML/ztmcm/m/it/12.045 N \OMS/ztmcm/m/n/12.045 ^^B \OT1/ztmcm/m/n/12.045 (\OML/ztmcm/m/it/12.045 F \OT1/ztmcm/m/n/12.045 + \OML/ztmcm/m/it/12.045 D\OT1/ztmcm/m/n/12.045 ))
  []
 
@@ -1811,15 +1812,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 66508799092BC4D055C132EA3CC9CC25;4927.
+(rerunfilecheck)             Checksum: 1C0FE415D4E13EC07E5E7791573200F9;5155.
  ) 
 Here is how much of TeX's memory you used:
- 29302 strings out of 476720
- 642791 string characters out of 5799663
+ 29308 strings out of 476720
+ 642941 string characters out of 5799663
  2160842 words of memory out of 5000000
- 50707 multiletter control sequences out of 15000+600000
+ 50713 multiletter control sequences out of 15000+600000
  605156 words of font info for 244 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  125i,21n,121p,2013b,768s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (55 pages, 1137472 bytes).
+Output written on main.xdv (55 pages, 1161884 bytes).

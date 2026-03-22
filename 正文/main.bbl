@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -270,5 +270,15 @@ GU Y, et~al.
 ZHENG J, et~al.
 \newblock Stochastic rime for image segmentation\allowbreak[J].
 \newblock Pattern Recognition, 2024, 146: 110022.
+
+\bibitem[Hamad et~al.(2024)Hamad, Samma, and Suandi]{hamad2024optimization}
+HAMAD Q~S, SAMMA H, SUANDI S~A.
+\newblock Optimization of convolutional neural network hyperparameter for medical image diagnosis using metaheuristic algorithms: A short recent review (2019-2022)\allowbreak[A].
+\newblock 2024.
+
+\bibitem[Chen et~al.(2022)Chen, Francis, Li, Liao, Xiao, Ha, Li, Ding, and Cao]{chen2022egret}
+CHEN Z, FRANCIS A, LI S, et~al.
+\newblock Egret swarm optimization algorithm: an evolutionary computation approach for model free optimization\allowbreak[J].
+\newblock Biomimetics, 2022, 7\allowbreak (4): 144.
 
 \end{thebibliography}
