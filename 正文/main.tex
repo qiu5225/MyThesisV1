@@ -7,6 +7,7 @@
 \usepackage{caption}
 \usepackage{amsmath}
 
+
 \bicaptionsetup[figure]{}{name=Fig.}
 \bicaptionsetup[table]{}{name=Table}
 \setlength{\headheight}{13pt}
@@ -50,14 +51,27 @@ BoldItalicFont = * Bold Italic
 
 
 \cabstract{
-生物信息学的快速发展推动病理数据维度呈指数级增长，高维医疗数据已成为医学研究与临床实践的核心数据基础，其丰富信息为精准医疗诊断、个性化治疗提供了重要支撑。但高维医疗数据的分析处理面临显著挑战：特征冗余引发维度灾难，致使计算复杂度剧增、模型性能劣化、数据分析难度提升，且需消耗大量计算资源；同时数据过拟合风险显著升高。
-高维医学特征的有效解析，已成为医学研究与临床实践的关键技术问题。特征选择作为高维数据处理的核心技术，通过筛选原始数据中最具相关性与代表性的特征，在生物信息学及医学研究中可实现疾病生物标志物、基因识别、诊断辅助、治疗结局预测及新型治疗靶点挖掘。特征选择对于提高机器学习模型性能至关重要，元启发式算法作为一种有效手段曾被广泛用于特征选择。但是朴素启发式算法面临着诸多问题，诸如开发与探索的平衡问题，早熟收敛问题，和参数敏感性等。本论文设计了二类改进型的启发式算法，旨在解决原算法的不足，并应用与医学数据的特征选择问题上。
-% 特征选择对于提高机器学习模型性能至关重要。虽然元启发式算法被广泛用于特征选择，但其有效性常受计算开销和收敛到次优解的阻碍。本文提出一种改进的 RIME 算法（IRIME），它结合信息熵评估策略、随机重启机制和拉格朗日插值方法来克服这些局限。信息熵评估策略通过对特征动态加权增强种群多样性，随机重启机制防止过早收敛，拉格朗日插值方法通过逼近全局最优解加速收敛。此外，本文还提出了一种基于经验交流策略的改进哈里斯鹰优化算法（EES-HHO）。该策略受人类社会经验交流机制启发，将进化过程动态划分为经验匮乏、经验交叉和经验共享三个阶段。通过在不同阶段采用差异化的经验交互方式，有效平衡了算法的全局勘探与局部开发能力，解决了原始算法易陷入局部最优的问题。在 CEC 2017 测试集上的大量实验表明，IRIME 和 EES-HHO 均优于多种领先算法，收敛速度更快且稳定性更高。在 8 个低到中等维度数据集和 4 个高维数据集上测试，这些算法在显著减少冗余特征的同时实现了有竞争力的分类准确率。此外，消融研究证实了各改进策略的协同效应。结果凸显了本文提出的算法在全局优化和特征选择方面的鲁棒性，为特征选择提供了实用工具。
+随着生物信息学的快速发展，病理数据的维度迅速增长，高维医疗数据已成为医学研究与临床实践的核心数据基础。但对高维医疗数据的有效分析却面临着特征数量致使计算复杂度剧增、机器学习模型性能劣化、计算资源消耗大等严峻挑战。高维医学特征的有效解析，已成为医学研究与临床实践的关键技术问题。
+特征选择作为高维数据处理的核心技术，通过筛选原始数据中最具相关性与代表性的特征，从而提高机器学习模型性能，降低计算消耗。元启发式算法作为一种有效手段曾被广泛用于特征选择，但是朴素启发式算法面临着诸多问题，诸如开发与探索的平衡问题，早熟收敛问题等。
+
+为了解决元启发式算法的这些问题，本论文提出了二种改进型的启发式算法，通过引入针对性的改进机制，解决了两种算法原本的弊端和面对高维医学数据时的不足。
+
+在第三章中，本文针对雾凇算法（RIME）的不足，提出一种改进的雾凇算法（IRIME），它结合信息熵评估策略、随机重启机制和拉格朗日插值方法来克服这些局限。信息熵评估策略通过对特征动态加权增强种群多样性，随机重启机制防止过早收敛，拉格朗日插值方法通过逼近全局最优解加速收敛。在 CEC 2017 测试集上的大量对比实验表明，IRIME 的性能不仅优于原算法RIME，而且优于其他 7 种知名算法。在 30 维度和 50 维度的弗里德曼（Friedman）检验中分别排名 1.31 和 1.21 ，大幅领先于其他 8 种算法，其收敛速度更快且稳定性更高。在随后的特征选择实验中，我们宽泛地选取了 8 个中低维度数据集和 4 个高维数据集进行实验，这些数据集均来自真实的临床数据，涵盖多样的数据特性。实验结果显示，IRIME 在适应度值、准确率以及特征子集大小方面，均保持领先地位。特别在高维数据集 ALLAML 和 TOX-171 上，IRIME 分别以 100\% 和 88.24\% 的分类准确率夺得第一。经实验验证，IRIME 方法在医学数据特征选择场景下展现出优异的实用价值，为医学数据特征选择领域补充了一种可靠的技术手段。
+
+在第四章中，为解决原始哈里斯鹰优化算法（HHO）在迭代过程中易陷入局部最优、种群多样性下降、后期收敛精度不足等问题，提出一种融合多策略的改进哈里斯鹰优化算法（IHHO）。本文首先引入经验互益策略，整合历史种群的有效搜索信息，增强种群个体间的信息交互能力，提升算法跳出局部最优的潜能；其次设计能量自适应扰动策略，依据猎物逃逸能量动态调整扰动比例，实现全局广域探索与局部精准开发的动态平衡；最后提出精英方差引导开发策略，通过计算精英个体的逐维方差确定局部搜索步长，解决算法后期搜索的局部振荡问题，提升局部优化精度。在 CEC2020 标准测试函数集，将其与原始 HHO 及 另外 5 种经典群智能优化算法进行对比实验。实验结果显示，IHHO 的弗里德曼（Friedman）平均排名为 1.43，显著优于对比算法。将 IHHO 算法应用于高维特征选择问题，选取 8 个高维数据集开展实验，从适应度值、分类准确率与特征压缩效果等维度进行验证。结果显示，IHHO 在 Breast、CNS、Leukemia 等多数高维数据集中取得了更低的平均适应度值与更高的分类准确率，部分数据集分类准确率达到100\%，所选特征子集兼具良好的判别性与泛化性，有效实现了高维特征的精准筛选与冗余特征消除。以上实验表明，所提多策略改进方法能显著提升哈里斯鹰优化算法的综合性能，并在连续函数优化与高维特征选择领域均具有良好的应用效果与推广价值。
 }
 \ckeywords{元启发算法，雾凇算法，哈里斯鹰优化算法，特征选择，高维数据集}
 
 \eabstract{
-Feature selection is crucial for improving model performance in machine learning. While meta-heuristic algorithms are widely employed for feature selection, their effectiveness is frequently hampered by computational overhead and convergence to suboptimal solutions. We propose an improved RIME algorithm (IRIME) in this work. It combines information entropy evaluation strategy, random restart mechanism, and Lagrange interpolation method to overcome these limitations. The information entropy evaluation strategy enhances population diversity by dynamically weighting features, while the random restart mechanism prevents premature convergence and the Lagrange interpolation method accelerates convergence by approximating global optima. In addition, we propose an improved Harris Hawks Optimization algorithm based on Experience Exchange Strategy (EES-HHO). Inspired by the mechanism of experience exchange in human society, this strategy dynamically divides the evolutionary process into three stages: experience scarcity, experience crossover, and experience sharing. By adopting differentiated experience interaction methods in different stages, it effectively balances the global exploration and local exploitation capabilities of the algorithm, solving the problem that the original algorithm is easy to fall into local optima. Extensive experiments on the CEC 2017 test suite show that both IRIME and EES-HHO outperform several leading algorithms, with faster convergence and higher stability. Tested on 8 datasets with low to moderate dimensionality and 4 high-dimensional datasets, our algorithms achieve competitive classification accuracy while significantly reducing redundant features. Furthermore, the ablation studies confirm the synergistic effect of the proposed strategies. The results highlight the robustness of the proposed algorithms in global optimization and feature selection, offering practical tools for feature selection.
+With the rapid development of bioinformatics, the dimensionality of pathological data has grown exponentially, making high-dimensional medical data the core foundation for medical research and clinical practice. However, effective analysis of such data faces severe challenges, including a sharp increase in computational complexity, degradation of machine learning model performance, and excessive consumption of computational resources. Effectively parsing high-dimensional medical features has become a critical technical issue in both research and clinical settings.
+
+Feature selection, a core technique in high-dimensional data processing, enhances machine learning performance and reduces computational overhead by screening the most relevant and representative features. While meta-heuristic algorithms have been widely adopted for feature selection, vanilla versions suffer from issues such as the imbalance between exploration and exploitation, as well as premature convergence.
+
+To address these limitations, this thesis proposes two improved heuristic algorithms. By introducing targeted optimization mechanisms, these methods overcome the inherent drawbacks of the original algorithms and their deficiencies when handling high-dimensional medical data.
+
+In Chapter 3, an Improved RIME (IRIME) is proposed to address the shortcomings of the original RIME algorithm. IRIME integrates an information entropy evaluation strategy, a random restart mechanism, and Lagrange interpolation to overcome these limitations. The information entropy strategy enhances population diversity through dynamic feature weighting; the random restart mechanism prevents premature convergence; and the Lagrange interpolation method accelerates convergence by approximating the global optimal solution. Extensive comparative experiments on the CEC 2017 test suite demonstrate that IRIME outperforms the original RIME and seven other well-known algorithms. In the Friedman test, IRIME ranked 1.31 and 1.21 for 30 and 50 dimensions respectively, significantly leading the other eight algorithms with faster convergence and higher stability. Subsequent feature selection experiments using eight low-to-medium dimensional datasets and four high-dimensional datasets-all derived from real clinical data-showed that IRIME maintains a leading position in fitness values, accuracy, and feature subset size. Notably, on the high-dimensional datasets ALLAML and TOX-171, IRIME achieved first place with classification accuracies of 100\% and 88.24\%, respectively. Experimental results verify that the IRIME method possesses excellent practical value for medical feature selection.
+
+In Chapter 4, an Improved Harris Hawks Optimization (IHHO) algorithm incorporating multiple strategies is proposed to resolve issues in the original HHO, such as susceptibility to local optima, declining population diversity, and insufficient convergence precision in later stages. First, an experience mutual-benefit strategy is introduced to integrate effective search information from historical populations, enhancing information interaction and the potential to escape local optima. Second, an energy adaptive perturbation strategy is designed to dynamically adjust perturbation ratios based on prey escape energy, achieving a balance between global exploration and local exploitation. Finally, an elite variance-guided exploitation strategy is proposed to determine local search step sizes by calculating the dimensional variance of elite individuals, addressing local oscillations and improving precision. Comparative experiments on the CEC 2020 benchmark functions against the original HHO and five other classic swarm intelligence algorithms show that IHHO achieved a Friedman mean rank of 1.43, significantly outperforming competitors. When applied to high-dimensional feature selection across eight datasets, IHHO achieved lower mean fitness values and higher classification accuracies in most sets (such as Breast, CNS, and Leukemia), with some reaching 100\% accuracy. The selected feature subsets exhibit strong discriminative power and generalization, effectively achieving precise screening and redundancy elimination. These results indicate that the proposed multi-strategy improvements significantly enhance the comprehensive performance of HHO, offering high application value in both continuous function optimization and high-dimensional feature selection.
 }
 % 英文文关键词(每个关键词之间用,分开, 最后一个关键词不打标点符号。)
 \ekeywords{meta-heuristic, RIME, Harris Hawks Optimization, feature selection, high-dimensional datasets}
@@ -73,12 +87,17 @@ Feature selection is crucial for improving model performance in machine learning
 \mainmatter
 \chapter{绪论}
 \section {研究背景}
-信息与互联网技术的飞速发展使得数据量呈指数级增长\overcite {oussous2018big}，在医学领域这一趋势尤为显著。随着基因测序、医学影像、临床检验等技术的革新，医学数据集正朝着 “海量样本 + 超高维特征” 的方向快速演进。例如：基因表达数据集的特征维度常达数千至数万维，医学影像特征提取后维度可突破十万级，临床多模态数据集更是融合了生理指标、病理特征、基因组学等多源高维信息\overcite {islam2022comprehensive}。直接利用这些高维医学数据进行疾病诊断、预后预测等任务时，不仅会产生高昂的计算成本，还会因特征空间的 “维数灾难” 导致数据稀疏性加剧，严重影响模型的泛化能力与诊断可靠性。
-数据挖掘技术\overcite {majumdar2017analysis} 旨在从海量数据中提取有效信息，而机器学习与人工智能的现代化发展为医学数据分析提供了强大工具。但在医学数据的模型训练过程中，原始高维特征集中不仅包含与疾病诊断、病理分析相关的关键信息，还混杂着大量冗余特征，如高度相关的临床指标、无生物学意义的噪声特征和无关特征。这些冗余与无关特征不仅会大幅增加计算开销、延长模型训练周期，更会干扰模型对核心医学规律的学习，导致诊断准确率下降、假阳性率升高，这在生死攸关的医学场景中可能引发严重后果\overcite {10214275}。因此，高维医学数据的特征选择已成为机器学习在医学领域落地应用的关键预处理技术，其核心目标是在剔除冗余与无关特征的同时，保留最具医学诊断价值、最能反映病理生理机制的核心特征子集。
+生物信息学的快速发展推动病理数据维度呈指数级增长，高维医疗数据已成为医学研究与临床实践的核心数据基础，其丰富信息为精准医疗诊断、个性化治疗提供了重要支撑。但高维医疗数据的分析处理面临显著挑战：特征冗余引发维度灾难，致使计算复杂度剧增、模型性能劣化、数据分析难度提升，且需消耗大量计算资源；同时数据过拟合风险显著升高。
+
+高维医学特征的有效解析，已成为医学研究与临床实践的关键技术问题。特征选择作为高维数据处理的核心技术，通过筛选原始数据中最具相关性与代表性的特征，在生物信息学及医学研究中可实现疾病生物标志物、基因识别、诊断辅助、治疗结局预测及新型治疗靶点挖掘。特征选择对于提高机器学习模型性能至关重要，元启发式算法作为一种有效手段曾被广泛用于特征选择。但是朴素启发式算法面临着诸多问题，诸如开发与探索的平衡问题，早熟收敛问题，和参数敏感性等。本论文直接利用这些高维医学数据进行疾病诊断、预后预测等任务时，不仅会产生高昂的计算成本，还会因特征空间的 “维数灾难” 导致数据稀疏性加剧，严重影响模型的泛化能力与诊断可靠性。
 
 
-特征选择方法可分为过滤式、嵌入式、封装式三类\overcite {maldonado2022review}，三类方法的差异体现在分类器与特征选择流程的融合方式上。过滤式方法\overcite {babalik2024binary} 采用相关性、互信息等统计准则完成特征筛选\overcite {pengmutation2005}，该类方法简单高效，能够有效缩减特征子集，但灵活性不足，通常无法解决医学高维数据中特征间复杂的非线性冗余问题；嵌入式方法\overcite {hussien2019s};\overcite {embedded1} 将特征选择嵌入分类器训练过程，提升了算法交互性，但也增加了模型训练与参数调优的复杂度，在医学数据的小样本场景下易出现过拟合；封装式方法\overcite {gonzalez2019new} 将特征选择转化为搜索问题，通过模型性能指标评估特征子集的优劣，元启发式算法已成为封装式特征选择的主流方法\overcite {yab2022meta}。该类算法通过连续迭代优化输入参数，同时结合性能指标评估，最终收敛至最优解，其受生物、物理或社会行为启发的优化机制，具有灵活性强、适配多类数据集、可处理高维空间的优势，更契合医学高维数据的特征选择需求。
+特征选择旨在从海量数据中提取有效信息，而机器学习与人工智能的现代化发展为医学数据分析提供了强大工具。但在医学数据的模型训练过程中，原始高维特征集中不仅包含与疾病诊断、病理分析相关的关键信息，还混杂着大量冗余特征，如高度相关的临床指标、无生物学意义的噪声特征和无关特征。这些冗余与无关特征不仅会大幅增加计算开销、延长模型训练周期，更会干扰模型对核心医学规律的学习，导致诊断准确率下降、假阳性率升高，这在生死攸关的医学场景中可能引发严重后果。因此，高维医学数据的特征选择已成为机器学习在医学领域落地应用的关键预处理技术，其核心目标是在剔除冗余与无关特征的同时，保留最具医学诊断价值、最能反映病理生理机制的核心特征子集。
 
+
+特征选择方法可分为过滤式、嵌入式、封装式三类\overcite {maldonado2022review}，三类方法的差异体现在分类器与特征选择流程的融合方式上。过滤式方法\overcite {babalik2024binary} 采用相关性、互信息等统计准则完成特征筛选\overcite {pengmutation2005}，该类方法简单高效，能够有效缩减特征子集，但灵活性不足，通常无法解决医学高维数据中特征间复杂的非线性冗余问题；嵌入式方法\overcite {hussien2019s};\overcite {embedded1} 将特征选择嵌入分类器训练过程，提升了算法交互性，但也增加了模型训练与参数调优的复杂度，在医学数据的小样本场景下易出现过拟合；封装式方法\overcite {gonzalez2019new} 将特征选择转化为搜索问题，通过模型性能指标评估特征子集的优劣。
+
+元启发式算法凭借其天然的全局优化特性，与特征选择任务的核心需求高度适配，能够通过模拟自然群体行为高效筛选出低冗余、高判别力的特征子集。为实现复杂高维数据的有效处理，科研人员围绕优化算法的搜索策略展开了大量改进研究，通过融合多策略、增强种群多样性、动态平衡探索与开发过程等方式提升算法优化性能，进而提出了一系列基于元启发式算法的特征选择方法。
 
 然而，针对医学高维数据集的特征选择任务，现有元启发式算法面临的挑战更为突出：医学数据的高维性使得搜索空间呈指数级爆炸式增长，加剧了数据稀疏性与基于距离的求解难题；同时，医学特征往往具有强相关性、非线性耦合等特点，导致算法更易陷入局部最优，难以挖掘到真正具有临床意义的核心特征子集。具体而言，元启发式算法在医学高维特征选择中面临双重核心挑战：一是迭代过程中解的多样性持续衰减，削弱全局优化能力，无法突破医学特征空间中的局部最优陷阱；二是算法性能对人工调优的参数高度敏感，导致性能波动较大，而医学数据的异质性进一步放大了参数依赖性带来的负面影响，降低了算法在不同医学场景下的泛化能力。
 
@@ -90,17 +109,19 @@ Feature selection is crucial for improving model performance in machine learning
 (4) 可扩展性受限：医学超高维场景下搜索空间呈爆炸式增长，算法无法在合理时间内完成收敛，难以满足临床实时诊断的需求。
 
 
-尽管不少启发式方法在通用数据集上取得良好效果，但在医学高维数据场景中仍存在诸多不足：例如参数设置复杂、泛化能力弱、鲁棒性差，且难以平衡 “特征降维幅度” 与 “临床诊断精度” 过度降维可能丢失关键医学特征，导致诊断漏诊，而降维不足则无法解决维数灾难问题。根据 NFL 定理\overcite {wolpert1997no} 从理论上证明：不存在可最优求解所有特征选择问题的通用算法，这一结论在医学数据领域尤为显著：不同疾病的病理机制差异、数据采集技术的多样性，使得单一算法难以适配所有医学高维特征选择场景，亟需针对医学数据的特殊性设计专用优化算法。
+尽管不少启发式方法在通用数据集上取得良好效果，但在医学高维数据场景中仍存在诸多不足：例如参数设置复杂、泛化能力弱、鲁棒性差，且难以平衡 “特征降维幅度” 与 “临床诊断精度” 过度降维可能丢失关键医学特征，导致诊断漏诊，而降维不足则无法解决维数灾难问题。 NFL 定理\overcite {wolpert1997no} 从理论上证明：不存在可最优求解所有特征选择问题的通用算法，这一结论在医学数据领域尤为显著：不同疾病的病理机制差异、数据采集技术的多样性，使得单一算法难以适配所有医学高维特征选择场景，亟需针对医学数据的特殊性设计专用优化算法。
 
-医学高维特征选择的优劣直接关系到疾病诊断的准确性、预后评估的可靠性以及临床决策的科学性，其研究具有重要的理论意义与临床应用价值。据此，本文提出两种多策略融合改进算法：
+% 医学高维特征选择的优劣直接关系到疾病诊断的准确性、预后评估的可靠性以及临床决策的科学性，其研究具有重要的理论意义与临床应用价值。
 
-（1）改进型雾凇算法（IRIME），该算法融合三大核心策略：信息熵评价策略、随机重启机制、拉格朗日插值法。信息熵评价策略通过对特征动态加权，提升种群多样性与全局探索能力，适配医学特征的复杂分布；随机重启机制通过重新初始化低适应度个体避免算法停滞，有效突破医学高维空间的局部最优陷阱；拉格朗日插值法通过逼近全局最优解加速算法收敛，满足医学数据处理的效率需求。基于 CEC2017 测试集的实验表明，IRIME 性能优于七种主流算法；在  8 个中低维数据集和 4 个高维医学数据集上，IRIME 以最小特征冗余实现了高精度分类，为临床诊断提供了更具针对性的特征子集；消融实验进一步验证了三种策略的协同有效性。
+% 据此，本文提出两种多策略融合改进算法：
 
-（2）融合多策略的改进哈里斯鹰优化算法（IHHO）。该算法首先引入经验互益策略，整合历史种群的有效搜索信息，增强种群个体间的信息交互能力，提升算法跳出医学高维特征空间局部最优的潜能；其次设计能量自适应扰动策略，依据猎物逃逸能量动态调整扰动比例，实现全局广域探索与局部精准开发的动态平衡，适配医学特征的强相关性与非线性特点；最后提出精英方差引导开发策略，通过计算精英个体的逐维方差确定局部搜索步长，解决算法后期搜索的局部振荡问题，提升局部优化精度，确保筛选出的特征子集具有稳定的临床诊断价值。通过时间复杂度分析明确了 IHHO 的计算成本，同时给出了算法的完整实现步骤，为医学高维特征选择提供了高效可行的解决方案。
+% （1）改进型雾凇算法（IRIME），该算法融合三大核心策略：信息熵评价策略、随机重启机制、拉格朗日插值法。信息熵评价策略通过对特征动态加权，提升种群多样性与全局探索能力，适配医学特征的复杂分布；随机重启机制通过重新初始化低适应度个体避免算法停滞，有效突破医学高维空间的局部最优陷阱；拉格朗日插值法通过逼近全局最优解加速算法收敛，满足医学数据处理的效率需求。基于 CEC2017 测试集的实验表明，IRIME 性能优于七种主流算法；在  8 个中低维数据集和 4 个高维医学数据集上，IRIME 以最小特征冗余实现了高精度分类，为临床诊断提供了更具针对性的特征子集；消融实验进一步验证了三种策略的协同有效性。
+
+% （2）融合多策略的改进哈里斯鹰优化算法（IHHO）。该算法首先引入经验互益策略，整合历史种群的有效搜索信息，增强种群个体间的信息交互能力，提升算法跳出医学高维特征空间局部最优的潜能；其次设计能量自适应扰动策略，依据猎物逃逸能量动态调整扰动比例，实现全局广域探索与局部精准开发的动态平衡，适配医学特征的强相关性与非线性特点；最后提出精英方差引导开发策略，通过计算精英个体的逐维方差确定局部搜索步长，解决算法后期搜索的局部振荡问题，提升局部优化精度，确保筛选出的特征子集具有稳定的临床诊断价值。通过时间复杂度分析明确了 IHHO 的计算成本，同时给出了算法的完整实现步骤，为医学高维特征选择提供了高效可行的解决方案。
 
 \section {国内外研究现状}
 % 优化的核心目标是在各类理论研究与工程应用中，为特定问题求解最优解决方案。随着实际问题复杂程度的持续提升，各领域对优化技术的性能要求日益严苛，高维数据场景下的特征选择问题尤为突出，其 NP 难特性与爆炸式增长的搜索空间，对优化算法的全局探索能力、收敛效率与鲁棒性提出了更高挑战。
-% 群智能优化算法凭借其天然的全局优化特性，与特征选择任务的核心需求高度适配，能够通过模拟自然群体行为高效筛选出低冗余、高判别力的特征子集。为实现复杂高维数据的有效处理，科研人员围绕优化算法的搜索策略展开了大量改进研究，通过融合多策略、增强种群多样性、动态平衡探索与开发过程等方式提升算法优化性能，进而提出了一系列基于元启发式算法的特征选择方法。
+
 近年来，启发式算法已成为机器学习领域的核心优化工具，尤其适用于求解具备大解空间与 NP 难特性的复杂优化问题\overcite {karimi2022machine}。这类算法依托创新搜索策略生成近似最优解，在求解效率与场景适应性上普遍优于传统优化方法。按照启发来源划分，启发式算法可归为四大类别\overcite {ss2022nature}：进化算法、群智能算法、物理启发算法与人类行为启发算法\overcite {zhao2024triangulation}。
 进化算法受生物进化规律启发，通过交叉、变异、选择、淘汰等操作迭代优化候选解种群，迭代过程中剔除低适应度个体、保留并进化高适应度个体，进而持续提升种群整体适应性。遗传算法（GA；\overcite {liao2023genetic}）是最具代表性的进化计算方法，同类算法还包括差分进化算法（DE；\overcite {song2023dynamic}）。群智能算法通过模拟简单个体间的局部交互与自组织行为求解复杂问题，实现群体层面的涌现智能，经典算法包含蚁群优化算法（ACO；\overcite {wang2021ant}）、粒子群优化算法（PSO；\overcite {du2023orderly}），以及近年来提出的麻雀搜索算法（SSA；\overcite {SSAxue2020novel}）、秃鹰搜索算法（BES；\overcite {BESalsattar2020novel}）与海鸥优化算法（SOA；\overcite {SOAdhiman2019seagull}）。物理启发优化算法以能量最小化、力学平衡、热力学过程等基础物理原理构建计算框架，典型算法包括模拟退火算法（SA；\overcite {vincent2022simulated}）、正弦余弦算法（SCA；\overcite {wang2021modified}）与水循环算法（WCA；\overcite {meng2023novel}）。人类启发算法将人类个体 / 群体的社会行为、认知过程与决策机制抽象为数学规则，用于求解优化问题，涵盖帝国主义竞争算法（ICA；\overcite {atashpaz2007imperialist}）、基于状态的优化算法（SBO；\overcite {wang2025status}）与文化算法（CA；\overcite {coello2004efficient}）。
 尽管启发式算法在求解复杂实际问题时面临早熟收敛、高维适应性不足等挑战，但研究者通过多策略融合、参数自适应调整等方式提出了大量改进变体，显著提升了其在特征选择等任务中的性能。例如，\overcite {hu2012adaptive} 提出自适应粒子群优化算法（APSO），通过动态调整参数强化算法鲁棒性，为高维特征选择提供了更稳定的求解工具；\overcite {tiwari2024developments} 在传统差分进化算法（DE）中融入自适应交叉机制与改进选择策略，有效避免算法早熟收敛，其改进算法在复杂非线性工程优化与高维特征选择任务中均表现优异；\overcite {dhar2022covariance} 利用斯皮尔曼秩相关系数确定狼群参与对抗学习的权重，加速灰狼优化算法（GWO）收敛并提升求解精度，为医学高维特征的冗余剔除提供了新思路；\overcite {peng2024q} 提出改进型哈里斯鹰优化算法（EHHO），针对性解决原算法处理高维复杂任务时的性能缺陷，实验结果验证了其在高维特征选择任务中的有效性；\overcite {zhang2024velocity} 提出改进灰狼算法（VGWO-AWLO），通过引入速度参数引导搜索并结合自适应权重优化，进一步平衡了算法的探索与开发能力，其性能在高维特征选择实验中优于原始 GWO 及其变体；\overcite {deep2022random} 提出融入分散因子的改进灰狼优化算法（RWGWO），强化局部搜索能力并优化特征选择的探索 - 开发平衡，在慢性病预测等医学高维数据处理任务中，该算法在特征降维幅度与分类精度上均优于其他自然启发算法。
@@ -129,12 +150,12 @@ Feature selection is crucial for improving model performance in machine learning
 （5）第五章，本章节对全文进行总结，探讨本文提出的两种算法的不足，及对未来研究方向展望。
 \chapter {相关背景知识介绍}
 \section {特征选择方法}
-现实应用中的数据，尤其是医学高维数据，如基因表达谱、多模态临床数据等往往包含大量无关特征与冗余特征。常见的机器学习算法如：决策树、支持向量机等在处理这类复杂高维数据时，常因特征空间的 “维数灾难” 出现模型过拟合、训练效率低下、泛化能力衰减等问题，导致最终性能不佳。这一现实困境使得特征选择技术近年来在机器学习、数据挖掘及医学数据分析等领域受到广泛关注，成为高维数据预处理的核心环节。
+
 特征选择的核心目标是从原始完整特征集中，筛选出能满足特定任务要求的最优特征子集即在剔除无关特征与冗余特征的同时，最大程度保留具有高判别力、强临床意义的核心特征。本质而言，特征选择问题是一类典型的组合优化问题，其搜索空间随特征维度呈指数级增长，在医学超高维数据场景下这一挑战尤为突出。根据特征选择过程与学习算法的融合方式，可将现有特征选择方法分为过滤式、包裹式和嵌入式三大类，三类方法在原理、性能及适用场景上各有差异。
 \subsection{过滤式方法}
 过滤式方法的核心特征是特征子集评估过程独立于具体学习算法。该类方法通常依赖数据本身的固有特性，如特征间的距离度量、相似度、信息增益、互信息等对特征进行排序筛选，无需调用后续学习器参与评估，因此计算开销小、执行速度快，相较于包裹式和嵌入式方法更具效率优势。在完成特征子集筛选后，再利用该子集训练具体学习器。由于整个特征选择过程与学习器无关，筛选出的特征子集具有较强的通用性和泛化能力，但受限于统计指标的单调性与独立性假设，其对特征间复杂非线性关系的捕捉能力较弱，筛选出的子集在特定学习器上的性能往往低于包裹式和嵌入式方法，尤其在医学高维数据的复杂特征交互场景下，易丢失关键关联信息。
 \subsection{包裹式方法}
-包裹式方法的核心逻辑是以特定学习器的性能作为特征子集的评估准则。该类方法首先明确后续用于任务建模的学习器，如分类任务中的 K 近邻、逻辑回归等，然后将特征子集在该学习器上的性能表现作为评估指标，通过搜索算法遍历特征空间，最终筛选出使学习器性能最优的特征子集。由于评估过程与目标学习器深度绑定，包裹式方法总能得到最适配该学习器的特征子集，因此分类精度通常更高，尤其在医学高维特征选择中，能更精准地捕捉与疾病诊断相关的核心特征组合。但该方法需反复调用学习器进行性能评估，计算开销大、时间复杂度高，且对训练数据的依赖性较强，在小样本医学数据场景下易出现过拟合，泛化能力相对较弱。
+包裹式方法的核心逻辑是以特定学习器的性能作为特征子集的评估准则。该类方法首先明确后续用于任务建模的学习器，如分类任务中的 K-近邻、逻辑回归等，然后将特征子集在该学习器上的性能表现作为评估指标，通过搜索算法遍历特征空间，最终筛选出使学习器性能最优的特征子集。由于评估过程与目标学习器深度绑定，包裹式方法总能得到最适配该学习器的特征子集，因此分类精度通常更高，尤其在医学高维特征选择中，能更精准地捕捉与疾病诊断相关的核心特征组合。但该方法需反复调用学习器进行性能评估，计算开销大、时间复杂度高，且对训练数据的依赖性较强，在小样本医学数据场景下易出现过拟合，泛化能力相对较弱。
 \subsection{嵌入式方法}
 是将特征选择与学习器训练过程同步进行，两者相互融合、协同优化。该方法在构建学习器的同时完成特征评估与筛选，通过学习器自身的参数学习机制自动识别并保留重要特征，剔除无关特征。当学习器训练完成时，其对应的特征子集即为最优特征子集。该方法既具备包裹式方法的高精度优势，又兼顾了过滤式方法的效率优势，且对结果的解释性较强。但嵌入式方法的设计与特定学习器深度耦合，通用性较差，泛化能力有限，且在医学超高维数据场景下，其模型训练与参数调优的复杂度会显著增加。
 通常，特征选择方法的关键研究内容可归纳为四点：子集生成、子集评估、停止准则及多指标验证，四者并非独立存在，而是相互关联、构成有机整体：
@@ -144,11 +165,7 @@ Feature selection is crucial for improving model performance in machine learning
 多指标验证：从分类精度、特征降维幅度、计算效率、鲁棒性等多维度验证特征选择方法的性能，全面体现其优越性与适用性。
 
 在特征选择的四大核心环节中，子集生成是决定算法性能的关键，尤其在医学高维特征选择任务中，高效的子集生成策略能有效缓解搜索空间爆炸问题，提升算法的全局寻优能力与收敛效率。因此，本文将重点研究特征选择中的子集生成步骤，旨在通过改进元启发式算法，设计适配医学高维场景的高效子集生成策略。
-如前文所述，启发式算法是子集生成的主流技术，但在特征选择任务中仍面临四大核心挑战，这些挑战在医学高维场景下更为突出：
-(1) 早熟收敛与局部最优：算法易陷入特征空间中的局部最优解，难以挖掘到具有临床意义的核心特征子集，阻碍全局优化；
-(2) 稳定性低：结果对初始种群配置、随机种子高度敏感，重复实验间的性能波动显著，而医学诊断对模型稳定性与可靠性要求极高；
-(3) 参数依赖：需大量超参数调优，不仅引入主观偏差，还因医学数据的异质性（不同疾病、不同检测技术生成的数据分布差异显著）降低算法泛化能力；
-(4) 可扩展性限制：医学超高维场景下（如基因测序数据维度达数万级），搜索空间呈爆炸式增长，算法难以在合理时间内完成收敛，无法满足临床应用的效率需求。
+
 
 \subsection{解的表达}
 对于每个解，维数等于特征数，每个维度表示对应特征的指数。举个例子，当数据中有100个特征时，一个解有100个维度。
@@ -172,12 +189,6 @@ DE(Y,X) = \sqrt{\sum_{j=1}^{dim} \left( X^j - Y^j \right)^2}
 \end{equation}
 其中X和Y是指给定实例中的特定特征，dim是使用的特征总数。对于每个数据集，实例被分为训练样本和测试样本（70\%，30\%）。训练样本用于FS评估，而测试样本在测试阶段被隐藏。为了减少过度拟合问题，我们在文本中采用了K=10的分层交叉验证。交叉验证方法首先将训练样本划分为十倍相同大小。然后用9(K-1)个数据集来训练KNN分类器，而剩余的1个折叠作为验证集。通过替换验证集和训练集，重复10次评估过程。总体而言，记录不同数据轮的结果。
 
-% 相比之下，雾凇算法（RIME）通过参数设置简洁、收敛速度较快的固有特性，在一定程度上缓解了上述问题，但仍存在改进空间。为此，本文在 RIME 算法基础上提出改进型雾凇算法（IRIME），集成三大核心策略以针对性解决上述挑战：
-% 信息熵评估策略：通过对特征进行动态加权，增强种群多样性与全局探索能力，有效突破医学高维特征空间的局部最优陷阱；
-% 随机重启机制：对低适应度个体进行重新初始化，避免算法停滞，提升其在复杂特征空间中的寻优灵活性；
-% 拉格朗日插值法：通过逼近全局最优解加速算法收敛，降低医学超高维场景下的计算开销。
-% 通过上述多策略融合改进，IRIME 算法在保留 RIME 原有优势的基础上，显著提升了全局寻优能力、收敛效率与稳定性，成为医学高维特征选择问题的高效、可扩展解决方案。
-
 \section{雾凇算法}
 \subsection{算法概述}
 雾凇算法受雾凇形成这一自然现象的启发。该算法模拟了不同环境条件下水汽的凝结过程。RIME 框架由四个关键阶段组成：（1）种群初始化，（2）软雾凇搜索，（3）硬雾凇穿刺，以及（4）正向贪婪选择。这些阶段共同使算法能够有效地探索和利用解空间。图 1 提供了 RIME 工作流程的可视化表示，而相应的算法步骤在算法 \ref{alg:RIME} 中进行了概述。
@@ -195,7 +206,7 @@ DE(Y,X) = \sqrt{\sum_{j=1}^{dim} \left( X^j - Y^j \right)^2}
 \textbf{Initialization} the population $R$\;
 Get the current optimal agent and its corresponding fitness value\;
 \While{$t \le T$}{
-    Calculate Coefficient of adherence $E$ by Equation \ref{eq:E}\;
+    Calculate Coefficient of adherence $E$ by Equation;
     \If{$r_2 < E$}{
         Update agent location using Algorithm 2\;
     }
@@ -207,6 +218,59 @@ Get the current optimal agent and its corresponding fitness value\;
     }
     $t = t + 1$\;
 }
+\end{algorithm}
+
+\begin{algorithm}[H]
+    \caption{Hard-rime puncture}
+    \label{alg:hard-rime-puncture}
+    \SetAlgoLined
+    \KwIn{Initial parameters $t, T, N, \text{Dim}$}
+    \While{$t \le T$}{
+        \For{$i = 1$ \KwTo $N$}{
+            \For{$j = 1$ \KwTo $\text{Dim}$}{
+                Calculate the normalized fitness value of the $i$-th agent $F^{\text{norm}}(R_i)$ \;
+                \If{$r_4 < F^{\text{norm}}(R_i)$}{
+                    Update the value of the corresponding rime particle by Equation \ref{eq:hard-rime-location-update} \;
+                }
+            }
+        }
+        Refresh the best-performing agent and its fitness \;
+        $t = t + 1$ \;
+    }
+\end{algorithm}
+
+\begin{algorithm}[H]
+    \caption{Soft-rime search}
+    \label{alg:soft-rime-search}
+    
+    % 模板配置了 linesnumbered，会自动显示行号
+    \SetAlgoLined 
+    
+    % 第1-2行：初始化
+    Begin with the population initialization \;
+    Select the optimal agent and its corresponding fitness \;
+    
+    % 第3行：While 循环
+    \While{$t \le T$}{
+        % 第4行
+        Calculate the coefficient of adherence $E$ by Equation 6 \;
+        
+        % 第5行：For 循环 (i)
+        \For{$i = 1$ \KwTo $N$ agents}{
+            % 第6行：For 循环 (j)
+            \For{$j = 1$ \KwTo $\text{Dim}$}{
+                % 第7行：If 判断
+                \If{$x < E$}{
+                    % 第8行
+                    Update the value of the corresponding rime particle by Equation 3 \;
+                }
+            }
+        }
+        
+        % 第12-13行
+        Refresh the best-performing agent and its fitness \;
+        $t = t + 1$ \;
+    }
 \end{algorithm}
 
 \subsection{种群初始化}
@@ -360,32 +424,60 @@ Initialize the random population $X_i (i = 1, 2, ..., N)$\;
     \label{fig:Flowchart-IRIME}
 \end{figure}
 
-\begin{algorithm}[H]
-\caption{Pseudo-code of IRIME}
-\label{alg:IRIME}
-\textbf{Initialization} the rime population\;
-Get the current optimal agent and optimal fitness\;
-\While{$t \le T$}{
-    Using \textbf{the random restart mechanism} for those who cannot find a better solution\;
-    Calculate coefficient of adherence $E$ by Equation \ref{eq:E}\;
-    \If{$r_2 < E$}{
-        Update rime agent location using Algorithm 2\;
+\begin{algorithm}[htbp]
+    \caption{Pseudo-code of IRIME}
+    \label{alg:irime}
+    \SetAlgoLined
+    Initialization the rime population \;
+    Get the current optimal agent and optimal fitness \;
+    \While{$t \le T$}{
+        Using \textbf{the random restart mechanism} for those who cannot find a better solution \;
+        Calculate coefficient of adherence $E$ by Equation 6 \;
+        \If{$r_2 < E$}{
+            Update rime agent location using Algorithm 2 \;
+        }
+        \If{$r_3 < S_i$}{
+            \tcp*{$S_i$: normalized fitness}
+            Cross updating between agents using Algorithm 3 \;
+        }
+        \If{$F(R_i^{\text{new}}) < F(R_i)$}{
+            Select the optimal solution and replace suboptimal solution using \textbf{the positive greedy selection} \;
+        }
+        Run the Algorithm 6 \;
+        Run the Algorithm 5 \;
+        $t = t + 1$ \;
     }
-    \If{$r_3 < S_i$ \tcp*[r]{$S_i$: normalized fitness}}{
-        Cross updating between agents using Algorithm 3\;
-    }
-    \If{$F(R_i^{new}) < F(R_i)$}{
-        Select the optimal solution and replace suboptimal solution using \textbf{the positive greedy selection}\;
-    }
-    Run the Algorithm 6\;
-    Run the Algorithm 5\;
-    $t = t + 1$\;
-}
 \end{algorithm}
 
 \subsection{信息熵评估策略}
 信息熵评估策略是信息论中用于衡量数据不确定性的基本概念。其实质是通过概率分布量化系统中的不确定性或随机性：熵值越高，系统的不确定性越大；反之，熵值越低，系统的确定性越强。在优化问题中，信息熵可动态评估种群多样性，从而在优化过程中实现探索与利用之间的自适应平衡。该策略如算法 5 所示。
-
+\begin{algorithm}[htbp]
+    \caption{Information Entropy Evaluation Strategy}
+    \label{alg:entropy}
+    \SetAlgoLined
+    \KwIn{Population $X = \{x_1, x_2, \dots, x_n\}$ (population size $n$, dimension $m$)}
+    \KwOut{Entropy-optimized population $X^{\text{IE}} = \{x_1^{\text{IE}}, x_2^{\text{IE}}, \dots, x_n^{\text{IE}}\}$}
+    
+    Initialize weight vector $\boldsymbol{w} \leftarrow [0]^m$ \;
+    \For{dimension $j = 1$ \KwTo $m$}{
+        Compute sum of the $j$-th dimension: $sum_j = \sum_{i=1}^n x_{ij}$ \;
+        \If{$sum_j = 0$}{
+            \tcp*{Avoid division by zero}
+            $p_{ij} \leftarrow 0, \forall i \in [1, n]$ \;
+        }
+        \Else{
+            Compute normalized probability: $p_{ij} = x_{ij} / sum_j, \forall i \in [1, n]$ \;
+        }
+        Compute entropy $E_j$ by Equation 10 \;
+    }
+    \For{dimension $j = 1$ \KwTo $m$}{
+        Compute the weight $w_j$ by Equation 11 \;
+    }
+    \For{individual $i = 1$ \KwTo $n$}{
+        Update position $X^{\text{IE}}$ through Equation 12 \;
+    }
+    \Return $X^{\text{IE}}$ \;
+\end{algorithm}
 \subsubsection{信息熵的数学定义}
 设离散随机变量 $\mathcal{X}$ 的概率质量函数为 $P\left( {\mathcal{X} = {x}_{k}}\right)  = 2 \; {p}_{k}$，其中 $k = 1,2,\ldots ,K$。$\mathcal{X}$ 的信息熵 $H\left( \mathcal{X}\right)$ 定义为：
 \begin{equation}
@@ -427,20 +519,8 @@ E_j = \begin{cases}
 % \end{equation}
 
 其中 $\odot$ 表示逐元素相乘，$\mathbf{w} = {\left\lbrack  {w}_{1},{w}_{2},\ldots ,{w}_{m}\right\rbrack  }^{\top }$ 是权重向量。
-
-\subsection{随机重启机制}
-传统的重启策略通常在预定的迭代次数后触发，无法及时重启表现不佳的个体。这会干扰表现良好个体的搜索过程，同时让过多表现不佳的解使算法陷入次优解。为克服这一局限，我们提出一种更具随机性的重启策略。当迭代次数超过 ${T}_{\text{ rand }}$ 时，算法重启按适应度值排名靠后的一半个体。这种方法在保留高质量个体的同时确保刷新表现不佳的解，从而保持收敛精度和速度。此外，随机化的迭代阈值显著增强了种群多样性，有效减轻了次优解的负面影响。随机重启策略正式定义如下：
-\begin{equation}
-    T_{\text{rand}} = T \times \sin\left(\pi \cdot \text{rand}\right) 
-\label{eq:rand number T}
-\end{equation}
-\begin{equation}
-    X_i^{\text{inferior}} = \text{lb} \times \text{rand} + (\text{ub} - \text{lb}) \times \text{rand} \times \text{randi}(-1,1)
-\label{eq:X-inferior}
-\end{equation}
-其中 ${T}_{\text{ rand }}$ 表示随机化的迭代阈值，${X}_{i}^{\text{ inferior }}$ 表示第 $i$ 个次优智能体的位置，${lb}$ 和 ${ub}$ 分别表示搜索域的下界和上界。randi $\left( {-1,1}\right)$ 是在 $\left\lbrack  {-1,1}\right\rbrack$ 内均匀分布的随机变量。
 \subsection{拉格朗日插值法}
-拉格朗日插值法利用预定义的节点构建目标函数的多项式近似。从该插值多项式得到的最优解可作为原函数最优解的近似。随着节点间的间隔减小，多项式的最优解会收敛到原函数的最优解。拉格朗日插值公式表示为：
+拉格朗日插值法利用预定义的节点构建目标函数的多项式近似。从该插值多项式得到的最优解可作为原函数最优解的近似。随着节点间的间隔减小，多项式的最优解会收敛到原函数的最优解。\\ 拉格朗日插值公式表示为：
 
 \begin{equation}
     P_n(x) = \sum_{j=1}^n y_j \left( \prod_{\substack{i=1 \\ i \neq j}}^{k} \frac{x - x_i}{x_j - x_i} \right)
@@ -480,6 +560,28 @@ a_2 &= \frac{f(\text{Best}(t))}{(\text{Best}(t)-X_{r3}(t))(\text{Best}(t)-X_{r4}
 \label{eq:a0-a1-a2-2}
 \end{equation}
 其中 ${X}_{L}$ 表示通过拉格朗日插值得到的新位置，${X}_{\left( r3\right) }\left( t\right)$ 和 345 ${X}_{\left( r4\right) }\left( t\right)$ 表示两个随机选择的个体的位置，Best $\left( t\right)$ 表示当前最优个体的位置。该策略的伪代码如算法 6 所示。
+\begin{algorithm}[htbp]
+    \caption{Lagrange Interpolation Method}
+    \label{alg:lagrange}
+    \SetAlgoLined
+    \KwIn{Population $P(t) = \{X_1(t), X_2(t), \dots, X_N(t)\}$; current best individual $Best(t)$}
+    \KwOut{New position $X_L$}
+    
+    Randomly select two distinct individuals $X_{(r3)}(t)$ and $X_{(r4)}(t)$ from $P(t)$ \;
+    Compute coefficients $a_0, a_1, a_2$ according to Equation 17 and Equation 20 \;
+    Update new position $X_L$ through Equation 19 \;
+\end{algorithm}
+\subsection{随机重启机制}
+传统的重启策略通常在预定的迭代次数后触发，无法及时重启表现不佳的个体。这会干扰表现良好个体的搜索过程，同时让过多表现不佳的解使算法陷入次优解。为克服这一局限，我们提出一种更具随机性的重启策略。当迭代次数超过 ${T}_{\text{ rand }}$ 时，算法重启按适应度值排名靠后的一半个体。这种方法在保留高质量个体的同时确保刷新表现不佳的解，从而保持收敛精度和速度。此外，随机化的迭代阈值显著增强了种群多样性，有效减轻了次优解的负面影响。随机重启策略正式定义如下：
+\begin{equation}
+    T_{\text{rand}} = T \times \sin\left(\pi \cdot \text{rand}\right) 
+\label{eq:rand number T}
+\end{equation}
+\begin{equation}
+    X_i^{\text{inferior}} = \text{lb} \times \text{rand} + (\text{ub} - \text{lb}) \times \text{rand} \times \text{randi}(-1,1)
+\label{eq:X-inferior}
+\end{equation}
+其中 ${T}_{\text{ rand }}$ 表示随机化的迭代阈值，${X}_{i}^{\text{ inferior }}$ 表示第 $i$ 个次优智能体的位置，${lb}$ 和 ${ub}$ 分别表示搜索域的下界和上界。randi $\left( {-1,1}\right)$ 是在 $\left\lbrack  {-1,1}\right\rbrack$ 内均匀分布的随机变量。
 
 \subsection{时间复杂度分析}
 IRIME 算法的时间复杂度包括：参数定义 O(1)、种群初始化 $\mathrm{O}\left( {\mathrm{n} \cdot  \mathrm{d}}\right)$、信息熵评估 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、随机重启机制 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、拉格朗日插值 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$、评估函数计算 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{c}}\right)$ 和种群更新 $\mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$。总体复杂度为 $\mathrm{O}\left( 1\right) \; + \mathrm{O}\left( {\mathrm{n} \cdot  \mathrm{d}}\right)  + \mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{c}}\right)  + 3 \cdot  \mathrm{O}\left( {\mathrm{T} \cdot  \mathrm{n} \cdot  \mathrm{d}}\right)$，其中 $\mathrm{n}$ 是种群大小，$\mathrm{d}$ 是问题维度，c 是评估函数计算时间。

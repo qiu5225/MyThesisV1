@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -10,26 +10,6 @@
   \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
   \let\eprint\href
 \fi
-
-\bibitem[Oussous et~al.(2018)Oussous, Benjelloun, Lahcen, and Belfkih]{oussous2018big}
-OUSSOUS A, BENJELLOUN F, LAHCEN A, et~al.
-\newblock Big data management and analytics: Recent trends and future directions\allowbreak[J].
-\newblock Software: Practice and Experience, 2018, 48\allowbreak (4): 792-810.
-
-\bibitem[Islam et~al.(2022)]{islam2022comprehensive}
-ISLAM M, et~al.
-\newblock A comprehensive survey on feature selection in the era of big data\allowbreak[J].
-\newblock IEEE Access, 2022, 10: 9925-9954.
-
-\bibitem[Majumdar et~al.(2017)Majumdar, Naraseeyappa, and Ankalaki]{majumdar2017analysis}
-MAJUMDAR J, NARASEEYAPPA S, ANKALAKI S.
-\newblock Analysis of data mining techniques for heart disease prediction\allowbreak[J].
-\newblock International Journal of Advanced Research in Computer and Communication Engineering, 2017, 6\allowbreak (6): 35-39.
-
-\bibitem[Author(2023)]{10214275}
-AUTHOR A.
-\newblock Feature selection for high-dimensional data: A review\allowbreak[J].
-\newblock IEEE Access, 2023, 11: 1-15.
 
 \bibitem[Maldonado et~al.(2022)]{maldonado2022review}
 MALDONADO S, et~al.
@@ -60,11 +40,6 @@ AUTHOR B.
 GONZALEZ A, et~al.
 \newblock New wrapper feature selection method\allowbreak[J].
 \newblock Knowledge-Based Systems, 2019, 163: 1-15.
-
-\bibitem[Yab et~al.(2022)]{yab2022meta}
-YAB C, et~al.
-\newblock Meta-heuristic algorithms for feature selection: A review\allowbreak[J].
-\newblock Applied Soft Computing, 2022, 115: 108182.
 
 \bibitem[Wolpert et~al.(1997)Wolpert and Macready]{wolpert1997no}
 WOLPERT D~H, MACREADY W~G.
