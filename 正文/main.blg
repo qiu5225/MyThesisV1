@@ -15,10 +15,9 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: main.bib
-Warning--I didn't find a database entry for "chen2022egret"
 You've used 53 entries,
             5374 wiz_defined-function locations,
-            1342 strings with 13964 characters,
+            1341 strings with 13951 characters,
 and the built_in function-call counts, 245721 in all, are:
 = -- 6804
 > -- 26573
@@ -57,4 +56,3 @@ warning$ -- 0
 while$ -- 985
 width$ -- 0
 write$ -- 754
-(There was 1 warning)
