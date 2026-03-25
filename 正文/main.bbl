@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -246,9 +246,20 @@ ZHENG J, et~al.
 \newblock Stochastic rime for image segmentation\allowbreak[J].
 \newblock Pattern Recognition, 2024, 146: 110022.
 
-\bibitem[Hamad et~al.(2024)Hamad, Samma, and Suandi]{hamad2024optimization}
-HAMAD Q~S, SAMMA H, SUANDI S~A.
-\newblock Optimization of convolutional neural network hyperparameter for medical image diagnosis using metaheuristic algorithms: A short recent review (2019-2022)\allowbreak[A].
-\newblock 2024.
+\bibitem[Pham et~al.(2020)Pham, Huynh-The, Alazab, Zhao, and Hwang]{pham2020sum}
+PHAM Q~V, HUYNH-THE T, ALAZAB M, et~al.
+\newblock Sum-rate maximization for uav-assisted visible light communications using noma: Swarm intelligence meets machine learning\allowbreak[J].
+\newblock IEEE Internet of Things Journal, 2020, 7\allowbreak (10): 10375-10387.
+
+\bibitem[Fetanat et~al.(2021)Fetanat, Stevens, Jain, Hayward, Meijering, and Lovell]{fetanat2021fully}
+FETANAT M, STEVENS M, JAIN P, et~al.
+\newblock Fully elman neural network: a novel deep recurrent neural network optimized by an improved harris hawks algorithm for classification of pulmonary arterial wedge pressure\allowbreak[J].
+\newblock IEEE Transactions on Biomedical Engineering, 2021, 69\allowbreak (5): 1733-1744.
+
+\bibitem[Xu et~al.(2020)Xu, Zhang, Zhao, and Pham]{xu2020intelligent}
+XU H, ZHANG G, ZHAO J, et~al.
+\newblock Intelligent reflecting surface aided wireless networks: harris hawks optimization for beamforming design\allowbreak[C]//\allowbreak
+2020 IEEE 6th International Conference on Computer and Communications (ICCC).
+\newblock IEEE, 2020: 200-205.
 
 \end{thebibliography}
