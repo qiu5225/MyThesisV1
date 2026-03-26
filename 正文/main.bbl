@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{80}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -141,6 +141,16 @@ KARIMI M, et~al.
 SS A.
 \newblock Nature-inspired optimization algorithms: A comprehensive review\allowbreak[J].
 \newblock Archives of Computational Methods in Engineering, 2022, 29: 1-30.
+
+\bibitem[Liang et~al.(2025)Liang, Lou, Yu, Bi, and Yu]{liang2025survey}
+LIANG J, LOU Y, YU M, et~al.
+\newblock A survey of surrogate-assisted evolutionary algorithms for expensive optimization: J. liang et al.\allowbreak[J].
+\newblock Journal of Membrane Computing, 2025, 7\allowbreak (2): 108-127.
+
+\bibitem[Priyadarshi et~al.(2025)Priyadarshi and Kumar]{priyadarshi2025evolution}
+PRIYADARSHI R, KUMAR R~R.
+\newblock Evolution of swarm intelligence: a systematic review of particle swarm and ant colony optimization approaches in modern research\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2025, 32\allowbreak (6): 3609-3650.
 
 \bibitem[Zhao et~al.(2024)]{zhao2024triangulation}
 ZHAO W, et~al.
@@ -373,5 +383,35 @@ ISSA A, ALI Y, RASHID T.
 KHATRI I, CHOUDHRY A, RAO A, et~al.
 \newblock Influence maximization in social networks using discretized harris’ hawks optimization algorithm\allowbreak[J].
 \newblock Applied Soft Computing, 2023, 149: 111037.
+
+\bibitem[陈志鹏(2025)]{1025619691.nh}
+陈志鹏.
+\newblock 改进的乌鸦搜索算法及其在特征选择中的研究与应用\allowbreak[D].
+\newblock 东莞理工学院, 2025.
+
+\bibitem[徐粤婷(2020)]{1020144173.nh}
+徐粤婷.
+\newblock 改进飞蛾火焰优化算法及其在特征选择问题上的应用\allowbreak[D].
+\newblock 温州大学, 2020.
+
+\bibitem[白晓彤(2025)]{1025546079.nh}
+白晓彤.
+\newblock 面向基因表达数据的混合式特征选择方法研究\allowbreak[D].
+\newblock 吉林师范大学, 2025.
+
+\bibitem[Song et~al.(2025)Song, Wang, Qi, Wang, Song, and Shang-Guan]{song2025serial}
+SONG Y~W, WANG J~S, QI Y~L, et~al.
+\newblock Serial filter-wrapper feature selection method with elite guided mutation strategy on cancer gene expression data\allowbreak[J].
+\newblock Artificial Intelligence Review, 2025, 58\allowbreak (4): 111.
+
+\bibitem[黄洋(2025)]{1025935331.nh}
+黄洋.
+\newblock 粒计算视角下嵌入式特征选择方法研究\allowbreak[D].
+\newblock 哈尔滨工程大学, 2025.
+
+\bibitem[Hao et~al.(2025)Hao, Gao, and Hu]{hao2025embedded}
+HAO P, GAO W, HU L.
+\newblock Embedded feature fusion for multi-view multi-label feature selection\allowbreak[J].
+\newblock Pattern Recognition, 2025, 157: 110888.
 
 \end{thebibliography}
