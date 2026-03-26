@@ -17,9 +17,14 @@
 \contentsline {table}{\numberline {3-14}{\ignorespaces 12 个数据集上的准确率结果}}{40}{table.caption.38}%
 \contentsline {table}{\numberline {3-15}{\ignorespaces IRIME 变体详情 ('Y' = 使用策略 ; 'N' = 未使用)}}{40}{table.caption.41}%
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {4-1}{\ignorespaces Benchmark Functions Table}}{47}{table.caption.51}%
-\contentsline {table}{\numberline {4-2}{\ignorespaces Parameter setting of each algorithm}}{48}{table.caption.52}%
-\contentsline {table}{\numberline {4-3}{\ignorespaces Parameter setting of each algorithm}}{49}{table.caption.53}%
-\contentsline {table}{\numberline {4-4}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{51}{table.caption.54}%
+\contentsline {table}{\numberline {4-1}{\ignorespaces Benchmark Functions Table}}{48}{table.caption.52}%
+\contentsline {table}{\numberline {4-2}{\ignorespaces Parameter setting of each algorithm}}{49}{table.caption.53}%
+\contentsline {table}{\numberline {4-3}{\ignorespaces 10维度排名表}}{50}{table.caption.55}%
+\contentsline {table}{\numberline {4-4}{\ignorespaces 30维度排名表}}{50}{table.caption.56}%
+\contentsline {table}{\numberline {4-5}{\ignorespaces Add caption}}{51}{table.caption.57}%
+\contentsline {table}{\numberline {4-6}{\ignorespaces Add caption}}{51}{table.caption.58}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces 消融实验结果表}}{54}{table.caption.59}%
+\contentsline {table}{\numberline {4-8}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{55}{table.caption.60}%
+\contentsline {table}{\numberline {4-9}{\ignorespaces 参数敏感性分析结果表}}{55}{table.caption.61}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}

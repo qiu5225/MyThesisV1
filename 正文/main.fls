@@ -322,6 +322,9 @@ INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
+INPUT main.aex
+INPUT ./main.aex
+INPUT ./main.aex
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
@@ -329,6 +332,13 @@ OUTPUT main.aux
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
+INPUT ./main.out
+INPUT ./main.out
+INPUT main.out
+INPUT main.out
+INPUT ./main.out
+INPUT ./main.out
+OUTPUT main.out
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
@@ -860,6 +870,9 @@ INPUT ./figures/Ftest/Ftest-ablation.pdf
 INPUT ./figures/HHO/elite.jpg
 INPUT ./figures/HHO/elite.jpg
 INPUT ./figures/HHO/elite.jpg
+INPUT ./figures/HHO/cov_cec2020.pdf
+INPUT ./figures/HHO/cov_cec2020.pdf
+INPUT ./figures/HHO/cov_cec2020.pdf
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
@@ -894,3 +907,5 @@ INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
 INPUT main.aux
+INPUT ./main.out
+INPUT ./main.out

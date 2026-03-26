@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -10,6 +10,41 @@
   \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
   \let\eprint\href
 \fi
+
+\bibitem[Iqbal et~al.(2023)Iqbal and Kumar]{iqbal2023data}
+IQBAL N, KUMAR P.
+\newblock From data science to bioscience: Emerging era of bioinformatics applications, tools and challenges\allowbreak[J].
+\newblock Procedia Computer Science, 2023, 218: 1516-1528.
+
+\bibitem[Nguyen et~al.(2022)Nguyen, Picetti, Dulai, Jairath, Sandborn, Ohno-Machado, Chen, and Singh]{nguyen2022machine}
+NGUYEN N~H, PICETTI D, DULAI P~S, et~al.
+\newblock Machine learning-based prediction models for diagnosis and prognosis in inflammatory bowel diseases: a systematic review\allowbreak[J].
+\newblock Journal of Crohn's and Colitis, 2022, 16\allowbreak (3): 398-413.
+
+\bibitem[Theng et~al.(2024)Theng and Bhoyar]{theng2024feature}
+THENG D, BHOYAR K~K.
+\newblock Feature selection techniques for machine learning: a survey of more than two decades of research\allowbreak[J].
+\newblock Knowledge and Information Systems, 2024, 66\allowbreak (3): 1575-1637.
+
+\bibitem[Sadeghian et~al.(2025)Sadeghian, Akbari, Nematzadeh, and Motameni]{sadeghian2025review}
+SADEGHIAN Z, AKBARI E, NEMATZADEH H, et~al.
+\newblock A review of feature selection methods based on meta-heuristic algorithms\allowbreak[J].
+\newblock Journal of Experimental \& Theoretical Artificial Intelligence, 2025, 37\allowbreak (1): 1-51.
+
+\bibitem[Azman et~al.(2023)Azman, Samah, Lin, Majid, Shah, Wen, and Howe]{azman2023support}
+AZMAN N~S, SAMAH A~A, LIN J~T, et~al.
+\newblock Support vector machine--recursive feature elimination for feature selection on multi-omics lung cancer data\allowbreak[J].
+\newblock Prog Microbes Mol Biol, 2023, 6\allowbreak (1): a0000327.
+
+\bibitem[Asif et~al.(2025)Asif, Wenhui, ur~Rehman, ul~ain, Amjad, Yueyang, Jinhai, and Awais]{asif2025advancements}
+ASIF S, WENHUI Y, UR~REHMAN S, et~al.
+\newblock Advancements and prospects of machine learning in medical diagnostics: unveiling the future of diagnostic precision\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2025, 32\allowbreak (2): 853-883.
+
+\bibitem[Pudjihartono et~al.(2022)Pudjihartono, Fadason, Kempa-Liehr, and O'Sullivan]{pudjihartono2022review}
+PUDJIHARTONO N, FADASON T, KEMPA-LIEHR A~W, et~al.
+\newblock A review of feature selection methods for machine learning-based disease risk prediction\allowbreak[J].
+\newblock Frontiers in bioinformatics, 2022, 2: 927312.
 
 \bibitem[Maldonado et~al.(2022)]{maldonado2022review}
 MALDONADO S, et~al.
@@ -40,6 +75,57 @@ AUTHOR B.
 GONZALEZ A, et~al.
 \newblock New wrapper feature selection method\allowbreak[J].
 \newblock Knowledge-Based Systems, 2019, 163: 1-15.
+
+\bibitem[Brezo{\v{c}}nik et~al.(2018)Brezo{\v{c}}nik, Fister~Jr, and Podgorelec]{brezovcnik2018swarm}
+BREZO{\v{C}}NIK L, FISTER~JR I, PODGORELEC V.
+\newblock Swarm intelligence algorithms for feature selection: a review\allowbreak[J].
+\newblock Applied sciences, 2018, 8\allowbreak (9): 1521.
+
+\bibitem[Aly et~al.(2025)Aly and Alotaibi]{aly2025hybrid}
+ALY M, ALOTAIBI A~S.
+\newblock Hybrid butterfly-grey wolf optimization (hb-gwo): A novel metaheuristic approach for feature selection in high-dimensional data\allowbreak[J].
+\newblock Statistics, Optimization \& Information Computing, 2025, 13\allowbreak (6): 2575-2600.
+
+\bibitem[Chen et~al.(2025)Chen, Fu, and Yang]{chen2025novel}
+CHEN Z, FU B, YANG Y.
+\newblock A novel elite-guided hybrid metaheuristic algorithm for efficient feature selection\allowbreak[J].
+\newblock Biomimetics, 2025, 10\allowbreak (11): 747.
+
+\bibitem[Cai et~al.(2025)Cai, Ma, Ye, Zhou, Wang, He, Pan, and Shen]{cai2025dynamic}
+CAI T, MA F, YE Z, et~al.
+\newblock Dynamic niche technology based hybrid breeding optimization algorithm for multimodal feature selection\allowbreak[J].
+\newblock Scientific Reports, 2025, 15\allowbreak (1): 8001.
+
+\bibitem[Kamal et~al.(2024)Kamal, Amin, AbdElminaam, and Ismail]{kamal2024comprehensive}
+KAMAL R, AMIN E, ABDELMINAAM D~S, et~al.
+\newblock A comprehensive survey on meta-heuristic algorithms for feature selection in high-dimensional data: challenges, applications, and future directions\allowbreak[C]//\allowbreak
+2024 International Mobile, Intelligent, and Ubiquitous Computing Conference (MIUCC).
+\newblock IEEE, 2024: 84-90.
+
+\bibitem[Jia et~al.(2022)Jia, Sun, Lian, and Hou]{jia2022feature}
+JIA W, SUN M, LIAN J, et~al.
+\newblock Feature dimensionality reduction: a review\allowbreak[J].
+\newblock Complex \& Intelligent Systems, 2022, 8\allowbreak (3): 2663-2693.
+
+\bibitem[Huang et~al.(2025)Huang, Wang, Asghar, Wang, and Chen]{huang2025q}
+HUANG C, WANG M, ASGHAR H~A, et~al.
+\newblock Q-learning enhanced differential evolution for feature selection in high-dimensional medical data analysis\allowbreak[J].
+\newblock Journal of King Saud University Computer and Information Sciences, 2025, 37\allowbreak (9): 280.
+
+\bibitem[Kaur et~al.(2023)Kaur, Kumar, Koul, and Kumar~Kamboj]{kaur2023systematic}
+KAUR S, KUMAR Y, KOUL A, et~al.
+\newblock A systematic review on metaheuristic optimization techniques for feature selections in disease diagnosis: Open issues and challenges: S. kaur et al.\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2023, 30\allowbreak (3): 1863-1895.
+
+\bibitem[Naskar et~al.(2023)Naskar, Pramanik, Hossain, Mirjalili, and Sarkar]{naskar2023late}
+NASKAR A, PRAMANIK R, HOSSAIN S~S, et~al.
+\newblock Late acceptance hill climbing aided chaotic harmony search for feature selection: An empirical analysis on medical data\allowbreak[J].
+\newblock Expert Systems with Applications, 2023, 221: 119745.
+
+\bibitem[Dhinakaran et~al.(2025)Dhinakaran, Srinivasan, Raja, Valarmathi, and Nayagam]{dhinakaran2025synergistic}
+DHINAKARAN D, SRINIVASAN L, RAJA S~E, et~al.
+\newblock Synergistic feature selection and distributed classification framework for high-dimensional medical data analysis\allowbreak[J].
+\newblock MethodsX, 2025, 14: 103219.
 
 \bibitem[Wolpert et~al.(1997)Wolpert and Macready]{wolpert1997no}
 WOLPERT D~H, MACREADY W~G.
@@ -204,7 +290,7 @@ SU H, ZHAO D, et~al.
 \bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
 HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
 \newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
-\newblock Future Generation Computer Systems, 2019, 97: 849-872.
+\newblock Future generation computer systems, 2019, 97: 849-872.
 
 \bibitem[Dorigo et~al.(2007)Dorigo and St{\"u}tzle]{dorigo2007ant}
 DORIGO M, ST{\"U}TZLE T.
@@ -261,5 +347,31 @@ XU H, ZHANG G, ZHAO J, et~al.
 \newblock Intelligent reflecting surface aided wireless networks: harris hawks optimization for beamforming design\allowbreak[C]//\allowbreak
 2020 IEEE 6th International Conference on Computer and Communications (ICCC).
 \newblock IEEE, 2020: 200-205.
+
+\bibitem[Van~Stein et~al.(2024)Van~Stein and B{\"a}ck]{van2024llamea}
+VAN~STEIN N, B{\"A}CK T.
+\newblock Llamea: A large language model evolutionary algorithm for automatically generating metaheuristics\allowbreak[J].
+\newblock IEEE Transactions on Evolutionary Computation, 2024, 29\allowbreak (2): 331-345.
+
+\bibitem[De~Rosa et~al.(2021)De~Rosa, Roder, Papa, and Dos~Santos]{de2021improving}
+DE~ROSA G~H, RODER M, PAPA J~P, et~al.
+\newblock Improving pre-trained weights through meta-heuristics fine-tuning\allowbreak[C]//\allowbreak
+2021 IEEE Symposium Series on Computational Intelligence (SSCI).
+\newblock IEEE, 2021: 1-8.
+
+\bibitem[Alazab et~al.(2024)Alazab, Khurma, Castillo, Abu-Salih, Mart{\'\i}n, and Camacho]{alazab2024effective}
+ALAZAB M, KHURMA R~A, CASTILLO P~A, et~al.
+\newblock An effective networks intrusion detection approach based on hybrid harris hawks and multi-layer perceptron\allowbreak[J].
+\newblock Egyptian Informatics Journal, 2024, 25: 100423.
+
+\bibitem[Issa et~al.(2022)Issa, Ali, and Rashid]{issa2022efficient}
+ISSA A, ALI Y, RASHID T.
+\newblock An efficient hybrid classification approach for covid-19 based on harris hawks optimization and salp swarm optimization\allowbreak[A].
+\newblock 2022.
+
+\bibitem[Khatri et~al.(2023)Khatri, Choudhry, Rao, Tyagi, Vishwakarma, and Prasad]{khatri2023influence}
+KHATRI I, CHOUDHRY A, RAO A, et~al.
+\newblock Influence maximization in social networks using discretized harris’ hawks optimization algorithm\allowbreak[J].
+\newblock Applied Soft Computing, 2023, 149: 111037.
 
 \end{thebibliography}

@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1774448622.30641 "main.aux" "main.bbl" "main" 1774448631.73147 0
-  "./main.bib" 1774448604 17955 49edf2ce1d432160e1f878b6897eea11 ""
+["bibtex main"] 1774498454.78035 "main.aux" "main.bbl" "main" 1774498860.30214 0
+  "./main.bib" 1774450130 25104 64463b61f08d383689cb66ba0a2ef7f4 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/bibtex/bst/gbt7714/gbt7714-numerical.bst" 1746085058 46094 ad0aed08d79354f7f2e8883dbf55daa8 ""
-  "main.aux" 1774448628 29965 17542d583e7ef6fb5a53c8a094c202f4 "xelatex"
+  "main.aux" 1774498839 34178 5b79c155e61539c3e6f13e694024161e "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1774448630.51637 "main.xdv" "main.pdf" "main" 1774448631.74861 0
-  "main.xdv" 1774448628 1400424 9458ff520df5af1fd6e8b3e96eb81528 "xelatex"
+["xdvipdfmx"] 1774498841.06227 "main.xdv" "main.pdf" "main" 1774498860.32137 0
+  "main.xdv" 1774498839 1619804 2548bc5b929d0e5364352e495d509dac "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1774448622.85114 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1774448631.73247 0
-  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1774448605 212784 99c2147a2491391a2574f56c2bfa4875 ""
+["xelatex"] 1774498832.61618 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1774498860.30285 0
+  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1774498819 235931 01e6a71e374d732fa028574ff65f6b8b ""
   "c:/Windows/Fonts/msyh.ttc" 1761330050 19704352 1e10e74402e59d54499af795caf0b135 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1746084981 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1746089148 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -271,6 +271,7 @@
   "figures/Ftest/Ftest-dim30-dim50.pdf" 1751423111 19846 7580d7daa520bfc48babfd8af559584f ""
   "figures/HHO/all_stage.png" 1774370796 3237386 34a20599cee74685be24a1fe2c337ba6 ""
   "figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg" 1772851008 20387 468ffba8e641fe53017a714b0b019b6d ""
+  "figures/HHO/cov_cec2020.pdf" 1774453369 402985 e4e5c63a03874a66706b1059e417ab0b ""
   "figures/HHO/elite.jpg" 1774157312 20488 12a5971396ee4a5b8c578b432f57950f ""
   "figures/RIME/RIMEsoftandhard.png" 1772851840 776539 0211c7719ef793f2d2a7952456fed75e ""
   "figures/box/dim30/1.pdf" 1746329053 9785 dd2ff9f182862eaac1d324fbea2ed8d5 ""
@@ -297,12 +298,13 @@
   "figures/box/dim50/5.pdf" 1746329053 7320 7e952ad561c9fd5e08377467ed4c6931 ""
   "figures/box/dim50/6.pdf" 1746329053 7344 4120aca31b2f06daa71e9f35a75d9b4a ""
   "figures/box/dim50/8.pdf" 1746329053 7322 7559cf825621179f27131ecc224ff8ff ""
-  "main.aux" 1774448628 29965 17542d583e7ef6fb5a53c8a094c202f4 "xelatex"
-  "main.bbl" 1774448622 10955 4e3edd3c2acea2f9359ca72caac52d01 "bibtex main"
-  "main.lof" 1774448628 3271 82d4b5f57864e779769684257d3ea49a "xelatex"
-  "main.lot" 1774448628 2444 55104d1140924f828233e2b2d9bcdc26 "xelatex"
-  "main.tex" 1774448605 212784 99c2147a2491391a2574f56c2bfa4875 ""
-  "main.toc" 1774448628 6851 1bf14726a6fdb8ff020aec9a582a5080 "xelatex"
+  "main.aux" 1774498839 34178 5b79c155e61539c3e6f13e694024161e "xelatex"
+  "main.bbl" 1774498455 18099 f26fabcdc5929da764183c53cde8bdde "bibtex main"
+  "main.lof" 1774498839 3369 ff16d5bb98b0323f70ad7c81a0470763 "xelatex"
+  "main.lot" 1774498839 2916 db0dc6d6b03ef1b47296c95a4029d3c5 "xelatex"
+  "main.out" 1774498839 6159 9ff3760a50c98caf31f1da38eaa9f24f "xelatex"
+  "main.tex" 1774498819 235931 01e6a71e374d732fa028574ff65f6b8b ""
+  "main.toc" 1774498839 6851 4705f9fb6f9c686e0e8798862d907a57 "xelatex"
   "title.png" 1772172846 112838 507126d3441e00830693855d09e1e4df ""
   "wzuthesis.cls" 1772172846 24813 0ddd52f1677ea1c943c43cbaae15b7af ""
   (generated)
@@ -310,6 +312,7 @@
   "main.lof"
   "main.log"
   "main.lot"
+  "main.out"
   "main.toc"
   "main.xdv"
   (rewritten before read)
