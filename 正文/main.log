@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  27 MAR 2026 01:01
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  27 MAR 2026 01:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1460,26 +1460,28 @@ Underfull \vbox (badness 2245) has occurred while \output is active []
  [7]
 File: figures/Flowchart/RIME-Flowcahrt.png Graphic file (type bmp)
 <figures/Flowchart/RIME-Flowcahrt.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [9] [10]
 File: figures/RIME/RIMEsoftandhard.png Graphic file (type bmp)
 <figures/RIME/RIMEsoftandhard.png>
- [10]
+ [11]
 File: figures/HHO/all_stage.png Graphic file (type bmp)
 <figures/HHO/all_stage.png>
- [11]
 File: figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg Graphic file (type bmp)
 <figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg>
- [12]
+ [12] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13] [14]
+ [14] [15]
 3
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/b/n' undefined
-(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 455.
+(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 461.
 
 
 Package fontspec Info: Font family 'AdobeFangsongStd-Regular.otf(0)' created
@@ -1493,12 +1495,12 @@ Package fontspec Info: Font family 'AdobeFangsongStd-Regular.otf(0)' created
 (fontspec)             <->"[./fonts/AdobeFangsongStd-Regular.otf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-[15
+[16
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [17]
 Missing character: There is no 考 ("8003) in font zptmcm7t!
 Missing character: There is no 虑 ("8651) in font zptmcm7t!
 Missing character: There is no 到 ("5230) in font zptmcm7t!
@@ -1533,18 +1535,17 @@ Missing character: There is no 表 ("8868) in font zptmcm7t!
 Missing character: There is no 达 ("8FBE) in font zptmcm7t!
 Missing character: There is no 式 ("5F0F) in font zptmcm7t!
 Missing character: There is no ： ("FF1A) in font zptmcm7t!
-[17]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 File: figures//Flowchart/IRIME流程图_横板1.png Graphic file (type bmp)
 <figures//Flowchart/IRIME流程图_横板1.png>
- [18]
+ [19] [20]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 632.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 638.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 632.
-
-Underfull \vbox (badness 6412) has occurred while \output is active []
-
- [19]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 638.
 File: figures/Convergence/dim30/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/1.pdf>
 File: figures/Convergence/dim30/5.pdf Graphic file (type pdf)
@@ -1571,7 +1572,6 @@ File: figures/Convergence/dim30/30.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/30.pdf>
 File: figures/Convergence/dim30/legend.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/legend.pdf>
- [20]
 File: figures/Convergence/dim50/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim50/1.pdf>
 File: figures/Convergence/dim50/5.pdf Graphic file (type pdf)
@@ -1598,6 +1598,10 @@ File: figures/Convergence/dim50/30.pdf Graphic file (type pdf)
 <use figures/Convergence/dim50/30.pdf>
 File: figures/Convergence/dim30/legend.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/legend.pdf>
+
+Underfull \vbox (badness 3547) has occurred while \output is active []
+
+ [21] [22] [23]
 File: figures/box/dim30/1.pdf Graphic file (type pdf)
 <use figures/box/dim30/1.pdf>
 File: figures/box/dim30/5.pdf Graphic file (type pdf)
@@ -1646,31 +1650,29 @@ File: figures/box/dim50/22.pdf Graphic file (type pdf)
 <use figures/box/dim50/22.pdf>
 File: figures/box/dim50/30.pdf Graphic file (type pdf)
 <use figures/box/dim50/30.pdf>
+ [24] [25] [26]
 File: figures/Ftest/Ftest-dim30-dim50.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-dim30-dim50.pdf>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.52437> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 987.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 993.
 
 
-LaTeX Warning: Float too large for page by 36.24338pt on input line 1081.
+LaTeX Warning: Float too large for page by 36.24338pt on input line 1087.
 
 
-LaTeX Warning: Float too large for page by 36.24338pt on input line 1184.
+LaTeX Warning: Float too large for page by 36.24338pt on input line 1190.
 
 
-Overfull \hbox (7.01999pt too wide) in paragraph at lines 1189--1244
+Overfull \hbox (7.01999pt too wide) in paragraph at lines 1195--1250
  [][] 
  []
 
 
-Overfull \hbox (7.01999pt too wide) in paragraph at lines 1252--1304
+Overfull \hbox (7.01999pt too wide) in paragraph at lines 1258--1310
  [][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21] [22] [23] [24] [25] [26] [27] [28] [29]
+[27] [28] [29] [30] [31]
 File: figures/FS/cov/1.pdf Graphic file (type pdf)
 <use figures/FS/cov/1.pdf>
 File: figures/FS/cov/2.pdf Graphic file (type pdf)
@@ -1743,51 +1745,54 @@ File: figures/FS/feature/11.pdf Graphic file (type pdf)
 <use figures/FS/feature/11.pdf>
 File: figures/FS/feature/12.pdf Graphic file (type pdf)
 <use figures/FS/feature/12.pdf>
- [30] [31] [32] [33] [34]
+ [32] [33] [34] [35] [36]
 File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-ablation.pdf>
- [35] [36] [37] [38]
+ [37] [38] [39]
 4
-[39
+[40
 
-] [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41]
+] [41] [42]
 File: figures/HHO/elite.jpg Graphic file (type bmp)
 <figures/HHO/elite.jpg>
- [42] [43] [44] [45]
+
+Underfull \vbox (badness 6188) has occurred while \output is active []
+
+ [43] [44] [45] [46] [47]
 File: figures/HHO/cov_cec2020.pdf Graphic file (type pdf)
 <use figures/HHO/cov_cec2020.pdf>
- [46
+ [48
 
-] [47
+] [49
 
 ]
-Overfull \hbox (26.60585pt too wide) in paragraph at lines 2148--2185
+Overfull \hbox (26.60585pt too wide) in paragraph at lines 2159--2196
  [][][] 
  []
 
 
-Overfull \hbox (37.14522pt too wide) in paragraph at lines 2192--2229
+Overfull \hbox (37.14522pt too wide) in paragraph at lines 2203--2240
  [][][] 
  []
 
-[48] [49] [50] [51] [52] [53]
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2308.
+[50] [51] [52] [53] [54] [55]
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2319.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2308.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2319.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2308.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2319.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2308.
- [54]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2319.
+ [56] [57] [58
+
+
+]
 5
-[55
+[59
 
-] [56] (./main.bbl [57
+] [60] (./main.bbl [61
 
-] [58] [59] [60] [61]) [62] (./main.aux)
+] [62] [63] [64] [65]) [66] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1800,15 +1805,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9A6EF3F73D587991A601DC67ADEB9D38;6175.
+(rerunfilecheck)             Checksum: 20A38914F954E20018387FC60AD0CAED;6317.
  ) 
 Here is how much of TeX's memory you used:
- 29701 strings out of 476720
- 651487 string characters out of 5799663
- 2158842 words of memory out of 5000000
- 51081 multiletter control sequences out of 15000+600000
+ 29702 strings out of 476720
+ 651508 string characters out of 5799663
+ 2157842 words of memory out of 5000000
+ 51082 multiletter control sequences out of 15000+600000
  617095 words of font info for 278 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  125i,21n,121p,1838b,800s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (74 pages, 1610232 bytes).
+Output written on main.xdv (78 pages, 1676464 bytes).

@@ -1,49 +1,51 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {3-1}{\ignorespaces CEC 2017 测试套件函数的详细信息}}{20}{table.caption.15}%
-\contentsline {table}{\numberline {3-1}{\ignorespaces Details of CEC 2017 test suite functions}}{20}{table.caption.15}%
-\contentsline {table}{\numberline {3-2}{\ignorespaces 基准测试中对比算法的参数配置}}{21}{table.caption.16}%
-\contentsline {table}{\numberline {3-2}{\ignorespaces Parameter configuration of the compared algorithms in the benchmark}}{21}{table.caption.16}%
-\contentsline {table}{\numberline {3-3}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (30D)}}{26}{table.caption.22}%
-\contentsline {table}{\numberline {3-3}{\ignorespaces Comparison results of nine algorithms on CEC 2017 function (30D)}}{26}{table.caption.22}%
-\contentsline {table}{\numberline {3-4}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (50D)}}{27}{table.caption.23}%
-\contentsline {table}{\numberline {3-4}{\ignorespaces Comparison results of nine algorithms on CEC 2017 function (50D)}}{27}{table.caption.23}%
-\contentsline {table}{\numberline {3-5}{\ignorespaces IRIME消融实验结果 (30D)}}{28}{table.caption.24}%
-\contentsline {table}{\numberline {3-6}{\ignorespaces IRIME消融实验结果 (50D)}}{29}{table.caption.25}%
-\contentsline {table}{\numberline {3-6}{\ignorespaces Results of IRIME ablation experiments (50D)}}{29}{table.caption.25}%
-\contentsline {table}{\numberline {3-7}{\ignorespaces 特征选择中的算法参数设置}}{30}{table.caption.26}%
-\contentsline {table}{\numberline {3-7}{\ignorespaces Parameters setting for algorithms used in FS}}{30}{table.caption.26}%
-\contentsline {table}{\numberline {3-8}{\ignorespaces Overview of datasets}}{30}{table.caption.27}%
-\contentsline {table}{\numberline {3-8}{\ignorespaces 数据集概览}}{30}{table.caption.27}%
-\contentsline {table}{\numberline {3-9}{\ignorespaces 12 个数据集上的适应度值结果}}{33}{table.caption.30}%
-\contentsline {table}{\numberline {3-9}{\ignorespaces Results of fitness values on 12 datasets}}{33}{table.caption.30}%
-\contentsline {table}{\numberline {3-10}{\ignorespaces 12 个数据集上的准确率结果}}{33}{table.caption.31}%
-\contentsline {table}{\numberline {3-10}{\ignorespaces Accuracy results on 12 datasets}}{33}{table.caption.31}%
-\contentsline {table}{\numberline {3-11}{\ignorespaces 特征选择实验中各算法参数设置}}{35}{table.caption.33}%
-\contentsline {table}{\numberline {3-11}{\ignorespaces Parameters setting for algorithms used in FS}}{35}{table.caption.33}%
-\contentsline {table}{\numberline {3-12}{\ignorespaces 数据集概览}}{36}{table.caption.34}%
-\contentsline {table}{\numberline {3-12}{\ignorespaces Overview of the dataset}}{36}{table.caption.34}%
-\contentsline {table}{\numberline {3-13}{\ignorespaces 12 个数据集上的准确率结果}}{36}{table.caption.35}%
-\contentsline {table}{\numberline {3-13}{\ignorespaces Accuracy results on 12 datasets}}{36}{table.caption.35}%
-\contentsline {table}{\numberline {3-14}{\ignorespaces IRIME消融实验各策略使用详情}}{37}{table.caption.37}%
-\contentsline {table}{\numberline {3-14}{\ignorespaces Details of each strategy used in the IRIME ablation experiment}}{37}{table.caption.37}%
+\contentsline {table}{\numberline {3-1}{\ignorespaces CEC 2017 测试套件函数的详细信息}}{24}{table.caption.15}%
+\contentsline {table}{\numberline {3-1}{\ignorespaces Details of CEC 2017 test suite functions}}{24}{table.caption.15}%
+\contentsline {table}{\numberline {3-2}{\ignorespaces 基准测试中对比算法的参数配置}}{27}{table.caption.16}%
+\contentsline {table}{\numberline {3-2}{\ignorespaces Parameter configuration of the compared algorithms in the benchmark}}{27}{table.caption.16}%
+\contentsline {table}{\numberline {3-3}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (30D)}}{28}{table.caption.22}%
+\contentsline {table}{\numberline {3-3}{\ignorespaces Comparison results of nine algorithms on CEC 2017 function (30D)}}{28}{table.caption.22}%
+\contentsline {table}{\numberline {3-4}{\ignorespaces 九种算法在 CEC 2017 函数上的对比结果 (50D)}}{29}{table.caption.23}%
+\contentsline {table}{\numberline {3-4}{\ignorespaces Comparison results of nine algorithms on CEC 2017 function (50D)}}{29}{table.caption.23}%
+\contentsline {table}{\numberline {3-5}{\ignorespaces IRIME消融实验结果 (30D)}}{30}{table.caption.24}%
+\contentsline {table}{\numberline {3-6}{\ignorespaces IRIME消融实验结果 (50D)}}{31}{table.caption.25}%
+\contentsline {table}{\numberline {3-6}{\ignorespaces Results of IRIME ablation experiments (50D)}}{31}{table.caption.25}%
+\contentsline {table}{\numberline {3-7}{\ignorespaces 特征选择中的算法参数设置}}{32}{table.caption.26}%
+\contentsline {table}{\numberline {3-7}{\ignorespaces Parameters setting for algorithms used in FS}}{32}{table.caption.26}%
+\contentsline {table}{\numberline {3-8}{\ignorespaces Overview of datasets}}{32}{table.caption.27}%
+\contentsline {table}{\numberline {3-8}{\ignorespaces 数据集概览}}{32}{table.caption.27}%
+\contentsline {table}{\numberline {3-9}{\ignorespaces 12 个数据集上的适应度值结果}}{35}{table.caption.30}%
+\contentsline {table}{\numberline {3-9}{\ignorespaces Results of fitness values on 12 datasets}}{35}{table.caption.30}%
+\contentsline {table}{\numberline {3-10}{\ignorespaces 12 个数据集上的准确率结果}}{35}{table.caption.31}%
+\contentsline {table}{\numberline {3-10}{\ignorespaces Accuracy results on 12 datasets}}{35}{table.caption.31}%
+\contentsline {table}{\numberline {3-11}{\ignorespaces 特征选择实验中各算法参数设置}}{37}{table.caption.33}%
+\contentsline {table}{\numberline {3-11}{\ignorespaces Parameters setting for algorithms used in FS}}{37}{table.caption.33}%
+\contentsline {table}{\numberline {3-12}{\ignorespaces 数据集概览}}{37}{table.caption.34}%
+\contentsline {table}{\numberline {3-12}{\ignorespaces Overview of the dataset}}{37}{table.caption.34}%
+\contentsline {table}{\numberline {3-13}{\ignorespaces 12 个数据集上的准确率结果}}{38}{table.caption.35}%
+\contentsline {table}{\numberline {3-13}{\ignorespaces Accuracy results on 12 datasets}}{38}{table.caption.35}%
+\contentsline {table}{\numberline {3-14}{\ignorespaces IRIME消融实验各策略使用详情}}{38}{table.caption.37}%
+\contentsline {table}{\numberline {3-14}{\ignorespaces Details of each strategy used in the IRIME ablation experiment}}{38}{table.caption.37}%
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {4-1}{\ignorespaces CEC 2020 基准函数表}}{45}{table.caption.48}%
-\contentsline {table}{\numberline {4-1}{\ignorespaces CEC 2020 Benchmark Functions Table}}{45}{table.caption.48}%
-\contentsline {table}{\numberline {4-2}{\ignorespaces IHHO对比实验中各算法参数设置表}}{45}{table.caption.49}%
-\contentsline {table}{\numberline {4-2}{\ignorespaces Parameter settings for each algorithm in the IHHO comparison experiment}}{45}{table.caption.49}%
-\contentsline {table}{\numberline {4-3}{\ignorespaces 各算法弗里德曼排名结果(10D)}}{47}{table.caption.51}%
-\contentsline {table}{\numberline {4-3}{\ignorespaces Friedman ranking results for each algorithm (10D)}}{47}{table.caption.51}%
-\contentsline {table}{\numberline {4-4}{\ignorespaces 各算法弗里德曼排名结果(30D)}}{48}{table.caption.52}%
-\contentsline {table}{\numberline {4-4}{\ignorespaces Friedman ranking results for each algorithm (30D)}}{48}{table.caption.52}%
-\contentsline {table}{\numberline {4-5}{\ignorespaces 各算法在 CEC 2020 的对比实验结果(10D)}}{49}{table.caption.53}%
-\contentsline {table}{\numberline {4-5}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (10D)}}{49}{table.caption.53}%
-\contentsline {table}{\numberline {4-6}{\ignorespaces 各算法在 CEC 2020 的对比实验结果(30D)}}{50}{table.caption.54}%
-\contentsline {table}{\numberline {4-6}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (30D)}}{50}{table.caption.54}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces IHHO消融实验结果表}}{53}{table.caption.55}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces Table of results from IHHO ablation experiments}}{53}{table.caption.55}%
-\contentsline {table}{\numberline {4-8}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{54}{table.caption.56}%
-\contentsline {table}{\numberline {4-8}{\ignorespaces Orthogonal experiments on parameter sensitivity of IHHO ($L_9(3^4)$)}}{54}{table.caption.56}%
+\contentsline {table}{\numberline {4-1}{\ignorespaces CEC 2020 基准函数表}}{46}{table.caption.48}%
+\contentsline {table}{\numberline {4-1}{\ignorespaces CEC 2020 Benchmark Functions Table}}{46}{table.caption.48}%
+\contentsline {table}{\numberline {4-2}{\ignorespaces IHHO对比实验中各算法参数设置表}}{47}{table.caption.49}%
+\contentsline {table}{\numberline {4-2}{\ignorespaces Parameter settings for each algorithm in the IHHO comparison experiment}}{47}{table.caption.49}%
+\contentsline {table}{\numberline {4-3}{\ignorespaces 各算法弗里德曼排名结果(10D)}}{49}{table.caption.51}%
+\contentsline {table}{\numberline {4-3}{\ignorespaces Friedman ranking results for each algorithm (10D)}}{49}{table.caption.51}%
+\contentsline {table}{\numberline {4-4}{\ignorespaces 各算法弗里德曼排名结果(30D)}}{50}{table.caption.52}%
+\contentsline {table}{\numberline {4-4}{\ignorespaces Friedman ranking results for each algorithm (30D)}}{50}{table.caption.52}%
+\contentsline {table}{\numberline {4-5}{\ignorespaces 各算法在 CEC 2020 的对比实验结果(10D)}}{51}{table.caption.53}%
+\contentsline {table}{\numberline {4-5}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (10D)}}{51}{table.caption.53}%
+\contentsline {table}{\numberline {4-6}{\ignorespaces 各算法在 CEC 2020 的对比实验结果(30D)}}{52}{table.caption.54}%
+\contentsline {table}{\numberline {4-6}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (30D)}}{52}{table.caption.54}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces IHHO消融实验结果表}}{55}{table.caption.55}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces Table of results from IHHO ablation experiments}}{55}{table.caption.55}%
+\contentsline {table}{\numberline {4-8}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{56}{table.caption.56}%
+\contentsline {table}{\numberline {4-8}{\ignorespaces Orthogonal experiments on parameter sensitivity of IHHO ($L_9(3^4)$)}}{56}{table.caption.56}%
+\contentsline {table}{\numberline {4-9}{\ignorespaces IHHO参数敏感度实验结果表}}{57}{table.caption.57}%
+\contentsline {table}{\numberline {4-9}{\ignorespaces Table of experimental results of IHHO parameter sensitivity}}{57}{table.caption.57}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
