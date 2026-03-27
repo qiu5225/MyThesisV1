@@ -1,4 +1,4 @@
-\begin{thebibliography}{80}
+\begin{thebibliography}{81}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -413,5 +413,10 @@ SONG Y~W, WANG J~S, QI Y~L, et~al.
 HAO P, GAO W, HU L.
 \newblock Embedded feature fusion for multi-view multi-label feature selection\allowbreak[J].
 \newblock Pattern Recognition, 2025, 157: 110888.
+
+\bibitem[Zhu et~al.(2007)Zhu, Ong, and Dash]{zhu2007markov}
+ZHU Z, ONG Y~S, DASH M.
+\newblock Markov blanket-embedded genetic algorithm for gene selection\allowbreak[J].
+\newblock Pattern Recognition, 2007, 40\allowbreak (11): 3236-3248.
 
 \end{thebibliography}

@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1774546840.2948 "main.aux" "main.bbl" "main" 1774546991.36894 0
-  "./main.bib" 1774544433 27428 bedaf1c13f9eb6db95f341680b24a4b7 ""
+["bibtex main"] 1774622460.42529 "main.aux" "main.bbl" "main" 1774623183.59392 0
+  "./main.bib" 1774621964 27760 0f077e2ebea8c880f31c5d0d2e4fb6e1 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/bibtex/bst/gbt7714/gbt7714-numerical.bst" 1746085058 46094 ad0aed08d79354f7f2e8883dbf55daa8 ""
-  "main.aux" 1774546969 39541 b3321db19b0602a705b8e11bd90e3430 "xelatex"
+  "main.aux" 1774623148 44177 1a44f6dca474f36cfe09c0f5adef5b75 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1774546971.32955 "main.xdv" "main.pdf" "main" 1774546991.39959 0
-  "main.xdv" 1774546969 1676464 fd0f78c93d365bf701d052ffe6220d6e "xelatex"
+["xdvipdfmx"] 1774623150.32196 "main.xdv" "main.pdf" "main" 1774623183.62027 0
+  "main.xdv" 1774623148 1725032 ae3218ca26ee802a5def8768cc6fcfc1 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1774546961.76435 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1774546991.36944 0
-  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1774546944 231267 074571b30dd4fd77abc674f1d80b1594 ""
+["xelatex"] 1774623139.38417 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1774623183.59425 0
+  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1774623135 233473 cd599df12cad0d477248b6a4f253702a ""
   "c:/Windows/Fonts/msyh.ttc" 1761330050 19704352 1e10e74402e59d54499af795caf0b135 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1746084981 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1746089148 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -205,7 +205,7 @@
   "d:/Application/LaTeX/texlive/2024/texmf-dist/web2c/texmf.cnf" 1746084428 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "d:/Application/LaTeX/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1746089643 9113944 d3f3778a3665138710f12de1edeec7f3 ""
   "d:/Application/LaTeX/texlive/2024/texmf.cnf" 1746089495 713 e69b156964470283e0530f5060668171 ""
-  "figures//Flowchart/IRIME流程图_横板1.png" 1774542337 138653 37f6a35f6834be8e05a8b76ea4448f90 ""
+  "figures//Flowchart/IRIME流程图_横板_2.png" 1774603533 142692 220a219d1cf80c43a0634dd4dd318a71 ""
   "figures/Convergence/dim30/1.pdf" 1746323637 541900 75424b63b7cca20e17a7dd05c85e8fa6 ""
   "figures/Convergence/dim30/10.pdf" 1746323637 549584 c85eb588cd2e11679af241d347ecfe91 ""
   "figures/Convergence/dim30/13.pdf" 1746323637 553892 cabcbd8f81f734fa69b22f7fccee80df ""
@@ -270,10 +270,17 @@
   "figures/Flowchart/RIME-Flowcahrt.png" 1749612310 85934 a34bda81fff16e1c0d810d37532d54e6 ""
   "figures/Ftest/Ftest-ablation.pdf" 1751336163 21848 8a0146cb01f2eddca3f755bc6da5980c ""
   "figures/Ftest/Ftest-dim30-dim50.pdf" 1751423111 19846 7580d7daa520bfc48babfd8af559584f ""
+  "figures/Ftest/IHHO_DIM10_Ftest.pdf" 1774580859 23003 e7bb9bbbe235ed17364267ddabb2d1f2 ""
+  "figures/Ftest/IHHO_DIM30_Ftest.pdf" 1774580907 22764 f0942ee2b70bf83365b9fb6a4227fb3a ""
+  "figures/HHO/HHO_rabbit.png" 1774601835 4200299 131ec45c69c9fb2513111a71f5d03f65 ""
+  "figures/HHO/IHHO_ACC.pdf" 1774582226 339543 33fcdb6d484e33b7179fb9745126e601 ""
+  "figures/HHO/IHHO_COV.pdf" 1774582257 2456873 f61bfa0ab60e5b7c98e5a6809ea28a3b ""
+  "figures/HHO/IHHO_FS_SIZE.pdf" 1774582281 340066 d86cbd95e2e04bd737b202e6aae9e644 ""
   "figures/HHO/all_stage.png" 1774370796 3237386 34a20599cee74685be24a1fe2c337ba6 ""
-  "figures/HHO/bo_d6lgi4f7aajc739e64c0_7_529_286_600_271_0.jpg" 1772851008 20387 468ffba8e641fe53017a714b0b019b6d ""
   "figures/HHO/cov_cec2020.pdf" 1774453369 402985 e4e5c63a03874a66706b1059e417ab0b ""
-  "figures/HHO/elite.jpg" 1774157312 20488 12a5971396ee4a5b8c578b432f57950f ""
+  "figures/HHO/cov_cec2020_30.pdf" 1774596291 326199 d5bf1f0f1ee360c3a2703f26d2186715 ""
+  "figures/HHO/elite.pdf" 1774609982 239323 8b083e5e5d135c0d20b34f6f6cbb3532 ""
+  "figures/HHO/gauss.pdf" 1774609982 225555 fd4e18fc57409439f36f2e3414f324a6 ""
   "figures/RIME/RIMEsoftandhard.png" 1772851840 776539 0211c7719ef793f2d2a7952456fed75e ""
   "figures/box/dim30/1.pdf" 1746329053 9785 dd2ff9f182862eaac1d324fbea2ed8d5 ""
   "figures/box/dim30/10.pdf" 1746329053 7257 f6ed27b73dede4aade37ad29e94df9cb ""
@@ -299,14 +306,13 @@
   "figures/box/dim50/5.pdf" 1746329053 7320 7e952ad561c9fd5e08377467ed4c6931 ""
   "figures/box/dim50/6.pdf" 1746329053 7344 4120aca31b2f06daa71e9f35a75d9b4a ""
   "figures/box/dim50/8.pdf" 1746329053 7322 7559cf825621179f27131ecc224ff8ff ""
-  "main.aux" 1774546969 39541 b3321db19b0602a705b8e11bd90e3430 "xelatex"
-  "main.bbl" 1774546841 20016 8524977af0e9ea57879a43a2ce1c1c2b "bibtex main"
-  "main.lof" 1774546969 4086 d706a634a38c967c553c98dc532daec0 "xelatex"
-  "main.lot" 1774546969 5685 c4a03180326174041e87c136f201a2a3 "xelatex"
-  "main.out" 1774546969 6317 20a38914f954e20018387fc60ad0caed "xelatex"
-  "main.tex" 1774546944 231267 074571b30dd4fd77abc674f1d80b1594 ""
-  "main.toc" 1774546969 6990 7018a7f8528fadeae7dbbdd3796b94e0 "xelatex"
-  "title.png" 1772172846 112838 507126d3441e00830693855d09e1e4df ""
+  "main.aux" 1774623148 44177 1a44f6dca474f36cfe09c0f5adef5b75 "xelatex"
+  "main.bbl" 1774622461 20255 93acc8fdc9dfe139eca7f059fef58080 "bibtex main"
+  "main.lof" 1774623148 6109 76c764619a144c88710a7458fd8d77f2 "xelatex"
+  "main.lot" 1774623148 6345 8371bb75816aee688d38ec8fa592ec5b "xelatex"
+  "main.out" 1774623148 6317 04e40fb00c15e8662391e671a43a1fc1 "xelatex"
+  "main.tex" 1774623135 233473 cd599df12cad0d477248b6a4f253702a ""
+  "main.toc" 1774623148 6989 a5a8fd8a456db3e0445fcf19f61312bc "xelatex"
   "wzuthesis.cls" 1772172846 24813 0ddd52f1677ea1c943c43cbaae15b7af ""
   (generated)
   "main.aux"
