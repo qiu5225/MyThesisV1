@@ -1,4 +1,4 @@
-\begin{thebibliography}{81}
+\begin{thebibliography}{82}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -46,6 +46,16 @@ PUDJIHARTONO N, FADASON T, KEMPA-LIEHR A~W, et~al.
 \newblock A review of feature selection methods for machine learning-based disease risk prediction\allowbreak[J].
 \newblock Frontiers in bioinformatics, 2022, 2: 927312.
 
+\bibitem[Bommert et~al.(2020)Bommert, Sun, Bischl, Rahnenf{\"u}hrer, and Lang]{bommert2020benchmark}
+BOMMERT A, SUN X, BISCHL B, et~al.
+\newblock Benchmark for filter methods for feature selection in high-dimensional classification data\allowbreak[J].
+\newblock Computational Statistics \& Data Analysis, 2020, 143: 106839.
+
+\bibitem[Author(2019)]{embedded1}
+AUTHOR B.
+\newblock Embedded feature selection methods: A review\allowbreak[J].
+\newblock Journal of Machine Learning Research, 2019, 20: 1-30.
+
 \bibitem[Maldonado et~al.(2022)]{maldonado2022review}
 MALDONADO S, et~al.
 \newblock Review of feature selection methods\allowbreak[J].
@@ -65,11 +75,6 @@ PENG H, LONG F, DING C.
 HUSSIEN A, et~al.
 \newblock S-shaped transfer functions for binary particle swarm optimization\allowbreak[J].
 \newblock Swarm and Evolutionary Computation, 2019, 44: 1-10.
-
-\bibitem[Author(2019)]{embedded1}
-AUTHOR B.
-\newblock Embedded feature selection methods: A review\allowbreak[J].
-\newblock Journal of Machine Learning Research, 2019, 20: 1-30.
 
 \bibitem[Gonzalez et~al.(2019)]{gonzalez2019new}
 GONZALEZ A, et~al.

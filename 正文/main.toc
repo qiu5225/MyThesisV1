@@ -57,9 +57,9 @@
 \contentsline {subsection}{\numberline {4.2.1}经验互益策略}{39}{subsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{40}{subsubsection.4.2.1.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{41}{subsubsection.4.2.1.2}%
-\contentsline {paragraph}{经验匮乏阶段 (Experience Scarcity Stage, ESC)}{41}{paragraph*.39}%
-\contentsline {paragraph}{经验交叉阶段 (Experience Crossover Stage, ECR)}{41}{paragraph*.40}%
-\contentsline {paragraph}{经验共享阶段 (Experience Sharing Stage, ESH)}{41}{paragraph*.41}%
+\contentsline {paragraph}{经验匮乏阶段（Experience Scarcity Stage，ESC）}{41}{paragraph*.39}%
+\contentsline {paragraph}{经验交叉阶段（Experience Crossover Stage, ECR）}{41}{paragraph*.40}%
+\contentsline {paragraph}{经验共享阶段（Experience Sharing Stage, ESH）}{41}{paragraph*.41}%
 \contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{41}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{43}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{44}{subsection.4.2.4}%
@@ -73,9 +73,9 @@
 \contentsline {subsubsection}{\numberline {4.3.2.1}实验准备}{51}{subsubsection.4.3.2.1}%
 \contentsline {subsubsection}{\numberline {4.3.2.2}实验结果与分析}{51}{subsubsection.4.3.2.2}%
 \contentsline {subsection}{\numberline {4.3.3}消融实验}{57}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{61}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{60}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}本章小结}{62}{section.4.4}%
 \contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{63}{chapter.5}%
 \contentsline {section}{\numberline {5.1}全文总结}{63}{section.5.1}%
 \contentsline {section}{\numberline {5.2}未来研究展望}{63}{section.5.2}%
-\contentsline {chapter}{参考文献}{65}{chapter*.68}%
+\contentsline {chapter}{参考文献}{65}{chapter*.63}%
