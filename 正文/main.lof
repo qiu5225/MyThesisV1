@@ -40,13 +40,13 @@
 \contentsline {figure}{\numberline {4-4}{\ignorespaces Convergence curve of CEC 2020 comparative experiments (30D)}}{47}{figure.caption.47}%
 \contentsline {figure}{\numberline {4-5}{\ignorespaces IHHO与其他5种算法在CEC 2020 测试集上的平均排名（10维）}}{51}{figure.caption.50}%
 \contentsline {figure}{\numberline {4-5}{\ignorespaces Average ranking of IHHO with other five algorithms on the CEC 2020 test set(10D)}}{51}{figure.caption.50}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces IHHO与其他5种算法在CEC 2020 测试集上的平均排名（30维）}}{52}{figure.caption.51}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Average ranking of IHHO with other five algorithms on the CEC 2020 test set (30D)}}{52}{figure.caption.51}%
-\contentsline {figure}{\numberline {4-7}{\ignorespaces IHHO特征选择实验适应度收敛曲线图}}{54}{figure.caption.55}%
-\contentsline {figure}{\numberline {4-7}{\ignorespaces Fitness convergence curve of IHHO feature selection experiment}}{54}{figure.caption.55}%
-\contentsline {figure}{\numberline {4-8}{\ignorespaces IHHO特征选择实验精确度直方图}}{55}{figure.caption.56}%
-\contentsline {figure}{\numberline {4-8}{\ignorespaces Histogram of accuracy for IHHO versus feature selection experiments}}{55}{figure.caption.56}%
-\contentsline {figure}{\numberline {4-9}{\ignorespaces IHHO特征选择实验特征子集大小直方图}}{56}{figure.caption.57}%
-\contentsline {figure}{\numberline {4-9}{\ignorespaces Histogram of feature subset size for IHHO feature selection experiment}}{56}{figure.caption.57}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces IHHO与其他5种算法在CEC 2020 测试集上的平均排名（30维）}}{51}{figure.caption.51}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces Average ranking of IHHO with other five algorithms on the CEC 2020 test set (30D)}}{51}{figure.caption.51}%
+\contentsline {figure}{\numberline {4-7}{\ignorespaces IHHO特征选择实验适应度收敛曲线图}}{53}{figure.caption.55}%
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Fitness convergence curve of IHHO feature selection experiment}}{53}{figure.caption.55}%
+\contentsline {figure}{\numberline {4-8}{\ignorespaces IHHO特征选择实验精确度直方图}}{54}{figure.caption.56}%
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Histogram of accuracy for IHHO versus feature selection experiments}}{54}{figure.caption.56}%
+\contentsline {figure}{\numberline {4-9}{\ignorespaces IHHO特征选择实验特征子集大小直方图}}{55}{figure.caption.57}%
+\contentsline {figure}{\numberline {4-9}{\ignorespaces Histogram of feature subset size for IHHO feature selection experiment}}{55}{figure.caption.57}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}

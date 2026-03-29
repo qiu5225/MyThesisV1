@@ -33,21 +33,21 @@
 \contentsline {table}{\numberline {4-3}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (10D)}}{49}{table.caption.48}%
 \contentsline {table}{\numberline {4-4}{\ignorespaces 各算法在 CEC 2020 的对比实验结果（30维）}}{50}{table.caption.49}%
 \contentsline {table}{\numberline {4-4}{\ignorespaces Comparative experimental results of each algorithm in CEC 2020 (30D)}}{50}{table.caption.49}%
-\contentsline {table}{\numberline {4-5}{\ignorespaces 各算法弗里德曼排名结果（10维）}}{52}{table.caption.52}%
-\contentsline {table}{\numberline {4-5}{\ignorespaces Friedman ranking results for each algorithm (10D)}}{52}{table.caption.52}%
-\contentsline {table}{\numberline {4-6}{\ignorespaces 各算法弗里德曼排名结果（30维）}}{53}{table.caption.53}%
-\contentsline {table}{\numberline {4-6}{\ignorespaces Friedman ranking results for each algorithm (30D)}}{53}{table.caption.53}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces 数据集信息汇总}}{53}{table.caption.54}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces Summary of datasets}}{53}{table.caption.54}%
-\contentsline {table}{\numberline {4-8}{\ignorespaces IHHO与其他五种算法适应度值统计结果及Friedman排名}}{58}{table.caption.58}%
-\contentsline {table}{\numberline {4-8}{\ignorespaces Friedman ranking of fitness statistical results between IHHO and other five algorithms}}{58}{table.caption.58}%
-\contentsline {table}{\numberline {4-9}{\ignorespaces IHHO与其他五种算法准确率统计结果及Friedman排名}}{58}{table.caption.59}%
-\contentsline {table}{\numberline {4-9}{\ignorespaces Friedman ranking of accuracy statistical results between IHHO and other five algorithms}}{58}{table.caption.59}%
-\contentsline {table}{\numberline {4-10}{\ignorespaces IHHO消融实验结果表}}{59}{table.caption.60}%
-\contentsline {table}{\numberline {4-10}{\ignorespaces Table of results from IHHO ablation experiments}}{59}{table.caption.60}%
-\contentsline {table}{\numberline {4-11}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{60}{table.caption.61}%
-\contentsline {table}{\numberline {4-11}{\ignorespaces Orthogonal experiments on parameter sensitivity of IHHO ($L_9(3^4)$)}}{60}{table.caption.61}%
-\contentsline {table}{\numberline {4-12}{\ignorespaces IHHO参数敏感度实验结果表}}{61}{table.caption.62}%
-\contentsline {table}{\numberline {4-12}{\ignorespaces Table of experimental results of IHHO parameter sensitivity}}{61}{table.caption.62}%
+\contentsline {table}{\numberline {4-5}{\ignorespaces 各算法弗里德曼排名结果（10维）}}{50}{table.caption.52}%
+\contentsline {table}{\numberline {4-5}{\ignorespaces Friedman ranking results for each algorithm (10D)}}{50}{table.caption.52}%
+\contentsline {table}{\numberline {4-6}{\ignorespaces 各算法弗里德曼排名结果（30维）}}{52}{table.caption.53}%
+\contentsline {table}{\numberline {4-6}{\ignorespaces Friedman ranking results for each algorithm (30D)}}{52}{table.caption.53}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces 数据集信息汇总}}{52}{table.caption.54}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces Summary of datasets}}{52}{table.caption.54}%
+\contentsline {table}{\numberline {4-8}{\ignorespaces IHHO与其他五种算法适应度值统计结果及Friedman排名}}{56}{table.caption.58}%
+\contentsline {table}{\numberline {4-8}{\ignorespaces Friedman ranking of fitness statistical results between IHHO and other five algorithms}}{56}{table.caption.58}%
+\contentsline {table}{\numberline {4-9}{\ignorespaces IHHO与其他五种算法准确率统计结果及Friedman排名}}{57}{table.caption.59}%
+\contentsline {table}{\numberline {4-9}{\ignorespaces Friedman ranking of accuracy statistical results between IHHO and other five algorithms}}{57}{table.caption.59}%
+\contentsline {table}{\numberline {4-10}{\ignorespaces IHHO消融实验结果表}}{58}{table.caption.60}%
+\contentsline {table}{\numberline {4-10}{\ignorespaces Table of results from IHHO ablation experiments}}{58}{table.caption.60}%
+\contentsline {table}{\numberline {4-11}{\ignorespaces IHHO算法参数敏感度正交实验方案表（$L_9(3^4)$）}}{59}{table.caption.61}%
+\contentsline {table}{\numberline {4-11}{\ignorespaces Orthogonal experiments on parameter sensitivity of IHHO ($L_9(3^4)$)}}{59}{table.caption.61}%
+\contentsline {table}{\numberline {4-12}{\ignorespaces IHHO参数敏感度实验结果表}}{60}{table.caption.62}%
+\contentsline {table}{\numberline {4-12}{\ignorespaces Table of experimental results of IHHO parameter sensitivity}}{60}{table.caption.62}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}

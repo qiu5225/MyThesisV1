@@ -3,8 +3,8 @@
 \contentsline {chapter}{ABSTRACT}{III}{section*.3}%
 \contentsline {paragraph}{\textbf {KEY WORDS:}}{IV}{paragraph*.4}%
 \contentsline {chapter}{目\hspace {\ccwd }录}{V}{paragraph*.4}%
-\contentsline {chapter}{图\ 目\ 录}{VII}{section*.5}%
-\contentsline {chapter}{表\ 目\ 录}{IX}{section*.6}%
+\contentsline {chapter}{图\ 目\ 录}{VIII}{section*.5}%
+\contentsline {chapter}{表\ 目\ 录}{X}{section*.6}%
 \contentsline {chapter}{\numberline {1\hspace {.3em}}绪论}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}研究背景}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}国内外研究现状}{2}{section.1.2}%
@@ -26,10 +26,11 @@
 \contentsline {subsection}{\numberline {2.2.5}积极的贪婪选择机制}{11}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}哈里斯鹰算法}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}算法概述}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}勘探阶段}{12}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}从勘探到开发的过渡}{12}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}开发阶段}{13}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}HHO 算法伪代码}{13}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.2}种群初始化}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}探索阶段}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}从探索到开发的过渡阶段}{13}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}开发阶段}{13}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}HHO 算法伪代码}{14}{subsection.2.3.6}%
 \contentsline {section}{\numberline {2.4}本章小结}{14}{section.2.4}%
 \contentsline {chapter}{\numberline {3\hspace {.3em}}多策略融合改进的雾凇算法}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}引言}{15}{section.3.1}%
@@ -69,13 +70,13 @@
 \contentsline {subsubsection}{\numberline {4.3.1.1}实验准备}{46}{subsubsection.4.3.1.1}%
 \contentsline {subsubsection}{\numberline {4.3.1.2}收敛曲线分析}{46}{subsubsection.4.3.1.2}%
 \contentsline {subsubsection}{\numberline {4.3.1.3}弗里德曼统计检验}{48}{subsubsection.4.3.1.3}%
-\contentsline {subsection}{\numberline {4.3.2}特征选择应用}{51}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}实验准备}{51}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}实验结果与分析}{51}{subsubsection.4.3.2.2}%
-\contentsline {subsection}{\numberline {4.3.3}消融实验}{57}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{60}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}本章小结}{61}{section.4.4}%
-\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{62}{chapter.5}%
-\contentsline {section}{\numberline {5.1}全文总结}{62}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来研究展望}{62}{section.5.2}%
-\contentsline {chapter}{参考文献}{64}{chapter*.63}%
+\contentsline {subsection}{\numberline {4.3.2}特征选择应用}{48}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}实验准备}{48}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}实验结果与分析}{52}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}消融实验}{56}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{57}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}本章小结}{59}{section.4.4}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}全文总结}{61}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来研究展望}{61}{section.5.2}%
+\contentsline {chapter}{参考文献}{63}{chapter*.63}%
