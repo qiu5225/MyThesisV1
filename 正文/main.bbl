@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{95}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -297,11 +297,6 @@ SU H, ZHAO D, et~al.
 \newblock Rime: A physics-based optimization\allowbreak[J].
 \newblock Neurocomputing, 2023, 532: 183-214.
 
-\bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
-HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
-\newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
-\newblock Future generation computer systems, 2019, 97: 849-872.
-
 \bibitem[Dorigo et~al.(2007)Dorigo and St{\"u}tzle]{dorigo2007ant}
 DORIGO M, ST{\"U}TZLE T.
 \newblock Ant colony optimization\allowbreak[M].
@@ -341,6 +336,26 @@ GU Y, et~al.
 ZHENG J, et~al.
 \newblock Stochastic rime for image segmentation\allowbreak[J].
 \newblock Pattern Recognition, 2024, 146: 110022.
+
+\bibitem[Abu~Khurma et~al.(2024)Abu~Khurma, Braik, Alzaqebah, Gopal~Dhal, Dama{\v{s}}evi{\v{c}}ius, and Abu-Salih]{abu2024advanced}
+ABU~KHURMA R, BRAIK M, ALZAQEBAH A, et~al.
+\newblock Advanced rime architecture for global optimization and feature selection\allowbreak[J].
+\newblock Journal of Big Data, 2024, 11\allowbreak (1): 89.
+
+\bibitem[Wang et~al.(2025)Wang, Xu, Jia, Wang, Xu, and Liu]{wang2025multi}
+WANG L, XU J, JIA L, et~al.
+\newblock Multi-strategy rime optimization algorithm for feature selection of network intrusion detection\allowbreak[J].
+\newblock Computers \& Security, 2025, 153: 104393.
+
+\bibitem[Wu et~al.(2024)Wu, Chen, Zhu, Cai, Heidari, and Chen]{wu2024feature}
+WU H, CHEN Y, ZHU W, et~al.
+\newblock Feature selection in high-dimensional data: an enhanced rime optimization with information entropy pruning and dbscan clustering\allowbreak[J].
+\newblock International journal of machine learning and cybernetics, 2024, 15\allowbreak (9): 4211-4254.
+
+\bibitem[Heidari et~al.(2019)Heidari, Mirjalili, Faris, Aljarah, Mafarja, and Chen]{heidari2019harris}
+HEIDARI A~A, MIRJALILI S, FARIS H, et~al.
+\newblock Harris hawks optimization: Algorithm and applications\allowbreak[J].
+\newblock Future generation computer systems, 2019, 97: 849-872.
 
 \bibitem[Pham et~al.(2020)Pham, Huynh-The, Alazab, Zhao, and Hwang]{pham2020sum}
 PHAM Q~V, HUYNH-THE T, ALAZAB M, et~al.
@@ -383,6 +398,21 @@ ISSA A, ALI Y, RASHID T.
 KHATRI I, CHOUDHRY A, RAO A, et~al.
 \newblock Influence maximization in social networks using discretized harris’ hawks optimization algorithm\allowbreak[J].
 \newblock Applied Soft Computing, 2023, 149: 111037.
+
+\bibitem[Azeem et~al.(2025)Azeem, Javed, Naseer, Ali, and Ghazal]{azeem2025new}
+AZEEM S, JAVED S, NASEER I, et~al.
+\newblock A new hybrid pso-hho wrapper based optimization for feature selection\allowbreak[J].
+\newblock IEEE Access, 2025.
+
+\bibitem[Jain et~al.(2025)Jain, Gopalani, and Meena]{jain2025hybrid}
+JAIN M~K, GOPALANI D, MEENA Y~K.
+\newblock Hybrid cnn-bilstm model with hho feature selection for enhanced fake news detection\allowbreak[J].
+\newblock Social Network Analysis and Mining, 2025, 15\allowbreak (1): 43.
+
+\bibitem[Luthfi et~al.(2025)Luthfi, Herteno, Abadi, Nugroho, Mazdadi, Athavale, et~al.]{luthfi2025enhancing}
+LUTHFI A~F, HERTENO R, ABADI F, et~al.
+\newblock Enhancing software defect prediction: Hho-based wrapper feature selection with ensemble methods\allowbreak[J].
+\newblock Indonesian Journal of Electronics, Electromedical Engineering, and Medical Informatics, 2025, 7\allowbreak (2): 188-202.
 
 \bibitem[陈志鹏(2025)]{1025619691.nh}
 陈志鹏.

@@ -11,72 +11,72 @@
 \contentsline {subsection}{\numberline {1.2.1}雾凇算法国内外研究现状}{3}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}哈里斯鹰算法国内外研究现状}{4}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}本文组织结构}{5}{section.1.3}%
-\contentsline {chapter}{\numberline {2\hspace {.3em}}相关背景知识介绍}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}特征选择方法}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}过滤式方法}{6}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}包裹式方法}{7}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}嵌入式方法}{7}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}解的表达}{7}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}适应度函数}{8}{subsection.2.1.5}%
-\contentsline {section}{\numberline {2.2}雾凇算法}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}算法概述}{8}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}种群初始化}{11}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}软雾凇搜索}{11}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}硬雾凇穿刺}{12}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}积极的贪婪选择机制}{12}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}哈里斯鹰算法}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}算法概述}{13}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}种群初始化}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}探索阶段}{14}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}从探索到开发的过渡阶段}{14}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}开发阶段}{14}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}HHO 算法伪代码}{15}{subsection.2.3.6}%
-\contentsline {section}{\numberline {2.4}本章小结}{16}{section.2.4}%
-\contentsline {chapter}{\numberline {3\hspace {.3em}}基于经验互益与自适应扰动的改进哈里斯鹰特征选择方法}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}引言}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}算法介绍}{17}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}信息熵评估策略}{17}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}信息熵的数学定义}{17}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}评估流程}{17}{subsubsection.3.2.1.2}%
-\contentsline {subsection}{\numberline {3.2.2}拉格朗日插值法}{19}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}随机重启机制}{20}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}时间复杂度分析}{20}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}实验设计}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}基准函数对比实验}{22}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}实验准备}{22}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}收敛曲线分析}{22}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.1.3}箱线图分析}{25}{subsubsection.3.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.3.1.4}弗里德曼统计检验}{25}{subsubsection.3.3.1.4}%
-\contentsline {subsection}{\numberline {3.3.2}特征选择应用}{28}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}实验准备}{28}{subsubsection.3.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}实验结果与分析}{32}{subsubsection.3.3.2.2}%
-\contentsline {subsection}{\numberline {3.3.3}消融实验}{37}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}本章小结}{40}{section.3.4}%
-\contentsline {chapter}{\numberline {4\hspace {.3em}}基于多策略改进的哈里斯鹰算法}{41}{chapter.4}%
-\contentsline {section}{\numberline {4.1}引言}{41}{section.4.1}%
-\contentsline {section}{\numberline {4.2}算法介绍}{41}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}经验互益策略}{41}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{42}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{43}{subsubsection.4.2.1.2}%
-\contentsline {paragraph}{经验匮乏阶段（Experience Scarcity Stage，ESC）}{43}{paragraph*.39}%
-\contentsline {paragraph}{经验交叉阶段（Experience Crossover Stage, ECR）}{43}{paragraph*.40}%
-\contentsline {paragraph}{经验共享阶段（Experience Sharing Stage, ESH）}{43}{paragraph*.41}%
-\contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{43}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{45}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{46}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}算法实现}{46}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}实验设计}{48}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}基准函数对比实验}{48}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}实验准备}{48}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}收敛曲线分析}{48}{subsubsection.4.3.1.2}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}弗里德曼统计检验}{50}{subsubsection.4.3.1.3}%
-\contentsline {subsection}{\numberline {4.3.2}特征选择应用}{53}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}实验准备}{53}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}实验结果与分析}{55}{subsubsection.4.3.2.2}%
-\contentsline {subsection}{\numberline {4.3.3}消融实验}{59}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{60}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}本章小结}{62}{section.4.4}%
-\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{64}{chapter.5}%
-\contentsline {section}{\numberline {5.1}全文总结}{64}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来研究展望}{64}{section.5.2}%
-\contentsline {chapter}{参考文献}{66}{chapter*.63}%
+\contentsline {chapter}{\numberline {2\hspace {.3em}}相关背景知识介绍}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}特征选择方法}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}过滤式方法}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}包裹式方法}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}嵌入式方法}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}解的表达}{8}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}适应度函数}{9}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}雾凇算法}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}算法概述}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}种群初始化}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}软雾凇搜索}{12}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}硬雾凇穿刺}{13}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}积极的贪婪选择机制}{13}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}哈里斯鹰算法}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}算法概述}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}种群初始化}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}探索阶段}{15}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}从探索到开发的过渡阶段}{15}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}开发阶段}{15}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}HHO 算法伪代码}{16}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}本章小结}{17}{section.2.4}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}基于经验互益与自适应扰动的改进哈里斯鹰特征选择方法}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}引言}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}算法介绍}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}信息熵评估策略}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}信息熵的数学定义}{18}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}评估流程}{18}{subsubsection.3.2.1.2}%
+\contentsline {subsection}{\numberline {3.2.2}拉格朗日插值法}{20}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}随机重启机制}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}时间复杂度分析}{21}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}实验设计}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}基准函数对比实验}{23}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}实验准备}{23}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}收敛曲线分析}{23}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}箱线图分析}{26}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.4}弗里德曼统计检验}{26}{subsubsection.3.3.1.4}%
+\contentsline {subsection}{\numberline {3.3.2}特征选择应用}{29}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}实验准备}{29}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}实验结果与分析}{33}{subsubsection.3.3.2.2}%
+\contentsline {subsection}{\numberline {3.3.3}消融实验}{38}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}本章小结}{41}{section.3.4}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}基于多策略改进的哈里斯鹰算法}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}引言}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}算法介绍}{42}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}经验互益策略}{42}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}策略设计背景与动机}{43}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}EES 数学模型与阶段划分}{44}{subsubsection.4.2.1.2}%
+\contentsline {paragraph}{经验匮乏阶段（Experience Scarcity Stage，ESC）}{44}{paragraph*.39}%
+\contentsline {paragraph}{经验交叉阶段（Experience Crossover Stage, ECR）}{44}{paragraph*.40}%
+\contentsline {paragraph}{经验共享阶段（Experience Sharing Stage, ESH）}{44}{paragraph*.41}%
+\contentsline {subsection}{\numberline {4.2.2}能量自适应柯西-高斯扰动策略}{44}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}精英方差引导开发策略}{46}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}时间复杂度分析}{47}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}算法实现}{47}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}实验设计}{49}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}基准函数对比实验}{49}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}实验准备}{49}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}收敛曲线分析}{49}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}弗里德曼统计检验}{51}{subsubsection.4.3.1.3}%
+\contentsline {subsection}{\numberline {4.3.2}特征选择应用}{54}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}实验准备}{54}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}实验结果与分析}{56}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}消融实验}{60}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}参数敏感度实验}{61}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}本章小结}{63}{section.4.4}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{65}{chapter.5}%
+\contentsline {section}{\numberline {5.1}全文总结}{65}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来研究展望}{65}{section.5.2}%
+\contentsline {chapter}{参考文献}{67}{chapter*.63}%
