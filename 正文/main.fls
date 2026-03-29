@@ -324,9 +324,6 @@ INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/rotating.sty
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/graphics/rotating.sty
-INPUT main.aex
-INPUT ./main.aex
-INPUT ./main.aex
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
@@ -334,13 +331,6 @@ OUTPUT main.aux
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
-INPUT ./main.out
-INPUT ./main.out
-INPUT main.out
-INPUT main.out
-INPUT ./main.out
-INPUT ./main.out
-OUTPUT main.out
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 INPUT d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
@@ -819,5 +809,3 @@ INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
 INPUT main.aux
-INPUT ./main.out
-INPUT ./main.out

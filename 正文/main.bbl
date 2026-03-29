@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{89}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -227,11 +227,6 @@ COELLO C.
 \newblock Efficient cultural algorithm\allowbreak[J].
 \newblock Evolutionary Computation, 2004, 12: 1-20.
 
-\bibitem[Hu et~al.(2012)]{hu2012adaptive}
-HU X, et~al.
-\newblock Adaptive particle swarm optimization\allowbreak[J].
-\newblock IEEE Transactions on Evolutionary Computation, 2012, 16: 1-15.
-
 \bibitem[Tiwari et~al.(2024)]{tiwari2024developments}
 TIWARI S, et~al.
 \newblock Developments in differential evolution\allowbreak[J].
@@ -399,6 +394,28 @@ KHATRI I, CHOUDHRY A, RAO A, et~al.
 \newblock 改进飞蛾火焰优化算法及其在特征选择问题上的应用\allowbreak[D].
 \newblock 温州大学, 2020.
 
+\bibitem[Cherrington et~al.(2019)Cherrington, Thabtah, Lu, and Xu]{cherrington2019feature}
+CHERRINGTON M, THABTAH F, LU J, et~al.
+\newblock Feature selection: filter methods performance challenges\allowbreak[C]//\allowbreak
+2019 International Conference on Computer and Information Sciences (ICCIS).
+\newblock IEEE, 2019: 1-4.
+
+\bibitem[Gong et~al.(2024)Gong, Li, Zhang, Zhang, and Wang]{gong2024new}
+GONG H, LI Y, ZHANG J, et~al.
+\newblock A new filter feature selection algorithm for classification task by ensembling pearson correlation coefficient and mutual information\allowbreak[J].
+\newblock Engineering Applications of Artificial Intelligence, 2024, 131: 107865.
+
+\bibitem[Masood et~al.(2023)Masood, Masood, Zahir, Driss, Mehmood, and Farooq]{masood2023novel}
+MASOOD F, MASOOD J, ZAHIR H, et~al.
+\newblock Novel approach to evaluate classification algorithms and feature selection filter algorithms using medical data\allowbreak[J].
+\newblock journal of Computational and Cognitive Engineering, 2023, 2\allowbreak (1): 57-67.
+
+\bibitem[El~Aboudi et~al.(2016)El~Aboudi and Benhlima]{el2016review}
+EL~ABOUDI N, BENHLIMA L.
+\newblock Review on wrapper feature selection approaches\allowbreak[C]//\allowbreak
+2016 international conference on engineering \& MIS (ICEMIS).
+\newblock IEEE, 2016: 1-5.
+
 \bibitem[白晓彤(2025)]{1025546079.nh}
 白晓彤.
 \newblock 面向基因表达数据的混合式特征选择方法研究\allowbreak[D].
@@ -409,6 +426,11 @@ SONG Y~W, WANG J~S, QI Y~L, et~al.
 \newblock Serial filter-wrapper feature selection method with elite guided mutation strategy on cancer gene expression data\allowbreak[J].
 \newblock Artificial Intelligence Review, 2025, 58\allowbreak (4): 111.
 
+\bibitem[Chen et~al.(2015)Chen and Chen]{chen2015novel}
+CHEN G, CHEN J.
+\newblock A novel wrapper method for feature selection and its applications\allowbreak[J].
+\newblock Neurocomputing, 2015, 159: 219-226.
+
 \bibitem[黄洋(2025)]{1025935331.nh}
 黄洋.
 \newblock 粒计算视角下嵌入式特征选择方法研究\allowbreak[D].
@@ -418,6 +440,22 @@ SONG Y~W, WANG J~S, QI Y~L, et~al.
 HAO P, GAO W, HU L.
 \newblock Embedded feature fusion for multi-view multi-label feature selection\allowbreak[J].
 \newblock Pattern Recognition, 2025, 157: 110888.
+
+\bibitem[Liu et~al.(2019)Liu, Zhou, and Liu]{liu2019embedded}
+LIU H, ZHOU M, LIU Q.
+\newblock An embedded feature selection method for imbalanced data classification\allowbreak[J].
+\newblock IEEE/CAA Journal of Automatica Sinica, 2019, 6\allowbreak (3): 703-715.
+
+\bibitem[Wang et~al.(2015)Wang, Tang, and Liu]{wang2015embedded}
+WANG S, TANG J, LIU H.
+\newblock Embedded unsupervised feature selection\allowbreak[C]//\allowbreak
+Proceedings of the AAAI conference on artificial intelligence: Vol.~29.
+\newblock 2015.
+
+\bibitem[Maldonado et~al.(2018)Maldonado and L{\'o}pez]{maldonado2018dealing}
+MALDONADO S, L{\'O}PEZ J.
+\newblock Dealing with high-dimensional class-imbalanced datasets: Embedded feature selection for svm classification\allowbreak[J].
+\newblock Applied Soft Computing, 2018, 67: 94-105.
 
 \bibitem[Zhu et~al.(2007)Zhu, Ong, and Dash]{zhu2007markov}
 ZHU Z, ONG Y~S, DASH M.
