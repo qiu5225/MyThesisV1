@@ -1,4 +1,4 @@
-\begin{thebibliography}{95}
+\begin{thebibliography}{90}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -307,16 +307,6 @@ ZHONG K, et~al.
 \newblock Srime: Enhanced rime with latin hypercube sampling\allowbreak[J].
 \newblock Engineering Applications of Artificial Intelligence, 2024, 129: 107666.
 
-\bibitem[Guo et~al.(2024)]{guo2024improved}
-GUO L, et~al.
-\newblock Improved rime for lung cancer image segmentation\allowbreak[J].
-\newblock Computers in Biology and Medicine, 2024, 168: 107777.
-
-\bibitem[Hosney et~al.(2024)]{hosney2024efficient}
-HOSNEY M, et~al.
-\newblock Efficient rime with orthogonal learning for bladder cancer diagnosis\allowbreak[J].
-\newblock Biomedical Signal Processing and Control, 2024, 88: 105666.
-
 \bibitem[Chen et~al.(2025)]{chen2025terime}
 CHEN H, et~al.
 \newblock Terime for photovoltaic parameter extraction\allowbreak[J].
@@ -332,10 +322,20 @@ GU Y, et~al.
 \newblock Multi-strategy improved rime for usv path planning\allowbreak[J].
 \newblock Ocean Engineering, 2024, 292: 116555.
 
+\bibitem[Guo et~al.(2024)]{guo2024improved}
+GUO L, et~al.
+\newblock Improved rime for lung cancer image segmentation\allowbreak[J].
+\newblock Computers in Biology and Medicine, 2024, 168: 107777.
+
 \bibitem[Zheng et~al.(2024)]{zheng2024stochastic}
 ZHENG J, et~al.
 \newblock Stochastic rime for image segmentation\allowbreak[J].
 \newblock Pattern Recognition, 2024, 146: 110022.
+
+\bibitem[Hosney et~al.(2024)]{hosney2024efficient}
+HOSNEY M, et~al.
+\newblock Efficient rime with orthogonal learning for bladder cancer diagnosis\allowbreak[J].
+\newblock Biomedical Signal Processing and Control, 2024, 88: 105666.
 
 \bibitem[Abu~Khurma et~al.(2024)Abu~Khurma, Braik, Alzaqebah, Gopal~Dhal, Dama{\v{s}}evi{\v{c}}ius, and Abu-Salih]{abu2024advanced}
 ABU~KHURMA R, BRAIK M, ALZAQEBAH A, et~al.
@@ -362,32 +362,21 @@ PHAM Q~V, HUYNH-THE T, ALAZAB M, et~al.
 \newblock Sum-rate maximization for uav-assisted visible light communications using noma: Swarm intelligence meets machine learning\allowbreak[J].
 \newblock IEEE Internet of Things Journal, 2020, 7\allowbreak (10): 10375-10387.
 
-\bibitem[Fetanat et~al.(2021)Fetanat, Stevens, Jain, Hayward, Meijering, and Lovell]{fetanat2021fully}
-FETANAT M, STEVENS M, JAIN P, et~al.
-\newblock Fully elman neural network: a novel deep recurrent neural network optimized by an improved harris hawks algorithm for classification of pulmonary arterial wedge pressure\allowbreak[J].
-\newblock IEEE Transactions on Biomedical Engineering, 2021, 69\allowbreak (5): 1733-1744.
-
 \bibitem[Xu et~al.(2020)Xu, Zhang, Zhao, and Pham]{xu2020intelligent}
 XU H, ZHANG G, ZHAO J, et~al.
 \newblock Intelligent reflecting surface aided wireless networks: harris hawks optimization for beamforming design\allowbreak[C]//\allowbreak
 2020 IEEE 6th International Conference on Computer and Communications (ICCC).
 \newblock IEEE, 2020: 200-205.
 
-\bibitem[Van~Stein et~al.(2024)Van~Stein and B{\"a}ck]{van2024llamea}
-VAN~STEIN N, B{\"A}CK T.
-\newblock Llamea: A large language model evolutionary algorithm for automatically generating metaheuristics\allowbreak[J].
-\newblock IEEE Transactions on Evolutionary Computation, 2024, 29\allowbreak (2): 331-345.
+\bibitem[Luthfi et~al.(2025)Luthfi, Herteno, Abadi, Nugroho, Mazdadi, Athavale, et~al.]{luthfi2025enhancing}
+LUTHFI A~F, HERTENO R, ABADI F, et~al.
+\newblock Enhancing software defect prediction: Hho-based wrapper feature selection with ensemble methods\allowbreak[J].
+\newblock Indonesian Journal of Electronics, Electromedical Engineering, and Medical Informatics, 2025, 7\allowbreak (2): 188-202.
 
-\bibitem[De~Rosa et~al.(2021)De~Rosa, Roder, Papa, and Dos~Santos]{de2021improving}
-DE~ROSA G~H, RODER M, PAPA J~P, et~al.
-\newblock Improving pre-trained weights through meta-heuristics fine-tuning\allowbreak[C]//\allowbreak
-2021 IEEE Symposium Series on Computational Intelligence (SSCI).
-\newblock IEEE, 2021: 1-8.
-
-\bibitem[Alazab et~al.(2024)Alazab, Khurma, Castillo, Abu-Salih, Mart{\'\i}n, and Camacho]{alazab2024effective}
-ALAZAB M, KHURMA R~A, CASTILLO P~A, et~al.
-\newblock An effective networks intrusion detection approach based on hybrid harris hawks and multi-layer perceptron\allowbreak[J].
-\newblock Egyptian Informatics Journal, 2024, 25: 100423.
+\bibitem[Azeem et~al.(2025)Azeem, Javed, Naseer, Ali, and Ghazal]{azeem2025new}
+AZEEM S, JAVED S, NASEER I, et~al.
+\newblock A new hybrid pso-hho wrapper based optimization for feature selection\allowbreak[J].
+\newblock IEEE Access, 2025.
 
 \bibitem[Issa et~al.(2022)Issa, Ali, and Rashid]{issa2022efficient}
 ISSA A, ALI Y, RASHID T.
@@ -398,21 +387,6 @@ ISSA A, ALI Y, RASHID T.
 KHATRI I, CHOUDHRY A, RAO A, et~al.
 \newblock Influence maximization in social networks using discretized harris’ hawks optimization algorithm\allowbreak[J].
 \newblock Applied Soft Computing, 2023, 149: 111037.
-
-\bibitem[Azeem et~al.(2025)Azeem, Javed, Naseer, Ali, and Ghazal]{azeem2025new}
-AZEEM S, JAVED S, NASEER I, et~al.
-\newblock A new hybrid pso-hho wrapper based optimization for feature selection\allowbreak[J].
-\newblock IEEE Access, 2025.
-
-\bibitem[Jain et~al.(2025)Jain, Gopalani, and Meena]{jain2025hybrid}
-JAIN M~K, GOPALANI D, MEENA Y~K.
-\newblock Hybrid cnn-bilstm model with hho feature selection for enhanced fake news detection\allowbreak[J].
-\newblock Social Network Analysis and Mining, 2025, 15\allowbreak (1): 43.
-
-\bibitem[Luthfi et~al.(2025)Luthfi, Herteno, Abadi, Nugroho, Mazdadi, Athavale, et~al.]{luthfi2025enhancing}
-LUTHFI A~F, HERTENO R, ABADI F, et~al.
-\newblock Enhancing software defect prediction: Hho-based wrapper feature selection with ensemble methods\allowbreak[J].
-\newblock Indonesian Journal of Electronics, Electromedical Engineering, and Medical Informatics, 2025, 7\allowbreak (2): 188-202.
 
 \bibitem[陈志鹏(2025)]{1025619691.nh}
 陈志鹏.

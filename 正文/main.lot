@@ -13,7 +13,8 @@
 \contentsline {table}{\numberline {3-5}{\ignorespaces Results of IRIME ablation experiments (50D)}}{32}{table.caption.27}%
 \contentsline {table}{\numberline {3-6}{\ignorespaces 特征选择中的算法参数设置}}{33}{table.caption.28}%
 \contentsline {table}{\numberline {3-6}{\ignorespaces Parameters setting for algorithms used in FS}}{33}{table.caption.28}%
-\contentsline {table}{\numberline {3-7}{\ignorespaces Overview of the datasets}}{33}{table.caption.29}%
+\contentsline {table}{\numberline {3-7}{\ignorespaces IRIME特征选择所用数据集概览}}{33}{table.caption.29}%
+\contentsline {table}{\numberline {3-7}{\ignorespaces Overview of the datasets used in FS of IRIME}}{33}{table.caption.29}%
 \contentsline {table}{\numberline {3-8}{\ignorespaces 12 个数据集上的适应度值结果}}{36}{table.caption.32}%
 \contentsline {table}{\numberline {3-8}{\ignorespaces Results of fitness values on 12 datasets}}{36}{table.caption.32}%
 \contentsline {table}{\numberline {3-9}{\ignorespaces 12 个数据集上的准确率结果}}{36}{table.caption.33}%
@@ -37,8 +38,8 @@
 \contentsline {table}{\numberline {4-5}{\ignorespaces Friedman ranking results for each algorithm (10D)}}{54}{table.caption.52}%
 \contentsline {table}{\numberline {4-6}{\ignorespaces 各算法弗里德曼排名结果（30维）}}{55}{table.caption.53}%
 \contentsline {table}{\numberline {4-6}{\ignorespaces Friedman ranking results for each algorithm (30D)}}{55}{table.caption.53}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces 数据集信息汇总}}{56}{table.caption.54}%
-\contentsline {table}{\numberline {4-7}{\ignorespaces Summary of datasets}}{56}{table.caption.54}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces IHHO特征选择所用数据集概览}}{56}{table.caption.54}%
+\contentsline {table}{\numberline {4-7}{\ignorespaces Overview of the datasets used in FS of IHHO}}{56}{table.caption.54}%
 \contentsline {table}{\numberline {4-8}{\ignorespaces IHHO与其他五种算法适应度值统计结果及Friedman排名}}{60}{table.caption.58}%
 \contentsline {table}{\numberline {4-8}{\ignorespaces Friedman ranking of fitness statistical results between IHHO and other five algorithms}}{60}{table.caption.58}%
 \contentsline {table}{\numberline {4-9}{\ignorespaces IHHO与其他五种算法准确率统计结果及Friedman排名}}{61}{table.caption.59}%

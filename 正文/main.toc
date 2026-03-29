@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {2.3.5}开发阶段}{15}{subsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.3.6}HHO 算法伪代码}{16}{subsection.2.3.6}%
 \contentsline {section}{\numberline {2.4}本章小结}{17}{section.2.4}%
-\contentsline {chapter}{\numberline {3\hspace {.3em}}基于经验互益与自适应扰动的改进哈里斯鹰特征选择方法}{18}{chapter.3}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}基于信息熵与拉格朗日插值法的改进雾凇特征选择方法}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}引言}{18}{section.3.1}%
 \contentsline {section}{\numberline {3.2}算法介绍}{18}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}信息熵评估策略}{18}{subsection.3.2.1}%
@@ -52,7 +52,7 @@
 \contentsline {subsubsection}{\numberline {3.3.2.2}实验结果与分析}{33}{subsubsection.3.3.2.2}%
 \contentsline {subsection}{\numberline {3.3.3}消融实验}{38}{subsection.3.3.3}%
 \contentsline {section}{\numberline {3.4}本章小结}{41}{section.3.4}%
-\contentsline {chapter}{\numberline {4\hspace {.3em}}基于多策略改进的哈里斯鹰算法}{42}{chapter.4}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}基于经验互益与自适应扰动的改进哈里斯鹰特征选择方法}{42}{chapter.4}%
 \contentsline {section}{\numberline {4.1}引言}{42}{section.4.1}%
 \contentsline {section}{\numberline {4.2}算法介绍}{42}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}经验互益策略}{42}{subsection.4.2.1}%
