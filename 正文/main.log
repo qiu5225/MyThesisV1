@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  29 MAR 2026 14:52
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  29 MAR 2026 21:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1327,12 +1327,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.53937> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.52812> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
-
-Overfull \hbox (26.8413pt too wide) in paragraph at lines 97--97
-\TU/TimesNewRoman(0)/m/n/14.05249 cessive consumption of computational resources. Effectively parsing high-dimensional
- []
-
-[3
+ [3
 
 ] [4] (./main.toc [5
 
@@ -1453,9 +1448,9 @@ File: figures//Flowchart/IRIME流程图_横板_2.png Graphic file (type bmp)
 <figures//Flowchart/IRIME流程图_横板_2.png>
  [18] [19]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 638.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 639.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 638.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 639.
 File: figures/Convergence/dim30/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/1.pdf>
 File: figures/Convergence/dim30/5.pdf Graphic file (type pdf)
@@ -1561,13 +1556,13 @@ File: figures/box/dim50/30.pdf Graphic file (type pdf)
 File: figures/Ftest/Ftest-dim30-dim50.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-dim30-dim50.pdf>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.52437> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 993.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 994.
 
 
-LaTeX Warning: Float too large for page by 36.24338pt on input line 1087.
+LaTeX Warning: Float too large for page by 36.24338pt on input line 1088.
 
 
-LaTeX Warning: Float too large for page by 36.24338pt on input line 1190.
+LaTeX Warning: Float too large for page by 36.24338pt on input line 1191.
 
 [26] [27] [28] [29]
 File: figures/FS/cov/1.pdf Graphic file (type pdf)
@@ -1646,12 +1641,12 @@ File: figures/FS/feature/12.pdf Graphic file (type pdf)
 File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-ablation.pdf>
 
-Overfull \hbox (47.93161pt too wide) in paragraph at lines 1650--1702
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1651--1703
  [][][] 
  []
 
 
-Overfull \hbox (47.93161pt too wide) in paragraph at lines 1710--1762
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1711--1763
  [][][] 
  []
 
@@ -1682,19 +1677,23 @@ LaTeX Warning: Float too large for page by 20.43962pt on input line 2077.
 [47]
 File: figures/Ftest/IHHO_DIM10_Ftest.pdf Graphic file (type pdf)
 <use figures/Ftest/IHHO_DIM10_Ftest.pdf>
-File: figures/Ftest/IHHO_DIM30_Ftest.pdf Graphic file (type pdf)
-<use figures/Ftest/IHHO_DIM30_Ftest.pdf>
+
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
  [48
 
 
-] [49] [50] [51]
+] [49] [50]
+File: figures/Ftest/IHHO_DIM30_Ftest.pdf Graphic file (type pdf)
+<use figures/Ftest/IHHO_DIM30_Ftest.pdf>
+ [51] [52]
 File: figures/HHO/IHHO_COV.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_COV.pdf>
 File: figures/HHO/IHHO_ACC.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_ACC.pdf>
 File: figures/HHO/IHHO_FS_SIZE.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_FS_SIZE.pdf>
- [52] [53] [54] [55] [56] [57] [58]
+ [53] [54] [55] [56] [57] [58] [59]
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2570.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2570.
@@ -1702,20 +1701,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2570.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2570.
- [59]
+ [60]
 Overfull \hbox (10.69786pt too wide) in paragraph at lines 2648--2684
  [][] 
  []
 
-[60]
+[61]
 5
-[61
+[62
 
 
 
-] [62] (./main.bbl [63
+] [63] (./main.bbl [64
 
-] [64] [65] [66] [67]) [68] (./main.aux)
+] [65] [66] [67] [68]) [69] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1725,15 +1724,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 18C1C45D668882709E93096BA794F989;6435.
+(rerunfilecheck)             Checksum: C0CB2ACC7D6284A7AC5AFEBB77130B68;6539.
  ) 
 Here is how much of TeX's memory you used:
- 29852 strings out of 476720
- 662069 string characters out of 5799663
+ 29768 strings out of 476720
+ 655131 string characters out of 5799663
  2127842 words of memory out of 5000000
- 51240 multiletter control sequences out of 15000+600000
+ 51156 multiletter control sequences out of 15000+600000
  617023 words of font info for 269 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  125i,21n,121p,1838b,800s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (80 pages, 1762768 bytes).
+Output written on main.xdv (81 pages, 1762320 bytes).
