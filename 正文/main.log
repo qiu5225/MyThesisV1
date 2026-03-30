@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  30 MAR 2026 02:36
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  30 MAR 2026 11:03
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1126,26 +1126,26 @@ runsystem(del main.aex)...executed.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1183,14 +1183,14 @@ LaTeX Font Info:    ... okay on input line 93.
 
 \symgns@font=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/TimesNewRoman(0)/m/n --> TS1/TimesNewRoman(0)/b/n on input line 93.
-Package gensymb Info: Math companion symbols declared on input line 93.
-LaTeX Info: Redefining \degree on input line 93.
-LaTeX Info: Redefining \celsius on input line 93.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 93.
-LaTeX Info: Redefining \ohm on input line 93.
-Package gensymb Info: Using \textohm for \ohm on input line 93.
-Package gensymb Info: Using \textmu for \micro on input line 93.
+(Font)                  TS1/TimesNewRoman(0)/m/n --> TS1/TimesNewRoman(0)/b/n on input line 94.
+Package gensymb Info: Math companion symbols declared on input line 94.
+LaTeX Info: Redefining \degree on input line 94.
+LaTeX Info: Redefining \celsius on input line 94.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 94.
+LaTeX Info: Redefining \ohm on input line 94.
+Package gensymb Info: Using \textohm for \ohm on input line 94.
+Package gensymb Info: Using \textmu for \micro on input line 94.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1198,19 +1198,19 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count423
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 93.
+(tocbasic)             because of missing \bbl@set@language on input line 94.
 (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
 File: fc-english.def 2016/01/12
 )
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 93.
-Package hyperref Info: Link coloring OFF on input line 93.
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 94.
+Package hyperref Info: Link coloring OFF on input line 94.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-Package bicaption Info: Main language is not set on input line 93.
+Package bicaption Info: Main language is not set on input line 94.
 
 Package fontspec Info: Font family 'AdobeSongStd-Light.otf(1)' created for
 (fontspec)             font 'AdobeSongStd-Light.otf' with options
@@ -1230,83 +1230,52 @@ Package fontspec Info: Font family 'AdobeSongStd-Light.otf(1)' created for
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
 
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 98
 \TU/AdobeSongStd-Light.otf(1)/m/n/12.045 分 类 号：| 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 97.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 98.
 (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 97.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 98.
  (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 97.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 98.
  (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 97.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 98.
  (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 97.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 98.
  (d:/Application/LaTeX/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12.045> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
-LaTeX Font Info:    Trying to load font information for TS1+TimesNewRoman(0) on input line 97.
-LaTeX Font Info:    No file TS1TimesNewRoman(0).fd. on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+LaTeX Font Info:    Trying to load font information for TS1+TimesNewRoman(0) on input line 98.
+LaTeX Font Info:    No file TS1TimesNewRoman(0).fd. on input line 98.
 
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead on input line 97.
+(Font)              using `TS1/cmr/m/n' instead on input line 98.
 
 
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 98
 \TU/TimesNewRoman(0)/m/n/12.045 UDC:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/12.045 学 号：| 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 98
 \TU/AdobeSongStd-Light.otf(1)/m/n/12.045 密 级\TU/TimesNewRoman(0)/m/n/12.045 :
  []
-
-
-Package fontspec Info: Could not resolve font "楷体/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "华文行楷/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "华文行楷/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Font family '华文行楷(0)' created for font '华文行楷' with
-(fontspec)             options [Script={CJK},BoldFont={楷体}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"华文行楷/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"楷体/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 
 Package fontspec Info: Font family 'AdobeHeitiStd-Regular.otf(0)' created for
@@ -1329,82 +1298,35 @@ Package fontspec Info: Font family 'AdobeHeitiStd-Regular.otf(0)' created for
 (fontspec)             <->"[./fonts/AdobeHeitiStd-Regular.otf]/OT:script=hani;language=dflt;embolden=4;slant=0.167;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-File: title.png Graphic file (type bmp)
-<title.png>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <15.05624> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.03374> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 作 者 姓 名：| 
- []
-
-
-Package fontspec Info: Font family 'AdobeKaitiStd-Regular.otf(0)' created for
-(fontspec)             font 'AdobeKaitiStd-Regular.otf' with options
-(fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.167}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/AdobeKaitiStd-Regular.otf]/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/AdobeKaitiStd-Regular.otf]/OT:script=hani;language=dflt;embolden=4;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/AdobeKaitiStd-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/AdobeKaitiStd-Regular.otf]/OT:script=hani;language=dflt;embolden=4;slant=0.167;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
-
-
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 培 养 类 型：| 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 学 位 类 型：| 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 专 业 名 称：| 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 98
 \TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 研 究 方 向：| 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 97
-\TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 指 导 教 师：| 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 98
 \TU/AdobeSongStd-Light.otf(1)/m/n/15.05624 完 成 日 期：| 
  []
 
-[1
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
 
 
 
 
-] [2] [1
-
-] [2]
+] [1] [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.53937> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.52812> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
  [3
 
 ] [4] (./main.toc [5
@@ -1438,14 +1360,7 @@ Underfull \vbox (badness 1661) has occurred while \output is active []
 ] [2]
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
- [3]
-
-Package natbib Warning: Citation `3' on page 4 undefined on input line 144.
-
-
-Package natbib Warning: Citation `2' on page 4 undefined on input line 144.
-
-[4] [5] [6]
+ [3] [4] [5] [6]
 2
 [7
 
@@ -1477,7 +1392,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 3
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/b/n' undefined
-(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 475.
+(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 477.
 
 [18
 
@@ -1486,9 +1401,9 @@ File: figures//Flowchart/IRIME流程图_横板_2.png Graphic file (type bmp)
 <figures//Flowchart/IRIME流程图_横板_2.png>
  [21] [22]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 651.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 653.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 651.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 653.
 File: figures/Convergence/dim30/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/1.pdf>
 File: figures/Convergence/dim30/5.pdf Graphic file (type pdf)
@@ -1593,16 +1508,61 @@ File: figures/box/dim50/30.pdf Graphic file (type pdf)
  [26] [27] [28]
 File: figures/Ftest/Ftest-dim30-dim50.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-dim30-dim50.pdf>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.52437> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1006.
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1006--1013
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
 
 
-LaTeX Warning: Float too large for page by 36.36737pt on input line 1100.
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1013--1020
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
 
 
-LaTeX Warning: Float too large for page by 36.36737pt on input line 1203.
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1020--1025
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
 
-[29] [30] [31] [32]
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1025--1029
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1029--1118
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[29] [30]
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1125--1132
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1132--1139
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1139--1144
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1144--1148
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1148--1239
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[31] [32]
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1249--1301
+ [][][] 
+ []
+
 File: figures/FS/cov/1.pdf Graphic file (type pdf)
 <use figures/FS/cov/1.pdf>
 File: figures/FS/cov/2.pdf Graphic file (type pdf)
@@ -1651,6 +1611,16 @@ File: figures/FS/acc/11.pdf Graphic file (type pdf)
 <use figures/FS/acc/11.pdf>
 File: figures/FS/acc/12.pdf Graphic file (type pdf)
 <use figures/FS/acc/12.pdf>
+
+Overfull \hbox (28.07117pt too wide) in paragraph at lines 1498--1541
+ [][][] 
+ []
+
+
+Overfull \hbox (44.76245pt too wide) in paragraph at lines 1548--1591
+ [][][] 
+ []
+
 File: figures/FS/feature/1.pdf Graphic file (type pdf)
 <use figures/FS/feature/1.pdf>
 File: figures/FS/feature/2.pdf Graphic file (type pdf)
@@ -1675,73 +1645,75 @@ File: figures/FS/feature/11.pdf Graphic file (type pdf)
 <use figures/FS/feature/11.pdf>
 File: figures/FS/feature/12.pdf Graphic file (type pdf)
 <use figures/FS/feature/12.pdf>
- [33] [34] [35] [36] [37]
+[33] [34] [35] [36] [37] [38] [39] [40]
 File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-ablation.pdf>
- [38] [39] [40] [41]
-4
-[42
 
-] [43]
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1700--1752
+ [][][] 
+ []
+
+
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1760--1812
+ [][][] 
+ []
+
+[41] [42] [43] [44]
+4
+[45
+
+]
 File: figures/HHO/gauss.pdf Graphic file (type pdf)
 <use figures/HHO/gauss.pdf>
- [44]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
- [45]
+ [46]
 File: figures/HHO/elite.pdf Graphic file (type pdf)
 <use figures/HHO/elite.pdf>
- [46]
+ [47]
 Missing character: There is no ∼ (U+223C) in font Times New Roman/OT:script=latn;language=dflt;mapping=tex-text;!
-[47] [48] [49]
+[48]
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+ [49] [50]
 File: figures/HHO/cov_cec2020.pdf Graphic file (type pdf)
 <use figures/HHO/cov_cec2020.pdf>
 File: figures/HHO/cov_cec2020_30.pdf Graphic file (type pdf)
 <use figures/HHO/cov_cec2020_30.pdf>
 
 
-LaTeX Warning: Float too large for page by 20.43962pt on input line 2089.
+LaTeX Warning: Float too large for page by 20.43962pt on input line 2126.
 
-[50]
+[51]
 File: figures/Ftest/IHHO_DIM10_Ftest.pdf Graphic file (type pdf)
 <use figures/Ftest/IHHO_DIM10_Ftest.pdf>
-
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
- [51
+ [52
 
 
-] [52] [53]
+] [53]
 File: figures/Ftest/IHHO_DIM30_Ftest.pdf Graphic file (type pdf)
 <use figures/Ftest/IHHO_DIM30_Ftest.pdf>
- [54] [55]
 File: figures/HHO/IHHO_COV.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_COV.pdf>
 File: figures/HHO/IHHO_ACC.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_ACC.pdf>
 File: figures/HHO/IHHO_FS_SIZE.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_FS_SIZE.pdf>
- [56] [57] [58] [59] [60] [61] [62]
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2582.
+ [54] [55] [56] [57] [58] [59] [60]
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2620.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2582.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2582.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2582.
- [63] [64]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
+ [61] [62] [63]
 5
-[65
+[64
 
 
 
-] [66] (./main.bbl [67
+] (./main.bbl [65
 
-] [68] [69] [70] [71] [72]) [73]
-
-Package natbib Warning: There were undefined citations.
-
-(./main.aux)
+] [66] [67] [68] [69] [70]) [71] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1751,15 +1723,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 05FC76862D30228882428AB7A3521231;6619.
+(rerunfilecheck)             Checksum: 8897E2C7F51A128F533558BEDE7B0D17;6611.
  ) 
 Here is how much of TeX's memory you used:
- 29861 strings out of 476720
- 658459 string characters out of 5799663
- 2127842 words of memory out of 5000000
- 51236 multiletter control sequences out of 15000+600000
- 617095 words of font info for 278 fonts, out of 8000000 for 9000
+ 29930 strings out of 476720
+ 666916 string characters out of 5799663
+ 2081842 words of memory out of 5000000
+ 51327 multiletter control sequences out of 15000+600000
+ 612987 words of font info for 251 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 125i,21n,121p,1838b,827s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,21n,121p,1838b,821s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (86 pages, 1835764 bytes).
+Output written on main.xdv (83 pages, 1838172 bytes).
