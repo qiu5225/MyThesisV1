@@ -1,4 +1,4 @@
-\begin{thebibliography}{95}
+\begin{thebibliography}{106}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -486,6 +486,62 @@ Proceedings of the AAAI conference on artificial intelligence: Vol.~29.
 MALDONADO S, L{\'O}PEZ J.
 \newblock Dealing with high-dimensional class-imbalanced datasets: Embedded feature selection for svm classification\allowbreak[J].
 \newblock Applied Soft Computing, 2018, 67: 94-105.
+
+\bibitem[Stanovov et~al.(2018)Stanovov, Akhmedova, and Semenkin]{stanovov2018lshade}
+STANOVOV V, AKHMEDOVA S, SEMENKIN E.
+\newblock Lshade algorithm with rank-based selective pressure strategy for solving cec 2017 benchmark problems\allowbreak[C]//\allowbreak
+2018 IEEE congress on evolutionary computation (CEC).
+\newblock IEEE, 2018: 1-8.
+
+\bibitem[Meraihi et~al.(2020)Meraihi, Ramdane-Cherif, Acheli, and Mahseur]{meraihi2020dragonfly}
+MERAIHI Y, RAMDANE-CHERIF A, ACHELI D, et~al.
+\newblock Dragonfly algorithm: a comprehensive review and applications\allowbreak[J].
+\newblock Neural Computing and Applications, 2020, 32\allowbreak (21): 16625-16646.
+
+\bibitem[Zhong et~al.(2022)Zhong, Li, and Meng]{zhong2022beluga}
+ZHONG C, LI G, MENG Z.
+\newblock Beluga whale optimization: A novel nature-inspired metaheuristic algorithm\allowbreak[J].
+\newblock Knowledge-based systems, 2022, 251: 109215.
+
+\bibitem[Sasmal et~al.(2024)Sasmal, Hussien, Das, Dhal, and Saha]{sasmal2024reptile}
+SASMAL B, HUSSIEN A~G, DAS A, et~al.
+\newblock Reptile search algorithm: Theory, variants, applications, and performance evaluation\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2024, 31\allowbreak (1): 521-549.
+
+\bibitem[Mirjalili(2016)]{mirjalili2016sca}
+MIRJALILI S.
+\newblock Sca: a sine cosine algorithm for solving optimization problems\allowbreak[J].
+\newblock Knowledge-based systems, 2016, 96: 120-133.
+
+\bibitem[Houssein et~al.(2023)Houssein, Oliva, Celik, Emam, and Ghoniem]{houssein2023boosted}
+HOUSSEIN E~H, OLIVA D, CELIK E, et~al.
+\newblock Boosted sooty tern optimization algorithm for global optimization and feature selection\allowbreak[J].
+\newblock Expert Systems with Applications, 2023, 213: 119015.
+
+\bibitem[Ezugwu et~al.(2022)Ezugwu, Agushaka, Abualigah, Mirjalili, and Gandomi]{ezugwu2022prairie}
+EZUGWU A~E, AGUSHAKA J~O, ABUALIGAH L, et~al.
+\newblock Prairie dog optimization algorithm\allowbreak[J].
+\newblock Neural Computing and Applications, 2022, 34\allowbreak (22): 20017-20065.
+
+\bibitem[Dhal et~al.(2023)Dhal, Sasmal, Das, Ray, and Rai]{dhal2023comprehensive}
+DHAL K~G, SASMAL B, DAS A, et~al.
+\newblock A comprehensive survey on arithmetic optimization algorithm\allowbreak[J].
+\newblock Archives of Computational Methods in Engineering, 2023, 30\allowbreak (5): 3379-3404.
+
+\bibitem[Mirjalili et~al.(2016)Mirjalili and Lewis]{mirjalili2016whale}
+MIRJALILI S, LEWIS A.
+\newblock The whale optimization algorithm\allowbreak[J].
+\newblock Advances in engineering software, 2016, 95: 51-67.
+
+\bibitem[Alruwaili et~al.(2023)Alruwaili, Asiri, Alrayes, Aljameel, Salama, and Hilal]{alruwaili2023red}
+ALRUWAILI F~F, ASIRI M~M, ALRAYES F~S, et~al.
+\newblock Red kite optimization algorithm with average ensemble model for intrusion detection for secure iot\allowbreak[J].
+\newblock IEEE Access, 2023, 11: 131749-131758.
+
+\bibitem[Jia et~al.(2023)Jia, Rao, Wen, and Mirjalili]{jia2023crayfish}
+JIA H, RAO H, WEN C, et~al.
+\newblock Crayfish optimization algorithm\allowbreak[J].
+\newblock Artificial Intelligence Review, 2023, 56\allowbreak (Suppl 2): 1919-1979.
 
 \bibitem[Zhu et~al.(2007)Zhu, Ong, and Dash]{zhu2007markov}
 ZHU Z, ONG Y~S, DASH M.

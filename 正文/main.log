@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  30 MAR 2026 11:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  31 MAR 2026 11:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1385,14 +1385,11 @@ File: figures/HHO/all_stage.png Graphic file (type bmp)
  [14]
 File: figures/HHO/HHO_rabbit.png Graphic file (type bmp)
 <figures/HHO/HHO_rabbit.png>
- [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16] [17]
+ [15] [16] [17]
 3
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/b/n' undefined
-(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 477.
+(Font)              using `TS1/TimesNewRoman(0)/m/n' instead on input line 474.
 
 [18
 
@@ -1401,9 +1398,9 @@ File: figures//Flowchart/IRIME流程图_横板_2.png Graphic file (type bmp)
 <figures//Flowchart/IRIME流程图_横板_2.png>
  [21] [22]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 653.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 657.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 653.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 657.
 File: figures/Convergence/dim30/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/1.pdf>
 File: figures/Convergence/dim30/5.pdf Graphic file (type pdf)
@@ -1430,6 +1427,7 @@ File: figures/Convergence/dim30/30.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/30.pdf>
 File: figures/Convergence/dim30/legend.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/legend.pdf>
+ [23]
 File: figures/Convergence/dim50/1.pdf Graphic file (type pdf)
 <use figures/Convergence/dim50/1.pdf>
 File: figures/Convergence/dim50/5.pdf Graphic file (type pdf)
@@ -1456,7 +1454,10 @@ File: figures/Convergence/dim50/30.pdf Graphic file (type pdf)
 <use figures/Convergence/dim50/30.pdf>
 File: figures/Convergence/dim30/legend.pdf Graphic file (type pdf)
 <use figures/Convergence/dim30/legend.pdf>
- [23] [24] [25]
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+ [24] [25] [26]
 File: figures/box/dim30/1.pdf Graphic file (type pdf)
 <use figures/box/dim30/1.pdf>
 File: figures/box/dim30/5.pdf Graphic file (type pdf)
@@ -1505,61 +1506,60 @@ File: figures/box/dim50/22.pdf Graphic file (type pdf)
 <use figures/box/dim50/22.pdf>
 File: figures/box/dim50/30.pdf Graphic file (type pdf)
 <use figures/box/dim50/30.pdf>
- [26] [27] [28]
 File: figures/Ftest/Ftest-dim30-dim50.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-dim30-dim50.pdf>
 
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1006--1013
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1010--1017
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1013--1020
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1017--1024
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1020--1025
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1024--1029
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1025--1029
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1029--1033
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1029--1118
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1033--1122
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[27] [28]
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1129--1136
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1136--1143
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1143--1148
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1148--1152
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (51.5917pt too wide) in alignment at lines 1152--1243
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 [29] [30]
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1125--1132
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1132--1139
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1139--1144
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1144--1148
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (51.5917pt too wide) in alignment at lines 1148--1239
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-[31] [32]
-Overfull \hbox (47.93161pt too wide) in paragraph at lines 1249--1301
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1253--1305
  [][][] 
  []
 
@@ -1612,12 +1612,12 @@ File: figures/FS/acc/11.pdf Graphic file (type pdf)
 File: figures/FS/acc/12.pdf Graphic file (type pdf)
 <use figures/FS/acc/12.pdf>
 
-Overfull \hbox (28.07117pt too wide) in paragraph at lines 1498--1541
+Overfull \hbox (28.07117pt too wide) in paragraph at lines 1503--1546
  [][][] 
  []
 
 
-Overfull \hbox (44.76245pt too wide) in paragraph at lines 1548--1591
+Overfull \hbox (44.76245pt too wide) in paragraph at lines 1553--1596
  [][][] 
  []
 
@@ -1645,50 +1645,51 @@ File: figures/FS/feature/11.pdf Graphic file (type pdf)
 <use figures/FS/feature/11.pdf>
 File: figures/FS/feature/12.pdf Graphic file (type pdf)
 <use figures/FS/feature/12.pdf>
-[33] [34] [35] [36] [37] [38] [39] [40]
+[31] [32] [33] [34] [35] [36] [37] [38] [39] [40]
 File: figures/Ftest/Ftest-ablation.pdf Graphic file (type pdf)
 <use figures/Ftest/Ftest-ablation.pdf>
 
-Overfull \hbox (47.93161pt too wide) in paragraph at lines 1700--1752
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1710--1762
  [][][] 
  []
 
 
-Overfull \hbox (47.93161pt too wide) in paragraph at lines 1760--1812
+Overfull \hbox (47.93161pt too wide) in paragraph at lines 1770--1822
  [][][] 
  []
 
-[41] [42] [43] [44]
+[41] [42] [43]
 4
-[45
+[44
 
 ]
 File: figures/HHO/gauss.pdf Graphic file (type pdf)
 <use figures/HHO/gauss.pdf>
- [46]
+ [45]
 File: figures/HHO/elite.pdf Graphic file (type pdf)
 <use figures/HHO/elite.pdf>
+ [46]
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
  [47]
-Missing character: There is no ∼ (U+223C) in font Times New Roman/OT:script=latn;language=dflt;mapping=tex-text;!
-[48]
 Underfull \vbox (badness 3029) has occurred while \output is active []
 
- [49] [50]
+ [48] [49]
 File: figures/HHO/cov_cec2020.pdf Graphic file (type pdf)
 <use figures/HHO/cov_cec2020.pdf>
 File: figures/HHO/cov_cec2020_30.pdf Graphic file (type pdf)
 <use figures/HHO/cov_cec2020_30.pdf>
 
 
-LaTeX Warning: Float too large for page by 20.43962pt on input line 2126.
+LaTeX Warning: Float too large for page by 20.43962pt on input line 2130.
 
-[51]
+[50]
 File: figures/Ftest/IHHO_DIM10_Ftest.pdf Graphic file (type pdf)
 <use figures/Ftest/IHHO_DIM10_Ftest.pdf>
- [52
+ [51
 
 
-] [53]
+] [52]
 File: figures/Ftest/IHHO_DIM30_Ftest.pdf Graphic file (type pdf)
 <use figures/Ftest/IHHO_DIM30_Ftest.pdf>
 File: figures/HHO/IHHO_COV.pdf Graphic file (type pdf)
@@ -1697,23 +1698,26 @@ File: figures/HHO/IHHO_ACC.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_ACC.pdf>
 File: figures/HHO/IHHO_FS_SIZE.pdf Graphic file (type pdf)
 <use figures/HHO/IHHO_FS_SIZE.pdf>
- [54] [55] [56] [57] [58] [59] [60]
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2620.
+ [53] [54] [55] [56] [57]
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+ [58] [59] [60]
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 2623.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2623.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2623.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2620.
- [61] [62] [63]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2623.
+ [61] [62]
 5
-[64
+[63
 
 
 
-] (./main.bbl [65
+] (./main.bbl [64
 
-] [66] [67] [68] [69] [70]) [71] (./main.aux)
+] [65] [66] [67] [68] [69] [70]) [71] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1726,12 +1730,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8897E2C7F51A128F533558BEDE7B0D17;6611.
  ) 
 Here is how much of TeX's memory you used:
- 29930 strings out of 476720
- 666916 string characters out of 5799663
- 2081842 words of memory out of 5000000
- 51327 multiletter control sequences out of 15000+600000
+ 29951 strings out of 476720
+ 666764 string characters out of 5799663
+ 2080842 words of memory out of 5000000
+ 51348 multiletter control sequences out of 15000+600000
  612987 words of font info for 251 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 125i,21n,121p,1838b,821s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,21n,121p,1838b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (83 pages, 1838172 bytes).
+Output written on main.xdv (83 pages, 1860544 bytes).
