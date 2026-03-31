@@ -399,6 +399,11 @@ FETANAT M, STEVENS M, JAIN P, et~al.
 \newblock Fully elman neural network: a novel deep recurrent neural network optimized by an improved harris hawks algorithm for classification of pulmonary arterial wedge pressure\allowbreak[J].
 \newblock IEEE Transactions on Biomedical Engineering, 2021, 69\allowbreak (5): 1733-1744.
 
+\bibitem[Azeem et~al.(2025)Azeem, Javed, Naseer, Ali, and Ghazal]{azeem2025new}
+AZEEM S, JAVED S, NASEER I, et~al.
+\newblock A new hybrid pso-hho wrapper based optimization for feature selection\allowbreak[J].
+\newblock IEEE Access, 2025.
+
 \bibitem[Issa et~al.(2022)Issa, Ali, and Rashid]{issa2022efficient}
 ISSA A, ALI Y, RASHID T.
 \newblock An efficient hybrid classification approach for covid-19 based on harris hawks optimization and salp swarm optimization\allowbreak[A].
@@ -408,11 +413,6 @@ ISSA A, ALI Y, RASHID T.
 KHATRI I, CHOUDHRY A, RAO A, et~al.
 \newblock Influence maximization in social networks using discretized harris’ hawks optimization algorithm\allowbreak[J].
 \newblock Applied Soft Computing, 2023, 149: 111037.
-
-\bibitem[Azeem et~al.(2025)Azeem, Javed, Naseer, Ali, and Ghazal]{azeem2025new}
-AZEEM S, JAVED S, NASEER I, et~al.
-\newblock A new hybrid pso-hho wrapper based optimization for feature selection\allowbreak[J].
-\newblock IEEE Access, 2025.
 
 \bibitem[陈志鹏(2025)]{1025619691.nh}
 陈志鹏.
