@@ -1,4 +1,4 @@
-\begin{thebibliography}{106}
+\begin{thebibliography}{105}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -25,11 +25,6 @@ NGUYEN N~H, PICETTI D, DULAI P~S, et~al.
 THENG D, BHOYAR K~K.
 \newblock Feature selection techniques for machine learning: a survey of more than two decades of research\allowbreak[J].
 \newblock Knowledge and Information Systems, 2024, 66\allowbreak (3): 1575-1637.
-
-\bibitem[Sadeghian et~al.(2025)Sadeghian, Akbari, Nematzadeh, and Motameni]{sadeghian2025review}
-SADEGHIAN Z, AKBARI E, NEMATZADEH H, et~al.
-\newblock A review of feature selection methods based on meta-heuristic algorithms\allowbreak[J].
-\newblock Journal of Experimental \& Theoretical Artificial Intelligence, 2025, 37\allowbreak (1): 1-51.
 
 \bibitem[Azman et~al.(2023)Azman, Samah, Lin, Majid, Shah, Wen, and Howe]{azman2023support}
 AZMAN N~S, SAMAH A~A, LIN J~T, et~al.
@@ -101,6 +96,11 @@ CAI T, MA F, YE Z, et~al.
 \newblock Dynamic niche technology based hybrid breeding optimization algorithm for multimodal feature selection\allowbreak[J].
 \newblock Scientific Reports, 2025, 15\allowbreak (1): 8001.
 
+\bibitem[Sadeghian et~al.(2025)Sadeghian, Akbari, Nematzadeh, and Motameni]{sadeghian2025review}
+SADEGHIAN Z, AKBARI E, NEMATZADEH H, et~al.
+\newblock A review of feature selection methods based on meta-heuristic algorithms\allowbreak[J].
+\newblock Journal of Experimental \& Theoretical Artificial Intelligence, 2025, 37\allowbreak (1): 1-51.
+
 \bibitem[Kamal et~al.(2024)Kamal, Amin, AbdElminaam, and Ismail]{kamal2024comprehensive}
 KAMAL R, AMIN E, ABDELMINAAM D~S, et~al.
 \newblock A comprehensive survey on meta-heuristic algorithms for feature selection in high-dimensional data: challenges, applications, and future directions\allowbreak[C]//\allowbreak
@@ -111,11 +111,6 @@ KAMAL R, AMIN E, ABDELMINAAM D~S, et~al.
 JIA W, SUN M, LIAN J, et~al.
 \newblock Feature dimensionality reduction: a review\allowbreak[J].
 \newblock Complex \& Intelligent Systems, 2022, 8\allowbreak (3): 2663-2693.
-
-\bibitem[Huang et~al.(2025)Huang, Wang, Asghar, Wang, and Chen]{huang2025q}
-HUANG C, WANG M, ASGHAR H~A, et~al.
-\newblock Q-learning enhanced differential evolution for feature selection in high-dimensional medical data analysis\allowbreak[J].
-\newblock Journal of King Saud University Computer and Information Sciences, 2025, 37\allowbreak (9): 280.
 
 \bibitem[Kaur et~al.(2023)Kaur, Kumar, Koul, and Kumar~Kamboj]{kaur2023systematic}
 KAUR S, KUMAR Y, KOUL A, et~al.
