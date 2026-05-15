@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1778752858.60075 "main.aux" "main.bbl" "main" 1778752896.67866 0
+["bibtex main"] 1778835266.24715 "main.aux" "main.bbl" "main" 1778835299.75156 0
   "./main.bib" 1778751622 37660 481904635fef9751d83f9f371ba27ac8 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/bibtex/bst/gbt7714/gbt7714-numerical.bst" 1746085058 46094 ad0aed08d79354f7f2e8883dbf55daa8 ""
-  "main.aux" 1778752865 48754 44c5700d0eaf04555d3a426e2dfc703d "xelatex"
+  "main.aux" 1778835272 49729 41a8361553622fac061a28e83d4be05a "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1778752867.32675 "main.xdv" "main.pdf" "main" 1778752896.6966 0
-  "main.xdv" 1778752865 1839536 ec0d2d84ac596172a7fbb6dc842643bd "xelatex"
+["xdvipdfmx"] 1778835273.7636 "main.xdv" "main.pdf" "main" 1778835299.76729 0
+  "main.xdv" 1778835272 1877220 e2fc7135e6b988bd7e9c3b628b6a8a56 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1778752859.2229 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1778752896.67897 0
-  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1778752849 260942 9f09893acb6d8eab7577a5335dd3d21f ""
+["xelatex"] 1778835266.81365 "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" "main.xdv" "main" 1778835299.7519 0
+  "c:/Users/Qiu/Documents/大论文/template/毕业论文LATEX模板/正文/main.tex" 1778835247 260438 e6d232086c728a6e74a4c5ecd5106fef ""
   "c:/Windows/Fonts/msyh.ttc" 1761330050 19704352 1e10e74402e59d54499af795caf0b135 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1746084981 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Application/LaTeX/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1746089148 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -317,13 +317,14 @@
   "figures/box/dim50/5.pdf" 1746329053 7320 7e952ad561c9fd5e08377467ed4c6931 ""
   "figures/box/dim50/6.pdf" 1746329053 7344 4120aca31b2f06daa71e9f35a75d9b4a ""
   "figures/box/dim50/8.pdf" 1746329053 7322 7559cf825621179f27131ecc224ff8ff ""
-  "main.aux" 1778752865 48754 44c5700d0eaf04555d3a426e2dfc703d "xelatex"
-  "main.bbl" 1778752859 27369 9aabcf09545dd0c555e26c3d1ac08bd1 "bibtex main"
-  "main.lof" 1778752865 6084 a1f1111441f6b67d71799c9942f17939 "xelatex"
-  "main.lot" 1778752865 6340 ca95a978d3dcf5da5fe25307d808db31 "xelatex"
-  "main.out" 1778752865 6486 bf9ffb5e26ac10749f4be16931d48bce "xelatex"
-  "main.tex" 1778752849 260942 9f09893acb6d8eab7577a5335dd3d21f ""
-  "main.toc" 1778752865 7067 7cbff688fea586a3bce2b9fe313c27dc "xelatex"
+  "main.aux" 1778835272 49729 41a8361553622fac061a28e83d4be05a "xelatex"
+  "main.bbl" 1778835266 27369 9aabcf09545dd0c555e26c3d1ac08bd1 "bibtex main"
+  "main.lof" 1778835272 6144 a642ac63c356dcee201c9e94e2ba5de3 "xelatex"
+  "main.lot" 1778835272 6400 a8dd42ca8e8676e403ff0ffa4d447031 "xelatex"
+  "main.out" 1778835272 6991 454afbb39010ceba6caa9e176f5bf556 "xelatex"
+  "main.tex" 1778835247 260438 e6d232086c728a6e74a4c5ecd5106fef ""
+  "main.toc" 1778835272 7461 a4775c31481c53b62e6fd346d3b7f11f "xelatex"
+  "title.png" 1774787411 112838 507126d3441e00830693855d09e1e4df ""
   "wzuthesis.cls" 1772172846 24813 0ddd52f1677ea1c943c43cbaae15b7af ""
   (generated)
   "main.aux"

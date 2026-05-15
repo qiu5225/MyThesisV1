@@ -60,9 +60,9 @@ BoldItalicFont = * Bold Italic
 \cclass{智能计算与数据挖掘}              % 研究方向
 \cmentor{黄长城（教授） 陈慧灵（教授）} % 指导老师
 \cdata{2026年3月1日} %完成时间
-\blindcode{} % 盲审代码
-%%===================================================
-\def\blind{}       % 盲审版把这条注释打开
+% \blindcode{} % 盲审代码
+% %%===================================================
+% \def\blind{}       % 盲审版把这条注释打开
 
 
 
@@ -70,24 +70,25 @@ BoldItalicFont = * Bold Italic
 随着生物信息学的快速发展，病理数据的维度迅速增长，高维医疗数据已成为医学研究与临床实践的核心数据基础。但对高维医疗数据的有效分析却面临着特征数量致使计算复杂度剧增、机器学习模型性能劣化、计算资源消耗大等严峻挑战。高维医学特征的有效解析，已成为医学研究与临床实践的关键技术问题。
 特征选择作为高维数据处理的核心技术，通过筛选原始数据中最具相关性与代表性的特征，从而提高机器学习模型性能，降低计算消耗。元启发算法作为一种有效手段曾被广泛用于特征选择，但是朴素元启发算法面临着诸多问题，诸如开发与探索的平衡问题，早熟收敛问题等。
 
-为了解决元启发算法的这些问题，本论文提出了二种改进型的元启发算法，通过引入针对性的改进机制，解决了两种算法原本的弊端和面对高维医学数据时的不足。
+为了解决元启发算法在医学数据集处理上的问题，本论文提出了两类改进型的元启发算法，通过引入针对性的改进机制，解决了两种算法原本的弊端和面对高维医学数据时的不足。
 
-在第三章中，本文针对雾凇算法（RIME）的不足，提出一种改进的雾凇算法（IRIME），它结合信息熵评估策略、随机重启机制和拉格朗日插值方法来克服这些局限。信息熵评估策略通过对特征动态加权增强种群多样性，随机重启机制防止过早收敛，拉格朗日插值方法通过逼近全局最优解加速收敛。在 CEC 2017 测试集上的大量对比实验表明，IRIME 的性能不仅优于原算法RIME，而且优于其他 7 种知名算法。在 30 维度和 50 维度的弗里德曼检验中分别排名 1.31 和 1.21 ，大幅领先于其他 8 种算法，其收敛速度更快且稳定性更高。在随后的特征选择实验中，我们选取了 8 个中低维度数据集和 4 个高维数据集进行实验，这些数据集均来自真实的临床数据，涵盖多样的数据特性。实验结果显示，IRIME 在适应度值、准确率以及特征子集大小方面，均保持领先地位。特别在高维数据集 ALLAML 和 TOX-171 上，IRIME 分别以 100\% 和 88.24\% 的分类准确率夺得第一。经实验验证，IRIME 方法在医学数据特征选择场景下展现出优异的实用价值，为医学数据特征选择领域补充了一种可靠的技术手段。
+在第三章中，本文提出一种改进的雾凇算法（IRIME），它结合信息熵评估策略、随机重启机制和拉格朗日插值方法来克服原雾凇算法的局限。信息熵评估策略通过对特征动态加权增强种群多样性，随机重启机制防止过早收敛，拉格朗日插值方法通过逼近全局最优解加速收敛。在 CEC 2017 测试集上的大量对比实验表明，IRIME 的性能不仅优于原算法RIME，而且优于其他 7 种知名算法。在 30 维度和 50 维度的弗里德曼检验中分别排名 1.31 和 1.21 ，大幅领先于其他 8 种算法，其收敛速度更快且稳定性更高。在特征选择实验中，我们选取了 8 个中低维度数据集和 4 个高维数据集进行实验，这些数据集均来自真实的临床数据，涵盖多样的数据特性。实验结果显示，IRIME 在适应度值、准确率以及特征子集大小方面，均保持领先地位。在高维数据集 ALLAML 和 TOX-171 上，IRIME 分别以 100\% 和 88.24\% 的分类准确率夺得第一。经实验验证，IRIME 在医学数据特征选择场景下具有出色的实用价值，为医学数据特征选择领域补充了一种可靠的技术手段。
 
-在第四章中，针对哈里斯鹰优化算法（HHO）在迭代过程中易陷入局部最优、种群多样性下降、后期收敛精度不足等问题，本文首先引入经验互益策略，整合历史种群的有效搜索信息，增强种群个体间的信息交互能力，提升算法跳出局部最优的潜能。其次设计能量自适应扰动策略，依据猎物逃逸能量动态调整扰动比例，实现全局广域探索与局部精准开发的动态平衡。最后提出精英方差引导开发策略，通过计算精英个体的逐维方差确定局部搜索步长，解决算法后期搜索的局部振荡问题，提升局部优化精度。并且在 CEC 2020 标准测试函数集，将其与原始 HHO 及 另外 5 种经典群智能优化算法进行对比实验。实验结果显示，IHHO 的弗里德曼平均排名为 1.44，显著优于对比算法。进一步将 IHHO 算法应用于高维特征选择问题，在 8 个高维数据集开展实验，从适应度值、分类准确率等维度进行验证。结果显示，IHHO 在 Breast、CNS、Leukemia 等多数高维数据集中取得了更低的平均适应度值与更高的分类准确率，部分数据集分类准确率达到100\%，所选特征子集兼具良好的判别性与泛化性，有效实现了高维特征的精准筛选与冗余特征消除。以上实验表明，所提多策略改进方法能显著提升哈里斯鹰优化算法的综合性能，并在连续函数优化与高维特征选择领域均具有良好的应用效果与推广价值。
+在第四章中，本文引入经验互益策略，设计能量自适应扰动策略，并结合精英方差引导开发策略提出一种改进型哈里斯鹰算法（IHHO），这些策略有效解决原算法后期搜索的局部振荡问题，提升局部优化精度。在 CEC 2020 标准测试函数集上，将其与原始 HHO 及 另外 5 种经典群智能优化算法进行对比实验。实验结果显示，IHHO 的弗里德曼平均排名为 1.44，显著优于对比算法。进一步将 IHHO 算法应用于高维特征选择问题，在 8 个高维数据集开展实验，从适应度值、分类准确率等维度进行验证。结果显示，IHHO 在 Breast、CNS、Leukemia 等多数高维数据集中取得了更低的平均适应度值与更高的分类准确率，部分数据集分类准确率达到100\%，所选特征子集兼具良好的判别性与泛化性，有效实现了高维特征的精准筛选与冗余特征消除。实验结果表明，IHHO综合性能优异，在医学数据集的高维特征选择领域均具有良好的应用效果与推广价值。
 }
 \ckeywords{元启发算法，雾凇算法，哈里斯鹰算法，特征选择，医学数据处理，高维医学数据}
 
 \eabstract{
 With the rapid development of bioinformatics, the dimensionality of pathological data has grown exponentially, making high-dimensional medical data the core foundation for medical research and clinical practice. However, effective analysis of such data faces severe challenges, including a sharp increase in computational complexity, degradation of machine learning model performance, and excessive consumption of computational resources. Efficient mining of high-dimensional medical features has become a critical technical bottleneck in both academic research and clinical diagnosis.
 
-Feature selection, a core technique in high-dimensional data processing, enhances machine learning performance and reduces computational overhead by screening the most relevant and representative features. While meta-heuristic algorithms have been widely adopted for feature selection, vanilla versions suffer from issues such as the imbalance between exploration and exploitation, as well as premature convergence.
+Feature selection, as a core technique in high-dimensional data processing, enhances machine learning model performance and reduces computational consumption by screening the most relevant and representative features from the original data. Meta-heuristic algorithms have been widely used for feature selection, but vanilla meta-heuristic algorithms face many problems, such as the imbalance between exploitation and exploration, and premature convergence.
 
-To address these limitations, this thesis proposes two improved heuristic algorithms. By introducing targeted optimization mechanisms, these methods overcome the inherent drawbacks of the original algorithms and their deficiencies when handling high-dimensional medical data.
+To solve the problems of meta-heuristic algorithms in processing medical datasets, this thesis proposes two improved meta-heuristic algorithms. By introducing targeted improvement mechanisms, these methods overcome the original drawbacks of the two algorithms and their deficiencies when facing high-dimensional medical data.
 
-In Chapter 3, an Improved RIME (IRIME) is proposed to address the shortcomings of the original RIME algorithm. IRIME integrates an information entropy evaluation strategy, a random restart mechanism, and Lagrange interpolation to overcome these limitations. The information entropy strategy enhances population diversity through dynamic feature weighting, the random restart mechanism prevents premature convergence, and the Lagrange interpolation method accelerates convergence by approximating the global optimal solution. Extensive comparative experiments on the CEC 2017 test suite demonstrate that IRIME outperforms the original RIME and seven other well-known algorithms. In the Friedman test, IRIME ranked 1.31 and 1.21 for 30 and 50 dimensions respectively, significantly leading the other eight algorithms with faster convergence and higher stability. Subsequent feature selection experiments using eight low-to-medium dimensional datasets and four high-dimensional datasets-all derived from real clinical data-showed that IRIME maintains a leading position in fitness values, accuracy, and feature subset size. Notably, on the high-dimensional datasets ALLAML and TOX-171, IRIME achieved first place with classification accuracies of 100\% and 88.24\%, respectively. Experimental results verify that the IRIME method possesses excellent practical value for medical feature selection.
+In Chapter 3, this thesis proposes an Improved RIME algorithm (IRIME), which combines an information entropy evaluation strategy, a random restart mechanism, and Lagrange interpolation to overcome the limitations of the original RIME algorithm. The information entropy evaluation strategy enhances population diversity through dynamic weighting of features, the random restart mechanism prevents premature convergence, and the Lagrange interpolation method accelerates convergence by approximating the global optimal solution. A large number of comparative experiments on the CEC 2017 test suite show that the performance of IRIME is not only superior to the original RIME algorithm, but also superior to seven other well-known algorithms. In the Friedman test for 30-dimensional and 50-dimensional functions, it ranked 1.31 and 1.21 respectively, far ahead of the other 8 algorithms, with faster convergence speed and higher stability. In the feature selection experiments, 8 medium-to-low dimensional datasets and 4 high-dimensional datasets were selected for experiments. These datasets are all derived from real clinical data, covering diverse data characteristics. Experimental results show that IRIME maintains a leading position in fitness values, accuracy, and feature subset size. On the high-dimensional datasets ALLAML and TOX-171, IRIME won first place with classification accuracies of 100\% and 88.24\% respectively. Verified by experiments, IRIME has outstanding practical value in the scenario of medical data feature selection, supplementing a reliable technical means for the field of medical data feature selection.
 
-In Chapter 4, an Improved Harris Hawks Optimization (IHHO) algorithm incorporating multiple strategies is proposed to resolve issues in the original HHO, such as susceptibility to local optima, declining population diversity, and insufficient convergence precision in later stages. First, an experience mutual-benefit strategy is introduced to integrate effective search information from historical populations, enhancing information interaction and the potential to escape local optima. Second, an energy adaptive perturbation strategy is designed to dynamically adjust perturbation ratios based on prey escape energy, achieving a balance between global exploration and local exploitation. Finally, an elite variance-guided exploitation strategy is proposed to determine local search step sizes by calculating the dimensional variance of elite individuals, addressing local oscillations and improving precision. Comparative experiments on the CEC 2020 benchmark functions against the original HHO and five other classic swarm intelligence algorithms show that IHHO achieved a Friedman mean rank of 1.44, significantly outperforming competitors. When applied to high-dimensional feature selection across eight datasets, IHHO achieved lower mean fitness values and higher classification accuracies in most sets (such as Breast, CNS, and Leukemia), with some reaching 100\% accuracy. The selected feature subsets exhibit strong discriminative power and generalization, effectively achieving precise screening and redundancy elimination. These results indicate that the proposed multi-strategy improvements significantly enhance the comprehensive performance of HHO, offering high application value in both continuous function optimization and high-dimensional feature selection.
+In Chapter 4, this thesis introduces an experience mutual-benefit strategy, designs an energy adaptive perturbation strategy, and proposes an Improved HH (IHHO) algorithm combined with an elite variance-guided exploitation strategy. These strategies effectively solve the local oscillation problem in the later search stage of the original algorithm and improve the precision of local optimization. On the CEC 2020 standard test function set, it is compared with the original HHO and 5 other classic swarm intelligence optimization algorithms. Experimental results show that the Friedman average rank of IHHO is 1.44, significantly better than the comparison algorithms. Furthermore, the IHHO algorithm is applied to the high-dimensional feature selection problem and experiments are carried out on 8 high-dimensional datasets to verify from dimensions such as fitness value and classification accuracy. The results show that IHHO achieves lower average fitness values and higher classification accuracies in most high-dimensional datasets such as Breast, CNS, and Leukemia. The classification accuracy of some datasets reaches 100\%, and the selected feature subset has good discriminability and generalization, effectively achieving accurate screening of high-dimensional features and elimination of redundant features. Experimental results show that IHHO has excellent comprehensive performance and good application effects and promotion value in the field of high-dimensional feature selection of medical datasets.
+
 }
 % 英文文关键词(每个关键词之间，分，最后一个关键词不打标点符号。)
 \ekeywords{meta-heuristic, RIME, harris hawks optimization, feature selection, medical data processing, high-dimensional medical data}
@@ -2817,64 +2818,64 @@ Unimodal Function & 1 & Shifted and Rotated Bent Cigar Function (CEC 2017 F1) & 
 
 
 
-% {
-%     \appendix
-%     \renewcommand{\chaptermark}[1]{\markboth{\heiti  附录\thechapter\ ~#1}{}}
-%     \chapter{补充更多细节}
+{
+    \appendix
+    \renewcommand{\chaptermark}[1]{\markboth{\heiti  附录\thechapter\ ~#1}{}}
+    \chapter{补充更多细节}
 
-%     \section{补充图}
-%     主要列入正文内过分冗长的公式推导，供查读方便所需的辅助性数学工具或表格；重复性数据图表；论文使用的缩写、程序全文及说明等。附录一般与论文全文装订在一起，与正文一起编页码，如果附录内容很多时可独立成册。若有多个附录按大写英文字母排序，如附录 A、附录B 等，每一个附录均另起一页。附录中的公式及图表编号也冠以附录序号字母加一短划线如公式A-2），图A-2，表B-2 等。本项可根据论文需要编排或省略。
-%     \subsection{补充图}
+    \section{补充图}
+    主要列入正文内过分冗长的公式推导，供查读方便所需的辅助性数学工具或表格；重复性数据图表；论文使用的缩写、程序全文及说明等。附录一般与论文全文装订在一起，与正文一起编页码，如果附录内容很多时可独立成册。若有多个附录按大写英文字母排序，如附录 A、附录B 等，每一个附录均另起一页。附录中的公式及图表编号也冠以附录序号字母加一短划线如公式A-2），图A-2，表B-2 等。本项可根据论文需要编排或省略。
+    \subsection{补充图}
 
-%     \newclearpage
-% }
-% \ifdefined\blind  %这个if不要删除
-%     % 盲审版没有致谢
-% \else
-%     \chapter{致谢}
+    \newclearpage
+}
+\ifdefined\blind  %这个if不要删除
+    % 盲审版没有致谢
+\else
+    \chapter{致谢}
 
-%     四年时间转眼即逝，青涩而美好的本科生活快告一段落了。回首这段时间，我不仅学习到了很多知识和技能，而且提高了分析和解决问题的能力与养成了一定的科学素养。虽然走过了一些弯路，但更加坚定我后来选择学术研究的道路，实在是获益良多。这一切与老师的教诲和同学们的帮助是分不开的，在此对他们表达诚挚的谢意。
+    四年时间转眼即逝，青涩而美好的本科生活快告一段落了。回首这段时间，我不仅学习到了很多知识和技能，而且提高了分析和解决问题的能力与养成了一定的科学素养。虽然走过了一些弯路，但更加坚定我后来选择学术研究的道路，实在是获益良多。这一切与老师的教诲和同学们的帮助是分不开的，在此对他们表达诚挚的谢意。
 
-%     最后我要感谢我的家人，正是他们的无私的奉献和支持，我才有了不断拼搏的信心和勇气，才能取得现在的成果。
+    最后我要感谢我的家人，正是他们的无私的奉献和支持，我才有了不断拼搏的信心和勇气，才能取得现在的成果。
 
-%     \vskip 108pt
-%     \begin{flushright}
-%         邱从波\makebox[1cm]{} \\
-%         \today
-%     \end{flushright}
-%     \newpage
-% \fi
-% \chapter{攻读硕士学位期间取得的主要学术成果}
+    \vskip 108pt
+    \begin{flushright}
+        邱从波\makebox[1cm]{} \\
+        \today
+    \end{flushright}
+    \newpage
+\fi
+\chapter{攻读硕士学位期间取得的主要学术成果}
 
-% \section*{1. 已发表的学术论文}
-% 论文格式依照《温州大学研究生学位论文格式》（温州大学行政〔2016〕153号）文件要求，上传的盲审论文含封面（盲审格式）、中英文摘要和关键词、目录、正文、参考文献、注释、附录、攻读学位期间取得的研究成果（作者、发表卷期等信息一律用“XXX”替代，详见示例）,除去扉页、版权页、致谢等部分，论文封面及论文中不得出现温州大学、指导教师及作者等相关信，一律用“***”替代。
+\section*{1. 已发表的学术论文}
+论文格式依照《温州大学研究生学位论文格式》（温州大学行政〔2016〕153号）文件要求，上传的盲审论文含封面（盲审格式）、中英文摘要和关键词、目录、正文、参考文献、注释、附录、攻读学位期间取得的研究成果（作者、发表卷期等信息一律用“XXX”替代，详见示例）,除去扉页、版权页、致谢等部分，论文封面及论文中不得出现温州大学、指导教师及作者等相关信，一律用“***”替代。
 
-% \ifdefined\blind  % 这个if不要删除
-%     % 盲审版不透露自己姓名
-%     \begin{enumerate}
-%         \renewcommand{\labelenumi}{[\arabic{enumi}]}
-%         \setlength{\itemindent}{0em}
-%         \setlength{\labelsep}{0.5em}
+\ifdefined\blind  % 这个if不要删除
+    % 盲审版不透露自己姓名
+    \begin{enumerate}
+        \renewcommand{\labelenumi}{[\arabic{enumi}]}
+        \setlength{\itemindent}{0em}
+        \setlength{\labelsep}{0.5em}
   
-%         \item XXX[J]. Journal of Materials Science-Materials in Electronics,2022,X(X): XXXX -XXXX.SCI收录，已发表，第三章的研究成果.
-%         \item  XXX, XXX, XXX[J]. Journal of Physics: Conference Series.2021.X(X)(本人第一作者).EI收录，已发表，第四章的研究成果.
-%     \end{enumerate}
-% \else
-%     攻读学位期间发表的学术论文目录格式同参考文，并在最后注明刊物级别和第一完成单位名称。
-%     \begin{enumerate}
-%         \renewcommand{\labelenumi}{[\arabic{enumi}]}
-%         \setlength{\itemindent}{0em}
-%         \setlength{\labelsep}{0.5em}
+        \item XXX[J]. Journal of Materials Science-Materials in Electronics,2022,X(X): XXXX -XXXX.SCI收录，已发表，第三章的研究成果.
+        \item  XXX, XXX, XXX[J]. Journal of Physics: Conference Series.2021.X(X)(本人第一作者).EI收录，已发表，第四章的研究成果.
+    \end{enumerate}
+\else
+    攻读学位期间发表的学术论文目录格式同参考文，并在最后注明刊物级别和第一完成单位名称。
+    \begin{enumerate}
+        \renewcommand{\labelenumi}{[\arabic{enumi}]}
+        \setlength{\itemindent}{0em}
+        \setlength{\labelsep}{0.5em}
   
-%         \item Zhang X, Yu Z, Zhao L, et al. COMPrompter: reconceptualized segment anything model with multiprompt network for camouflaged object detection[J]. Science China Information Sciences, 2025, 68(1): 112104. JCR 一区，温州大学.
-%         \item Yu Z, Zhang X, Zhao L, et al. Exploring Deeper! Segment Anything Model with Depth Perception for Camouflaged Object Detection[C]//Proceedings of the 32nd ACM International Conference on Multimedia. 2024: 4322-4330. CCF-A ,温州大学.
-%     \end{enumerate}
-% \fi
+        \item Zhang X, Yu Z, Zhao L, et al. COMPrompter: reconceptualized segment anything model with multiprompt network for camouflaged object detection[J]. Science China Information Sciences, 2025, 68(1): 112104. JCR 一区，温州大学.
+        \item Yu Z, Zhang X, Zhao L, et al. Exploring Deeper! Segment Anything Model with Depth Perception for Camouflaged Object Detection[C]//Proceedings of the 32nd ACM International Conference on Multimedia. 2024: 4322-4330. CCF-A ,温州大学.
+    \end{enumerate}
+\fi
 
-% \section*{2. 参与的科研项目}
+\section*{2. 参与的科研项目}
 
 
-% \section*{3. 获奖情况}
+\section*{3. 获奖情况}
 
 
 %\newpage
