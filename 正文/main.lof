@@ -1,54 +1,53 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {2-1}{\ignorespaces 雾凇算法流程图}}{9}{figure.caption.7}%
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Flowcahrt of RIME Algorithm}}{9}{figure.caption.7}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces 雾凇算法软雾凇搜索和硬雾凇穿刺示意图}}{12}{figure.caption.11}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Soft-rime search and hard-rime puncture of RIME}}{12}{figure.caption.11}%
-\contentsline {figure}{\numberline {2-3}{\ignorespaces HHO各阶段示意图}}{13}{figure.caption.12}%
-\contentsline {figure}{\numberline {2-3}{\ignorespaces All stages of HHO}}{13}{figure.caption.12}%
-\contentsline {figure}{\numberline {2-4}{\ignorespaces 硬围攻阶段的矢量示意图}}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Example of overall vectors in the case of hard besiege}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {2-1}{\ignorespaces 雾凇算法流程图}}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Flowcahrt of RIME Algorithm}}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 雾凇算法软雾凇搜索和硬雾凇穿刺示意图}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Soft-rime search and hard-rime puncture of RIME}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces HHO各阶段示意图}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces All stages of HHO}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {2-4}{\ignorespaces 硬围攻阶段的矢量示意图}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Example of overall vectors in the case of hard besiege}}{15}{figure.caption.13}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3-1}{\ignorespaces IRIME工作流程图}}{21}{figure.caption.16}%
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Flowchart of IRIME}}{21}{figure.caption.16}%
-\contentsline {figure}{\numberline {3-2}{\ignorespaces 12 个基准函数上的收敛曲线 （30维）}}{25}{figure.caption.20}%
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Convergence curves on the 12 benchmark functions (30D)}}{25}{figure.caption.20}%
-\contentsline {figure}{\numberline {3-3}{\ignorespaces 12 个基准函数上的收敛曲线 （50维）}}{26}{figure.caption.21}%
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Convergence curves on the 12 benchmark functions (50D)}}{26}{figure.caption.21}%
-\contentsline {figure}{\numberline {3-4}{\ignorespaces 12 个基准函数上的箱线图（30维）}}{27}{figure.caption.22}%
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Boxplots on the 12 benchmark functions (30D)}}{27}{figure.caption.22}%
-\contentsline {figure}{\numberline {3-5}{\ignorespaces 12 个基准函数上的箱线图（50维）}}{28}{figure.caption.23}%
-\contentsline {figure}{\numberline {3-5}{\ignorespaces Boxplots on the 12 benchmark functions (50D)}}{28}{figure.caption.23}%
-\contentsline {figure}{\numberline {3-6}{\ignorespaces 9种算法的弗里德曼检验结果}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3-6}{\ignorespaces Friedman test results for the nine algorithms}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3-7}{\ignorespaces 12 个数据集上的适应度值收敛曲线}}{36}{figure.caption.28}%
-\contentsline {figure}{\numberline {3-7}{\ignorespaces Convergence curves of fitness values on 12 datasets}}{36}{figure.caption.28}%
-\contentsline {figure}{\numberline {3-8}{\ignorespaces 12 个数据集上的对比准确率直方图}}{37}{figure.caption.29}%
-\contentsline {figure}{\numberline {3-8}{\ignorespaces Histogram of comparison accuracy on 12 datasets}}{37}{figure.caption.29}%
-\contentsline {figure}{\numberline {3-9}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{40}{figure.caption.32}%
-\contentsline {figure}{\numberline {3-9}{\ignorespaces Histogram of the number of contrasting features on the 12 datasets}}{40}{figure.caption.32}%
-\contentsline {figure}{\numberline {3-10}{\ignorespaces IRIME 及其变体的弗里德曼检验结果}}{41}{figure.caption.33}%
-\contentsline {figure}{\numberline {3-10}{\ignorespaces Friedman test results for IRIME and its variants}}{41}{figure.caption.33}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces IRIME工作流程图}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Flowchart of IRIME}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces 12 个基准函数上的收敛曲线 （30维）}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Convergence curves on the 12 benchmark functions (30D)}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces 12 个基准函数上的收敛曲线 （50维）}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Convergence curves on the 12 benchmark functions (50D)}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces 12 个基准函数上的箱线图（30维）}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Boxplots on the 12 benchmark functions (30D)}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces 12 个基准函数上的箱线图（50维）}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Boxplots on the 12 benchmark functions (50D)}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {3-6}{\ignorespaces 9种算法的弗里德曼检验结果}}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Friedman test results for the nine algorithms}}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {3-7}{\ignorespaces 12 个数据集上的适应度值收敛曲线}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Convergence curves of fitness values on 12 datasets}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {3-8}{\ignorespaces 12 个数据集上的对比准确率直方图}}{38}{figure.caption.29}%
+\contentsline {figure}{\numberline {3-8}{\ignorespaces Histogram of comparison accuracy on 12 datasets}}{38}{figure.caption.29}%
+\contentsline {figure}{\numberline {3-9}{\ignorespaces 12 个数据集上的对比特征数量直方图}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {3-9}{\ignorespaces Histogram of the number of contrasting features on the 12 datasets}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {3-10}{\ignorespaces IRIME 及其变体的弗里德曼检验结果}}{42}{figure.caption.33}%
+\contentsline {figure}{\numberline {3-10}{\ignorespaces Friedman test results for IRIME and its variants}}{42}{figure.caption.33}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {4-1}{\ignorespaces 能量自适应柯西-高斯扰动策略示意图}}{46}{figure.caption.40}%
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Diagram of the energy adaptive Cauchy-Gaussian perturbation strategy}}{46}{figure.caption.40}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces 精英方差引导开发策略示意图}}{47}{figure.caption.41}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Schematic of the elite variance guided development strategy}}{47}{figure.caption.41}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces CEC 2020 对比实验收敛曲线图（10维）}}{50}{figure.caption.45}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Convergence curve of CEC 2020 comparative experiments (10D)}}{50}{figure.caption.45}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces CEC 2020 对比实验收敛曲线图（30维）}}{50}{figure.caption.45}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces Convergence curve of CEC 2020 comparative experiments (30D)}}{50}{figure.caption.45}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces IHHO与其他5种算法在CEC 2020 上的平均排名（10维）}}{53}{figure.caption.48}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Average ranking of IHHO with other five algorithms on CEC 2020 (10D)}}{53}{figure.caption.48}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces IHHO与其他5种算法在CEC 2020 上的平均排名（30维）}}{54}{figure.caption.49}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Average ranking of IHHO with other five algorithms on CEC 2020 (30D)}}{54}{figure.caption.49}%
-\contentsline {figure}{\numberline {4-7}{\ignorespaces IHHO特征选择实验适应度收敛曲线图}}{55}{figure.caption.53}%
-\contentsline {figure}{\numberline {4-7}{\ignorespaces Fitness convergence curve of IHHO feature selection experiment}}{55}{figure.caption.53}%
-\contentsline {figure}{\numberline {4-8}{\ignorespaces IHHO特征选择实验精确度直方图}}{56}{figure.caption.54}%
-\contentsline {figure}{\numberline {4-8}{\ignorespaces Histogram of accuracy for IHHO versus feature selection experiments}}{56}{figure.caption.54}%
-\contentsline {figure}{\numberline {4-9}{\ignorespaces IHHO特征选择实验特征子集大小直方图}}{57}{figure.caption.55}%
-\contentsline {figure}{\numberline {4-9}{\ignorespaces Histogram of feature subset size for IHHO feature selection experiment}}{57}{figure.caption.55}%
-\addvspace {10.0pt}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces 能量自适应柯西-高斯扰动策略示意图}}{47}{figure.caption.40}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Diagram of the energy adaptive Cauchy-Gaussian perturbation strategy}}{47}{figure.caption.40}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces 精英方差引导开发策略示意图}}{48}{figure.caption.41}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Schematic of the elite variance guided development strategy}}{48}{figure.caption.41}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces CEC 2020 对比实验收敛曲线图（10维）}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Convergence curve of CEC 2020 comparative experiments (10D)}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces CEC 2020 对比实验收敛曲线图（30维）}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Convergence curve of CEC 2020 comparative experiments (30D)}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces IHHO与其他5种算法在CEC 2020 上的平均排名（10维）}}{54}{figure.caption.48}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Average ranking of IHHO with other five algorithms on CEC 2020 (10D)}}{54}{figure.caption.48}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces IHHO与其他5种算法在CEC 2020 上的平均排名（30维）}}{55}{figure.caption.49}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces Average ranking of IHHO with other five algorithms on CEC 2020 (30D)}}{55}{figure.caption.49}%
+\contentsline {figure}{\numberline {4-7}{\ignorespaces IHHO特征选择实验适应度收敛曲线图}}{56}{figure.caption.53}%
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Fitness convergence curve of IHHO feature selection experiment}}{56}{figure.caption.53}%
+\contentsline {figure}{\numberline {4-8}{\ignorespaces IHHO特征选择实验精确度直方图}}{57}{figure.caption.54}%
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Histogram of accuracy for IHHO versus feature selection experiments}}{57}{figure.caption.54}%
+\contentsline {figure}{\numberline {4-9}{\ignorespaces IHHO特征选择实验特征子集大小直方图}}{58}{figure.caption.55}%
+\contentsline {figure}{\numberline {4-9}{\ignorespaces Histogram of feature subset size for IHHO feature selection experiment}}{58}{figure.caption.55}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
