@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  17 MAY 2026 23:01
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.5.1)  18 MAY 2026 15:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1767,15 +1767,9 @@ LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
 
 ] (./main.bbl [65
 
-] [66] [67] [68] [69] [70] [71]) [72]
+] [66] [67] [68] [69] [70] [71]) [72] [73
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2832.
-
-[73] [74
-
-
-] [75
+] [74
 
 ] (./main.aux)
  ***********
@@ -1791,15 +1785,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 22D83C20A0300CFEBA0B8D64DDB675F5;7069.
+(rerunfilecheck)             Checksum: 62826108307E0FB83660F7634F6AA15D;6983.
  ) 
 Here is how much of TeX's memory you used:
- 29950 strings out of 476720
- 672265 string characters out of 5799663
+ 29892 strings out of 476720
+ 667649 string characters out of 5799663
  2068842 words of memory out of 5000000
- 51330 multiletter control sequences out of 15000+600000
+ 51272 multiletter control sequences out of 15000+600000
  590435 words of font info for 239 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  125i,21n,121p,1696b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (88 pages, 1885364 bytes).
+Output written on main.xdv (87 pages, 1871924 bytes).

@@ -81,6 +81,5 @@
 \contentsline {section}{\numberline {5.1}全文总结}{64}{section.5.1}%
 \contentsline {section}{\numberline {5.2}未来研究展望}{64}{section.5.2}%
 \contentsline {chapter}{参考文献}{65}{chapter*.61}%
-\contentsline {subsection}{\numberline {0.0.1}补充图}{73}{subsection.0.0.1}%
-\contentsline {chapter}{致谢}{74}{chapter*.62}%
-\contentsline {chapter}{攻读硕士学位期间取得的主要学术成果}{75}{chapter*.63}%
+\contentsline {chapter}{致谢}{73}{chapter*.62}%
+\contentsline {chapter}{攻读硕士学位期间取得的主要学术成果}{74}{chapter*.63}%
